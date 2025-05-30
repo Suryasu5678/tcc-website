@@ -1,0 +1,160 @@
+    /*
+    Flaticon icon font: Flaticon
+    Creation date: 28/08/2020 04:49
+    */
+
+    @font-face {
+  font-family: "Flaticon";
+  src: url("./Flaticon.eot");
+  src: url("./Flaticon.eot?#iefix") format("embedded-opentype"),
+       url("./Flaticon.woff2") format("woff2"),
+       url("./Flaticon.woff") format("woff"),
+       url("./Flaticon.ttf") format("truetype"),
+       url("./Flaticon.svg#Flaticon") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  @font-face {
+    font-family: "Flaticon";
+    src: url("./Flaticon.svg#Flaticon") format("svg");
+  }
+}
+
+    .fi:before{
+        display: inline-block;
+  font-family: "Flaticon";
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  line-height: 1;
+  text-decoration: inherit;
+  text-rendering: optimizeLegibility;
+  text-transform: none;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+    }
+
+.flaticon-pdf-file:before { content: "\f100"; }
+.flaticon-doc:before { content: "\f101"; }
+.flaticon-support:before { content: "\f102"; }
+.flaticon-speech-bubble:before { content: "\f103"; }
+.flaticon-comment:before { content: "\f104"; }
+.flaticon-phone-call:before { content: "\f105"; }
+.flaticon-doctor:before { content: "\f106"; }
+.flaticon-stethoscope:before { content: "\f107"; }
+.flaticon-cardiogram:before { content: "\f108"; }
+.flaticon-heart:before { content: "\f109"; }
+.flaticon-care:before { content: "\f10a"; }
+.flaticon-support-1:before { content: "\f10b"; }
+.flaticon-heart-1:before { content: "\f10c"; }
+.flaticon-cardiogram-1:before { content: "\f10d"; }
+.flaticon-heart-rate:before { content: "\f10e"; }
+.flaticon-blood-pressure-gauge:before { content: "\f10f"; }
+.flaticon-cardiology:before { content: "\f110"; }
+.flaticon-surgery:before { content: "\f111"; }
+.flaticon-organ-transplantation:before { content: "\f112"; }
+.flaticon-work-from-home:before { content: "\f113"; }
+.flaticon-charity:before { content: "\f114"; }
+.flaticon-hospital:before { content: "\f115"; }
+.flaticon-ambulance:before { content: "\f116"; }
+.flaticon-hospital-bed:before { content: "\f117"; }
+.flaticon-customer-service:before { content: "\f118"; }
+.flaticon-medical-symbol:before { content: "\f119"; }
+.flaticon-online-appointment:before { content: "\f11a"; }
+.flaticon-checkup:before { content: "\f11b"; }
+.flaticon-heartbeat:before { content: "\f11c"; }
+.flaticon-vaccine:before { content: "\f11d"; }
+.flaticon-medicine:before { content: "\f11e"; }
+.flaticon-patient:before { content: "\f11f"; }
+.flaticon-health-report:before { content: "\f120"; }
+.flaticon-medical-history:before { content: "\f121"; }
+.flaticon-examination:before { content: "\f122"; }
+.flaticon-medical-insurance:before { content: "\f123"; }
+.flaticon-heart-rate-1:before { content: "\f124"; }
+.flaticon-document:before { content: "\f125"; }
+.flaticon-x-ray:before { content: "\f126"; }
+.flaticon-incubator:before { content: "\f127"; }
+.flaticon-heart-attack:before { content: "\f128"; }
+.flaticon-heart-rate-monitor:before { content: "\f129"; }
+.flaticon-blood-transfusion:before { content: "\f12a"; }
+.flaticon-information:before { content: "\f12b"; }
+.flaticon-medical-prescription:before { content: "\f12c"; }
+.flaticon-consultation:before { content: "\f12d"; }
+.flaticon-healthcare:before { content: "\f12e"; }
+.flaticon-medication:before { content: "\f12f"; }
+.flaticon-first-aid-kit:before { content: "\f130"; }
+.flaticon-diabetes:before { content: "\f131"; }
+.flaticon-blood:before { content: "\f132"; }
+.flaticon-thermometer:before { content: "\f133"; }
+.flaticon-oxygen-tank:before { content: "\f134"; }
+.flaticon-surgery-1:before { content: "\f135"; }
+.flaticon-medicine-1:before { content: "\f136"; }
+.flaticon-cardiogram-2:before { content: "\f137"; }
+.flaticon-nurse:before { content: "\f138"; }
+.flaticon-heart-2:before { content: "\f139"; }
+.flaticon-heart-rate-2:before { content: "\f13a"; }
+.flaticon-ekg-monitor:before { content: "\f13b"; }
+
+    $font-Flaticon-pdf-file: "\f100";
+    $font-Flaticon-doc: "\f101";
+    $font-Flaticon-support: "\f102";
+    $font-Flaticon-speech-bubble: "\f103";
+    $font-Flaticon-comment: "\f104";
+    $font-Flaticon-phone-call: "\f105";
+    $font-Flaticon-doctor: "\f106";
+    $font-Flaticon-stethoscope: "\f107";
+    $font-Flaticon-cardiogram: "\f108";
+    $font-Flaticon-heart: "\f109";
+    $font-Flaticon-care: "\f10a";
+    $font-Flaticon-support-1: "\f10b";
+    $font-Flaticon-heart-1: "\f10c";
+    $font-Flaticon-cardiogram-1: "\f10d";
+    $font-Flaticon-heart-rate: "\f10e";
+    $font-Flaticon-blood-pressure-gauge: "\f10f";
+    $font-Flaticon-cardiology: "\f110";
+    $font-Flaticon-surgery: "\f111";
+    $font-Flaticon-organ-transplantation: "\f112";
+    $font-Flaticon-work-from-home: "\f113";
+    $font-Flaticon-charity: "\f114";
+    $font-Flaticon-hospital: "\f115";
+    $font-Flaticon-ambulance: "\f116";
+    $font-Flaticon-hospital-bed: "\f117";
+    $font-Flaticon-customer-service: "\f118";
+    $font-Flaticon-medical-symbol: "\f119";
+    $font-Flaticon-online-appointment: "\f11a";
+    $font-Flaticon-checkup: "\f11b";
+    $font-Flaticon-heartbeat: "\f11c";
+    $font-Flaticon-vaccine: "\f11d";
+    $font-Flaticon-medicine: "\f11e";
+    $font-Flaticon-patient: "\f11f";
+    $font-Flaticon-health-report: "\f120";
+    $font-Flaticon-medical-history: "\f121";
+    $font-Flaticon-examination: "\f122";
+    $font-Flaticon-medical-insurance: "\f123";
+    $font-Flaticon-heart-rate-1: "\f124";
+    $font-Flaticon-document: "\f125";
+    $font-Flaticon-x-ray: "\f126";
+    $font-Flaticon-incubator: "\f127";
+    $font-Flaticon-heart-attack: "\f128";
+    $font-Flaticon-heart-rate-monitor: "\f129";
+    $font-Flaticon-blood-transfusion: "\f12a";
+    $font-Flaticon-information: "\f12b";
+    $font-Flaticon-medical-prescription: "\f12c";
+    $font-Flaticon-consultation: "\f12d";
+    $font-Flaticon-healthcare: "\f12e";
+    $font-Flaticon-medication: "\f12f";
+    $font-Flaticon-first-aid-kit: "\f130";
+    $font-Flaticon-diabetes: "\f131";
+    $font-Flaticon-blood: "\f132";
+    $font-Flaticon-thermometer: "\f133";
+    $font-Flaticon-oxygen-tank: "\f134";
+    $font-Flaticon-surgery-1: "\f135";
+    $font-Flaticon-medicine-1: "\f136";
+    $font-Flaticon-cardiogram-2: "\f137";
+    $font-Flaticon-nurse: "\f138";
+    $font-Flaticon-heart-2: "\f139";
+    $font-Flaticon-heart-rate-2: "\f13a";
+    $font-Flaticon-ekg-monitor: "\f13b";

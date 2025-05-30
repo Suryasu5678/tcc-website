@@ -1,0 +1,91 @@
+	/*
+  	Flaticon icon font: Flaticon
+  	Creation date: 28/08/2020 04:49
+  	*/
+
+@font-face {
+  font-family: "Flaticon";
+  src: url("../fonts/Flaticon.eot");
+  src: url("../fonts/Flaticon.eot?#iefix") format("embedded-opentype"),
+       url("../fonts/Flaticon.woff2") format("woff2"),
+       url("../fonts/Flaticon.woff") format("woff"),
+       url("../fonts/Flaticon.ttf") format("truetype"),
+       url("../fonts/Flaticon.svg#Flaticon") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  @font-face {
+    font-family: "Flaticon";
+    src: url("../fonts/Flaticon.svg#Flaticon") format("svg");
+  }
+}
+
+[class^="pbmit-cardioly-icon-"]:before, [class*=" pbmit-cardioly-icon-"]:before,
+[class^="pbmit-cardioly-icon-"]:after, [class*=" pbmit-cardioly-icon-"]:after {   
+  font-family: Flaticon;
+
+font-style: normal;
+}
+
+.pbmit-cardioly-icon-pdf-file:before { content: "\f100"; }
+.pbmit-cardioly-icon-doc:before { content: "\f101"; }
+.pbmit-cardioly-icon-support:before { content: "\f102"; }
+.pbmit-cardioly-icon-speech-bubble:before { content: "\f103"; }
+.pbmit-cardioly-icon-comment:before { content: "\f104"; }
+.pbmit-cardioly-icon-phone-call:before { content: "\f105"; }
+.pbmit-cardioly-icon-doctor:before { content: "\f106"; }
+.pbmit-cardioly-icon-stethoscope:before { content: "\f107"; }
+.pbmit-cardioly-icon-cardiogram:before { content: "\f108"; }
+.pbmit-cardioly-icon-heart:before { content: "\f109"; }
+.pbmit-cardioly-icon-care:before { content: "\f10a"; }
+.pbmit-cardioly-icon-support-1:before { content: "\f10b"; }
+.pbmit-cardioly-icon-heart-1:before { content: "\f10c"; }
+.pbmit-cardioly-icon-cardiogram-1:before { content: "\f10d"; }
+.pbmit-cardioly-icon-heart-rate:before { content: "\f10e"; }
+.pbmit-cardioly-icon-blood-pressure-gauge:before { content: "\f10f"; }
+.pbmit-cardioly-icon-cardiology:before { content: "\f110"; }
+.pbmit-cardioly-icon-surgery:before { content: "\f111"; }
+.pbmit-cardioly-icon-organ-transplantation:before { content: "\f112"; }
+.pbmit-cardioly-icon-work-from-home:before { content: "\f113"; }
+.pbmit-cardioly-icon-charity:before { content: "\f114"; }
+.pbmit-cardioly-icon-hospital:before { content: "\f115"; }
+.pbmit-cardioly-icon-ambulance:before { content: "\f116"; }
+.pbmit-cardioly-icon-hospital-bed:before { content: "\f117"; }
+.pbmit-cardioly-icon-customer-service:before { content: "\f118"; }
+.pbmit-cardioly-icon-medical-symbol:before { content: "\f119"; }
+.pbmit-cardioly-icon-online-appointment:before { content: "\f11a"; }
+.pbmit-cardioly-icon-checkup:before { content: "\f11b"; }
+.pbmit-cardioly-icon-heartbeat:before { content: "\f11c"; }
+.pbmit-cardioly-icon-vaccine:before { content: "\f11d"; }
+.pbmit-cardioly-icon-medicine:before { content: "\f11e"; }
+.pbmit-cardioly-icon-patient:before { content: "\f11f"; }
+.pbmit-cardioly-icon-health-report:before { content: "\f120"; }
+.pbmit-cardioly-icon-medical-history:before { content: "\f121"; }
+.pbmit-cardioly-icon-examination:before { content: "\f122"; }
+.pbmit-cardioly-icon-medical-insurance:before { content: "\f123"; }
+.pbmit-cardioly-icon-heart-rate-1:before { content: "\f124"; }
+.pbmit-cardioly-icon-document:before { content: "\f125"; }
+.pbmit-cardioly-icon-x-ray:before { content: "\f126"; }
+.pbmit-cardioly-icon-incubator:before { content: "\f127"; }
+.pbmit-cardioly-icon-heart-attack:before { content: "\f128"; }
+.pbmit-cardioly-icon-heart-rate-monitor:before { content: "\f129"; }
+.pbmit-cardioly-icon-blood-transfusion:before { content: "\f12a"; }
+.pbmit-cardioly-icon-information:before { content: "\f12b"; }
+.pbmit-cardioly-icon-medical-prescription:before { content: "\f12c"; }
+.pbmit-cardioly-icon-consultation:before { content: "\f12d"; }
+.pbmit-cardioly-icon-healthcare:before { content: "\f12e"; }
+.pbmit-cardioly-icon-medication:before { content: "\f12f"; }
+.pbmit-cardioly-icon-first-aid-kit:before { content: "\f130"; }
+.pbmit-cardioly-icon-diabetes:before { content: "\f131"; }
+.pbmit-cardioly-icon-blood:before { content: "\f132"; }
+.pbmit-cardioly-icon-thermometer:before { content: "\f133"; }
+.pbmit-cardioly-icon-oxygen-tank:before { content: "\f134"; }
+.pbmit-cardioly-icon-surgery-1:before { content: "\f135"; }
+.pbmit-cardioly-icon-medicine-1:before { content: "\f136"; }
+.pbmit-cardioly-icon-cardiogram-2:before { content: "\f137"; }
+.pbmit-cardioly-icon-nurse:before { content: "\f138"; }
+.pbmit-cardioly-icon-heart-2:before { content: "\f139"; }
+.pbmit-cardioly-icon-heart-rate-2:before { content: "\f13a"; }
+.pbmit-cardioly-icon-ekg-monitor:before { content: "\f13b"; }
