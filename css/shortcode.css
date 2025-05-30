@@ -2058,7 +2058,7 @@ ul.pbmit-timelist-list .pbmit-timelist-li-value {
 .pbmit-footer-text-inner{
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
 }
 .pbmit-footer-copyright-box ul li {
     display: inline-block;
