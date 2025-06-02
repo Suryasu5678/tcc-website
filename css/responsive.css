@@ -324,7 +324,7 @@ body {
 	}
 	/*=== Banner Slider ===*/
 	.pbmit-slider-one .pbmit-slider-item{
-		height: 700px;
+		height: 100vh;
 	}
 	.pbmit-slider-one .pbmit-title{
 		font-size: 65px;

@@ -268,7 +268,7 @@ body {
     border-radius: 50%;
 }
 .pbmit-ihbox-style-7 .pbmit-ihbox-icon{
-    border-bottom: 10px solid #fcd6dc;
+    border-bottom: 10px solid #d9d6fc;
     border-radius: 50%;
     width: 270px;
     margin:0 auto;
@@ -285,7 +285,7 @@ body {
     margin-bottom: 5px;
 }
 .pbmit-ihbox-style-7:hover .pbmit-ihbox-icon{
-    border-bottom-color: var(--pbmit-global-color);
+    border-bottom-color: var(     --pbmit-secondary-color);
 }
 /** Style 8 **/
 .pbmit-ihbox-style-8 {    
