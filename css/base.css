@@ -12,8 +12,7 @@ INDEX:
     09 - Scroll To Top 
     10 - Search Box
 ******************************/
-@import url('https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet');
-@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet');
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
  :root {
      --pbmit-global-color: #EB2C30;
      --pbmit-secondary-color: #192136;
@@ -25,15 +24,15 @@ INDEX:
      --pbmit-global-color-rgb: rgb(238, 52, 78);
      --pbmit-secondary-color-rgb: rgb(25, 33, 54);
      --pbmit-responsive-breakpoint: 1200px;
-     --pbmit-body-typography-font-family:'Mulish', sans-serif;
+     --pbmit-body-typography-font-family:'Montserrat', sans-serif;
      --pbmit-body-typography-variant: regular;
      --pbmit-body-typography-font-size: 16px;
      --pbmit-body-typography-line-height: 1.7;
      --pbmit-body-typography-color: #828690;
-     --pbmit-heading-typography-font-family: 'Nunito', sans-serif;
+     --pbmit-heading-typography-font-family: 'Montserrat', sans-serif;
      --pbmit-heading-color: #273353;
      --pbmit-heading-font-variant: 800;
-     --pbmit-btn-typography-font-family: 'Mulish', sans-serif;
+     --pbmit-btn-typography-font-family: 'Montserrat', sans-serif;
      --pbmit-btn-typography-variant: 700;
      --pbmit-btn-typography-font-size: 13px;
      --pbmit-btn-typography-line-height: 13px;
