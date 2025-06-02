@@ -3274,7 +3274,7 @@ body{
 .pbmit-slider-three .pbmit-slider-item{
 	display: flex;
 	align-items: center;
-	height: 900px;
+	height: 100vh;
 }
 .pbmit-slider-three .pbmit-sub-title{
 	font-size: 14px;
