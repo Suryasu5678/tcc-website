@@ -151,7 +151,10 @@ body {
 		padding: 60px 0px 244px 0px;
 	}
 	/*=== Homepage 03 ===*/
+	
+	
 	.header-style-3 .site-header-menu-inner{
+		
 		border-radius: 0;
 	}
 	.header-style-3 .site-header-menu-inner .d-flex.align-items-center.justify-content-between {
@@ -185,9 +188,7 @@ body {
 		padding-right: calc(var(--bs-gutter-x) * .8);
 		padding-left: calc(var(--bs-gutter-x) * .8);
 	} 
-	.sticky-header{
-		position: relative  !important;
-	}
+	
     /** Main menu resoposive **/
     .navbar-toggler { 
 		border: none; 
