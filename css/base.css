@@ -617,6 +617,18 @@ INDEX:
      transform: translateY(0px);
      z-index: 999;
 }
+.arrow {
+    display: inline-block;
+    transition: transform 0.5s ease;
+  }
+  
+  /* Rotate arrow on hover of the arrow itself */
+  .arrow:hover {
+    transform: rotate(180deg);
+  }
+  .dropdown:hover .arrow {
+    transform: rotate(180deg);
+  }
  .main-menu .navigation > li > ul li a{
      border-bottom:1px solid rgba(255, 255, 255, 0.20);
 }

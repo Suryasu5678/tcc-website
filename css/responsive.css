@@ -767,6 +767,10 @@ body {
 }
 
 @media(max-width:767px) {
+	.pbmit-service-style-1 .pbmit-service-title {
+		
+		height: auto;
+	}
 	/** Section Padding **/ 
 	.section-lg{ 
 		padding-top: 60px; 
