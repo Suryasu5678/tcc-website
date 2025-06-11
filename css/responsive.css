@@ -570,7 +570,9 @@ body {
 	.pbmit-header-style-2 .pbmit-title-bar-content, 
 	.pbmit-header-style-2 .pbmit-title-bar-wrapper{
 		min-height: 350px;
+
 	}	
+	
 	/*=== Banner Slider ===*/
 	.pbmit-slider-one .pbmit-slider-item{
 		height: 500px;
@@ -767,6 +769,15 @@ body {
 }
 
 @media(max-width:767px) {
+	.pbmit-tbar-title{
+		text-align: center;
+		
+	}
+	.pbmit-title-bar-content .pbmit-tbar-title {color: black;}
+	.pbmit-title-bar-wrapper {
+		background-image: url(/images/About\ us\ \(2\).png);
+
+	}
 	.pbmit-service-style-1 .pbmit-service-title {
 		
 		height: auto;

@@ -1958,10 +1958,7 @@ div#clock span:first-child {
     letter-spacing: 0px;
     font-style: normal;
 }
-.site-footer .pbmit-float-menu.widget ul > li {
-    float: left;
-    width: 50%;
-}
+
 .site-footer .pbmit-float-menu ul li a{
     position: relative;
     padding-left: 18px;
@@ -2090,7 +2087,7 @@ ul.pbmit-timelist-list .pbmit-timelist-li-value {
     display: flex;
     align-items: center;
     padding: 64px 0 0 0;
-    min-height:550px;
+    min-height:500px;
 }
 .pbmit-title-bar-content .pbmit-tbar-inner {
     max-width: none;
@@ -2098,6 +2095,10 @@ ul.pbmit-timelist-list .pbmit-timelist-li-value {
 }
 .pbmit-title-bar-content-inner {
     width: 100%;
+    text-align: left;
+}
+.pbmit-tbar-title{
+    color: #fff;
     text-align: left;
 }
 .pbmit-title-bar-content .pbmit-tbar-title {
@@ -2110,6 +2111,7 @@ ul.pbmit-timelist-list .pbmit-timelist-li-value {
     font-style: normal;
     color: #fff;
 }
+
 .pbmit-title-bar-wrapper .pbmit-title-bar-content .pbmit-breadcrumb-inner {
     display: inline-block;
     border-radius: 5px;
