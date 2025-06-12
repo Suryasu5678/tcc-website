@@ -2120,23 +2120,30 @@ ul.pbmit-timelist-list .pbmit-timelist-li-value {
     background-position: center center;
     background-size: cover;
     background-attachment: scroll;
+    
 }
 
 .pbmit-title-bar-content {
     position: relative;
     z-index: 1;
     display: flex;
-    align-items: center;
+    align-items: end;
     padding: 64px 0 0 0;
     min-height:500px;
+    
 }
 .pbmit-title-bar-content .pbmit-tbar-inner {
     max-width: none;
-    padding: 0;
+    
 }
 .pbmit-title-bar-content-inner {
     width: 100%;
     text-align: left;
+    z-index: 1; 
+    position: relative;
+    padding-bottom: 20px;
+   
+    
 }
 .pbmit-tbar-title{
     color: #fff;
