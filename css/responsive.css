@@ -769,13 +769,25 @@ body {
 }
 
 @media(max-width:767px) {
-	.pbmit-tbar-title{
-		text-align: center;
-		
-	}
-	.pbmit-title-bar-content .pbmit-tbar-title {color: black;}
+	
 	.pbmit-title-bar-wrapper {
 		background-image: url(/images/About\ us\ \(2\).png);
+
+	}
+	.pbmit-title-bar-wrapper-cardiology {
+		background-image: url(/images/Cardilology.png);
+
+	}
+	.pbmit-title-bar-wrapper-vascular {
+		background-image: url(/images/Cardilology.png);
+
+	}
+	.pbmit-title-bar-wrapper-executive {
+		background-image: url(/images/Cardilology.png);
+
+	}
+	.pbmit-title-bar-wrapper-conceirge {
+		background-image: url(/images/Cardilology.png);
 
 	}
 	.pbmit-service-style-1 .pbmit-service-title {

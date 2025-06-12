@@ -2081,6 +2081,47 @@ ul.pbmit-timelist-list .pbmit-timelist-li-value {
     background-size: cover;
     background-attachment: scroll;
 }
+.pbmit-title-bar-wrapper-cardiology {
+    background-color: #f6f6f6;
+    background-image: url(/images/Cardilologys.png);
+        background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    background-attachment: scroll;
+}
+.pbmit-title-bar-wrapper-vascular {
+    background-color: #f6f6f6;
+    background-image: url(/images/Vascular\ Medicine.png);
+        background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    background-attachment: scroll;
+}
+.pbmit-title-bar-wrapper-executive {
+    background-color: #f6f6f6;
+    background-image: url(/images/Executive\ Health\ Physical.png);
+        background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    background-attachment: scroll;
+}
+.pbmit-title-bar-wrapper-conceirge {
+    background-color: #f6f6f6;
+    background-image: url(/images/Concierge\ program.png);
+        background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    background-attachment: scroll;
+}
+.pbmit-title-bar-wrapper-contact{
+    background-color: #f6f6f6;
+    background-image: url(/images/Contact\ us.png);
+        background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    background-attachment: scroll;
+}
+
 .pbmit-title-bar-content {
     position: relative;
     z-index: 1;
