@@ -32,8 +32,17 @@ body {
 /*----------------------------------------*/
 /*  00 - Section Title
 /*----------------------------------------*/
+.pbmit-service-style-1:hover .pbmit-service-icon-wrapper img {
+    content: url("/images/icon/Frame 4.svg");
+  }
+  .service-card-executive:hover .pbmit-service-icon-wrapper img {
+    content: url("/images/icon/Executive-1.svg");
+  }
+  .service-card-Concierge:hover .pbmit-service-icon-wrapper img {
+    content: url("/images/icon/Conciegre-1\ \(1\).svg");
+  }
     .pbmit-heading-subheading {
-        position: relative;
+        position: relative; 
         z-index: 1;
         margin-bottom: 45px;
     }
