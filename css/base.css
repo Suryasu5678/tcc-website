@@ -772,6 +772,10 @@ INDEX:
      position: relative;
      overflow: hidden;
 }
+.swiper-pagination {
+    position: relative;
+    z-index: 1; 
+  }
  .swiper-pagination-bullet {
     border: 0;
     background-color: #5e6473;
