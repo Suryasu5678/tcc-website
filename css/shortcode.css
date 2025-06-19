@@ -1868,7 +1868,7 @@ div#clock span:first-child {
 }
 .pbmit-footer-big-area .container {
     position: relative;
-    z-index: 2;
+    z-index: 1;
     padding-top: 50px;
     padding-bottom: 50px;
 }
