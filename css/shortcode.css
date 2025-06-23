@@ -2131,6 +2131,15 @@ ul.pbmit-timelist-list .pbmit-timelist-li-value {
     background-attachment: scroll;
     
 }
+.pbmit-title-bar-wrapper-appointment{
+    background-color: #f6f6f6;
+    background-image: url(/images/Contact\ us.png);
+        background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    background-attachment: scroll;
+    
+}
 
 .pbmit-title-bar-content {
     position: relative;
