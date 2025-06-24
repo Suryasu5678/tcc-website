@@ -375,3 +375,55 @@
    return false;
  
    });
+$(document).ready(function () {
+  if ($.isFunction($.fn.validate)) {
+    $("#appointment-form").validate();
+  }
+
+  $("#appointment-form").submit(function (e) {
+    e.preventDefault();
+
+    // ✅ Custom validation for checkbox group: days[]
+    const checked = $("input[name='days[]']:checked").length;
+    if (checked === 0) {
+      $("#days-error").show();
+      $('html, body').animate({
+        scrollTop: $("#days-error").offset().top - 100
+      }, 300);
+      return false;
+    } else {
+      $("#days-error").hide();
+    }
+
+    // ✅ Add hidden input for AJAX flag (only once)
+    if ($("#appointment-form .doing-via-ajax").length === 0) {
+      $("#appointment-form").prepend(
+        '<input class="doing-via-ajax" type="hidden" name="doing-via-ajax" value="yes" />'
+      );
+    }
+
+    // ✅ Validate other fields
+    if ($("#appointment-form").valid()) {
+      const $button = $("#appointment-form button[type='submit']");
+      const originalText = $button.text();
+      $button.prop("disabled", true).text("Sending...");
+
+      $.ajax({
+        type: "POST",
+        url: "bookappointment.php",
+        data: $("#appointment-form").serialize(),
+        success: function (response) {
+          alert("Your appointment request was submitted successfully!");
+          $("#appointment-form")[0].reset();
+          $button.prop("disabled", false).text(originalText);
+          $("#days-error").hide(); // hide error if previously shown
+        },
+        error: function () {
+          alert("An error occurred. Please try again later.");
+          $button.prop("disabled", false).text(originalText);
+        }
+      });
+    }
+  });
+});
+  
