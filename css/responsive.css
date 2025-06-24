@@ -769,7 +769,10 @@ body {
 }
 
 @media(max-width:767px) {
-	
+	.arrow{
+		display: none;
+	}
+
 	.pbmit-title-bar-wrapper {
 		background-image: url(/images/About\ us\ \(2\).png);
 
