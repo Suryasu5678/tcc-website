@@ -769,6 +769,10 @@ body {
 }
 
 @media(max-width:767px) {
+	.footer-padding{
+		padding-left: 0rem;
+		 padding-right: 0rem;
+	}
 	.arrow{
 		display: none;
 	}
