@@ -35,6 +35,9 @@ body {
 .pbmit-service-style-1:hover .pbmit-service-icon-wrapper img {
     content: url("/images/icon/Frame 4.svg");
   }
+  .service-card-vascular:hover .pbmit-service-icon-wrapper img {
+    content: url("/images/icon/Vasular_red\ \(2\).svg");
+  }
   .service-card-executive:hover .pbmit-service-icon-wrapper img {
     content: url("/images/icon/Executive-1.svg");
   }
@@ -2096,7 +2099,7 @@ ul.pbmit-timelist-list .pbmit-timelist-li-value {
 }
 .pbmit-title-bar-wrapper-cardiology {
     background-color: #f6f6f6;
-    background-image: url(/images/Cardilologys.png);
+    background-image: url(/images/cardilology_banner.webp);
         background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
@@ -2104,7 +2107,7 @@ ul.pbmit-timelist-list .pbmit-timelist-li-value {
 }
 .pbmit-title-bar-wrapper-vascular {
     background-color: #f6f6f6;
-    background-image: url(/images/Vascular\ Medicine.png);
+    background-image: url(/images/Vascular_banner.webp);
         background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
@@ -2112,7 +2115,7 @@ ul.pbmit-timelist-list .pbmit-timelist-li-value {
 }
 .pbmit-title-bar-wrapper-executive {
     background-color: #f6f6f6;
-    background-image: url(/images/Executive\ Health\ Physical.png);
+    background-image: url(/images/executive_health_physical\ \(1\).webp);
         background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
@@ -2137,7 +2140,7 @@ ul.pbmit-timelist-list .pbmit-timelist-li-value {
 }
 .pbmit-title-bar-wrapper-appointment{
     background-color: #f6f6f6;
-    background-image: url(/images/Contact\ us.png);
+    background-image: url(/images/book_appointment_Banner.webp); 
         background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
