@@ -375,6 +375,8 @@
    return false;
  
    });
+
+  //  appointment form
 $(document).ready(function () {
   if ($.isFunction($.fn.validate)) {
     $("#appointment-form").validate();
