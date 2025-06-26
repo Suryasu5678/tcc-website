@@ -1297,17 +1297,7 @@ div#clock span:first-child {
     height: 80px;
     width: 80px;
 }
-.pbmit-testimonial-style-1:after {
-    position: absolute;
-    content: '“';
-    font-size: 220px;
-    font-family: Nunito,sans-serif;
-    line-height: 200px;
-    top: 45px;
-    color: #eff0f1;
-    right: 50px;
-    font-weight: 700;
-}
+
 .pbmit-testimonial-style-1 .pbminfotech-box-author .pbminfotech-testimonial-detail{
     color: #ee344e;
 }
