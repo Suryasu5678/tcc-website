@@ -9,11 +9,11 @@
 /* Make sure you done Gmail Account (or your server email account details)    */
 /* changes as described here: https://mailtrap.io/blog/phpmailer-gmail/       */
 
-$from_email				= "YOUREMAIL@gmail.com";
-$from_email_password	= "emailPassword";
-$from_email_name		= "Your Name";
-$to_email				= "RECEIVER_EMAIL@gmail.com";
-$to_email_name			= "Receiver Name";
+$from_email				= "psajithkumar97@gmail.com";
+$from_email_password	= "wkus hlnt cocm xgvd";
+$from_email_name		= "Ajith kumar";
+$to_email				= "ajithkumar.ps@spritle.com";
+$to_email_name			= "Ajithkumar PS";
 $email_subject			= 'Contact Form Data';
 
 /* ========================================================================== */
@@ -199,6 +199,4 @@ if( !empty($_POST) ){
 	die('<p>Please go to Contact page and fill the contact form.</p>');
 
 }
-
-
 
