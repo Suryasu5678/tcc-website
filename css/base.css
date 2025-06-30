@@ -42,8 +42,8 @@ INDEX:
 /* 00 - General 
 /*----------------------------------------*/
  html {
-     font-family: sans-serif;
-     -webkit-text-size-adjust: 100%;
+    font-family:var(--pbmit-body-typography-font-family);
+    -webkit-text-size-adjust: 100%;
      -ms-text-size-adjust: 100%;
 }
  *{

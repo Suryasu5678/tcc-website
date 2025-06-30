@@ -54,7 +54,7 @@ body {
         position: relative;
         display: inline-block;
         padding: 0 10px;
-        font-family: Mulish,sans-serif;
+        font-family:var(--pbmit-body-typography-font-family);
         font-weight: 700;
         font-size: 13px;
         line-height: 20px;
@@ -235,6 +235,8 @@ body {
 }
 .pbmit-ihbox-style-5 .pbmit-ihbox-contents{
     margin-left: 25px;
+    margin-top: 10px;
+
 }
 /** Style 6 **/ 
 .pbmit-ihbox-style-6 .pbmit-ihbox-icon .pbmit-ihbox-icon-type-image img{
@@ -252,7 +254,7 @@ body {
     margin-bottom: 0;
     font-weight: 800 !important;
 	font-style: normal;
-	font-family: Mulish,sans-serif;
+    font-family:var(--pbmit-body-typography-font-family);
 }
 .pbmit-ihbox-style-6 .pbmit-heading-desc{
     font-size: 12px;
@@ -538,11 +540,11 @@ div#clock span:first-child {
     text-align: left;
 }
 .pbminfotech-ele-fid-style-3 .pbmit-sbox-icon-wrapper{
-    font-size: 60px;
+    font-size: 55px;
     color: #ee344e;
 }
 .pbminfotech-ele-fid-style-3 .pbmit-fid-inner{
-    font-size: 50px;
+    font-size: 40px;
     color: #fff;
     margin-top: 5px;
     margin-bottom: 10px;
@@ -1282,7 +1284,7 @@ div#clock span:first-child {
     border-top: 1px solid rgb(0 0 0 / 0.1);
 }
 .pbmit-testimonial-style-1 blockquote{
-    font-family: "Mulish", Tahoma, Geneva, sans-serif;
+    font-family:var(--pbmit-body-typography-font-family);
     font-size: 17px;
     line-height: 30px;
     padding: 0;
@@ -1435,14 +1437,14 @@ div#clock span:first-child {
     display: none;
 }
 .pbmit-client-style-1 .pbmit-client-with-hover-img .pbmit-client-hover-img  {
-    transform: translateY(-100%);
+    transform: translateX(-100%);
 }
 .pbmit-client-style-1 .pbmit-client-with-hover-img:hover .pbmit-client-hover-img  { 
     visibility: visible;
     transform: translateY(0%);
 }
 .pbmit-client-style-1 .pbmit-client-with-hover-img:hover .pbmit-featured-wrapper{
-    transform: translateY(100%);
+    transform: translateX(100%);
 } 
 
 /*----------------------------------------*/
@@ -2022,7 +2024,7 @@ div#clock span:first-child {
     position: relative;
 }
 .pbmit-footer-newsletter button {
-    font-family: Mulish,sans-serif;
+    font-family:var(--pbmit-body-typography-font-family);
     font-weight: 700;
     font-size: 13px;
     line-height: 13px;
@@ -2040,10 +2042,7 @@ div#clock span:first-child {
 .pbmit-footer-newsletter button:hover{
     background-color: var(--pbmit-global-color);
 } 
-ul.pbmit-timelist-list li {
-    list-style: none;
-    padding: 10px 0px;
-}
+
 ul.pbmit-timelist-list .pbmit-timelist-li-value {
     float: right;
     font-weight: 700;
@@ -2257,7 +2256,7 @@ ul.pbmit-timelist-list .pbmit-timelist-li-value {
     padding-top: 10px;
 }
 .progressbar .progress-label{
-    font-family: Mulish,sans-serif;
+    font-family:var(--pbmit-body-typography-font-family);
     font-weight: var(--pbmit-heading-font-variant);
     color: var(--pbmit-white-color);
     display: inline-block;
@@ -2737,7 +2736,7 @@ body .nav-tabs{
     padding: 0;
     padding-bottom: calc(5px/2);
     background: transparent;
-    font-family: 'Mulish';
+    font-family:var(--pbmit-body-typography-font-family);
     font-size: 16px;
     font-weight: 600;
     display: flex;
@@ -3173,7 +3172,7 @@ body{
         text-align: center;
         border-radius: 6px;
         display: block;
-        font-family: Mulish,sans-serif;
+        font-family:var(--pbmit-body-typography-font-family);
         font-weight: 700;
         font-size: 13px;
         line-height: 13px;

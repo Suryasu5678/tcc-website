@@ -71,8 +71,7 @@
 }
 .about-section-home1 .about-img-section .about-img-one img {
   border-radius: 6px 6px 6px 6px;
-  height: 45vh;
-  object-fit: fill;
+  object-fit: contain;
 }
 .about-section-home1 .about-img-section .about-img-second {
   margin: 0px 0px 0px 20px;
