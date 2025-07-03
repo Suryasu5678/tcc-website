@@ -10,6 +10,7 @@
       name="viewport"
       content="width=device-width, initial-scale=1, shrink-to-fit=no"
     />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link
       rel="shortcut icon"
       type="image/x-icon"
@@ -209,7 +210,7 @@
     </span> 
     app on your mobile device.
   </p>
-  <p style="text-align: center; margin-bottom: 4;"> (or)</p>
+  <p style="text-align:center; margin-bottom: 0 !important ;"> (or)</p>
 
   <!-- Bullet 2 -->
   <p class="mb-2">
@@ -252,122 +253,128 @@
             your appointment.
           </p>
           
-          <form id="appointment-form" method="post" action="bookappointment.php">
-            <!-- Top Section -->
-            <div class="mb-3">
-              <input type="text" name="name" class="form-control text-dark" placeholder="Name*" required>
-            </div>
-            <div class="mb-3">
-              <input type="email" name="email" class="form-control text-dark" placeholder="Email*" required>
-            </div>
-            <div class="mb-3">
-              <input type="text" name="phone" class="form-control text-dark" placeholder="Phone*" required>
-            </div>
-            <div class="mb-3">
-              <input type="text" name="insurance" class="form-control text-dark" placeholder="Insurance Plan*" required>
-            </div>
-          
-       <!-- Mid Section -->
+            <form id="appointment-form" method="post" action="bookappointment.php">
+              <!-- Top Section -->
+              <div class="mb-3">
+                <input type="text" name="name" class="form-control text-dark" placeholder="Name*" required>
+              </div>
+              <div class="mb-3">
+                <input type="email" name="email" class="form-control text-dark" placeholder="Email*" required>
+              </div>
+              <div class="mb-3"> 
+                <!-- <input type="text" name="phone" class="form-control text-dark" placeholder="Phone*" required> -->
+                <input type="tel" name="phone" class="form-control text-dark"
+                placeholder="Phone* (e.g. 123-456-7890)" 
+                pattern="^(\+1\s?)?(\(?\d{3}\)?)[-\s.]?\d{3}[-\s.]?\d{4}$"
+                title="Enter a valid US phone number"
+                required />
+              </div> 
+            
+              <div class="mb-3">
+                <input type="text" name="insurance" class="form-control text-dark" placeholder="Insurance Plan*" required>
+              </div>
+            
+        <!-- Mid Section -->
 
 
-            <!-- Bottom Section -->
-            <div class="mb-3">
-              <input type="text" name="subject" class="form-control text-dark" placeholder="Subject*" required>
-            </div>
-            <div class="mb-3">
-              <input type="text" name="primary-care" class="form-control text-dark" placeholder="Primary Care Provider*" required>
-            </div>
-            <div class="mb-3">
-              <textarea name="message" rows="4" class="form-control text-dark" placeholder="Message*" style=" height: 100px; 
-              width: 100%; 
-              max-width: 500px;  
-              padding-top: 20px;" required></textarea>
-            </div>
+              <!-- Bottom Section -->
+              <div class="mb-3">
+                <input type="text" name="subject" class="form-control text-dark" placeholder="Subject*" required>
+              </div>
+              <div class="mb-3">
+                <input type="text" name="primary-care" class="form-control text-dark" placeholder="Primary Care Provider*" required>
+              </div>
+              <div class="mb-3">
+                <textarea name="message" rows="4" class="form-control text-dark" placeholder="Message*" style=" height: 100px; 
+                width: 100%; 
+                max-width: 500px;  
+                padding-top: 20px;" required></textarea>
+              </div>
 
 
-            <hr class="border-light my-4" />
-            <!-- <h6 class="fw-semibold text-white mt-4 mb-3">Select preferred day  / time:</h6> -->
-            <h4 class="fw-bold mb-4 mb-3" style="color: #fff;">Select preferred day  / time:</h4>
-            <br/>
-<div class="row g-4">
+              <hr class="border-light my-4" />
+              <!-- <h6 class="fw-semibold text-white mt-4 mb-3">Select preferred day  / time:</h6> -->
+              <h4 class="fw-bold mb-4 mb-3" style="color: #fff;">Select preferred day  / time:</h4>
+              <br/>
+  <div class="row g-4">
 
-  <!-- Monday -->
-  <div class="col-12 col-lg-6">
-    <div class="text-white fw-bold mb-2">Monday</div>
-    <div class="d-flex flex-wrap gap-3">
-      <div class="form-check">
-        <input type="checkbox" class="form-check-input" id="mon-11" name="slots[]" value="Monday-11AM">
-        <label class="form-check-label text-white" for="mon-11">11:00AM</label>
-      </div>
-      <div class="form-check">
-        <input type="checkbox" class="form-check-input" id="mon-12" name="slots[]" value="Monday-12Noon">
-        <label class="form-check-label text-white" for="mon-12">12:00Noon</label>
-      </div>
-    </div>
-  </div>
-
-  <!-- Tuesday (border only for lg+) -->
-  <div class="col-12 col-lg-6 border-start-lg border-light ps-lg-4">
-    <div class="text-white fw-bold mb-2">Tuesday</div>
-    <div class="d-flex flex-wrap gap-3">
-      <div class="form-check">
-        <input type="checkbox" class="form-check-input" id="tue-11" name="slots[]" value="Tuesday-11AM">
-        <label class="form-check-label text-white" for="tue-11">11:00AM</label>
-      </div>
-      <div class="form-check">
-        <input type="checkbox" class="form-check-input" id="tue-12" name="slots[]" value="Tuesday-12Noon">
-        <label class="form-check-label text-white" for="tue-12">12:00Noon</label>
+    <!-- Monday -->
+    <div class="col-12 col-lg-6">
+      <div class="text-white fw-bold mb-2">Monday</div>
+      <div class="d-flex flex-wrap gap-3">
+        <div class="form-check">
+          <input type="checkbox" class="form-check-input" id="mon-11" name="slots[]" value="Monday-11AM">
+          <label class="form-check-label text-white" for="mon-11">11:00AM</label>
+        </div>
+        <div class="form-check">
+          <input type="checkbox" class="form-check-input" id="mon-12" name="slots[]" value="Monday-12Noon">
+          <label class="form-check-label text-white" for="mon-12">12:00Noon</label>
+        </div>
       </div>
     </div>
-  </div>
-  <!-- <hr class="border-light my-4" /> -->
-</div>
 
-
-<div class="my-0"></div>
-
-<!-- Row: Wednesday + Thursday -->
-<div class="row g-4">
-
-  <!-- Wednesday -->
-  <div class="col-12 col-lg-6">
-    <div class="text-white fw-bold mb-2">Wednesday</div>
-    <div class="d-flex flex-wrap gap-3">
-      <div class="form-check">
-        <input type="checkbox" class="form-check-input" id="wed-11" name="slots[]" value="Wednesday-11AM">
-        <label class="form-check-label text-white" for="wed-11">11:00AM</label>
-      </div>
-      <div class="form-check">
-        <input type="checkbox" class="form-check-input" id="wed-12" name="slots[]" value="Wednesday-12Noon">
-        <label class="form-check-label text-white" for="wed-12">12:00Noon</label>
+    <!-- Tuesday (border only for lg+) -->
+    <div class="col-12 col-lg-6 border-start-lg border-light ps-lg-4">
+      <div class="text-white fw-bold mb-2">Tuesday</div>
+      <div class="d-flex flex-wrap gap-3">
+        <div class="form-check">
+          <input type="checkbox" class="form-check-input" id="tue-11" name="slots[]" value="Tuesday-11AM">
+          <label class="form-check-label text-white" for="tue-11">11:00AM</label>
+        </div>
+        <div class="form-check">
+          <input type="checkbox" class="form-check-input" id="tue-12" name="slots[]" value="Tuesday-12Noon">
+          <label class="form-check-label text-white" for="tue-12">12:00Noon</label>
+        </div>
       </div>
     </div>
+    <!-- <hr class="border-light my-4" /> -->
   </div>
 
-  <!-- Thursday -->
-  <div class="col-12 col-lg-6 border-start-lg border-light ps-lg-4">
-    <div class="text-white fw-bold mb-2">Thursday</div>
-    <div class="d-flex flex-wrap gap-3">
-      <div class="form-check">
-        <input type="checkbox" class="form-check-input" id="thu-11" name="slots[]" value="Thursday-11AM">
-        <label class="form-check-label text-white" for="thu-11">11:00AM</label>
-      </div>
-      <div class="form-check">
-        <input type="checkbox" class="form-check-input" id="thu-12" name="slots[]" value="Thursday-12Noon">
-        <label class="form-check-label text-white" for="thu-12">12:00Noon</label>
+
+  <div class="my-0"></div>
+
+  <!-- Row: Wednesday + Thursday -->
+  <div class="row g-4">
+
+    <!-- Wednesday -->
+    <div class="col-12 col-lg-6">
+      <div class="text-white fw-bold mb-2">Wednesday</div>
+      <div class="d-flex flex-wrap gap-3">
+        <div class="form-check">
+          <input type="checkbox" class="form-check-input" id="wed-11" name="slots[]" value="Wednesday-11AM">
+          <label class="form-check-label text-white" for="wed-11">11:00AM</label>
+        </div>
+        <div class="form-check">
+          <input type="checkbox" class="form-check-input" id="wed-12" name="slots[]" value="Wednesday-12Noon">
+          <label class="form-check-label text-white" for="wed-12">12:00Noon</label>
+        </div>
       </div>
     </div>
+
+    <!-- Thursday -->
+    <div class="col-12 col-lg-6 border-start-lg border-light ps-lg-4">
+      <div class="text-white fw-bold mb-2">Thursday</div>
+      <div class="d-flex flex-wrap gap-3">
+        <div class="form-check">
+          <input type="checkbox" class="form-check-input" id="thu-11" name="slots[]" value="Thursday-11AM">
+          <label class="form-check-label text-white" for="thu-11">11:00AM</label>
+        </div>
+        <div class="form-check">
+          <input type="checkbox" class="form-check-input" id="thu-12" name="slots[]" value="Thursday-12Noon">
+          <label class="form-check-label text-white" for="thu-12">12:00Noon</label>
+        </div>
+      </div>
+    </div>
+
   </div>
+  <br/>
+              <button type="submit" class="btn w-100 text-white" style="background-color: var(--pbmit-global-color);">
+                Send Request
+              </button>
 
-</div>
-<br/>
-            <button type="submit" class="btn w-100 text-white" style="background-color: var(--pbmit-global-color);">
-              Send Request
-            </button>
-
-            <br/>
-            <br/>
-          </form>
+              <br/>
+              <br/>
+            </form>
           
         </div>
         </div>
@@ -376,149 +383,82 @@
   </div>
   
              <!-- footer -->
-         <footer class="footer site-footer" >
-          <div class="footer-wrap pbmit-footer-big-area">
-             <div class="container">
-                <div class="row align-items-center ">
-                   <div class="col-md-9">
-                      <div class="d-md-flex align-items-center">
-                         <div class="pbmit-footer-logo">
-                            
-                            <img class="pbmit-main-logo" src="images/logo/Svg (1).svg" alt="Cardioly Demo1">
-                         </div>
-                         <div class="d-md-flex">
-                            <div class="pbmit-footer-boxes col-md-6">
-                               <div class="pbmit-footer-contact-info">
-                                  <div class="pbmit-footer-contact-info-inner d-flex align-items-center">
-                                     <i class="pbmit-base-icon-location"></i>
-                                     <div class="pbmit-footer-contact-info-wrap">
-                                        <span class="pbmit-label fw-semibold">1421 Wayzata Blvd Suite 303<br>
-                                           Wayzata, MN 55391</span> 
-                                     </div>
-                                  </div>
-                               </div>
-                            </div>
-                            <div class="pbmit-footer-boxes col-md-6">
-                               <div class="pbmit-footer-contact-info">
-                                  <div class="pbmit-footer-contact-info-inner d-flex align-items-center">
-                                     <i class="pbmit-base-icon-phone"></i>
-                                     <div class="pbmit-footer-contact-info-wrap">
-                                        <a class="pbmit-label fw-semibold cursor-pointer" href="tel:19522326132" >    1-952-232-6132</a> 
-                                     </div>
-                                  </div>
-                               </div>
-                            </div>
-                         </div>
-                      </div>
-                   </div>
-                   <div class="col-md-3 pbmit-footer-social-icon">
-                      <ul class="pbmit-social-links">
-                         <li class="pbmit-social-li pbmit-social-facebook">
-                            <a href="#" target="_blank">
-                               <span><i class="pbmit-base-icon-facebook-squared"></i></span>
-                            </a>
-                         </li>
-                         <li class="pbmit-social-li pbmit-social-twitter">
-                            <a href="#" target="_blank">
-                               <span><i class="pbmit-base-icon-twitter"></i></span>
-                            </a>
-                         </li>
-                         <li class="pbmit-social-li pbmit-social-linkedin">
-                            <a href="#" target="_blank">
-                               <span><i class="pbmit-base-icon-linkedin-squared"></i></span>
-                            </a>
-                         </li>
-                         <li class="pbmit-social-li pbmit-social-youtube">
-                            <a href="#" target="_blank">
-                               <span><i class="pbmit-base-icon-youtube-play"></i></span>
-                            </a>
-                         </li>
-                      </ul>
-                   </div>
+             <footer class="bg-white py-5" style="font-family: var(--pbmit-body-typography-font-family); color: var(--pbmit-heading-color);">
+              <div class="container">
+                <div class="row gy-4">
+                  
+                  <!-- Logo & Tagline -->
+                  <div class="col-md-3">
+                    <img src="images/logo/Svg (1).svg" alt="Twin Cities Cardiology" style="max-height: 50px;" class="mb-2">
+                    <p class="fst-italic small" style="color: var(--pbmit-body-typography-color);">
+                      "Your heart, our priority. Compassionate care with precision."
+                    </p>
+                  </div>
+            
+                  <!-- Services -->
+                  <div class="col-md-3">
+                    <h6 class="fw-bold mb-3">Services</h6>
+                    <ul class="list-unstyled small">
+                      <li><a href="/cardiology.html" class="text-decoration-none" style="color: var(--pbmit-heading-color);">› Cardiology</a></li>
+                      <li><a href="/vascularmedicine.html" class="text-decoration-none" style="color: var(--pbmit-heading-color);">› Vascular Medicine</a></li>
+                      <li><a href="/executivehealthphysical.html" class="text-decoration-none" style="color: var(--pbmit-heading-color);">› Executive Physicals</a></li>
+                      <li><a href="/conciergeprogram.html" class="text-decoration-none" style="color: var(--pbmit-heading-color);">› Concierge Program</a></li>
+                    </ul>
+                  </div>
+            
+                  <!-- Clinic Hours -->
+                  <div class="col-md-3">
+                    <h6 class="fw-bold mb-3">Clinic Hours</h6>
+                    <ul class="list-unstyled small">
+                      <li>Mon – Thu: <span class="text-danger fw-semibold">9:00 – 4:00</span></li>
+                      <li>Friday: <span class="text-danger fw-semibold">9:00 – 4:00</span> <small>(Emergencies only)</small></li>
+                      <li>Sat – Sun: <span class="text-danger fw-semibold">Closed</span></li>
+                    </ul>
+                  </div>
+            
+                  <!-- Contact Info -->
+                  <div class="col-md-3">
+                    <h6 class="fw-bold mb-3">Contact Us</h6>
+                    <ul class="list-unstyled small">
+                      <li class="d-flex align-items-center mb-2">
+                        <i class="fas fa-envelope me-2 text-danger"></i>
+                        contact@twincitiescardiology.com
+                      </li>
+                      <li class="d-flex align-items-center mb-2">
+                        <i class="fas fa-phone-alt me-2 text-danger"></i>
+                        <a href="tel:19522326132" class="text-decoration-none" style="color: var(--pbmit-heading-color);">
+                          1-952-232-6132
+                        </a>
+                      </li>
+                      <li class="d-flex align-items-start mb-2">
+                        <i class="pbmit-base-icon-location me-2 mt-1 text-danger"></i>
+                        <span>1421 Wayzata Blvd, MN 55391</span>
+                      </li>
+                      <li class="mt-2">
+                        <a href="#" target="_blank" class="text-decoration-none">
+                          <i class="fab fa-linkedin me-2 text-danger"></i> LinkedIn
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                  
+            
                 </div>
-             </div>
-          </div>
-          <div class="pbmit-footer-widget-area">
-             <div class="container">
-                 <div class="row gx-4 gy-4"> <!-- Added consistent gutter spacing -->
-                     <!-- Quick Links -->
-                     <div class="col-sm-6 col-md-6 col-lg-3">
-                         <div class="widget pbmit-float-menu h-100"> <!-- Added h-100 for equal height -->
-                             <h3 class="widget-title ">Quick Links</h3> <!-- Removed text-center for consistency -->
-                             <ul>
-                              
-                                 <li class="menu-item">
-                                  <a href="/cardiology.html">Cardiology </a>
-                               </li>
-                                 <li class="menu-item">
-                                  <a href="/vascularmedicine.html">Vascular Medicine</a>                                   </li>
-                                 <li class="menu-item">
-                                  <a href="/executivehealthphysical.html">Executive Health Physical</a>                                   </li>
-                                 <li class="menu-item">
-                                  <a href="/conciergeprogram.html">Concierge Program</a>                                   </li>
-                                
-                             </ul>
-                         </div>
-                     </div>
-                     
-                     <!-- Wayzata Hours -->
-                     <div class="col-sm-6 col-md-6 col-lg-4">
-                         <div class="widget h-100"> <!-- Added h-100 for equal height -->
-                             <h3 class="widget-title ">Wayzata Hours</h3>
-                             <ul class="pbmit-timelist-list ">
-                               <li>
-                                 <span class="pbmit-timelist-li-title">Mon – Thu</span>
-                                 <span class="pbmit-timelist-li-value">9:00 – 4:00</span>
-                               </li>
-                               <li>
-                                <span class="pbmit-timelist-li-title">Friday <span class="small text-danger">(Emergencies only)</span></span>
-                                <span class="pbmit-timelist-li-value" style="margin-left: 20px;">9:00 – 4:00</span>
-                              </li>
-                               <li>
-                                 <span class="pbmit-timelist-li-title">Sat – Sun</span>
-                                 <span class="pbmit-timelist-li-value">Closed</span>
-                               </li>
-                             </ul>
-                             
-                         </div>
-                     </div>
-                     
-                     <!-- St. Cloud Hours -->
-                     <div class="col-sm-6 col-md-6 col-lg-4">
-                         <div class="widget h-100"> <!-- Added h-100 for equal height -->
-                             <h3 class="widget-title ">St. Cloud Hours</h3>
-                             <ul class="pbmit-timelist-list">
-                               <li>
-                                 <span class="pbmit-timelist-li-title">Mon – Thu</span>
-                                 <span class="pbmit-timelist-li-value">9:00 – 4:00</span>
-                               </li>
-                               <li>
-                                <span class="pbmit-timelist-li-title">Friday <span class="small text-danger">(Emergencies only)</span></span>
-                                <span class="pbmit-timelist-li-value" style="margin-left: 20px;">9:00 – 4:00</span>
-                              </li>
-                               <li>
-                                 <span class="pbmit-timelist-li-title">Sat – Sun</span>
-                                 <span class="pbmit-timelist-li-value">Closed</span>
-                               </li>
-                             </ul>
-                         </div>
-                     </div>
-                     
-                     
-                 </div>
-             </div>
-         </div>
-          <div class="pbmit-footer-section pbmit-bg-color-global " style="background-color: #181e2e;">
-             <div class="container">
-                <div class="pbmit-footer-text-inner">   
-                   <div class="pbmit-footer-copyright-box "> Copyright © 2022 
-                      <a href="index.html ">Cardiology</a>, All Rights Reserved.
-                   </div>
-                 
+            
+                <!-- Divider -->
+                <hr class="my-4" style="border-color: #dee2e6;">
+            
+                <!-- Bottom Row -->
+                <div class="d-flex flex-column flex-md-row justify-content-between align-items-center">
+                  <p class="mb-2 mb-md-0 small" style="color: var(--pbmit-body-typography-color);">
+                    © 2025 Twin Cities Cardiology. All rights reserved.
+                  </p>
+                  <a href="/privacy-policy.html" class="text-decoration-none small" style="color: var(--pbmit-heading-color);">
+                    Privacy Policy
+                  </a>
                 </div>
-             </div>
-          </div>	
-       </footer>
+              </div>
+            </footer>
        <!-- footer End -->
      
     <!-- JS
