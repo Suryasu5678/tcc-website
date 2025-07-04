@@ -506,6 +506,9 @@ $(document).ready(function () {
 
     // ✅ Validate other fields
     if ($("#appointment-form").valid()) {
+      console.log("Success");
+      
+      $("#days-error").style.display = "none"; // Hide error if previously shown
       const $button = $("#appointment-form button[type='submit']");
       const originalText = $button.text();
       $button.prop("disabled", true).text("Sending...");
