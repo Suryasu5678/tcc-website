@@ -36,1229 +36,1143 @@
       <link rel="stylesheet" href="css/style.css">
       <!-- Responsive CSS -->
       <link rel="stylesheet" href="css/responsive.css">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 
       <style>
-         .insurance-swiper .swiper-wrapper {
-  transition-timing-function: linear !important;
-         }
-         .pbmit-client-style-1 img {
-  max-height: 180px; /* Adjust as needed */
-  width: auto;
-  object-fit: contain;
+            .insurance-swiper .swiper-wrapper {
+    transition-timing-function: linear !important;
+            }
+            .pbmit-client-style-1 img {
+    max-height: 180px; /* Adjust as needed */
+    width: auto;
+    object-fit: contain;
+    }   /* Insurance Partners Swiper - Unique Classes */
+        .insurance-partners-swiper {
+            margin-top: 40px;
+            padding: 20px 0;
+        }
+
+        .insurance-partners-swiper .swiper-slide {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 120px;
+        }
+
+        .insurance-client-card {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .insurance-client-wrapper {
+            position: relative;
+            width: 150px;
+            height: 80px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: transform 0.3s ease;
+            cursor: pointer;
+        }
+
+        .insurance-client-wrapper:hover {
+            transform: scale(1.1);
+        }
+
+        .insurance-logo-main img {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
+            filter: grayscale(100%);
+            transition: filter 0.3s ease;
+        }
+
+        /* .insurance-client-wrapper:hover .insurance-logo-main img {
+            filter: grayscale(0%);
+        } */
+
+        /* .insurance-logo-hover {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            mix-blend-mode: normal; /* prevent color blending that may look like shadow */
+    
+
+        /* .insurance-logo-hover img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+
+        .insurance-client-wrapper:hover .insurance-logo-hover {
+            opacity: 1;
+        }
+
+        .insurance-client-wrapper:hover .insurance-logo-main {
+            opacity: 0;
+        } */
+
+        .insurance-title-hidden {
+            display: none;
+        }
+
+        /* Insurance Swiper Pagination */
+        .insurance-partners-swiper .swiper-pagination {
+            position: static;
+            margin-top: 20px;
+        }
+
+        .insurance-partners-swiper .swiper-pagination-bullet {
+            width: 12px;
+            height: 12px;
+            background: #ccc;
+            opacity: 1;
+            margin: 0 5px;
+            transition: all 0.3s ease;
+        }
+
+        .insurance-partners-swiper .swiper-pagination-bullet-active {
+            background: #25355f;
+            
+            transform: scale(1.2);
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .insurance-client-wrapper {
+                width: 180px;
+                height: 100px;
+            }
+            
+            .insurance-partners-swiper .swiper-slide {
+                height: 100px;
+            }
+        }
+        .insurance-partners-swiper .swiper-pagination-bullet-active {
+    background: #25355f;
+    opacity: 1 !important;  /* Add this line */
+    transform: scale(1.2);
 }
       </style>
    </head>
    <body>
-      <!-- page wrapper -->
-      <div class="page-wrapper   ">
-        <!-- Header Main Area -->
-        <header class="site-header header-style-3">
-            <div class="pbmit-header-overlay site-header-menu">
-               <div class="container g-0">
-                  <div class="pre-header">
-                     <div class="container-fuild">
-                        <div class="d-md-flex align-items-center justify-content-between">
-                            <div class="pbmit-pre-header-left fs-6 ">
-                            
-                              <a href="tel:19522326132" style="display: inline-flex; align-items: center; gap: 6px; cursor: pointer; text-decoration: none; color: inherit;">
-                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 24 24">
-                                   <path d="M6.62 10.79a15.464 15.464 0 0 0 6.59 6.59l2.2-2.2a1 1 0 0 1 1.11-.27c1.2.48 2.5.74 3.84.74a1 1 0 0 1 1 1v3.5a1 1 0 0 1-1 1C10.75 21.5 2.5 13.25 2.5 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.34.26 2.64.74 3.84a1 1 0 0 1-.27 1.11l-2.2 2.2z"/>
-                                 </svg>
-                                 1-952-232-6132
-                               </a>
-                               
-                           </div>
-                           <div class="pbmit-pre-header-right">
-                              <ul class="pbmit-contact-info">
+    <!-- page wrapper -->
+    <div class="page-wrapper   ">
+      <!-- Header Main Area -->
+      <header class="site-header header-style-3">
+          <div class="pbmit-header-overlay site-header-menu">
+             <div class="container g-0">
+                <div class="pre-header">
+                   <div class="container-fuild">
+                      <div class="d-md-flex align-items-center justify-content-between">
+                          <div class="pbmit-pre-header-left fs-6 ">
+                          
+                            <a href="tel:19522326132" style="display: inline-flex; align-items: center; gap: 6px; cursor: pointer; text-decoration: none; color: inherit;">
+                               <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 24 24">
+                                 <path d="M6.62 10.79a15.464 15.464 0 0 0 6.59 6.59l2.2-2.2a1 1 0 0 1 1.11-.27c1.2.48 2.5.74 3.84.74a1 1 0 0 1 1 1v3.5a1 1 0 0 1-1 1C10.75 21.5 2.5 13.25 2.5 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.34.26 2.64.74 3.84a1 1 0 0 1-.27 1.11l-2.2 2.2z"/>
+                               </svg>
+                               1-952-232-6132
+                             </a>
+                             
+                         </div>
+                         <div class="pbmit-pre-header-right">
+                            <ul class="pbmit-contact-info">
+                              
+                                   <span class="d-flex align-items-center">
+                                  <img src="images/logo/Group transparent.png" alt="MY TCC Logo" class="img-fluid me-1 " style="width: 20px; height: 20px;">
+                                  <span style="font-size: 16px;">MY TCC</span>
+                                </span>
+                                  </ul>
+                               </li>
+                            </ul>						
+                         </div>
+                      </div>
+                   </div>
+                </div>
+                <div class="site-header-menu-inner">
+                   <div class="container-fuild">
+                      <div class="row">
+                         <div class="col-md-12">
+                            <div class="d-flex align-items-center justify-content-between">
+                               <div class="d-flex align-items-center justify-content-between flex-fill">
+                                  <div class="site-branding">
+                                     <!-- Logo area -->
+                                     <h1 class="site-title">
+                                        <a href="/index.html" rel="home">
+                                           <img class="logo-img" src="images/logo/Svg (1).svg" alt="Cardiology" title="Cardiology">
+                                        </a>
+                                     </h1>				        
+                                  </div>
+                                  <div class="site-navigation ml-auto">
+                                      <nav class="main-menu navbar-expand-xl navbar-light ">
+                                          <div class="navbar-header">
+                                              <!-- Toggle Button --> 
+                                              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                                                  <i class="pbmit-base-icon-menu-1"></i>
+                                              </button>
+                                          </div>
+                                          <div class="collapse navbar-collapse clearfix" id="navbarSupportedContent">
+                                              <ul class="navigation clearfix me-2">
+                                              
+                                                  <li >
+                                                      <a href="about-us.html">ABOUT US</a>
+                                                      
+                                                  </li>
+                                                  <li class="dropdown">
+                                        <a style="cursor: pointer; display: flex; align-items: center; ">
+                                          SERVICES 
+                                          <span class="arrow" style="font-size: 1.3rem; " class="">&#9662;</span>
+                                        </a>
+                                        <ul>
+                                          <li><a href="cardiology.html">Cardiology</a></li>
+                                          <li><a href="vascularmedicine.html">Vascular Medicine</a></li>
+                                          <li><a href="executivehealthphysical.html">Executive Health Physical</a></li>
+                                          <li><a href="conciergeprogram.html">Concierge Program</a></li>
+                                        </ul>
+                                      </li>
+                                      
+                                              
+                                              
+                                              
+                                              
+                                                  <li><a href="contact-us.html ">CONTACT US</a></li>
+                                     <li><a href=" " class="d-block d-lg-none">MY TCC</a></li>
+                                              </ul>
+                                          </div>
+                                      </nav>
+                                  </div>
+                               </div>
+                               <div class="pbmit-right-box">
                                 
-                                     <span class="d-flex align-items-center">
-                                    <img src="images/logo/Group transparent.png" alt="MY TCC Logo" class="img-fluid me-1 " style="width: 20px; height: 20px;">
-                                    <span style="font-size: 16px;">MY TCC</span>
-                                  </span>
-                                    </ul>
-                                 </li>
-                              </ul>						
-                           </div>
-                        </div>
-                     </div>
-                  </div>
-                  <div class="site-header-menu-inner">
-                     <div class="container-fuild">
-                        <div class="row">
-                           <div class="col-md-12">
-                              <div class="d-flex align-items-center justify-content-between">
-                                 <div class="d-flex align-items-center justify-content-between flex-fill">
-                                    <div class="site-branding">
-                                       <!-- Logo area -->
-                                       <h1 class="site-title">
-                                          <a href="/index.html" rel="home">
-                                             <img class="logo-img" src="images/logo/Svg (1).svg" alt="Cardiology" title="Cardiology">
-                                          </a>
-                                       </h1>				        
-                                    </div>
-                                    <div class="site-navigation ml-auto">
-										<nav class="main-menu navbar-expand-xl navbar-light ">
-											<div class="navbar-header">
-												<!-- Toggle Button --> 
-												<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-													<i class="pbmit-base-icon-menu-1"></i>
-												</button>
-											</div>
-											<div class="collapse navbar-collapse clearfix" id="navbarSupportedContent">
-												<ul class="navigation clearfix me-2">
-												
-													<li >
-														<a href="about-us.html">ABOUT US</a>
-														
-													</li>
-													<li class="dropdown">
-                                          <a style="cursor: pointer; display: flex; align-items: center; ">
-                                            SERVICES 
-                                            <span class="arrow" style="font-size: 1.3rem; " class="">&#9662;</span>
-                                          </a>
-                                          <ul>
-                                            <li><a href="cardiology.html">Cardiology</a></li>
-                                            <li><a href="vascularmedicine.html">Vascular Medicine</a></li>
-                                            <li><a href="executivehealthphysical.html">Executive Health Physical</a></li>
-                                            <li><a href="conciergeprogram.html">Concierge Program</a></li>
-                                          </ul>
-                                        </li>
-                                        
-												
-												
-												
-												
-													<li><a href="contact-us.html ">CONTACT US</a></li>
-                                       <li><a href=" " class="d-block d-lg-none">MY TCC</a></li>
-												</ul>
-											</div>
-										</nav>
-                                    </div>
-                                 </div>
-                                 <div class="pbmit-right-box">
-                                  
-                                    <div class="menu-right-box d-flex align-items-center">
-                                       <div class="pbmit-header-button">
-                                          <a href="bookmyappointment.html" class="pbmit-btn">Book Appointment</a>
-                                       </div>
-                                    </div>
-                                 </div>
-                              </div>
-                           </div>
-                        </div>
-                     </div>
-                  </div>
-               </div>
-            </div>
-            <div class="pbmit-slider-area pbmit-slider-three">
-				<div class="swiper-slider"  data-dots="true" data-arrows="false" data-columns="1" data-margin="0" data-effect="fade">
-					<div class="swiper-wrapper">
-             <!-- Top Gradient Overlay (visible only on lg and up) -->
+                                  <div class="menu-right-box d-flex align-items-center">
+                                     <div class="pbmit-header-button">
+                                        <a href="bookmyappointment.html" class="pbmit-btn text-uppercase">Book Appointment</a>
+                                     </div>
+                                  </div>
+                               </div>
+                            </div>
+                         </div>
+                      </div>
+                   </div>
+                </div>
+             </div>
+          </div>
+          <div class="pbmit-slider-area pbmit-slider-three">
+              <div class="swiper-slider"  data-dots="true" data-arrows="false" data-columns="1" data-margin="0" data-effect="fade">
+                  <div class="swiper-wrapper">
+           <!-- Top Gradient Overlay (visible only on lg and up) -->
 <div class="d-none d-lg-block" style="position: absolute; top: 0; left: 0; width: 100%; height: 160px; background: linear-gradient(180deg, #00213a 0, rgba(0, 33, 58, 0) 100%); pointer-events: none; z-index: 1;"></div>
 
 <!-- Bottom Gradient Overlay (visible only on lg and up) -->
 <div class="d-none d-lg-block" style="position: absolute; bottom: 0; left: 0; width: 100%; height: 19.8rem; background: linear-gradient(180deg, rgba(0, 48, 87, 0) 40.86%, #003057 100%); pointer-events: none; z-index: 1;"></div>
 
+                
                   
-					
-						<div class="swiper-slide">
-							<div class="pbmit-slider-item" >
-                        
+                      <div class="swiper-slide">
+                          <div class="pbmit-slider-item" >
                       
-                        <div class="pbmit-slider-bg">
-                           <video autoplay muted loop playsinline
-                              class="w-100 h-100"
-                              style="object-fit: cover; object-position: center;">
-                              <source src="videos/HeroSection.mp4" type="video/mp4" />
-                           </video>
-                        </div>
-                           <!-- <div 
-                           class="position-absolute start-0 end-0 bottom-0 gradient-overlay"
-                           style="
-                             pointer-events: none;
-                             height: 100vh;
-                             z-index: 100;
-                             top: 0;
-                             background: linear-gradient(to top, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0));
-                           ">
-                         </div> -->
+                    
+                      <div class="pbmit-slider-bg">
+                         <video autoplay muted loop playsinline
+                            class="w-100 h-100"
+                            style="object-fit: cover; object-position: center;">
+                            <source src="videos/HeroSection.mp4" type="video/mp4" />
+                         </video>
+                      </div>
+                         <!-- <div 
+                         class="position-absolute start-0 end-0 bottom-0 gradient-overlay"
+                         style="
+                           pointer-events: none;
+                           height: 100vh;
+                           z-index: 100;
+                           top: 0;
+                           background: linear-gradient(to top, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0));
+                         ">
+                       </div> -->
 
-                        								<div class="container">
-									<div class="row text-center">
-										<div class="col-md-12"> 
-											<div class="pbmit-slider-content">
-												<h2 class="pbmit-title transform-bottom transform-delay-2"> Strong Hearts Begin <br/> with Smart Choices</h2>
-												<div class="pbmit-button d-flex justify-content-center">
-													<div class="me-4 transform-bottom transform-delay-3">
-														<a href="about-us.html" class="pbmit-btn pbmit-btn-white">Meet the Team </a>
-													</div>
-													<div class="transform-bottom transform-delay-4">
-														<a href="bookmyappointment.html" class="pbmit-btn pbmit-btn-outline-white">BOOK APPOINTMENT</a>
-													</div>
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-						<!-- Slide2 -->
-					
-			
-			</div>
-        </header>
-        <!-- Header Main Area End Here -->
-         
-         <!-- page content -->
-         <div class="page-content">
-
-            <!-- Welcome -->     
+                                                      <div class="container">
+                                  <div class="row text-center">
+                                      <div class="col-md-12"> 
+                                          <div class="pbmit-slider-content">
+                                              <h2 class="pbmit-title transform-bottom transform-delay-2"> Strong Hearts Begin <br/> with Smart Choices</h2>
+                                              <div class="pbmit-button d-flex justify-content-center">
+                                                  <div class="me-4 transform-bottom transform-delay-3">
+                                                      <a href="about-us.html" class="pbmit-btn pbmit-btn-white">Meet the Team </a>
+                                                  </div>
+                                                  <div class="transform-bottom transform-delay-4">
+                                                      <a href="bookmyappointment.html" class="pbmit-btn pbmit-btn-outline-white">BOOK APPOINTMENT</a>
+                                                  </div>
+                                              </div>
+                                          </div>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                      <!-- Slide2 -->
+                  
           
-            <!-- Welcome end --> 
-
-            <section class="section-lg about-main-section">
-               <div class="container">
-                  <div class="row justify-content-between align-items-center">
-                     <div class="col-xl-6 col-lg-12 position-relative">
-                        <div class="scale-hover">                        <img src="images/about_us.webp" class="img-fluid w-100  " alt="About Us Image">
-                        </div>
-                        <div class="about-fid-section">
-                           <div class="pbminfotech-ele-fid-style-5">
-                              <div class="pbmit-fld-contents d-flex">
-                               
-                               
-                              </div>
-                           </div>
-                        </div>
-                     </div>
-                     <div class="col-xl-6 col-lg-12 position-relative">
-                        <div class="benefits-right-section">
-                           <div class="pbmit-heading-subheading text-center text-md-start">
-                              <h4 class="pbmit-subtitle">How Can We Help You?</h4>
-                            
-                           </div>
-                          
-                           <div class="d-flex ">
-                              <div class="pbmit-ihbox-style-1">
-                                 <div class="pbmit-ihbox-box">
-                                    <div class="d-flex">
-                                       <div class="pbmit-ihbox-icon">
-                                          <div class="pbmit-ihbox-icon-wrapper">
-                                             <i class="pbmit-cardioly-icon pbmit-cardioly-icon-comment"></i>
-                                          </div>
-                                       </div>
-                                       <h2 class="pbmit-element-title" style="font-weight: 700;">
-                                          Are you experiencing:
-                                       </h2>
-                                    </div>
-                                    <div class="pbmit-ihbox-contents pe-5">
-                                       <div class="pbmit-heading-desc">
-                                             <ul class="pbmit-list-style-1" style="list-style-type: disc; padding-left: 40px;         grid-template-columns: repeat(2, 1fr);    gap:10px
-   "   style="list-style-type: disc; 
-           padding-left: 0; 
-           display: grid; 
-           grid-template-columns: 1fr; 
-           gap: 10px; 
-           max-width: 600px;">
-                                                <li>Chest pain</li>
-                                                <li>Dizziness or fainting</li>
-                                                <li>Shortness of breath</li>
-                                                <li>Irregular heartbeat</li>
-                                                <li>Leg swelling</li>
-                                                <li>Cough when lying down</li>
-                                                <li> Cough with leg swelling</li>
-                                                <li>Varicose veins</li>
-                                          </div>
-                                                                                <div class="d-flex mt-3">
-                                                                                 <div class="pbmit-ihbox-icon">
-                                                                                    <div class="pbmit-ihbox-icon-wrapper">
-                                                                                       <i class="pbmit-cardioly-icon pbmit-cardioly-icon-comment"></i>
-                                                                                    </div>
-                                                                                 </div>
-                                                                                 <h2 class="pbmit-element-title" style="font-weight: 700;">
-                                                                                    Family or personal heart history
-
-
-                                                                                 </h2>
-                                                                              </div><div class="d-flex mt-3">
-                                                                                 <div class="pbmit-ihbox-icon">
-                                                                                    <div class="pbmit-ihbox-icon-wrapper">
-                                                                                       <i class="pbmit-cardioly-icon pbmit-cardioly-icon-comment"></i>
-                                                                                    </div>
-                                                                                 </div>
-                                                                                 <h2 class="pbmit-element-title" style="font-weight: 700;">
-                                                                                    Know your heart disease risk
-
-
-                                                                                 </h2>
-                                                                              </div><div class="d-flex mt-3">
-                                                                                 <div class="pbmit-ihbox-icon">
-                                                                                    <div class="pbmit-ihbox-icon-wrapper">
-                                                                                       <i class="pbmit-cardioly-icon pbmit-cardioly-icon-comment"></i>
-                                                                                    </div>
-                                                                                 </div>
-                                                                                 <h2 class="pbmit-element-title" style="font-weight: 700;">
-                                                                                    Boost longevity and quality of life                                                                                 </h2>
-                                                                              </div>
-                                                                              </div><div class="d-flex mt-3">
-                                                                                 <div class="pbmit-ihbox-icon">
-                                                                                    <div class="pbmit-ihbox-icon-wrapper">
-                                                                                       <i class="pbmit-cardioly-icon pbmit-cardioly-icon-comment"></i>
-                                                                                    </div>
-                                                                                 </div>
-                                                                                 <h2 class="pbmit-element-title" style="font-weight: 700;">
-                                                                                    Test cardiopulmonary fitness / athletic performance
-
-                                                                                 </h2>
-                                                                              </div>
-                                    </div>
-                                 </div>
-                              </div>
-                            
-                           </div>
-                          
-                          
-                        </div>
-                     </div>
-                  </div>
-               </div>
-            </section>  
-
-       <!-- Service Start -->
-<section class="service-section-home2 p-0">
-   <div class="container">
-      <div class="pbmit-heading-subheading text-center">
-         <h4 class="pbmit-subtitle">OUR 
-            SERVICES</h4>
-         <h2 class="pbmit-title">Cardiovascular care that meets your unique needs
-
-         </h2>
-         <div class="mt-2">
-            We care to know you, meet you where you are, and help you make the right choices for you.
-         </div> 
-      </div>
-
-         <!-- Swiper Slider Start -->
-         <div class="swiper service-swiper" data-autoplay="true" data-pagination="true" data-arrows="false" data-columns="3">
-            <div class="swiper-wrapper " >
-               <!-- Card 1 -->
-               <div class="swiper-slide col-md-4" >
-                  <article class="pbmit-service-style-1" >
-                     <div class="pbminfotech-post-item" >
-                        <div class="pbmit-featured-wrapper">
-                           <div class="service-hover">
-                              <img src="images/valve_disorder_management (1).webp" class="img-fluid" alt="">
-                           </div>
-                        </div>
-                        <div class="pbminfotech-box-content">
-                            <div class="pbmit-service-icon-wrapper">
-                              
-                              <img  src="/images/icon/vascular.svg" alt="icon" />
-                            </div>
-                           <div class="pbminfotech-box-content-inner">
-                              <div class="pbmit-service-cat">
-                                 <a href="#" rel="tag">Heart</a>
-                              </div>
-                              <h3 class="pbmit-service-title">
-                                 <a href="service-details.html">Cardiology </a>
-                              </h3>
-                             
-                              <div class="pbmit-service-btn">
-                                 <a class="pbmit-service-btn-a" href="/cardiology.html"><span>Readmore</span></a>
-                              </div>
-                           </div>
-                        </div>
-                     </div>
-                  </article>
-               </div>
-
-               <!-- Card 2 -->
-               <div class="swiper-slide col-md-4">
-                  <article class="pbmit-service-style-1 service-card-vascular">
-                     <div class="pbminfotech-post-item">
-                        <div class="pbmit-featured-wrapper">
-                           <div class="service-hover">
-                              <img src="/images/Vascular1.png" class="img-fluid" alt="">
-                           </div>
-                        </div>
-                        <div class="pbminfotech-box-content">
-                           <div class="pbmit-service-icon-wrapper">
-                              <!-- whiteicon -->
-                              <img  src="/images/leg.svg"  alt="icon" />
-                            </div>
-                           <div class="pbminfotech-box-content-inner">
-                             <div class="pbmit-service-cat">
-                               <a href="#" rel="tag">Arteries & Veins</a>
-                             </div>
-                             <h3 class="pbmit-service-title">
-                               <a href="service-details.html">Vascular Medicine</a>
-                             </h3>
-                             <div class="pbmit-service-btn">
-                               <a class="pbmit-service-btn-a" href="/vascularmedicine.html"><span>Readmore</span></a>
-                             </div>
-                           </div>
-                         </div>
-                         
-                     </div>
-                  </article>
-               </div>
-
-               <!-- Card 3 -->
-               <div class="swiper-slide col-md-4">
-                  <article class="pbmit-service-style-1 service-card-executive">
-                     <div class="pbminfotech-post-item">
-                        <div class="pbmit-featured-wrapper">
-                           <div class="service-hover">
-                              <img src="images/Executive Health Physical.webp" class="img-fluid" alt="">
-                           </div>
-                        </div>
-                        <div class="pbminfotech-box-content">
-                           <div class="pbmit-service-icon-wrapper">
-                              <img src="/images/icon/Executive.svg" class="ps-2"></img>
-                           </div>
-                           <div class="pbminfotech-box-content-inner">
-                              <div class="pbmit-service-cat">
-                                 <a href="#" rel="tag">Functional Workup
-                                 </a>
-                              </div>
-                              <h3 class="pbmit-service-title">
-                                 <a href="service-details.html">Executive Health Physical
-                                 </a>
-                              </h3>
-                           
-                              <div class="pbmit-service-btn">
-                                 <a class="pbmit-service-btn-a" href="/executivehealthphysical.html"><span>Readmore</span></a>
-                              </div>
-                           </div>
-                        </div>
-                     </div>
-                  </article>
-               </div>
-
-               <!--  Card 4 -->
-               <div class="swiper-slide col-md-4">
-                  <article class="pbmit-service-style-1 service-card-Concierge">
-                     <div class="pbminfotech-post-item">
-                        <div class="pbmit-featured-wrapper">
-                           <div class="service-hover">
-                              <img src="images/Concierge.webp" class="img-fluid" alt="">
-                           </div>
-                        </div>
-                        <div class="pbminfotech-box-content">
-                           <div class="pbmit-service-icon-wrapper">
-                              <i class="fa fa-tablet" aria-hidden="true"></i>
-                           </div>
-                           <div class="pbminfotech-box-content-inner">
-                              <div class="pbmit-service-cat"><a href="#">Boutique</a></div>
-                              <h3 class="pbmit-service-title"><a href="#">Concierge Program</a></h3>
-                              
-                              <div class="pbmit-service-btn">
-                                 <a class="pbmit-service-btn-a" href="/conciergeprogram.html"><span>Readmore</span></a>
-                              </div>
-                           </div>
-                        </div>
-                     </div>
-                  </article>
-               </div>
-
-           
-               </div>
-            </div>
-            
-            
-            
-            <!-- Pagination -->
-         </div>
-         <!-- Swiper Slider End -->
-      
-   </div>
-</section>
-<!-- Service End -->
-
-
-
-
-            <!-- client Start -->
-<!-- <section class="client-section-home3">
-   <div class="container">
-     <div class="pbmit-heading-subheading text-center">
-       <h4 class="pbmit-subtitle">Insurance Plans that we accept</h4>
-     </div> -->
- 
-    <!-- Desktop Grid -->
-<!-- <div class="row d-none d-md-flex">
-   <div class="col-md-2 col-sm-6">
-     <article class="pbmit-client-style-1">
-       <div class="pbmit-client-wrapper pbmit-client-with-hover-img">
-         <h4 class="pbmit-hide">client 1</h4>
-         <div class="pbmit-client-hover-img">
-           <img src="images/insurancelogos/Medicare.png" class="img-fluid" alt="">
-         </div>
-         <div class="pbmit-featured-wrapper">
-           <img src="images/insurancelogos/Medicare.png" class="img-fluid" alt="">
-         </div>
-       </div>
-     </article>
-   </div>
-   <div class="col-md-2 col-sm-6">
-     <article class="pbmit-client-style-1">
-       <div class="pbmit-client-wrapper pbmit-client-with-hover-img">
-         <h4 class="pbmit-hide">client 2</h4>
-         <div class="pbmit-client-hover-img">
-           <img src="images/insurancelogos/HP.png" class="img-fluid" alt="">
-         </div>
-         <div class="pbmit-featured-wrapper">
-           <img src="images/insurancelogos/HP.png" class="img-fluid" alt="">
-         </div>
-       </div>
-     </article>
-   </div>
-   <div class="col-md-2 col-sm-6">
-     <article class="pbmit-client-style-1">
-       <div class="pbmit-client-wrapper pbmit-client-with-hover-img">
-         <h4 class="pbmit-hide">client 3</h4>
-         <div class="pbmit-client-hover-img">
-           <img src="images/insurancelogos/PrimeWest.png" class="img-fluid" alt="">
-         </div>
-         <div class="pbmit-featured-wrapper">
-           <img src="images/insurancelogos/PrimeWest.png" class="img-fluid" alt="">
-         </div>
-       </div>
-     </article>
-   </div>
-   <div class="col-md-2 col-sm-6">
-     <article class="pbmit-client-style-1">
-       <div class="pbmit-client-wrapper pbmit-client-with-hover-img">
-         <h4 class="pbmit-hide">client 4</h4>
-         <div class="pbmit-client-hover-img">
-           <img src="images/insurancelogos/1st Health Network.png" class="img-fluid" alt="">
-         </div>
-         <div class="pbmit-featured-wrapper">
-           <img src="images/insurancelogos/1st Health Network.png" class="img-fluid" alt="">
-         </div>
-       </div>
-     </article>
-   </div>
-   <div class="col-md-2 col-sm-6">
-     <article class="pbmit-client-style-1">
-       <div class="pbmit-client-wrapper pbmit-client-with-hover-img">
-         <h4 class="pbmit-hide">client 5</h4>
-         <div class="pbmit-client-hover-img">
-           <img src="images/insurancelogos/BCBS.png" class="img-fluid" alt="">
-         </div>
-         <div class="pbmit-featured-wrapper">
-           <img src="images/insurancelogos/BCBS.png" class="img-fluid" alt="">
-         </div>
-       </div>
-     </article>
-   </div>
-   <div class="col-md-2 col-sm-6">
-     <article class="pbmit-client-style-1">
-       <div class="pbmit-client-wrapper pbmit-client-with-hover-img">
-         <h4 class="pbmit-hide">client 6</h4>
-         <div class="pbmit-client-hover-img">
-           <img src="images/insurancelogos/Cigna.png" class="img-fluid" alt="">
-         </div>
-         <div class="pbmit-featured-wrapper">
-           <img src="images/insurancelogos/Cigna.png" class="img-fluid" alt="">
-         </div>
-       </div>
-     </article>
-   </div>
-   <div class="col-md-2 col-sm-6">
-     <article class="pbmit-client-style-1">
-       <div class="pbmit-client-wrapper pbmit-client-with-hover-img">
-         <h4 class="pbmit-hide">client 7</h4>
-         <div class="pbmit-client-hover-img">
-           <img src="images/insurancelogos/Medicare RR.png" class="img-fluid" alt="">
-         </div>
-         <div class="pbmit-featured-wrapper">
-           <img src="images/insurancelogos/Medicare RR.png" class="img-fluid" alt="">
-         </div>
-       </div>
-     </article>
-   </div>
-   <div class="col-md-2 col-sm-6">
-     <article class="pbmit-client-style-1">
-       <div class="pbmit-client-wrapper pbmit-client-with-hover-img">
-         <h4 class="pbmit-hide">client 8</h4>
-         <div class="pbmit-client-hover-img">
-           <img src="images/insurancelogos/Allina Aetna.png" class="img-fluid" alt="">
-         </div>
-         <div class="pbmit-featured-wrapper">
-           <img src="images/insurancelogos/Allina Aetna.png" class="img-fluid" alt="">
-         </div>
-       </div>
-     </article>
-   </div>
-   <div class="col-md-2 col-sm-6">
-     <article class="pbmit-client-style-1">
-       <div class="pbmit-client-wrapper pbmit-client-with-hover-img">
-         <h4 class="pbmit-hide">client 9</h4>
-         <div class="pbmit-client-hover-img">
-           <img src="images/insurancelogos/Aetna.png" class="img-fluid" alt="">
-         </div>
-         <div class="pbmit-featured-wrapper">
-           <img src="images/insurancelogos/Aetna.png" class="img-fluid" alt="">
-         </div>
-       </div>
-     </article>
-   </div>
-   <div class="col-md-2 col-sm-6">
-     <article class="pbmit-client-style-1">
-       <div class="pbmit-client-wrapper pbmit-client-with-hover-img">
-         <h4 class="pbmit-hide">client 10</h4>
-         <div class="pbmit-client-hover-img">
-           <img src="images/insurancelogos/MultiPlan.png" class="img-fluid" alt="">
-         </div>
-         <div class="pbmit-featured-wrapper">
-           <img src="images/insurancelogos/MultiPlan.png" class="img-fluid" alt="">
-         </div>
-       </div>
-     </article>
-   </div>
-   <div class="col-md-2 col-sm-6">
-     <article class="pbmit-client-style-1">
-       <div class="pbmit-client-wrapper pbmit-client-with-hover-img">
-         <h4 class="pbmit-hide">client 11</h4>
-         <div class="pbmit-client-hover-img">
-           <img src="images/insurancelogos/Medicaid.png" class="img-fluid" alt="">
-         </div>
-         <div class="pbmit-featured-wrapper">
-           <img src="images/insurancelogos/Medicaid.png" class="img-fluid" alt="">
-         </div>
-       </div>
-     </article>
-   </div>
-   <div class="col-md-2 col-sm-6">
-     <article class="pbmit-client-style-1">
-       <div class="pbmit-client-wrapper pbmit-client-with-hover-img">
-         <h4 class="pbmit-hide">client 12</h4>
-         <div class="pbmit-client-hover-img">
-           <img src="images/insurancelogos/Americas PPO.png" class="img-fluid" alt="">
-         </div>
-         <div class="pbmit-featured-wrapper">
-           <img src="images/insurancelogos/Americas PPO.png" class="img-fluid" alt="">
-         </div>
-       </div>
-     </article>
-   </div>
-   <div class="col-md-2 col-sm-6">
-     <article class="pbmit-client-style-1">
-       <div class="pbmit-client-wrapper pbmit-client-with-hover-img">
-         <h4 class="pbmit-hide">client 13</h4>
-         <div class="pbmit-client-hover-img">
-           <img src="images/insurancelogos/UCare.png" class="img-fluid" alt="">
-         </div>
-         <div class="pbmit-featured-wrapper">
-           <img src="images/insurancelogos/UCare.png" class="img-fluid" alt="">
-         </div>
-       </div>
-     </article>
-   </div>
-   <div class="col-md-2 col-sm-6">
-     <article class="pbmit-client-style-1">
-       <div class="pbmit-client-wrapper pbmit-client-with-hover-img">
-         <h4 class="pbmit-hide">client 14</h4>
-         <div class="pbmit-client-hover-img">
-           <img src="images/insurancelogos/Sanford.png" class="img-fluid" alt="">
-         </div>
-         <div class="pbmit-featured-wrapper">
-           <img src="images/insurancelogos/Sanford.png" class="img-fluid" alt="">
-         </div>
-       </div>
-     </article>
-   </div>
- </div> -->
- 
- 
- 
- 
- <section class="client-section-home3">
-   <div class="container">
-       <div class="pbmit-heading-subheading text-center">
-           <h4 class="pbmit-subtitle">Insurance Plans that we accept</h4>
-       </div>
-
-       <!-- Desktop Swiper -->
-       <div class="swiper insurance-swiper desktop" data-autoplay="true" data-speed="3000" data-loop="true">
-           <div class="swiper-wrapper">
-               <!-- Medicare -->
-               <div class="swiper-slide">
-                   <article class="pbmit-client-style-1">
-                       <div class="pbmit-client-wrapper pbmit-client-with-hover-img">
-                           <h4 class="pbmit-hide">Medicare</h4>
-                           <div class="pbmit-client-hover-img">
-                               <img src="images/insurancelogos/Medicare.png" class="img-fluid" alt="Medicare">
-                           </div>
-                           <div class="pbmit-featured-wrapper">
-                               <img src="images/insurancelogos/Medicare.png" class="img-fluid" alt="Medicare">
-                           </div>
-                       </div>
-                   </article>
-               </div>
-
-               <!-- Health Partners -->
-               <div class="swiper-slide">
-                   <article class="pbmit-client-style-1">
-                       <div class="pbmit-client-wrapper pbmit-client-with-hover-img">
-                           <h4 class="pbmit-hide">Health Partners</h4>
-                           <div class="pbmit-client-hover-img">
-                               <img src="images/insurancelogos/HP.png" class="img-fluid" alt="Health Partners">
-                           </div>
-                           <div class="pbmit-featured-wrapper">
-                               <img src="images/insurancelogos/HP.png" class="img-fluid" alt="Health Partners">
-                           </div>
-                       </div>
-                   </article>
-               </div>
-
-               <!-- PrimeWest -->
-               <div class="swiper-slide">
-                   <article class="pbmit-client-style-1">
-                       <div class="pbmit-client-wrapper pbmit-client-with-hover-img">
-                           <h4 class="pbmit-hide">PrimeWest</h4>
-                           <div class="pbmit-client-hover-img">
-                               <img src="images/insurancelogos/PrimeWest.png" class="img-fluid" alt="PrimeWest">
-                           </div>
-                           <div class="pbmit-featured-wrapper">
-                               <img src="images/insurancelogos/PrimeWest.png" class="img-fluid" alt="PrimeWest">
-                           </div>
-                       </div>
-                   </article>
-               </div>
-
-               <!-- 1st Health Network -->
-               <div class="swiper-slide">
-                   <article class="pbmit-client-style-1">
-                       <div class="pbmit-client-wrapper pbmit-client-with-hover-img">
-                           <h4 class="pbmit-hide">1st Health Network</h4>
-                           <div class="pbmit-client-hover-img">
-                               <img src="images/insurancelogos/1st Health Network.png" class="img-fluid" alt="1st Health Network">
-                           </div>
-                           <div class="pbmit-featured-wrapper">
-                               <img src="images/insurancelogos/1st Health Network.png" class="img-fluid" alt="1st Health Network">
-                           </div>
-                       </div>
-                   </article>
-               </div>
-
-               <!-- BCBS -->
-               <div class="swiper-slide">
-                   <article class="pbmit-client-style-1">
-                       <div class="pbmit-client-wrapper pbmit-client-with-hover-img">
-                           <h4 class="pbmit-hide">Blue Cross Blue Shield</h4>
-                           <div class="pbmit-client-hover-img">
-                               <img src="images/insurancelogos/BCBS.png" class="img-fluid" alt="BCBS">
-                           </div>
-                           <div class="pbmit-featured-wrapper">
-                               <img src="images/insurancelogos/BCBS.png" class="img-fluid" alt="BCBS">
-                           </div>
-                       </div>
-                   </article>
-               </div>
-
-               <!-- Cigna -->
-               <div class="swiper-slide">
-                   <article class="pbmit-client-style-1">
-                       <div class="pbmit-client-wrapper pbmit-client-with-hover-img">
-                           <h4 class="pbmit-hide">Cigna</h4>
-                           <div class="pbmit-client-hover-img">
-                               <img src="images/insurancelogos/Cigna.png" class="img-fluid" alt="Cigna">
-                           </div>
-                           <div class="pbmit-featured-wrapper">
-                               <img src="images/insurancelogos/Cigna.png" class="img-fluid" alt="Cigna">
-                           </div>
-                       </div>
-                   </article>
-               </div>
-
-               <!-- Aetna -->
-               <div class="swiper-slide">
-                   <article class="pbmit-client-style-1">
-                       <div class="pbmit-client-wrapper pbmit-client-with-hover-img">
-                           <h4 class="pbmit-hide">Aetna</h4>
-                           <div class="pbmit-client-hover-img">
-                               <img src="images/insurancelogos/Aetna.png" class="img-fluid" alt="Aetna">
-                           </div>
-                           <div class="pbmit-featured-wrapper">
-                               <img src="images/insurancelogos/Aetna.png" class="img-fluid" alt="Aetna">
-                           </div>
-                       </div>
-                   </article>
-               </div>
-
-               <!-- MultiPlan -->
-               <div class="swiper-slide">
-                   <article class="pbmit-client-style-1">
-                       <div class="pbmit-client-wrapper pbmit-client-with-hover-img">
-                           <h4 class="pbmit-hide">MultiPlan</h4>
-                           <div class="pbmit-client-hover-img">
-                               <img src="images/insurancelogos/MultiPlan.png" class="img-fluid" alt="MultiPlan">
-                           </div>
-                           <div class="pbmit-featured-wrapper">
-                               <img src="images/insurancelogos/MultiPlan.png" class="img-fluid" alt="MultiPlan">
-                           </div>
-                       </div>
-                   </article>
-               </div>
-
-               <!-- Medicaid -->
-               <div class="swiper-slide">
-                   <article class="pbmit-client-style-1">
-                       <div class="pbmit-client-wrapper pbmit-client-with-hover-img">
-                           <h4 class="pbmit-hide">Medicaid</h4>
-                           <div class="pbmit-client-hover-img">
-                               <img src="images/insurancelogos/Medicaid.png" class="img-fluid" alt="Medicaid">
-                           </div>
-                           <div class="pbmit-featured-wrapper">
-                               <img src="images/insurancelogos/Medicaid.png" class="img-fluid" alt="Medicaid">
-                           </div>
-                       </div>
-                   </article>
-               </div>
-
-               <!-- UCare -->
-               <div class="swiper-slide">
-                   <article class="pbmit-client-style-1">
-                       <div class="pbmit-client-wrapper pbmit-client-with-hover-img">
-                           <h4 class="pbmit-hide">UCare</h4>
-                           <div class="pbmit-client-hover-img">
-                               <img src="images/insurancelogos/UCare.png" class="img-fluid" alt="UCare">
-                           </div>
-                           <div class="pbmit-featured-wrapper">
-                               <img src="images/insurancelogos/UCare.png" class="img-fluid" alt="UCare">
-                           </div>
-                       </div>
-                   </article>
-               </div>
-           </div>
-
-           <!-- Navigation buttons -->
-           <div class="swiper-button-prev swiper-nav">
-            <i class="fas fa-chevron-left"></i>
-        </div>
-        <div class="swiper-button-next swiper-nav">
-            <i class="fas fa-chevron-right"></i>
-        </div>
-       </div>
-   </div>
-</section>
- 
-     <!-- Mobile Marquee -->
-     <div class="client-marquee-wrapper d-md-none">
-       <div class="client-marquee-track">
-         <!-- Repeat all logos here for smooth scrolling -->
-         <!-- First set -->
-         <div class="logo-item"><img src="images/insurancelogos/Medicare.png" alt=""></div>
-         <div class="logo-item"><img src="images/insurancelogos/HP.png" alt=""></div>
-         <div class="logo-item"><img src="images/insurancelogos/PrimeWest.png" alt=""></div>
-         <div class="logo-item"><img src="images/insurancelogos/1st Health Network.png" alt=""></div>
-         <div class="logo-item"><img src="images/insurancelogos/BCBS.png" alt=""></div>
-         <div class="logo-item"><img src="images/insurancelogos/Cigna.png" alt=""></div>
-         <div class="logo-item"><img src="images/insurancelogos/Medicare RR.png" alt=""></div>
-         <div class="logo-item"><img src="images/insurancelogos/Allina Aetna.png" alt=""></div>
-         <div class="logo-item"><img src="images/insurancelogos/Aetna.png" alt=""></div>
-         <div class="logo-item"><img src="images/insurancelogos/MultiPlan.png" alt=""></div>
-         <div class="logo-item"><img src="images/insurancelogos/Medicaid.png" alt=""></div>
-         <div class="logo-item"><img src="images/insurancelogos/Americas PPO.png" alt=""></div>
-         <div class="logo-item"><img src="images/insurancelogos/UCare.png" alt=""></div>
-         <div class="logo-item"><img src="images/insurancelogos/Sanford.png" alt=""></div>
-         
-         <!-- Duplicate for looping -->
-         <div class="logo-item"><img src="images/insurancelogos/Medicare.png" alt=""></div>
-         <div class="logo-item"><img src="images/insurancelogos/HP.png" alt=""></div>
-         <div class="logo-item"><img src="images/insurancelogos/PrimeWest.png" alt=""></div>
-         <div class="logo-item"><img src="images/insurancelogos/1st Health Network.png" alt=""></div>
-         <div class="logo-item"><img src="images/insurancelogos/BCBS.png" alt=""></div>
-         <div class="logo-item"><img src="images/insurancelogos/Cigna.png" alt=""></div>
-         <div class="logo-item"><img src="images/insurancelogos/Medicare RR.png" alt=""></div>
-         <div class="logo-item"><img src="images/insurancelogos/Allina Aetna.png" alt=""></div>
-         <div class="logo-item"><img src="images/insurancelogos/Aetna.png" alt=""></div>
-         <div class="logo-item"><img src="images/insurancelogos/MultiPlan.png" alt=""></div>
-         <div class="logo-item"><img src="images/insurancelogos/Medicaid.png" alt=""></div>
-         <div class="logo-item"><img src="images/insurancelogos/Americas PPO.png" alt=""></div>
-         <div class="logo-item"><img src="images/insurancelogos/UCare.png" alt=""></div>
-         <div class="logo-item"><img src="images/insurancelogos/Sanford.png" alt=""></div>
-       </div>
-     </div>
-   </div>
- </section>
- <!-- client End -->
- 
- 
- 
-
+          </div>
+      </header>
+      <!-- Header Main Area End Here -->
        
-             
+       <!-- page content -->
+       <div class="page-content">
 
-
-
-                      <!-- Team Start -->
-               <section class="ihbox-bg-section-home3">
-                  <div class="container">
-                     <div class="pbmit-heading-subheading text-center">
-                        <h4 class="pbmit-subtitle">Our locations
-                        </h4>
-                        <h2 class="pbmit-title">Where to find us
-                        </h2>
-                     
-                     </div> 
-                     <div class="row">
-                        <div class="col-md-6 col-lg-4">
-                           <article class="pbmit-miconheading-style-7">
-                              <div class="pbmit-ihbox-style-7">
-                                 <div class="pbmit-ihbox-box">
-                                    <div class="pbmit-ihbox-icon">
-                                       <div class="pbmit-ihbox-icon-wrapper pbmit-ihbox-icon-type-image">
-                                          <img src="images/locations/Wayzata.png" class="img-fluid" alt="Appointment">
-                                       </div>
-                                    </div>
-                                    <div class="pbmit-ihbox-contents">
-                                       <h2 class="pbmit-element-title"> Wayzata</h2>
-                                       
-                                       <div class="pbmit-heading-desc">1421 Wayzata Blvd
-                                          Suite 303
-                                          Wayzata, MN 55391
-                                          </div>
-                                    </div>
-                                 </div>
-                              </div>
-                           </article>
-                        </div>
-                        <div class="col-md-6 col-lg-4">
-                           <article class="pbmit-miconheading-style-7">
-                              <div class="pbmit-ihbox-style-7">
-                                 <div class="pbmit-ihbox-box">
-                                    <div class="pbmit-ihbox-icon">
-                                       <div class="pbmit-ihbox-icon-wrapper pbmit-ihbox-icon-type-image">
-                                          <img src="images/locations/St Cloud.png" class="img-fluid" alt="Doctor Checkup">
-                                       </div>
-                                    </div>
-                                    <div class="pbmit-ihbox-contents">
-                                       <h2 class="pbmit-element-title"> St Cloud</h2>
-                                       
-                                    <div class="pbmit-heading-desc">3920 42nd Ave S
-                                       South Bldg
-                                       St Cloud, MN 56301</div>
-                                    </div>
-                                 </div>
-                              </div>
-                           </article>
-                        </div>
-                        <div class="col-md-6 col-lg-4">
-                           <article class="pbmit-miconheading-style-7">
-                              <div class="pbmit-ihbox-style-7">
-                                 <div class="pbmit-ihbox-box">
-                                    <div class="pbmit-ihbox-icon">
-                                       <div class="pbmit-ihbox-icon-wrapper pbmit-ihbox-icon-type-image">
-                                          <img src="images/locations/Coming Soon.jpg" class="img-fluid" alt="Manage Treatment">
-                                       </div>
-                                            </div>
-                                    <div class="pbmit-ihbox-contents">
-                                       <h2 class="pbmit-element-title text-muted">Coming Soon</h2>                                    
-                                   
-                                 </div>
-                              </div>
-                           </article>
-                        </div>
-                      
-                     </div>
-                  </div>
-               </section>
-               <!-- Team End -->
-      
-   
-
+          <!-- Welcome -->     
         
-         <!-- testimonial Start -->
-         <section class="testimonial-main-home2 pb-5">
-            <div class="pbmit-heading-subheading text-center">
-               <h4 class="pbmit-subtitle">Testimonials</h4>
-               <h2 class="pbmit-title">What Our Patients say about us</h2>
+          <!-- Welcome end --> 
+
+          <section class="section-lg about-main-section">
+             <div class="container">
+                <div class="row justify-content-between align-items-center">
+                   <div class="col-xl-6 col-lg-12 position-relative">
+                      <div class="scale-hover">                        <img src="images/about_us.webp" class="img-fluid w-100  " alt="About Us Image">
+                      </div>
+                      <div class="about-fid-section">
+                         <div class="pbminfotech-ele-fid-style-5">
+                            <div class="pbmit-fld-contents d-flex">
+                             
+                             
+                            </div>
+                         </div>
+                      </div>
+                   </div>
+                   <div class="col-xl-6 col-lg-12 position-relative">
+                      <div class="benefits-right-section">
+                         <div class="pbmit-heading-subheading text-center text-md-start">
+                            <h4 class="pbmit-subtitle">How Can We Help You?</h4>
+                          
+                         </div>
+                        
+                         <div class="d-flex ">
+                            <div class="pbmit-ihbox-style-1">
+                               <div class="pbmit-ihbox-box">
+                                  <div class="d-flex">
+                                     <div class="pbmit-ihbox-icon">
+                                        <div class="pbmit-ihbox-icon-wrapper">
+                                           <i class="pbmit-cardioly-icon pbmit-cardioly-icon-comment"></i>
+                                        </div>
+                                     </div>
+                                     <h2 class="pbmit-element-title" style="font-weight: 700;">
+                                        Are you experiencing:
+                                     </h2>
+                                  </div>
+                                  <div class="pbmit-ihbox-contents pe-5">
+                                     <div class="pbmit-heading-desc">
+                                           <ul class="pbmit-list-style-1" style="list-style-type: disc; padding-left: 40px;         grid-template-columns: repeat(2, 1fr);    gap:10px
+ "   style="list-style-type: disc; 
+         padding-left: 0; 
+         display: grid; 
+         grid-template-columns: 1fr; 
+         gap: 10px; 
+         max-width: 600px;">
+                                              <li>Chest pain</li>
+                                              <li>Dizziness or fainting</li>
+                                              <li>Shortness of breath</li>
+                                              <li>Irregular heartbeat</li>
+                                              <li>Leg swelling</li>
+                                              <li>Cough when lying down</li>
+                                              <li> Cough with leg swelling</li>
+                                              <li>Varicose veins</li>
+                                        </div>
+                                                                              <div class="d-flex mt-3">
+                                                                               <div class="pbmit-ihbox-icon">
+                                                                                  <div class="pbmit-ihbox-icon-wrapper">
+                                                                                     <i class="pbmit-cardioly-icon pbmit-cardioly-icon-comment"></i>
+                                                                                  </div>
+                                                                               </div>
+                                                                               <h2 class="pbmit-element-title" style="font-weight: 700;">
+                                                                                  Family or personal heart history
+
+
+                                                                               </h2>
+                                                                            </div><div class="d-flex mt-3">
+                                                                               <div class="pbmit-ihbox-icon">
+                                                                                  <div class="pbmit-ihbox-icon-wrapper">
+                                                                                     <i class="pbmit-cardioly-icon pbmit-cardioly-icon-comment"></i>
+                                                                                  </div>
+                                                                               </div>
+                                                                               <h2 class="pbmit-element-title" style="font-weight: 700;">
+                                                                                  Know your heart disease risk
+
+
+                                                                               </h2>
+                                                                            </div><div class="d-flex mt-3">
+                                                                               <div class="pbmit-ihbox-icon">
+                                                                                  <div class="pbmit-ihbox-icon-wrapper">
+                                                                                     <i class="pbmit-cardioly-icon pbmit-cardioly-icon-comment"></i>
+                                                                                  </div>
+                                                                               </div>
+                                                                               <h2 class="pbmit-element-title" style="font-weight: 700;">
+                                                                                  Boost longevity and quality of life                                                                                 </h2>
+                                                                            </div>
+                                                                            </div><div class="d-flex mt-3">
+                                                                               <div class="pbmit-ihbox-icon">
+                                                                                  <div class="pbmit-ihbox-icon-wrapper">
+                                                                                     <i class="pbmit-cardioly-icon pbmit-cardioly-icon-comment"></i>
+                                                                                  </div>
+                                                                               </div>
+                                                                               <h2 class="pbmit-element-title" style="font-weight: 700;">
+                                                                                  Test cardiopulmonary fitness / athletic performance
+
+                                                                               </h2>
+                                                                            </div>
+                                  </div>
+                               </div>
+                            </div>
+                          
+                         </div>
+                        
+                        
+                      </div>
+                   </div>
+                </div>
+             </div>
+          </section>  
+
+     <!-- Service Start -->
+     <section class="service-section-home2 p-0">
+        <div class="container">
+          <div class="pbmit-heading-subheading text-center mb-4">
+            <h4 class="pbmit-subtitle text-danger text-uppercase fw-semibold" style="letter-spacing: 1px;">
+              Our Services
+            </h4>
+            <h2 class="pbmit-title fw-bold" style="font-size: 32px; color: var(--pbmit-heading-color);">
+              Cardiovascular care that meets your unique needs
+            </h2>
+            <p class="mt-3" style="font-size: 16px; color: var(--pbmit-body-typography-color); max-width: 700px; margin: 0 auto;">
+              We care to know you, meet you where you are, and help you make the right choices for you.
+            </p>
+          </div>
+        </div>
+      
+        <!-- Swiper Slider Start -->
+        <div class="container swiper service-swiper"
+             data-autoplay="true"
+             data-pagination="true"
+             data-arrows="false"
+             data-columns="3">
              
-            </div>
-            <div class="testimonial-section-home2">
-               <div class="swiper-slider" data-autoplay="true" data-dots="true" data-arrows="false" data-columns="3" data-margin="" data-effect="slide">
-                  <div class="swiper-wrapper">
-                     <div class="swiper-slide">
-                        <!-- Slide1 -->
-                        <article class="pbmit-testimonial-style-1">
-                           <div class="pbminfotech-post-item">
-                              <div class="pbminfotech-box-content">
-                                 <div class="pbminfotech-box-img d-flex">
-                                    <div class="pbmit-featured-wrapper">
-                                       <img src="images/Male_user.png" class="img-fluid" alt="">
-                                    </div>
-                                    <div class="pbminfotech-box-author">
-                                       <h3 class="pbminfotech-box-title">Gordy L</h3>
-                                       <div class="pbminfotech-testimonial-detail">Cardiology</div>
-                                    </div>
-                                 </div>
-                                 <div class="pbminfotech-box-desc testimonial-scroll-box">
-                                    <blockquote class="pbminfotech-testimonial-text">
-                                       "I've been Dr. Esberg's patient for a long time and I follow her wherever
-                                       she goes. She's the best heart doctor of all the doctors that I've had.
-                                       She's helped me so much for my heart, I can't even begin to say how much.
-                                       Dr. Esberg is upfront, tells me like it is and guides me to what has
-                                       always been the best for me. Her care has been incredible. She's the best
-                                       of the best and I'd be lost without her."
-                                    </blockquote>       
-                                 </div>
-                              </div>
-                           </div>
-                        </article>
-                     </div>
-                     <div class="swiper-slide">
-                        <!-- Slide2 -->
-                        <article class="pbmit-testimonial-style-1">
-                           <div class="pbminfotech-post-item">
-                              <div class="pbminfotech-box-content">
-                                 <div class="pbminfotech-box-img d-flex">
-                                    <div class="pbmit-featured-wrapper">
-                                       <img src="images/Male_user.png" class="img-fluid" alt="">
-                                    </div>
-                                    <div class="pbminfotech-box-author">
-                                       <h3 class="pbminfotech-box-title">Tim & Becky T</h3>
-                                       <div class="pbminfotech-testimonial-detail">Cardiology</div>
-                                    </div>
-                                 </div>
-                                 <div class="pbminfotech-box-desc testimonial-scroll-box">
-                                    <blockquote class="pbminfotech-testimonial-text">
-                                       "We would like to share how impressed my wife, Becky, and I are with Cassie.
-                                       She is cheerful, professional and extremely helpful. She is a great front
-                                       face and PR for your clinic. We really appreciated how we were treated by
-                                       Cassie. Her demeanor almost made me feel happy that I have palpitations/
-                                       PAC's! Don't lose her!"
-                                    </blockquote>
-                                 </div>
-                              </div>
-                           </div>
-                        </article>
-                     </div>
-                     <div class="swiper-slide">
-                        <!-- Slide3 -->
-                        <article class="pbmit-testimonial-style-1">
-                           <div class="pbminfotech-post-item">
-                              <div class="pbminfotech-box-content">
-                                 <div class="pbminfotech-box-img d-flex">
-                                    <div class="pbmit-featured-wrapper">
-                                       <img src="images/Male_user.png" class="img-fluid" alt="">
-                                    </div>
-                                    <div class="pbminfotech-box-author">
-                                       <h3 class="pbminfotech-box-title">Mike M, DDS</h3>
-                                       <div class="pbminfotech-testimonial-detail">Concierge Program</div>
-                                    </div>
-                                 </div>
-                                 <div class="pbminfotech-box-desc testimonial-scroll-box">
-                                    <blockquote class="pbminfotech-testimonial-text">
-                                       "Dr. Esberg has been taking care of me since I had a heart attack several
-                                       years ago, and her care has always been exceptional. She is not only an
-                                       outstanding physician but also a genuinely kind person. My experience at
-                                       Twin Cities Cardiology has been a complete 180 from what I've encountered
-                                       at most health systems. Here, I can get an appointment within days—no more
-                                       playing the lottery with big systems and waiting weeks. The staff are
-                                       friendly, responsive, and clearly enjoy their work, which creates a
-                                       welcoming atmosphere. I've been so impressed with my care that I now have
-                                       a concierge membership. Dr. Esberg is always accessible, and I trust her
-                                       so much that I confidently recommend her to my family and friends."
-                                    </blockquote>
-                                 </div>
-                              </div>
-                           </div>
-                        </article>
-                     </div>
+          <div class="swiper-wrapper">
+            <!-- Card 1: Cardiology -->
+            <div class="swiper-slide col-md-4">
+              <article class="pbmit-service-style-1">
+                <div class="pbminfotech-post-item">
+                  <div class="pbmit-featured-wrapper">
+                    <div class="service-hover">
+                      <img src="images/valve_disorder_management (1).webp" class="img-fluid" alt="Cardiology Service Image" />
+                    </div>
                   </div>
-               </div>
+                  <div class="pbminfotech-box-content">
+                    <div class="pbmit-service-icon-wrapper">
+                      <img src="/images/icon/vascular.svg" alt="Heart icon" />
+                    </div>
+                    <div class="pbminfotech-box-content-inner">
+                      <div class="pbmit-service-cat"><a href="#" rel="tag">Heart</a></div>
+                      <h3 class="pbmit-service-title">
+                        <a href="/cardiology.html">Cardiology</a>
+                      </h3>
+                      <div class="pbmit-service-btn">
+                        <a class="pbmit-service-btn-a" href="/cardiology.html"><span>Readmore</span></a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </article>
             </div>
-            
-            <style>
-            /* Testimonial scroll box styling */
-            .testimonial-scroll-box {
-                line-height: 1.5rem;           /* Each line is 1.5rem high */
-                height: 14rem;               /* 15 lines × 1.5rem = 22.5rem */
-                overflow-y: auto;              /* Enable vertical scrolling */
-                padding-right: 0.5rem;         /* Space for scrollbar */
-                margin: 0;
-                border: 1px solid #eee;        /* Optional: subtle border */
-                padding: 1rem;                 /* Inner padding for better readability */
-                border-radius: 8px;            /* Optional: rounded corners */
-            }
-            
-            /* Style the testimonial text */
-            .testimonial-scroll-box .pbminfotech-testimonial-text {
-                margin: 0;
-                padding: 0;
-                line-height: inherit;          /* Inherit the line-height from parent */
-            }
-            
-            /* Custom scrollbar styling (optional) */
-            .testimonial-scroll-box::-webkit-scrollbar {
-                width: 6px;
-            }
-            
-            .testimonial-scroll-box::-webkit-scrollbar-track {
-                background: #f1f1f1;
-                border-radius: 3px;
-            }
-            
-            .testimonial-scroll-box::-webkit-scrollbar-thumb {
-                background: #c1c1c1;
-                border-radius: 3px;
-            }
-            
-            .testimonial-scroll-box::-webkit-scrollbar-thumb:hover {
-                background: #a8a8a8;
-            }
-            </style> 
-         </section>
-         <!-- testimonial End -->
-         
+      
+            <!-- Card 2: Vascular Medicine -->
+            <div class="swiper-slide col-md-4">
+              <article class="pbmit-service-style-1">
+                <div class="pbminfotech-post-item">
+                  <div class="pbmit-featured-wrapper">
+                    <div class="service-hover">
+                      <img src="/images/Vascular1.png" class="img-fluid" alt="Vascular Medicine Image" />
+                    </div>
+                  </div>
+                  <div class="pbminfotech-box-content">
+                    <div class="pbmit-service-icon-wrapper">
+                      <img src="/images/leg.svg" alt="Vascular icon" />
+                    </div>
+                    <div class="pbminfotech-box-content-inner">
+                      <div class="pbmit-service-cat"><a href="#" rel="tag">Arteries & Veins</a></div>
+                      <h3 class="pbmit-service-title">
+                        <a href="/vascularmedicine.html">Vascular Medicine</a>
+                      </h3>
+                      <div class="pbmit-service-btn">
+                        <a class="pbmit-service-btn-a" href="/vascularmedicine.html"><span>Readmore</span></a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </article>
+            </div>
+      
+            <!-- Card 3: Executive Health Physical -->
+            <div class="swiper-slide col-md-4">
+              <article class="pbmit-service-style-1">
+                <div class="pbminfotech-post-item">
+                  <div class="pbmit-featured-wrapper">
+                    <div class="service-hover">
+                      <img src="images/Executive Health Physical.webp" class="img-fluid" alt="Executive Health Image" />
+                    </div>
+                  </div>
+                  <div class="pbminfotech-box-content">
+                    <div class="pbmit-service-icon-wrapper">
+                      <img src="/images/icon/Executive.svg" class="ps-2" alt="Executive icon" />
+                    </div>
+                    <div class="pbminfotech-box-content-inner">
+                      <div class="pbmit-service-cat"><a href="#" rel="tag">Functional Workup</a></div>
+                      <h3 class="pbmit-service-title">
+                        <a href="/executivehealthphysical.html">Executive Health Physical</a>
+                      </h3>
+                      <div class="pbmit-service-btn">
+                        <a class="pbmit-service-btn-a" href="/executivehealthphysical.html"><span>Readmore</span></a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </article>
+            </div>
+      
+            <!-- Card 4: Concierge Program -->
+            <div class="swiper-slide col-md-4">
+              <article class="pbmit-service-style-1">
+                <div class="pbminfotech-post-item">
+                  <div class="pbmit-featured-wrapper">
+                    <div class="service-hover">
+                      <img src="images/Concierge.webp" class="img-fluid" alt="Concierge Service Image" />
+                    </div>
+                  </div>
+                  <div class="pbminfotech-box-content">
+                    <div class="pbmit-service-icon-wrapper">
+                      <i class="fa fa-tablet" aria-hidden="true"></i>
+                    </div>
+                    <div class="pbminfotech-box-content-inner">
+                      <div class="pbmit-service-cat"><a href="#" rel="tag">Boutique</a></div>
+                      <h3 class="pbmit-service-title">
+                        <a href="/conciergeprogram.html">Concierge Program</a>
+                      </h3>
+                      <div class="pbmit-service-btn">
+                        <a class="pbmit-service-btn-a" href="/conciergeprogram.html"><span>Readmore</span></a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </article>
+            </div>
+          </div>
+        </div>
+        <!-- Swiper Slider End -->
+      </section>
+<!-- Insurance Plans Section -->
+<section class="insurance-logo-section pt-5 pb-3">
+    <div class="container text-center mb-4">
+        <h4 class="pbmit-subtitle text-danger text-uppercase fw-semibold" style="letter-spacing: 1px; font-size: 13px;">
+            _Insurance Plans That We Accept_
+          </h4>
+          
+    <h2 class="pbmit-title fw-bold" style="font-size: 32px;">
+      We Accept Most Major Insurance Providers
+    </h2>
+    <p class="mt-2" style="font-size: 16px; color: var(--pbmit-body-typography-color); max-width: 700px; margin: 0 auto;">
+      We're in-network with a wide range of insurance plans to make your care seamless and accessible.
+    </p>
+    </div>
+    <!-- Desktop Swiper (visible on md and above) -->
+    <div class="container swiper insurance-partners-swiper desktop">
+        <div class="swiper-wrapper" id="insuranceMarqueeWrapper">
+            <!-- Medicare -->
+            <div class="swiper-slide">
+                <article class="insurance-client-card">
+                    <div class="insurance-client-wrapper insurance-client-with-hover-img">
+                        <h4 class="insurance-title-hidden">Medicare</h4>
+                        <div class="insurance-logo-hover">
+                            <img src="images/insurancelogos/Medicare.png" class="img-fluid" alt="Medicare">
+                        </div>
+                        <!-- <div class="insurance-logo-main">
+                            <img src="images/insurancelogos/Medicare.png" class="img-fluid" alt="Medicare">
+                        </div> -->
+                    </div>
+                </article>
+            </div>
 
-         </div>
-         <!-- page content End -->
+            <!-- Health Partners -->
+            <div class="swiper-slide">
+                <article class="insurance-client-card">
+                    <div class="insurance-client-wrapper insurance-client-with-hover-img">
+                        <h4 class="insurance-title-hidden">Health Partners</h4>
+                        <div class="insurance-logo-hover">
+                            <img src="images/insurancelogos/HP.png" class="img-fluid" alt="Health Partners">
+                        </div>
+                        <!-- <div class="insurance-logo-main">
+                            <img src="images/insurancelogos/HP.png" class="img-fluid" alt="Health Partners">
+                        </div> -->
+                    </div>
+                </article>
+            </div>
 
-         <!-- footer -->
-         <footer class="bg-white py-5" style="font-family: var(--pbmit-body-typography-font-family); color: var(--pbmit-heading-color);">
-            <div class="container">
-              <div class="row gy-4">
-                
-                <!-- Logo & Tagline -->
-                <div class="col-md-3">
-                  <img src="images/logo/Svg (1).svg" alt="Twin Cities Cardiology" style="max-height: 50px;" class="mb-2">
-                  <p class="fst-italic small" style="color: var(--pbmit-body-typography-color);">
-                    "Your heart, our priority. Compassionate care with precision."
-                  </p>
+            <!-- PrimeWest -->
+            <div class="swiper-slide">
+                <article class="insurance-client-card">
+                    <div class="insurance-client-wrapper insurance-client-with-hover-img">
+                        <h4 class="insurance-title-hidden">PrimeWest</h4>
+                        <div class="insurance-logo-hover">
+                            <img src="images/insurancelogos/PrimeWest.png" class="img-fluid" alt="PrimeWest">
+                        </div>
+                        <!-- <div class="insurance-logo-main">
+                            <img src="images/insurancelogos/PrimeWest.png" class="img-fluid" alt="PrimeWest">
+                        </div> -->
+                    </div>
+                </article>
+            </div>
+
+            <!-- 1st Health Network -->
+            <div class="swiper-slide">
+                <article class="insurance-client-card">
+                    <div class="insurance-client-wrapper insurance-client-with-hover-img">
+                        <h4 class="insurance-title-hidden">1st Health Network</h4>
+                        <div class="insurance-logo-hover">
+                            <img src="images/insurancelogos/1st Health Network.png" class="img-fluid" alt="1st Health Network">
+                        </div>
+                        <!-- <div class="insurance-logo-main">
+                            <img src="images/insurancelogos/1st Health Network.png" class="img-fluid" alt="1st Health Network">
+                        </div> -->
+                    </div>
+                </article>
+            </div>
+
+            <!-- BCBS -->
+            <div class="swiper-slide">
+                <article class="insurance-client-card">
+                    <div class="insurance-client-wrapper insurance-client-with-hover-img">
+                        <h4 class="insurance-title-hidden">Blue Cross Blue Shield</h4>
+                        <div class="insurance-logo-hover">
+                            <img src="images/insurancelogos/BCBS.png" class="img-fluid" alt="BCBS">
+                        </div>
+                        <!-- <div class="insurance-logo-main">
+                            <img src="images/insurancelogos/BCBS.png" class="img-fluid" alt="BCBS">
+                        </div> -->
+                    </div>
+                </article>
+            </div>
+
+            <!-- Cigna -->
+            <div class="swiper-slide">
+                <article class="insurance-client-card">
+                    <div class="insurance-client-wrapper insurance-client-with-hover-img">
+                        <h4 class="insurance-title-hidden">Cigna</h4>
+                        <div class="insurance-logo-hover">
+                            <img src="images/insurancelogos/Cigna.png" class="img-fluid" alt="Cigna">
+                        </div>
+                        <!-- <div class="insurance-logo-main">
+                            <img src="images/insurancelogos/Cigna.png" class="img-fluid" alt="Cigna">
+                        </div> -->
+                    </div>
+                </article>
+            </div>
+
+            <!-- Aetna -->
+            <div class="swiper-slide">
+                <article class="insurance-client-card">
+                    <div class="insurance-client-wrapper insurance-client-with-hover-img">
+                        <h4 class="insurance-title-hidden">Aetna</h4>
+                        <div class="insurance-logo-hover">
+                            <img src="images/insurancelogos/Aetna.png" class="img-fluid" alt="Aetna">
+                        </div>
+                        <!-- <div class="insurance-logo-main">
+                            <img src="images/insurancelogos/Aetna.png" class="img-fluid" alt="Aetna">
+                        </div> -->
+                    </div>
+                </article>
+            </div>
+
+            <!-- MultiPlan -->
+            <div class="swiper-slide">
+                <article class="insurance-client-card">
+                    <div class="insurance-client-wrapper insurance-client-with-hover-img">
+                        <h4 class="insurance-title-hidden">MultiPlan</h4>
+                        <div class="insurance-logo-hover">
+                            <img src="images/insurancelogos/MultiPlan.png" class="img-fluid" alt="MultiPlan">
+                        </div>
+                        <!-- <div class="insurance-logo-main">
+                            <img src="images/insurancelogos/MultiPlan.png" class="img-fluid" alt="MultiPlan">
+                        </div> -->
+                    </div>
+                </article>
+            </div>
+
+            <!-- Medicaid -->
+            <div class="swiper-slide">
+                <article class="insurance-client-card">
+                    <div class="insurance-client-wrapper insurance-client-with-hover-img">
+                        <h4 class="insurance-title-hidden">Medicaid</h4>
+                        <div class="insurance-logo-hover">
+                            <img src="images/insurancelogos/Medicaid.png" class="img-fluid" alt="Medicaid">
+                        </div>
+                        <!-- <div class="insurance-logo-main">
+                            <img src="images/insurancelogos/Medicaid.png" class="img-fluid" alt="Medicaid">
+                        </div> -->
+                    </div>
+                </article>
+            </div>
+
+            <!-- UCare -->
+            <div class="swiper-slide">
+                <article class="insurance-client-card">
+                    <div class="insurance-client-wrapper insurance-client-with-hover-img">
+                        <h4 class="insurance-title-hidden">UCare</h4>
+                        <div class="insurance-logo-hover">
+                            <img src="images/insurancelogos/UCare.png" class="img-fluid" alt="UCare">
+                        </div>
+                        <!-- <div class="insurance-logo-main">
+                            <img src="images/insurancelogos/UCare.png" class="img-fluid" alt="UCare">
+                        </div> -->
+                    </div>
+                </article>
+            </div>
+        </div>
+
+        <!-- Pagination dots -->
+        <div class="swiper-pagination"></div>
+    </div>
+</div>
+
+    </div>
+
+    
+
+</div>
+
+  
+    <!-- Mobile Marquee (visible on small screens) -->
+    <div class="client-marquee-wrapper d-md-none mt-4">
+      <div class="client-marquee-track d-flex align-items-center">
+        <!-- Repeat logos twice for smooth infinite scroll -->
+        <!-- Set 1 -->
+        <div class="logo-item"><img src="images/insurancelogos/Medicare.png" alt="Medicare" /></div>
+        <div class="logo-item"><img src="images/insurancelogos/HP.png" alt="HP" /></div>
+        <div class="logo-item"><img src="images/insurancelogos/PrimeWest.png" alt="PrimeWest" /></div>
+        <div class="logo-item"><img src="images/insurancelogos/1st Health Network.png" alt="1st Health Network" /></div>
+        <div class="logo-item"><img src="images/insurancelogos/BCBS.png" alt="BCBS" /></div>
+        <div class="logo-item"><img src="images/insurancelogos/Cigna.png" alt="Cigna" /></div>
+        <div class="logo-item"><img src="images/insurancelogos/Medicare RR.png" alt="Medicare RR" /></div>
+        <div class="logo-item"><img src="images/insurancelogos/Allina Aetna.png" alt="Allina Aetna" /></div>
+        <div class="logo-item"><img src="images/insurancelogos/Aetna.png" alt="Aetna" /></div>
+        <div class="logo-item"><img src="images/insurancelogos/MultiPlan.png" alt="MultiPlan" /></div>
+        <div class="logo-item"><img src="images/insurancelogos/Medicaid.png" alt="Medicaid" /></div>
+        <div class="logo-item"><img src="images/insurancelogos/Americas PPO.png" alt="America's PPO" /></div>
+        <div class="logo-item"><img src="images/insurancelogos/UCare.png" alt="UCare" /></div>
+        <div class="logo-item"><img src="images/insurancelogos/Sanford.png" alt="Sanford" /></div>
+  
+        <!-- Set 2 (Duplicate for loop effect) -->
+        <div class="logo-item"><img src="images/insurancelogos/Medicare.png" alt="Medicare" /></div>
+        <div class="logo-item"><img src="images/insurancelogos/HP.png" alt="HP" /></div>
+        <div class="logo-item"><img src="images/insurancelogos/PrimeWest.png" alt="PrimeWest" /></div>
+        <div class="logo-item"><img src="images/insurancelogos/1st Health Network.png" alt="1st Health Network" /></div>
+        <div class="logo-item"><img src="images/insurancelogos/BCBS.png" alt="BCBS" /></div>
+        <div class="logo-item"><img src="images/insurancelogos/Cigna.png" alt="Cigna" /></div>
+        <div class="logo-item"><img src="images/insurancelogos/Medicare RR.png" alt="Medicare RR" /></div>
+        <div class="logo-item"><img src="images/insurancelogos/Allina Aetna.png" alt="Allina Aetna" /></div>
+        <div class="logo-item"><img src="images/insurancelogos/Aetna.png" alt="Aetna" /></div>
+        <div class="logo-item"><img src="images/insurancelogos/MultiPlan.png" alt="MultiPlan" /></div>
+        <div class="logo-item"><img src="images/insurancelogos/Medicaid.png" alt="Medicaid" /></div>
+        <div class="logo-item"><img src="images/insurancelogos/Americas PPO.png" alt="America's PPO" /></div>
+        <div class="logo-item"><img src="images/insurancelogos/UCare.png" alt="UCare" /></div>
+        <div class="logo-item"><img src="images/insurancelogos/Sanford.png" alt="Sanford" /></div>
+      </div>
+    </div>
+  </section>
+  <section class="ihbox-bg-section-home3 py-5">
+    <div class="container">
+      <div class="pbmit-heading-subheading text-center mb-4">
+        <h4 class="pbmit-subtitle text-danger text-uppercase fw-semibold" style="letter-spacing: 1px;">
+          Our Locations
+        </h4>
+        <h2 class="pbmit-title fw-bold" style="font-size: 32px;">
+          Where to Find Us
+        </h2>
+        <p class="mt-2" style="font-size: 16px; color: var(--pbmit-body-typography-color); max-width: 700px; margin: 0 auto;">
+          Conveniently located to serve you better. Visit us at any of our Minnesota locations for expert cardiac care.
+        </p>
+      </div>
+  
+      <div class="row g-4">
+        <!-- Wayzata Location -->
+        <div class="col-md-6 col-lg-4">
+          <article class="pbmit-miconheading-style-7">
+            <div class="pbmit-ihbox-style-7">
+              <div class="pbmit-ihbox-box">
+                <div class="pbmit-ihbox-icon">
+                  <div class="pbmit-ihbox-icon-wrapper pbmit-ihbox-icon-type-image">
+                    <img src="images/locations/Wayzata.png" class="img-fluid rounded-6" alt="Wayzata Location" />
+                  </div>
                 </div>
-          
-                <!-- Services -->
-                <div class="col-md-3">
-                  <h6 class="fw-bold mb-3">Services</h6>
-                  <ul class="list-unstyled small">
-                    <li><a href="/cardiology.html" class="text-decoration-none" style="color: var(--pbmit-heading-color);">› Cardiology</a></li>
-                    <li><a href="/vascularmedicine.html" class="text-decoration-none" style="color: var(--pbmit-heading-color);">› Vascular Medicine</a></li>
-                    <li><a href="/executivehealthphysical.html" class="text-decoration-none" style="color: var(--pbmit-heading-color);">› Executive Physicals</a></li>
-                    <li><a href="/conciergeprogram.html" class="text-decoration-none" style="color: var(--pbmit-heading-color);">› Concierge Program</a></li>
-                  </ul>
+                <div class="pbmit-ihbox-contents">
+                  <h3 class="pbmit-element-title">Wayzata</h3>
+                  <div class="pbmit-heading-desc">
+                    1421 Wayzata Blvd<br />
+                    Suite 303<br />
+                    Wayzata, MN 55391
+                  </div>
                 </div>
-          
-                <!-- Clinic Hours -->
-                <div class="col-md-3">
-                  <h6 class="fw-bold mb-3">Clinic Hours</h6>
-                  <ul class="list-unstyled small">
-                    <li>Mon – Thu: <span class="text-danger fw-semibold">9:00 – 4:00</span></li>
-                    <li>Friday: <span class="text-danger fw-semibold">9:00 – 4:00</span> <small>(Emergencies only)</small></li>
-                    <li>Sat – Sun: <span class="text-danger fw-semibold">Closed</span></li>
-                  </ul>
-                </div>
-          
-                <!-- Contact Info -->
-                <div class="col-md-3">
-                  <h6 class="fw-bold mb-3">Contact Us</h6>
-                  <ul class="list-unstyled small">
-                    <li class="d-flex align-items-center mb-2">
-                      <i class="fas fa-envelope me-2 text-danger"></i>
-                      contact@twincitiescardiology.com
-                    </li>
-                    <li class="d-flex align-items-center mb-2">
-                      <i class="fas fa-phone-alt me-2 text-danger"></i>
-                      <a href="tel:19522326132" class="text-decoration-none" style="color: var(--pbmit-heading-color);">
-                        1-952-232-6132
-                      </a>
-                    </li>
-                    <li class="d-flex align-items-start mb-2">
-                      <i class="pbmit-base-icon-location me-2 mt-1 text-danger"></i>
-                      <span>1421 Wayzata Blvd, MN 55391</span>
-                    </li>
-                    <li class="mt-2">
-                      <a href="#" target="_blank" class="text-decoration-none">
-                        <i class="fab fa-linkedin me-2 text-danger"></i> LinkedIn
-                      </a>
-                    </li>
-                  </ul>
-                </div>
-                
-          
-              </div>
-          
-              <!-- Divider -->
-              <hr class="my-4" style="border-color: #dee2e6;">
-          
-              <!-- Bottom Row -->
-              <div class="d-flex flex-column flex-md-row justify-content-between align-items-center">
-                <p class="mb-2 mb-md-0 small" style="color: var(--pbmit-body-typography-color);">
-                  © 2025 Twin Cities Cardiology. All rights reserved.
-                </p>
-                <a href="/privacy-policy.html" class="text-decoration-none small" style="color: var(--pbmit-heading-color);">
-                  Privacy Policy
-                </a>
               </div>
             </div>
-          </footer>
-         <!-- footer End -->
+          </article>
+        </div>
+  
+        <!-- St Cloud Location -->
+        <div class="col-md-6 col-lg-4">
+          <article class="pbmit-miconheading-style-7">
+            <div class="pbmit-ihbox-style-7">
+              <div class="pbmit-ihbox-box">
+                <div class="pbmit-ihbox-icon">
+                  <div class="pbmit-ihbox-icon-wrapper pbmit-ihbox-icon-type-image">
+                    <img src="images/locations/St Cloud.png" class="img-fluid rounded-6" alt="St. Cloud Location" />
+                  </div>
+                </div>
+                <div class="pbmit-ihbox-contents">
+                  <h3 class="pbmit-element-title">St. Cloud</h3>
+                  <div class="pbmit-heading-desc">
+                    3920 42nd Ave S<br />
+                    South Bldg<br />
+                    St. Cloud, MN 56301
+                  </div>
+                </div>
+              </div>
+            </div>
+          </article>
+        </div>
+  
+        <!-- Coming Soon -->
+        <div class="col-md-6 col-lg-4">
+          <article class="pbmit-miconheading-style-7">
+            <div class="pbmit-ihbox-style-7">
+              <div class="pbmit-ihbox-box">
+                <div class="pbmit-ihbox-icon">
+                  <div class="pbmit-ihbox-icon-wrapper pbmit-ihbox-icon-type-image">
+                    <img src="images/locations/Coming Soon.jpg" class="img-fluid rounded-6" alt="Coming Soon" />
+                  </div>
+                </div>
+                <div class="pbmit-ihbox-contents">
+                  <h3 class="pbmit-element-title text-muted">Coming Soon</h3>
+                </div>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="testimonial-main-home2 pb-5">
+    <div class="pbmit-heading-subheading text-center mb-4">
+      <h4 class="pbmit-subtitle text-danger text-uppercase fw-semibold" style="letter-spacing: 1px;">
+        Testimonials
+      </h4>
+      <h2 class="pbmit-title fw-bold" style="font-size: 32px;">
+        What Our Patients Say About Us
+      </h2>
+      <p class="mt-2" style="font-size: 16px; color: var(--pbmit-body-typography-color); max-width: 700px; margin: 0 auto;">
+        Hear directly from our patients about the compassionate care, expert treatment, and personalized attention they received.
+      </p>
+    </div>
+  
+    <div class="testimonial-section-home2">
+      <div class="swiper-slider" data-autoplay="true" data-dots="true" data-arrows="false" data-columns="3" data-margin="" data-effect="slide">
+        <div class="swiper-wrapper">
+          <!-- Slide 1 -->
+          <div class="swiper-slide">
+            <article class="pbmit-testimonial-style-1">
+              <div class="pbminfotech-post-item">
+                <div class="pbminfotech-box-content">
+                  <div class="pbminfotech-box-img d-flex">
+                    <div class="pbmit-featured-wrapper">
+                      <img src="images/Male_user.png" class="img-fluid" alt="Gordy L" />
+                    </div>
+                    <div class="pbminfotech-box-author">
+                      <h3 class="pbminfotech-box-title">Gordy L</h3>
+                      <div class="pbminfotech-testimonial-detail">Cardiology</div>
+                    </div>
+                  </div>
+                  <div class="pbminfotech-box-desc testimonial-scroll-box">
+                    <blockquote class="pbminfotech-testimonial-text">
+                      "I've been Dr. Esberg's patient for a long time and I follow her wherever she goes. She's the best heart doctor of all the doctors that I've had. She's helped me so much for my heart, I can't even begin to say how much. Dr. Esberg is upfront, tells me like it is and guides me to what has always been the best for me. Her care has been incredible. She's the best of the best and I'd be lost without her."
+                    </blockquote>
+                  </div>
+                </div>
+              </div>
+            </article>
+          </div>
+  
+          <!-- Slide 2 -->
+          <div class="swiper-slide">
+            <article class="pbmit-testimonial-style-1">
+              <div class="pbminfotech-post-item">
+                <div class="pbminfotech-box-content">
+                  <div class="pbminfotech-box-img d-flex">
+                    <div class="pbmit-featured-wrapper">
+                      <img src="images/Male_user.png" class="img-fluid" alt="Tim & Becky T" />
+                    </div>
+                    <div class="pbminfotech-box-author">
+                      <h3 class="pbminfotech-box-title">Tim & Becky T</h3>
+                      <div class="pbminfotech-testimonial-detail">Cardiology</div>
+                    </div>
+                  </div>
+                  <div class="pbminfotech-box-desc testimonial-scroll-box">
+                    <blockquote class="pbminfotech-testimonial-text">
+                      "We would like to share how impressed my wife, Becky, and I are with Cassie. She is cheerful, professional and extremely helpful. She is a great front face and PR for your clinic. We really appreciated how we were treated by Cassie. Her demeanor almost made me feel happy that I have palpitations/PAC's! Don't lose her!"
+                    </blockquote>
+                  </div>
+                </div>
+              </div>
+            </article>
+          </div>
+  
+          <!-- Slide 3 -->
+          <div class="swiper-slide">
+            <article class="pbmit-testimonial-style-1">
+              <div class="pbminfotech-post-item">
+                <div class="pbminfotech-box-content">
+                  <div class="pbminfotech-box-img d-flex">
+                    <div class="pbmit-featured-wrapper">
+                      <img src="images/Male_user.png" class="img-fluid" alt="Mike M, DDS" />
+                    </div>
+                    <div class="pbminfotech-box-author">
+                      <h3 class="pbminfotech-box-title">Mike M, DDS</h3>
+                      <div class="pbminfotech-testimonial-detail">Concierge Program</div>
+                    </div>
+                  </div>
+                  <div class="pbminfotech-box-desc testimonial-scroll-box">
+                    <blockquote class="pbminfotech-testimonial-text">
+                      "Dr. Esberg has been taking care of me since I had a heart attack several years ago, and her care has always been exceptional. She is not only an outstanding physician but also a genuinely kind person. My experience at Twin Cities Cardiology has been a complete 180 from what I've encountered at most health systems. Here, I can get an appointment within days—no more playing the lottery with big systems and waiting weeks. The staff are friendly, responsive, and clearly enjoy their work, which creates a welcoming atmosphere. I've been so impressed with my care that I now have a concierge membership. Dr. Esberg is always accessible, and I trust her so much that I confidently recommend her to my family and friends."
+                    </blockquote>
+                  </div>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+    <!-- Scroll box styling -->
+    <style>
+      .testimonial-scroll-box {
+        line-height: 1.5rem;
+        height: 14rem;
+        overflow-y: auto;
+        padding: 1rem 0.5rem;
+        margin: 0;
+        border: 1px solid #eee;
+        border-radius: 8px;
+      }
+  
+      .testimonial-scroll-box .pbminfotech-testimonial-text {
+        margin: 0;
+        padding: 0;
+        line-height: inherit;
+      }
+  
+      .testimonial-scroll-box::-webkit-scrollbar {
+        width: 6px;
+      }
+  
+      .testimonial-scroll-box::-webkit-scrollbar-track {
+        background: #f1f1f1;
+        border-radius: 3px;
+      }
+  
+      .testimonial-scroll-box::-webkit-scrollbar-thumb {
+        background: #c1c1c1;
+        border-radius: 3px;
+      }
+  
+      .testimonial-scroll-box::-webkit-scrollbar-thumb:hover {
+        background: #a8a8a8;
+      }
+    </style>
+  </section>
+  <footer class="py-5 text-white" style="
+  background: linear-gradient(to right, #192136, #273353);
+  font-family: var(--pbmit-body-typography-font-family);
+  color: var(--pbmit-heading-color);
+">
+  <div class="container">
+    <div class="row row-cols-1 row-cols-md-4 g-4">
+      
+      <!-- Logo & Tagline -->
+      <div>
+        <img src="images/logo/Svg (1).svg" alt="Twin Cities Cardiology" style="max-height: 50px;" class="mb-3" />
+        <p class="fst-italic small text-light" style="font-size: 15px; font-weight: 700; line-height: 18px;">
+          "Your heart, our priority. Compassionate care with precision."
+        </p>
       </div>
 
-      <!-- page wrapper End -->
-
-   <!-- Search Box Start Here -->
-   <div class="pbmit-search-overlay">
-      <div class="pbmit-icon-close"></div>
-      <div class="pbmit-search-outer"> 
-         <form class="pbmit-site-searchform">
-            <input type="search" class="form-control field searchform-s" name="s" placeholder="Type Word Then Press Enter">
-            <button type="submit"><i class="pbmit-base-icon-search-1"></i></button>
-         </form>
+      <!-- Services Links -->
+      <div>
+        <h6 class="fw-bold mb-3 text-white" style="font-size: 15px;">Services</h6>
+        <ul class="list-unstyled small">
+          <li><a href="/cardiology.html" class="text-decoration-none text-light">› Cardiology</a></li>
+          <li><a href="/vascularmedicine.html" class="text-decoration-none text-light">› Vascular Medicine</a></li>
+          <li><a href="/executivehealthphysical.html" class="text-decoration-none text-light">› Executive Physicals</a></li>
+          <li><a href="/conciergeprogram.html" class="text-decoration-none text-light">› Concierge Program</a></li>
+        </ul>
       </div>
-   </div>
+
+      <!-- Clinic Hours -->
+      <div class="ps-md-3">
+        <h6 class="fw-bold mb-3 text-white" style="font-size: 15px;">Clinic Hours</h6>
+        <ul class="list-unstyled small text-light">
+          <li class="d-flex justify-content-between">
+            <span>Mon – Thu:</span> <span class="fw-semibold">9:00 – 4:00</span>
+          </li>
+          <li class="d-flex justify-content-between">
+            <span>Friday <small class="text-danger fw-semibold">(Emergencies only)</small>:</span>
+            <span class="fw-semibold">9:00 – 4:00</span>
+          </li>
+          <li class="d-flex justify-content-between">
+            <span>Sat – Sun:</span> <span class="fw-semibold">Closed</span>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Contact Info -->
+      <div>
+        <h6 class="fw-bold mb-3 text-white" style="font-size: 15px;">Contact Us</h6>
+        <ul class="list-unstyled small text-light">
+          <!-- <li class="d-flex align-items-center mb-2">
+            <i class="fas fa-envelope me-2 text-danger"></i> contact@twincitiescardiology.com
+          </li> -->
+          <li class="d-flex align-items-center mb-2">
+            <i class="fas fa-envelope me-2 text-danger"></i>
+            <a href="mailto:contactus@tccardio.org" class="text-decoration-none text-light">contactus@tccardio.org</a>
+          </li>
+          <li class="d-flex align-items-center mb-2">
+            <i class="fas fa-phone-alt me-2 text-danger"></i>
+            <a href="tel:19522326132" class="text-decoration-none text-light">1-952-232-6132</a>
+          </li>
+          <li class="d-flex align-items-start mb-2">
+            <i class="pbmit-base-icon-location me-2 mt-1 text-danger"></i>
+            <span>1421 Wayzata Blvd, MN 55391</span>
+          </li>
+          <li class="mt-2">
+            <a href="#" target="_blank" class="text-decoration-none text-light">
+              <i class="fab fa-linkedin me-2 text-danger"></i> LinkedIn
+            </a>
+          </li>
+        </ul>
+      </div>
+
+    </div>
+
+    <!-- Divider -->
+    <hr class="my-4" style="border-top: 1px solid rgba(255,255,255,0.1);" />
+
+    <!-- Bottom Strip -->
+    <div class="d-flex flex-column flex-md-row justify-content-between align-items-center mt-4 pt-3 " style="border-color: rgba(255, 255, 255, 0.1);">
+        <p class="mb-2 mb-md-0 small text-light fw-bold text-start w-100" style="font-size: 14px;">
+          © 2025 Twin Cities Cardiology. All rights reserved.
+        </p>
+        <p class="mb-0 small text-light fw-bold text-start text-md-end w-100" style="font-size: 14px;">
+          Privacy Policy
+        </p>
+      </div>
+  </div>
+</footer>
+
+
+<div class="pbmit-search-overlay">
+    <div class="pbmit-icon-close"></div>
+    <div class="pbmit-search-outer"> 
+       <form class="pbmit-site-searchform">
+          <input type="search" class="form-control field searchform-s" name="s" placeholder="Type Word Then Press Enter">
+          <button type="submit"><i class="pbmit-base-icon-search-1"></i></button>
+       </form>
+    </div>
+ </div>
 
 
 
 
 
-   <!-- Search Box End Here -->
+ <!-- Search Box End Here -->
 
-      <!-- JS
-         ============================================ -->
-      <!-- jQuery JS -->
-      <script src="js/jquery.min.js"></script>
-      <!-- Popper JS -->
-      <script src="js/popper.min.js"></script>
-      <!-- Bootstrap JS -->
-      <script src="js/bootstrap.min.js"></script>
-      <!-- jquery Waypoints JS -->
-      <script src="js/jquery.waypoints.min.js"></script>
-      <!-- jquery Appear JS -->
-      <script src="js/jquery.appear.js"></script>
-      <!-- Numinate JS -->
-      <script src="js/numinate.min.js"></script>
-      <!-- Slick JS -->
-      <script src="js/swiper.min.js"></script>
-      <!-- Magnific JS -->
-      <script src="js/jquery.magnific-popup.min.js"></script>
-      <!-- Circle Progress JS -->
-      <script src="js/circle-progress.js"></script> 
-      <!-- AOS -->
-      <script src="js/aos.js"></script>
-      <!-- Scripts JS -->
-      <script src="js/scripts.js"></script>
+    <!-- JS
+       ============================================ -->
+    <!-- jQuery JS -->
+    <script src="js/jquery.min.js"></script>
+    <!-- Popper JS -->
+    <script src="js/popper.min.js"></script>
+    <!-- Bootstrap JS -->
+    <script src="js/bootstrap.min.js"></script>
+    <!-- jquery Waypoints JS -->
+    <script src="js/jquery.waypoints.min.js"></script>
+    <!-- jquery Appear JS -->
+    <script src="js/jquery.appear.js"></script>
+    <!-- Numinate JS -->
+    <script src="js/numinate.min.js"></script>
+    <!-- Slick JS -->
+    <script src="js/swiper.min.js"></script>
+    <!-- Magnific JS -->
+    <script src="js/jquery.magnific-popup.min.js"></script>
+    <!-- Circle Progress JS -->
+    <script src="js/circle-progress.js"></script> 
+    <!-- AOS -->
+    <script src="js/aos.js"></script>
+    <!-- Scripts JS -->
+    <script src="js/scripts.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.4.7/swiper-bundle.min.js"></script>
+    <script>
+        // Initialize Insurance Partners Swiper with unique variable name
+        const insurancePartnersSwiper = new Swiper('.insurance-partners-swiper', {
+            slidesPerView: 2,
+            slidesPerGroup: 2,
+            spaceBetween: 30,
+            autoplay: {
+                delay: 2000,
+                disableOnInteraction: false,
+            },
+            loop: true,
+            pagination: {
+            el: '.insurance-partners-swiper .swiper-pagination',
+            clickable: true,    
+            type: 'bullets',
+            bulletClass: 'swiper-pagination-bullet',
+            bulletActiveClass: 'swiper-pagination-bullet-active',
+            
+            },
+            breakpoints: {
+                640: {
+                    slidesPerView: 3,
+                    spaceBetween: 20,
+                },
+                768: {
+                    slidesPerView: 4,
+                    spaceBetween: 30,
+                },
+                1024: {
+                    slidesPerView: 5,
+                    spaceBetween: 30,
+                },
+                1200: {
+                    slidesPerView: 6,
+                    spaceBetween: 40,
+                },
+            },
+        });
+    
 
-      <script>
-         const insuranceSwiper = new Swiper('.insurance-swiper', {
-           loop: true,
-           speed: 6000, // Control marquee speed (higher = slower)
-           slidesPerView: 'auto',
-           spaceBetween: 30,
-           autoplay: {
-             delay: 0, // zero delay for continuous scroll
-             disableOnInteraction: false,
-           },
-           allowTouchMove: false,
-           navigation: {
-             nextEl: '.insurance-swiper-next',
-             prevEl: '.insurance-swiper-prev',
-           },
-         });
-       </script>
-       
-   </body>
-</html>
+
+    
+    </script>
+     
+ </body>
+</html>            
