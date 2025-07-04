@@ -163,6 +163,30 @@
       </style>
    </head>
    <body>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const video = document.getElementById("heroVideo");
+        const buttons = document.getElementById("hero-buttons");
+    
+        // Only do this for mobile
+        if (window.innerWidth <= 768 && video) {
+          video.addEventListener("playing", function () {
+            buttons.style.display = "flex";
+          });
+    
+          // Fallback: if video doesn't start in 3s (due to autoplay issues), show buttons anyway
+          setTimeout(() => {
+            if (video.paused) {
+              buttons.style.display = "flex";
+            }
+          }, 3000);
+        } else {
+          // Desktop: show by default
+          buttons.style.display = "flex";
+        }
+      });
+    </script>
+    
     <!-- page wrapper -->
     <div class="page-wrapper   ">
       <!-- Header Main Area -->
@@ -280,11 +304,17 @@
                       
                     
                       <div class="pbmit-slider-bg">
-                         <video autoplay muted loop playsinline
+                         <!-- <video autoplay muted loop playsinline
                             class="w-100 h-100"
                             style="object-fit: cover; object-position: center;">
                             <source src="videos/HeroSection.mp4" type="video/mp4" />
-                         </video>
+                         </video> -->
+                         <video id="heroVideo" autoplay muted loop playsinline
+  class="w-100 h-100"
+  style="object-fit: cover; object-position: center;">
+  <source src="videos/HeroSection.mp4" type="video/mp4" />
+</video>
+
                       </div>
                          <!-- <div 
                          class="position-absolute start-0 end-0 bottom-0 gradient-overlay"
@@ -298,7 +328,7 @@
                        </div> -->
 
                                                       <div class="container">
-                                  <div class="row text-center">
+                                  <!-- <div class="row text-center">
                                       <div class="col-md-12"> 
                                           <div class="pbmit-slider-content">
                                               <h2 class="pbmit-title transform-bottom transform-delay-2"> Strong Hearts Begin <br/> with Smart Choices</h2>
@@ -312,7 +342,16 @@
                                               </div>
                                           </div>
                                       </div>
+                                  </div> -->
+                                  <div id="hero-buttons" class="pbmit-button d-flex justify-content-center" style="display: none;">
+                                    <div class="me-4 transform-bottom transform-delay-3">
+                                      <a href="about-us.html" class="pbmit-btn pbmit-btn-white">Meet the Team</a>
+                                    </div>
+                                    <div class="transform-bottom transform-delay-4">
+                                      <a href="bookmyappointment.html" class="pbmit-btn pbmit-btn-outline-white">BOOK APPOINTMENT</a>
+                                    </div>
                                   </div>
+                                  
                               </div>
                           </div>
                       </div>
@@ -793,13 +832,14 @@
   </section>
   <section class="ihbox-bg-section-home3 py-5">
     <div class="container">
-      <div class="pbmit-heading-subheading text-center mb-4">
+      <div class="pbmit-heading-subheading text-center mt-4">
         <h4 class="pbmit-subtitle text-danger text-uppercase fw-semibold" style="letter-spacing: 1px;">
           Our Locations
         </h4>
         <h2 class="pbmit-title fw-bold" style="font-size: 32px;">
           Where to Find Us
         </h2>
+        
         <p class="mt-2" style="font-size: 16px; color: var(--pbmit-body-typography-color); max-width: 700px; margin: 0 auto;">
           Conveniently located to serve you better. Visit us at any of our Minnesota locations for expert cardiac care.
         </p>
