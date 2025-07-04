@@ -465,8 +465,7 @@ $("#contact-form").submit(function () {
         $(".contact-form button.pbmit-btn span").show();
         $(".contact-form button.pbmit-btn").removeAttr("disabled");
         $(".contact-form .message-status").html(cevap);
-        $("#contact-form")[0].reset();
-        // Reset form fields after successful submit
+        $("#contact-form")[0].reset(); // Reset the form after successful submission
       },
     });
   }
