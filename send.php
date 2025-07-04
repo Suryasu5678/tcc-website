@@ -127,7 +127,7 @@ if( !empty($_POST) ){
 	} else {
 
 		// all required files are valid.. continue to send email
-		$email_body = '<h2>Contact Form Data</h2><table style="border: 1px solid #b5b5b5; padding: 5px;">';
+		$email_body = '<h2>User Submitted Details</h2><table style="border: 1px solid #b5b5b5; padding: 5px;">';
 		foreach( $_POST as $key=>$value ){
 			if( in_array( $key, $field_list ) ){
 				$field_name = field_name($key);

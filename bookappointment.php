@@ -99,7 +99,7 @@ if (!empty($_POST)) {
         die();
     } else {
         // Build email body
-        $email_body = '<h2>Appointment Request</h2><table style="border: 1px solid #b5b5b5; padding: 5px;">';
+        $email_body = '<h2>Appointment Form Submission Details</h2><table style="border: 1px solid #b5b5b5; padding: 5px;">';
         foreach ($field_list as $key) {
             if ($key === 'days') {
                 $days = isset($_POST['days']) && is_array($_POST['days']) ? implode(', ', $_POST['days']) : '';
