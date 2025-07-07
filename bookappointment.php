@@ -18,9 +18,7 @@ $field_list = array(
     'email',
     'phone',
     'insurance',
-    'days',
-    'subject',
-    'primary-care',
+    'slots',
     'message',
 );
 
@@ -30,9 +28,7 @@ $required_fields = array(
     'email',
     'phone',
     'insurance',
-    'days',
-    'subject',
-    'primary-care',
+    'slots',
     'message',
 );
 
@@ -80,8 +76,8 @@ if (!empty($_POST)) {
 
     // Validate required fields
     foreach ($required_fields as $key) {
-        if ($key === 'days') {
-            if (empty($_POST['days']) || !is_array($_POST['days'])) {
+        if ($key === 'slots') {
+            if (empty($_POST['slots']) || !is_array($_POST['slots'])) {
                 $error_message .= '<li>Please select at least one available day.</li>';
             }
         } else {
@@ -101,11 +97,11 @@ if (!empty($_POST)) {
         // Build email body
         $email_body = '<h2>Appointment Form Submission Details</h2><table style="border: 1px solid #b5b5b5; padding: 5px;">';
         foreach ($field_list as $key) {
-            if ($key === 'days') {
-                $days = isset($_POST['days']) && is_array($_POST['days']) ? implode(', ', $_POST['days']) : '';
+            if ($key === 'slots') {
+                $slots = isset($_POST['slots']) && is_array($_POST['slots']) ? implode(', ', $_POST['slots']) : '';
                 $email_body .= '<tr>
-                    <td style="border: 1px solid #b5b5b5; padding: 5px;"><strong>Available Days</strong></td>
-                    <td style="border: 1px solid #b5b5b5; padding: 5px;">: ' . htmlspecialchars($days) . '</td>
+                    <td style="border: 1px solid #b5b5b5; padding: 5px;"><strong>Available slots</strong></td>
+                    <td style="border: 1px solid #b5b5b5; padding: 5px;">: ' . htmlspecialchars($slots) . '</td>
                 </tr>';
             } else {
                 $value = isset($_POST[$key]) ? $_POST[$key] : '';
