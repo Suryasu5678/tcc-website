@@ -87,10 +87,10 @@ footer .pbmit-base-icon-location:before {
                   <div class="pbmit-pre-header-right">
                     <ul class="pbmit-contact-info">
                                 
-                      <span class="d-flex align-items-center">
+                      <!-- <span class="d-flex align-items-center">
                         <img src="images/logo/Group transparent.png" alt="MY TCC Logo" class="img-fluid me-1 " style="width: 20px; height: 20px;">
                         <span style="font-size: 16px;">MY TCC</span>
-                      </span>
+                      </span> -->
                          </ul>
                       </li>
                    </ul>		
@@ -162,25 +162,24 @@ footer .pbmit-base-icon-location:before {
                                             
                             
                             
-                            
+                                          
                             
                               <li><a href="contact-us.html ">CONTACT US</a></li>
-                              <li>
-                                <a href="bookmyappointment.html">BOOK APPOINTMENT</a>
-                              </li>
-                                           <li><a href=" " class="d-block d-lg-none">MY TCC</a></li>
+                              <li class="d-block d-lg-none"><a href="bookmyappointment.html">BOOK APPOINTMENT</a></li>
+
+                                          
                             </ul>
                             </div>
                           </nav>
                         </div>
                       </div>
-                      <!-- <div class="pbmit-right-box">
+                      <div class="pbmit-right-box">
                         <div class="menu-right-box d-flex align-items-center">
                           <div class="pbmit-header-button">
                             <a href="bookmyappointment.html" class="pbmit-btn text-uppercase">Book Appointment</a>
 
                           </div>
-                        </div> -->
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -216,195 +215,124 @@ footer .pbmit-base-icon-location:before {
 <div class="container py-5">
     <div class="row">
   
-      <!-- Left Section -->
-      <div class="col-md-6 mb-4 " style="color: #fff;">
-        <div style="background-color: var(--pbmit-blackish-color); padding: 30px; border-radius: 10px;">
-          <h4 class="fw-bold mb-3" style="color: #fff;">Do you already have a Twin Cities Cardiology account?</h4>
-          <br/>
-         <p class="mb-3">
-    To request an appointment:
-  </p>
-
-  <!-- Bullet 1 -->
-  <p class="mb-2">
-    • Use your 
-    <span style="font-size: 16px; font-weight: 500; color: var(--pbmit-global-color);">
-      FollowMyHealth
-    </span> 
-    app on your mobile device.
-  </p>
-  <p style="text-align:center; margin-bottom: 0 !important ;"> (or)</p>
-
-  <!-- Bullet 2 -->
-  <p class="mb-2">
-    • Click 
-    <span 
-      class="ms-2 d-inline-flex align-items-center" 
-      style="cursor: pointer; transition: transform 0.3s ease;" 
-      onmouseover="this.style.transform='scale(1.01)'; this.querySelector('span').style.color='var(--pbmit-global-color)'" 
-      onmouseout="this.style.transform='scale(1)'; this.querySelector('span').style.color='white'"
-    >
-      <img 
-        src="images/logo/Group transparent.png" 
-        alt="MY TCC Logo" 
-        class="img-fluid me-2" 
-        style="width: 20px; height: 20px;"
-      >
-      <span style="font-size: 16px; font-weight: 700; color: white;">
-        MY TCC
-      </span>
-    </span>
-  </p>  
-       
-             </div>
-      </div>
-  
-      <!-- Right Section -->
-      <div class="col-md-6 " >
-        <div style="background-color: var(--pbmit-blackish-color); padding: 30px; border-radius: 10px;">
-          <h4 class="fw-bold mb-4" style="color: #fff;">New to Twin Cities Cardiology?</h4>
-          <p class="mb-4" style="color: #fff;">
-            We reserve daily slots to
-            see new patients !<br><br>
-          
-            Enter your information in
-            the form below and send
-            it to us.<br><br>
-          
-            We will get in touch with
-            you right away to schedule
-            your appointment.
-          </p>
-          
-            <form id="appointment-form" method="post" action="bookappointment.php">
-              <!-- Top Section -->
-              <div class="mb-3">
-                <input type="text" name="name" class="form-control text-dark" placeholder="Name*" required>
-              </div>
-              <div class="mb-3">
-                <input type="email" name="email" class="form-control text-dark" placeholder="Email*" required>
-              </div>
-              <div class="mb-3"> 
-                <!-- <input type="text" name="phone" class="form-control text-dark" placeholder="Phone*" required> -->
-                <input type="tel" name="phone" class="form-control text-dark"
-                placeholder="Phone* (e.g. 123-456-7890)" 
-                pattern="^(\+1\s?)?(\(?\d{3}\)?)[-\s.]?\d{3}[-\s.]?\d{4}$"
-                title="Enter a valid US phone number"
-                required />
-
-                <input type="tel" name="phone" class="form-control text-dark" required
-       pattern="^(\+1\s?)?(\(?\d{3}\)?)[\s.-]?\d{3}[\s.-]?\d{4}$"
-       placeholder="Phone* e.g. 123-456-7890)">
-
-              </div> 
-            
-              <div class="mb-3">
-                <input type="text" name="insurance" class="form-control text-dark" placeholder="Insurance Plan*" required>
-              </div>
-            
-        <!-- Mid Section -->
-
-
-              <!-- Bottom Section -->
-              <div class="mb-3">
-                <textarea name="message" rows="4" class="form-control text-dark" placeholder="Message*" style=" height: 100px; 
-                width: 100%; 
-                max-width: 550px;  
-                padding-top: 20px;" required></textarea>
-              </div>
-
-
-              <hr class="border-dark my-4" />
-
-              <!-- <h6 class="fw-semibold text-white mt-4 mb-3">Select preferred day  / time:</h6> -->
-              <h4 class="fw-bold mb-4 mb-3" style="color: #fff;">Your preferece of day and time:</h4>
-              <br/>
-  <div class="row g-4">
-
-    <!-- Monday -->
-    <div class="col-12 col-lg-6">
-      <div class="text-white fw-bold mb-2">Monday</div>
-      <div class="d-flex flex-wrap gap-3">
-        <div class="form-check">
-          <input type="checkbox" class="form-check-input" id="mon-11" name="slots[]" value="Monday-11AM">
-          <label class="form-check-label text-white" for="mon-11">11:00AM</label>
-        </div>
-        <div class="form-check">
-          <input type="checkbox" class="form-check-input" id="mon-12" name="slots[]" value="Monday-12Noon">
-          <label class="form-check-label text-white" for="mon-12">12:00Noon</label>
+      <div class="container py-5">
+        <div class="row justify-content-center">
+          <!-- Right Section Only -->
+          <div class="col-12 col-md-8 col-lg-6">
+            <div style="background-color: var(--pbmit-blackish-color); padding: 30px; border-radius: 10px;">
+              <h4 class="fw-bold mb-4 text-white">What is convenient for you?</h4>
+              <p class="mb-4 text-white">
+                Enter your information in the form below and send it to us.<br/> <br/>
+                We will contact you right away to schedule an appointment.<br/>
+              </p>
+      
+              <form id="appointment-form" method="post" action="bookappointment.php">
+                <!-- Basic Info -->
+                <div class="mb-3">
+                  <input type="text" name="name" class="form-control text-dark" placeholder="Name*" required>
+                </div>
+                <div class="mb-3">
+                  <input type="email" name="email" class="form-control text-dark" placeholder="Email*" required>
+                </div>
+                <div class="mb-3">
+                  <input type="tel" name="phone" class="form-control text-dark" required
+                    pattern="^(\+1\s?)?(\(?\d{3}\)?)[\s.-]?\d{3}[\s.-]?\d{4}$"
+                    placeholder="Phone* e.g. 123-456-7890">
+                </div>
+                <div class="mb-3">
+                  <input type="text" name="insurance" class="form-control text-dark" placeholder="Insurance Plan*" required>
+                </div>
+      
+                <!-- Message -->
+                <div class="mb-3">
+                  <textarea name="message" rows="4" class="form-control text-dark" placeholder="Message*" style="height: 100px; padding-top: 20px;" required></textarea>
+                </div>
+      
+                <hr class="border-dark my-4" />
+      
+                <!-- Slot Selection -->
+                <h4 class="fw-bold mb-4 text-white">Your preference of day and time:</h4>
+                 <div class="row g-4">
+                  <!-- Monday -->
+                  <div class="col-12 col-lg-6">
+                    <div class="text-white fw-bold mb-2">Mon</div>
+                    <div class="d-flex flex-wrap gap-3">
+                      <div class="form-check">
+                        <input type="checkbox" class="form-check-input" id="mon-11" name="slots[]" value="Monday-11AM">
+                        <label class="form-check-label text-white" for="mon-11">11:00AM</label>
+                      </div>
+                      <div class="form-check">
+                        <input type="checkbox" class="form-check-input" id="mon-12" name="slots[]" value="Monday-12PM">
+                        <label class="form-check-label text-white" for="mon-12">12:00PM</label>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- Tuesday -->
+                  <div class="col-12 col-lg-6 border-start-lg border-light ps-lg-4">
+                    <div class="text-white fw-bold mb-2">Tue</div>
+                    <div class="d-flex flex-wrap gap-3">
+                      <div class="form-check">
+                        <input type="checkbox" class="form-check-input" id="tue-11" name="slots[]" value="Tuesday-11PM">
+                        <label class="form-check-label text-white" for="tue-11">11:00AM</label>
+                      </div>
+                      <div class="form-check">
+                        <input type="checkbox" class="form-check-input" id="tue-12" name="slots[]" value="Tuesday-12PM">
+                        <label class="form-check-label text-white" for="tue-12">12:00PM</label>
+                      </div>
+                    </div>
+                  </div>
+      
+                  <!-- Wednesday -->
+                  <div class="col-12 col-lg-6">
+                    <div class="text-white fw-bold mb-2">Wed</div>
+                    <div class="d-flex flex-wrap gap-3">
+                      <div class="form-check">
+                        <input type="checkbox" class="form-check-input" id="wed-11" name="slots[]" value="Wednesday-11AM">
+                        <label class="form-check-label text-white" for="wed-11">11:00AM</label>
+                      </div>
+                      <div class="form-check">
+                        <input type="checkbox" class="form-check-input" id="wed-12" name="slots[]" value="Wednesday-12Noon">
+                        <label class="form-check-label text-white" for="wed-12">12:00PM</label>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- Thursday -->
+                  <div class="col-12 col-lg-6 border-start-lg border-light ps-lg-4">
+                    <div class="text-white fw-bold mb-2">Thu</div>
+                    <div class="d-flex flex-wrap gap-3">
+                      <div class="form-check">
+                        <input type="checkbox" class="form-check-input" id="thu-11" name="slots[]" value="Thursday-11AM">
+                        <label class="form-check-label text-white" for="thu-11">11:00AM</label>
+                      </div>
+                      <div class="form-check">
+                        <input type="checkbox" class="form-check-input" id="thu-12" name="slots[]" value="Thursday-12Noon">
+                        <label class="form-check-label text-white" for="thu-12">12:00PM</label>
+                      </div>
+                    </div>
+                  </div>
+                </div> 
+               
+                
+                <!-- Hidden input to store selected day -->
+                <input type="hidden" name="preferredDay" id="preferredDay">
+      
+                <!-- Error message -->
+                <div id="days-error" class="text-danger mt-2" style="display: none;">
+                  Please select at least one available day.
+                </div>
+      
+                <!-- Submit -->
+                <button type="submit" class="btn w-100 text-white mt-4" style="background-color: var(--pbmit-global-color);">
+                  Send Request
+                </button>
+              </form>
+            </div>
+          </div>
         </div>
       </div>
-    </div>
-
-    <!-- Tuesday (border only for lg+) -->
-    <div class="col-12 col-lg-6 border-start-lg border-light ps-lg-4">
-      <div class="text-white fw-bold mb-2">Tuesday</div>
-      <div class="d-flex flex-wrap gap-3">
-        <div class="form-check">
-          <input type="checkbox" class="form-check-input" id="tue-11" name="slots[]" value="Tuesday-11AM">
-          <label class="form-check-label text-white" for="tue-11">11:00AM</label>
-        </div>
-        <div class="form-check">
-          <input type="checkbox" class="form-check-input" id="tue-12" name="slots[]" value="Tuesday-12Noon">
-          <label class="form-check-label text-white" for="tue-12">12:00Noon</label>
-        </div>
-      </div>
-    </div>
-    <!-- <hr class="border-light my-4" /> -->
-  </div>
-
-
-  <div class="my-0"></div>
-
-  <!-- Row: Wednesday + Thursday -->
-  <div class="row g-4">
-
-    <!-- Wednesday -->
-    <div class="col-12 col-lg-6">
-      <div class="text-white fw-bold mb-2">Wednesday</div>
-      <div class="d-flex flex-wrap gap-3">
-        <div class="form-check">
-          <input type="checkbox" class="form-check-input" id="wed-11" name="slots[]" value="Wednesday-11AM">
-          <label class="form-check-label text-white" for="wed-11">11:00AM</label>
-        </div>
-        <div class="form-check">
-          <input type="checkbox" class="form-check-input" id="wed-12" name="slots[]" value="Wednesday-12Noon">
-          <label class="form-check-label text-white" for="wed-12">12:00Noon</label>
-        </div>
-      </div>
-    </div>
-
-    <!-- Thursday -->
-    <div class="col-12 col-lg-6 border-start-lg border-light ps-lg-4">
-      <div class="text-white fw-bold mb-2">Thursday</div>
-      <div class="d-flex flex-wrap gap-3">
-        <div class="form-check">
-          <input type="checkbox" class="form-check-input" id="thu-11" name="slots[]" value="Thursday-11AM">
-          <label class="form-check-label text-white" for="thu-11">11:00AM</label>
-        </div>
-        <div class="form-check">
-          <input type="checkbox" class="form-check-input" id="thu-12" name="slots[]" value="Thursday-12Noon">
-          <label class="form-check-label text-white" for="thu-12">12:00Noon</label>
-        </div>
-      </div>
-    </div>
-
-  </div>
-  <!-- Error shown here -->
-   <div id="days-error" class="text-danger mt-1 " style="display: none;">
-    Please select at least one available day.
-   </div>
-  <br/>
-              <button type="submit" class="btn w-100 text-white" style="background-color: var(--pbmit-global-color);">
-                Send Request
-              </button>
-
-              <br/>
-              <br/>
-            </form>
-          
-        </div>
-        </div>
+      
+     
+     
       </div>
     </div>
   </div>
@@ -427,10 +355,12 @@ footer .pbmit-base-icon-location:before {
                   style="max-height: 80px; width: auto; height: auto;"
                 />
               
-                <p class="fst-italic text-light mx-auto ms-1 ms-md-0" 
-                     style="font-size: 14px; font-weight: 500; line-height: 1.4; max-width: 280px; text-align: left;">
-                  Your heart, our priority — compassionate care with precision.
-                  </p>
+                <p class="fst-italic text-light mx-auto" 
+                     style="font-size: 11px; font-weight: 500; line-height: 1.6; max-width: 220px; text-align: left;">
+                     "It’s not just about hearts.<br/>
+
+                     It's about the people who carry them."
+                  </p> 
               </div>
               
           
@@ -484,7 +414,7 @@ footer .pbmit-base-icon-location:before {
                     <span class="me-2" style="min-width: 22px;">
                       <i class="pbmit-base-icon-location text-danger" style="font-size: 21px;"></i>
                     </span>
-                    <span>1421 Wayzata Blvd Suite 303
+                    <span>1421 Wayzata Blvd, Suite 303
                       Wayzata, MN 55391</span>
                   </li>
               
