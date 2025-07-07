@@ -923,6 +923,16 @@
 <script src="js/appear.min.js"></script> <!-- Or intersection observer-based animation lib -->
 <script src="js/theme-scripts.js"></script>
 <script>
+  /*-------------------------------------
+    Sticky Header
+    -------------------------------------*/
+  $(window).scroll(function () {
+    var sticky = $(".site-header-menu"),
+      scroll = $(window).scrollTop();
+    if (scroll >= 90) sticky.addClass("sticky-header");
+    else sticky.removeClass("sticky-header");
+  });
+  
    function animateCounter(el) {
      const from = parseInt(el.getAttribute('data-from')) || 0;
      const to = parseInt(el.getAttribute('data-to')) || 0;
