@@ -43,6 +43,51 @@
          margin-left: 0 !important;
        }
 
+       @media (max-width: 768px) {
+        .list-group-item {
+          text-align: left !important;
+        }
+
+        @media (max-width: 768px) {
+        .pbmit-title-bar-wrapper-concierge .gradient-bottom {
+          height: 10rem !important;
+        }
+      }
+
+        @media (max-width: 768px) {
+      .list-group-item {
+        padding-left: 0.75rem;
+        padding-right: 0.75rem;
+        margin-bottom: 0.75rem;
+      }
+
+      .main-section-heading,
+      .sub-section-heading {
+        font-size: 1.25rem;
+        margin-top: 1.5rem;
+        margin-bottom: 1rem;
+      }
+    }
+        @media (min-width: 992px) {
+      .text-lg-justify {
+        text-align: justify !important;
+      }
+    }
+
+    .list-group-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      padding: 0.75rem 0;
+      border: none;
+      background: transparent;
+    }
+}
+
+
+
+
+
    </style>
    <body>
       <!-- Page Wrapper -->
@@ -125,7 +170,7 @@
                                        <li class="d-block d-lg-none"><a href="bookmyappointment.html">BOOK APPOINTMENT</a></li>
                                         
 													
-                                       <li><a href=" " class="d-block d-lg-none">MY TCC</a></li>
+                                       <!-- <li><a href=" " class="d-block d-lg-none">MY TCC</a></li> -->
 												</ul>
 											</div>
 										</nav>
@@ -185,7 +230,7 @@
                 <!-- IMAGE COLUMN (first on mobile) -->
                 <div class="col-xl-6 col-lg-12 position-relative">
                   <div class="scale-hover">
-                    <img src="images/clinic/Clinic pic for Manifesto.png" class="img-fluid w-100" alt="About Us Image">
+                    <img src="images/img/Clinic pic for Manifesto.png" class="img-fluid w-100" alt="About Us Image">
                   </div>
                   <div class="about-fid-section">
                     <div class="pbminfotech-ele-fid-style-5">
@@ -203,7 +248,7 @@
                       <h4 class="pbmit-subtitle">OUR MANIFESTO</h4>
                     </div>
           
-                    <div>
+                    <div class="text-left" style="text-align: justify;">
                       <h2 class="pbmit-title">The Heart of What We Do</h2>
                     </div>
           
@@ -236,7 +281,7 @@
                <div class="container">
                   <div class="row justify-content-between align-items-center">
                      <div class="col-xl-6 col-lg-12 position-relative">
-                        <div class="scale-hover">                        <img src="images/clinic/Dr Esberg pic for The Why.png" class="img-fluid w-100  " alt="About Us Image">
+                        <div class="scale-hover">                        <img src="images/img/Dr Esberg pic for The Why.png" class="img-fluid w-100  " alt="About Us Image">
                         </div>
                         <div class="about-fid-section">
                            <div class="pbminfotech-ele-fid-style-5">
@@ -249,14 +294,14 @@
                      </div>
                      <div class="col-xl-6 col-lg-12 position-relative">
                         <div class="benefits-right-section">
-                           <div class="pbmit-heading-subheading text-left " >
+                           <div class="pbmit-heading-subheading text-left" >
                         
                               
                                  <h4 class="pbmit-subtitle ">OUR FOUNDER</h4>
                               </div>
 
 
-                              <div class=" " >
+                              <div class="text-start" style="text-align: justify;">
                                  <h2 class="pbmit-title"> 
                                  The Why</h2>
                            </div>
@@ -357,7 +402,7 @@
                   <div class="container">
                      <div class="row justify-content-between align-items-center">
                         <div class="col-xl-6 col-lg-12 position-relative">
-                           <div class="scale-hover">                        <img src="images/clinic/Raghu Pillai.png" class="img-fluid w-100  " alt="About Us Image">
+                           <div class="scale-hover">                        <img src="images/img/Raghu Pillai.png" class="img-fluid w-100  " alt="About Us Image">
                            </div>
                            <div class="about-fid-section">
                               <div class="pbminfotech-ele-fid-style-5">
@@ -377,7 +422,7 @@
                                  </div>
    
    
-                                 <div>
+                                 <div class="text-start" style="text-align: justify;">
                                     <h2 class="pbmit-title"> 
                                       Care is an experience…<br />
                                       We designed it that way!
@@ -549,7 +594,7 @@
                         <div class="container">
                            <div class="row justify-content-between align-items-center">
                               <div class="col-xl-6 col-lg-12 position-relative">
-                                 <div class="scale-hover">                        <img src="images/clinic/Dr Ciagne.jpg" class="img-fluid w-100  " alt="About Us Image">
+                                 <div class="scale-hover">                        <img src="images/img/Mark Ciagne.jpg" class="img-fluid w-100  " alt="About Us Image">
                                  </div>
                                  <div class="about-fid-section">
                                     <div class="pbminfotech-ele-fid-style-5">
@@ -569,7 +614,7 @@
                                        </div>
          
          
-                                       <div class=" " >
+                                       <div class="text-start" style="text-align: justify;">
                                           <h2 class="pbmit-title"> 
                                              A New Chapter, Rooted in Experience
                                           </h2>
@@ -667,7 +712,7 @@
        <!-- IMAGE COLUMN (first on all screens) -->
        <div class="col-xl-6 col-lg-12 position-relative">
          <div class="scale-hover">
-           <img src="images/clinic/Care Team.png" class="img-fluid w-100" alt="Care Team Image">
+           <img src="images/img/Care Team.jpg" class="img-fluid w-100" alt="Care Team Image">
          </div>
          <div class="about-fid-section">
            <div class="pbminfotech-ele-fid-style-5">
@@ -712,7 +757,14 @@
    </div>
  </section>
  <!-- we-are-here End -->
- 
+ <style>
+   @media (max-width: 768px) {
+     .fst-italic.text-light {
+       margin-left: 0 !important;
+       margin-right: auto !important;
+     }
+   }
+   </style>
              
  <footer class="py-5  text-white" style="
              background: linear-gradient(to right, #192136, #273353);
@@ -732,11 +784,12 @@
                   />
                 
                   <p class="fst-italic text-light mx-auto" 
-                     style="font-size: 11px; font-weight: 500; line-height: 1.6; max-width: 220px; text-align: left;">
+                     style="font-size: 11px; font-weight: 500; line-height: 1.6; max-width: 220px;text-align:start;">
                      "It’s not just about hearts.<br/>
 
                      It's about the people who carry them."
                   </p>
+                
                
 
 
