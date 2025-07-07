@@ -49,14 +49,11 @@
        margin-left: 0 !important;
      }
 
- </style>
-  <body>
-    <style>
-      .main-section-heading {
+     .main-section-heading {
         font-size: 2rem;
         font-weight: 700;
         color: #273353;
-        margin-top: 3rem;
+        margin-top: 2rem;
         margin-bottom: 1.5rem;
       }
     
@@ -68,7 +65,51 @@
         margin-top: 1.5rem;
         margin-bottom: 1rem;
       }
-    </style>
+
+
+      @media (max-width: 768px) {
+        .list-group-item {
+          text-align: left !important;
+        }
+
+        @media (max-width: 768px) {
+        .pbmit-title-bar-wrapper-concierge .gradient-bottom {
+          height: 10rem !important;
+        }
+      }
+
+        @media (max-width: 768px) {
+      .list-group-item {
+        padding-left: 0.75rem;
+        padding-right: 0.75rem;
+        margin-bottom: 0.75rem;
+      }
+
+      .main-section-heading,
+      .sub-section-heading {
+        font-size: 1.25rem;
+        margin-top: 1.5rem;
+        margin-bottom: 1rem;
+      }
+    }
+        @media (min-width: 992px) {
+      .text-lg-justify {
+        text-align: justify !important;
+      }
+    }
+
+    .list-group-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      padding: 0.75rem 0;
+      border: none;
+      background: transparent;
+    }
+  }
+
+ </style>
+  <body>
     <!-- Page Wrapper -->
     <div class="page-wrapper">
         <!-- Header Main Area -->
@@ -90,10 +131,10 @@
                          <div class="pbmit-pre-header-right">
                           <ul class="pbmit-contact-info">
                                 
-                                <span class="d-flex align-items-center">
+                                <!-- <span class="d-flex align-items-center">
                                     <img src="images/logo/Group transparent.png" alt="MY TCC Logo" class="img-fluid me-1 " style="width: 20px; height: 20px;">
                                     <span style="font-size: 16px;">MY TCC</span>
-                                  </span>
+                                  </span> -->
                                </ul>
                             </li>
                          </ul>		
@@ -144,27 +185,27 @@
                                                           </li>
                                                           
                                           
-                                          
+                                                          
                                           
                                             <li><a href="contact-us.html ">CONTACT US</a></li>
+                                            <li class="d-block d-lg-none"><a href="bookmyappointment.html">BOOK APPOINTMENT</a></li>
 
-                                            <li>
-                                              <a href="bookmyappointment.html">BOOK APPOINTMENT</a>
-                                            </li>
-                                                         <li><a href=" " class="d-block d-lg-none">MY TCC</a></li>
+                                           
+                                            
+                                                         
                                           </ul>
                                         </div>
                                      </nav>
                                   </div>
                                </div>
-                               <!-- <div class="pbmit-right-box">
+                               <div class="pbmit-right-box">
                                 
                                   <div class="menu-right-box d-flex align-items-center">
                                      <div class="pbmit-header-button">
                                           <a href="bookmyappointment.html" class="pbmit-btn">Book Appointment</a>
                                      </div>
-                                  </div> -->
-                               <!-- </div> -->
+                                  </div> 
+                                </div>
                             </div>
                          </div>
                       </div>
@@ -211,13 +252,13 @@
             <div class="row" style="text-align: justify;">
               <div class="service-details" style="text-align: justify;">
                 
-                <div class="mt-5">
+                <div class="">
                  
-                  <h2 class="main-section-heading">A Smarter Approach to Health & Prevention</h2>
+                  <h2 class="main-section-heading text-start" style="text-align: justify;">A Smarter Approach to Health & Prevention</h2>
                   </div>
          
-                <div class="row">
-                  <p style="max-width: 800px;">
+                <div class="row text-start" style="text-align: justify;">
+                  <p style="max-width: 800px">
                     Our Executive Health Physical is designed for individuals who want a deeper understanding of their health – beyond the basics. It’s a comprehensive, one-day experience that combines a thorough workup with advanced testing and a thoughtful, personalized care plan.
                    
                     
@@ -279,9 +320,9 @@ Create a plan to stay healthy, active, and well
                 </div>
                 <div class="service-img-section">
 
-                  <h2 class="main-section-heading">What’s Included?</h2>
+                  <h2 class="main-section-heading text-start" style="text-align: justify;">What’s Included?</h2>
                  
-                <h5 class="sub-section-heading">Heart & Vascular Health  </h5>
+                <h5 class="sub-section-heading text-start" style="text-align: justify;">Heart & Vascular Health  </h5>
               
                   <div class="row">
                   <div class="col-md-6 col-sm-12">
@@ -355,45 +396,10 @@ Create a plan to stay healthy, active, and well
                   </div>
                                              
                   
-                  <h5 class="sub-section-heading">Advanced Imaging &  Testing (Optional)  </h5>
                  
-                      <div class="row">
-                  <div class="col-md-6 col-sm-12">
-                    <ul class="list-group list-group-borderless">
-                      <li class="list-group-item">
-                        <i
-                        class="pbmit-base-icon-ok-1"
-                        aria-hidden="true"
-                      ></i>
-                      Total body MRI (to detect silent conditions early)
 
 
-
-
-
-                                            </li>
-                                            <li class="list-group-item">
-                                              <i
-                                              class="pbmit-base-icon-ok-1"
-                                              aria-hidden="true"
-                                            ></i>
-                                            Galleri® testing (to detect the “fingerprint” of many cancers before symptoms and beyond traditional screening)
-
-
-
-
-                                          </li>
-                                           
-                    </ul>
-                  </div>
-             
-                  </div>
-                  
-                </div>
-
-
-
-                <div  class="mb-5">
+                <div  class="mb-5 text-start" style="text-align: justify;">
                 <h5 class="sub-section-heading"> Lifestyle & Risk Factor Assessment </h5>
                
                  
@@ -442,8 +448,44 @@ Create a plan to stay healthy, active, and well
                 </div>
               </div>
               </div>
+              <h5 class="sub-section-heading text-start" style="text-align: justify;">Advanced Imaging &  Testing (Optional)  </h5>
+                 
+              <div class="row">
+          <div class="col-md-6 col-sm-12">
+            <ul class="list-group list-group-borderless">
+              <li class="list-group-item">
+                <i
+                class="pbmit-base-icon-ok-1"
+                aria-hidden="true"
+              ></i>
+              Total body MRI (to detect silent conditions early)
 
-              <div  class="mb-5">
+
+
+
+
+                                    </li>
+                                    <li class="list-group-item">
+                                      <i
+                                      class="pbmit-base-icon-ok-1"
+                                      aria-hidden="true"
+                                    ></i>
+                                    Galleri® testing (to detect the “fingerprint” of many cancers before symptoms and beyond traditional screening)
+
+
+
+
+                                  </li>
+                                   
+            </ul>
+          </div>
+     
+          </div>
+          
+        </div>
+
+
+              <div  class="mb-5 text-start" style="text-align: justify;">
                 <h2 class="mb-3 mt-5 " >
                   Why Choose Us?</h2>
                
@@ -549,10 +591,12 @@ Create a plan to stay healthy, active, and well
             style="max-height: 80px; width: auto; height: auto;"
           />
         
-          <p class="fst-italic text-light mx-auto ms-1 ms-md-0" 
-          style="font-size: 14px; font-weight: 500; line-height: 1.4; max-width: 280px; text-align: left;">
-       Your heart, our priority — compassionate care with precision.
-       </p>
+          <p class="fst-italic text-light mx-auto" 
+                     style="font-size: 11px; font-weight: 500; line-height: 1.6; max-width: 220px; text-align: left;">
+                     "It’s not just about hearts.<br/>
+
+                     It's about the people who carry them."
+                  </p>
         </div>
         
    
@@ -606,7 +650,7 @@ Create a plan to stay healthy, active, and well
               <span class="me-2" style="min-width: 22px;">
                 <i class="pbmit-base-icon-location text-danger" style="font-size: 21px;"></i>
               </span>
-              <span>1421 Wayzata Blvd Suite 303
+              <span>1421 Wayzata Blvd, Suite 303
                 Wayzata, MN 55391</span>
             </li>
         

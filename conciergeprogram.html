@@ -49,8 +49,8 @@
         font-size: 2rem;
         font-weight: 700;
         color: #273353;
-        margin-top: 2rem;
         margin-bottom: 1.5rem;
+        margin-top: 2rem;
       }
     
       .sub-section-heading {
@@ -66,10 +66,48 @@
          margin-left: 0 !important;
        }
        @media (max-width: 768px) {
-  .list-group-item {
-    text-align: left !important;
-  }
+        .list-group-item {
+          text-align: left !important;
+        }
+
+        @media (max-width: 768px) {
+        .pbmit-title-bar-wrapper-concierge .gradient-bottom {
+          height: 10rem !important;
+        }
+      }
+
+        @media (max-width: 768px) {
+      .list-group-item {
+        padding-left: 0.75rem;
+        padding-right: 0.75rem;
+        margin-bottom: 0.75rem;
+      }
+
+      .main-section-heading,
+      .sub-section-heading {
+        font-size: 1.25rem;
+        margin-top: 1.5rem;
+        margin-bottom: 1rem;
+      }
+    }
+        @media (min-width: 992px) {
+      .text-lg-justify {
+        text-align: justify !important;
+      }
+    }
+
+    .list-group-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      padding: 0.75rem 0;
+      border: none;
+      background: transparent;
+    }
 }
+
+
+
 
     </style>
     <!-- Page Wrapper -->
@@ -90,19 +128,17 @@
                               +1 (952) 232-6132
                             </a>
                            </div>
-                         <div class="pbmit-pre-header-right">
-                          <ul class="pbmit-contact-info">
-                                
-                                <span class="d-flex align-items-center">
-                                    <img src="images/logo/Group transparent.png" alt="MY TCC Logo" class="img-fluid me-1 " style="width: 20px; height: 20px;">
-                                    <span style="font-size: 16px;">MY TCC</span>
-                                  </span>
-                               </ul>
-                            </li>
-                         </ul>		
+                           <div class="pbmit-pre-header-right">
+                            <ul class="pbmit-contact-info">
+                              <!-- <li class="d-flex align-items-center">
+                                <img src="images/logo/Group transparent.png" alt="MY TCC Logo" class="img-fluid me-1" style="width: 20px; height: 20px;">
+                                <span style="font-size: 16px;">MY TCC</span>
+                              </li> -->
+                            </ul>
+                            
                          </div>
                       </div>
-                   </div>
+                   </div> 
                 </div>
                 <div class="site-header-menu-inner">
                    <div class="container-fuild">
@@ -149,27 +185,25 @@
                                           
                                             
                                                           
-                                          
+                                                         
                                           
                                             <li><a href="contact-us.html ">CONTACT US</a></li>
+                                            <li class="d-block d-lg-none"><a href="bookmyappointment.html">BOOK APPOINTMENT</a></li>
 
-                                            <li>
-                                              <a href="bookmyappointment.html">BOOK APPOINTMENT</a>
-                                            </li>
-                                                         <li><a href=" " class="d-block d-lg-none">MY TCC</a></li>
+                                                       
                                           </ul>
                                         </div>
                                      </nav>
                                   </div>
                                </div>
-                               <!-- <div class="pbmit-right-box">
+                               <div class="pbmit-right-box">
                                 
                                   <div class="menu-right-box d-flex align-items-center">
                                      <div class="pbmit-header-button">
                                           <a href="bookmyappointment.html" class="pbmit-btn text-uppercase">Book Appointment</a>
                                      </div>
                                   </div>
-                               </div> -->
+                               </div> 
                             </div>
                          </div>
                       </div>
@@ -187,7 +221,7 @@
       <!-- Header Main Area End Here -->
 
       <!-- Title Bar -->
-      <div class="pbmit-title-bar-wrapper-conceirge">
+      <div class="pbmit-title-bar-wrapper concierge">
         <div class="pbmit-title-bar-content">
             <div class="container">
               <!-- Top Gradient Overlay (visible only on lg and up) -->
@@ -216,9 +250,9 @@
             <div class="row" style="text-align: justify;">
               <div class="service-details" style="text-align: justify;">
            
-                <div class="mt-5">
+                <div class="">
                   
-                  <h2 class="main-section-heading text-start text-md-justify">Elite Care. On Your Terms.</h2>
+                  <h2 class="main-section-heading text-start" style="text-align: justify;">Elite Care. On Your Terms.</h2>
                   </div>
                 
                 <div class="row">
@@ -235,13 +269,13 @@
                 
                   <div class="pbmit-heading-subheading text-left mb-3 mt-5" >
                       
-                    <h5 class="sub-section-heading text-start text-md-justify">Priority Access</h5>   
+                    <h5 class="sub-section-heading text-start" style="text-align: justify;">Priority Access</h5>   
                     
 
                  </div>
-                    <div class="text-start text-md-justify row">
+                    <div class="text-start row" style="text-align: justify;">
                 <div class="col-md-6 col-sm-12">
-                  <ul class="list-group list-group-borderless text-start text-md-justify">
+                  <ul class="list-group list-group-borderless text-start" style="text-align: justify;">
                     <li class="list-group-item ">
                       <i
                       class="pbmit-base-icon-ok-1"
@@ -267,9 +301,9 @@
                 <div  class="mb-5">
                   
                  
-                    <h5 class="sub-section-heading text-start text-md-justify">Comprehensive Health Management</h5>        
+                    <h5 class="sub-section-heading text-start" style="text-align: justify;">Comprehensive Health Management</h5>        
                  
-                   <div class="row text-start text-md-justify">
+                   <div class="row text-start" style="text-align: justify;">
                     
                     <div class="col-md-6 col-sm-12">
                       <ul class="list-group list-group-borderless">
@@ -312,18 +346,12 @@
                 </div>
                 </div>
                 <div  class="mb-5">
-                    <h5 class="sub-section-heading text-start text-md-justify">Lifestyle Integration</h5>
+                    <h5 class="sub-section-heading text-start" style="text-align: justify;">Lifestyle Integration</h5>
                    
                       <div class="row">
-                    
-                        <div class="pbmit-heading-subheading text-left mb-3" >
-                              
-                                    
-                         
-                       </div>
                    <div class="row">
                     <div class="col-md-6 col-sm-12">
-                      <ul class="list-group list-group-borderless text-start text-md-justify">
+                      <ul class="list-group list-group-borderless text-start" style="text-align: justify;">
                         <li class="list-group-item">
                           <i
                           class="pbmit-base-icon-ok-1"
@@ -354,7 +382,7 @@ expert, performance coach etc.
                 </div>
                 </div>
                 <div  class="mb-5">
-                  <h5 class="sub-section-heading text-start text-md-justify">Luxury-Level Experience</h5
+                  <h5 class="sub-section-heading text-start" style="text-align: justify;">Luxury-Level Experience</h5
                  
                    
                   <div class="row">
@@ -366,7 +394,7 @@ expert, performance coach etc.
                    </div>
                    <div class="row">
                     <div class="col-md-6 col-sm-12">
-                      <ul class="list-group list-group-borderless text-start text-md-justify">
+                      <ul class="list-group list-group-borderless text-start" style="text-align: justify;">
                         <li class="list-group-item">
                           <i 
 
@@ -448,7 +476,7 @@ expert, performance coach etc.
                   
                 </div>
 
-                <div  class="mb-5">
+                <div  class="">
                     <h2 class="main-section-heading">Why Choose Us?</h2>
                  
                    
@@ -543,7 +571,7 @@ expert, performance coach etc.
     font-family: var(--pbmit-body-typography-font-family);
     color: var(--pbmit-heading-color);
   ">
-    <div class="container text-start text-md-justify">
+    <div class="container text-start"style="text-align: justify;">
       <div class="row row-cols-1 row-cols-md-4 g-4">
         
         <!-- Logo & Tagline -->
@@ -555,9 +583,11 @@ expert, performance coach etc.
            style="max-height: 80px; width: auto; height: auto;"
          />
        
-         <p class="fst-italic text-light mx-auto ms-1 ms-md-0" 
-                     style="font-size: 14px; font-weight: 500; line-height: 1.4; max-width: 280px; text-align: left;">
-                  Your heart, our priority — compassionate care with precision.
+         <p class="fst-italic text-light mx-auto" 
+                     style="font-size: 11px; font-weight: 500; line-height: 1.6; max-width: 220px; text-align: left;">
+                     "It’s not just about hearts.<br/>
+
+                     It's about the people who carry them."
                   </p>
        </div>
        
@@ -612,7 +642,7 @@ expert, performance coach etc.
              <span class="me-2" style="min-width: 22px;">
                <i class="pbmit-base-icon-location text-danger" style="font-size: 21px;"></i>
              </span>
-             <span>11421 Wayzata Blvd Suite 303
+             <span>1421 Wayzata Blvd, Suite 303
               Wayzata, MN 55391</span>
            </li>
        
