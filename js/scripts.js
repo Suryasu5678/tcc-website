@@ -482,8 +482,8 @@ $(document).ready(function () {
   $("#appointment-form").submit(function (e) {
     e.preventDefault();
 
-    // ✅ Custom validation for checkbox group: days[]
-    const checked = $("input[name='days[]']:checked").length;
+    // ✅ Custom validation for checkbox group: slots[]
+    const checked = $("input[name='slots[]']:checked").length;
     if (checked === 0) {
       $("#days-error").show();
       $("html, body").animate(
@@ -506,6 +506,7 @@ $(document).ready(function () {
 
     // ✅ Validate other fields
     if ($("#appointment-form").valid()) {
+      $("#days-error").hide();
       console.log("Success");
       
       $("#days-error").style.display = "none"; // Hide error if previously shown
