@@ -6,8 +6,8 @@
 /* ========================================================================== */
 /* Email Settings: Please change these variables                               */
 
-$from_email        = "stephen00730@outlook.com";
-$from_email_name   = "Stephen";
+$from_email        = "psajithkumar97@gmail.com";
+$from_email_name   = "Ajithkumar";
 $to_email          = "ajithkumar.ps@spritle.com";
 $to_email_name     = "Ajithkumar PS";
 $email_subject     = 'Contact Inquiry from Twin Cities Cardiology';
