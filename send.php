@@ -9,11 +9,11 @@
 /* Make sure you done Gmail Account (or your server email account details)    */
 /* changes as described here: https://mailtrap.io/blog/phpmailer-gmail/       */
 
-$from_email				= "psajithkumar97@gmail.com";
-$from_email_password	= "wkus hlnt cocm xgvd";
+$from_email				= "tcccontactus@gmail.com";
+$from_email_password	= "vuyn sdjq hdoo vpps";
 $from_email_name		= "TCC";
-$to_email				= "ajithkumar.ps@spritle.com";
-$to_email_name			= "Ajithkumar PS";
+$to_email				= "raghu@quantumadvisors.ai";
+$to_email_name			= "Raghu";
 $email_subject			= 'Contact Inquiry from Twin Cities Cardiology';
 
 /* ========================================================================== */
