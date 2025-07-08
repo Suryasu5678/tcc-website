@@ -153,11 +153,11 @@ if( !empty($_POST) ){
 		//SMTP::DEBUG_OFF = off (for production use)
 		//SMTP::DEBUG_CLIENT = client messages
 		//SMTP::DEBUG_SERVER = client and server messages
-		$mail->SMTPDebug = SMTP::DEBUG_SERVER;
-		// $mail->SMTPDebug = SMTP::DEBUG_OFF;
+		// $mail->SMTPDebug = SMTP::DEBUG_SERVER;
+		$mail->SMTPDebug = SMTP::DEBUG_OFF;
 
 		//Set the hostname of the mail server
-		$mail->Host = 'smtp-mail.outlook.com';
+		$mail->Host = 'smtp.gmail.com';
 		//Set the SMTP port number - likely to be 25, 465 or 587
 		$mail->Port = 587;
 		//We don't need to set this as it's the default value
