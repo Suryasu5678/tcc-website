@@ -506,6 +506,7 @@ $(document).ready(function () {
 
     // ✅ Validate other fields
     if ($("#appointment-form").valid()) {
+      $("#appointment-form .message-status").html("");
       $("#days-error").hide();
       console.log("Success");
       
@@ -518,13 +519,14 @@ $(document).ready(function () {
         url: "bookappointment.php",
         data: $("#appointment-form").serialize(),
         success: function (response) {
-          alert("Your appointment request was submitted successfully!");
+          // alert("Your appointment request was submitted successfully!");
+          $("#appointment-form .message-status").html(response);
           $("#appointment-form")[0].reset();
           $button.prop("disabled", false).text(originalText);
           $("#days-error").hide(); // hide error if previously shown
         },
         error: function () {
-          alert("An error occurred. Please try again later.");
+          $("#appointment-form .message-status").html(response);
           $button.prop("disabled", false).text(originalText);
         },
       });
