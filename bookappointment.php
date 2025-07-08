@@ -5,8 +5,8 @@
  */
 
 // SMTP Email Settings
-$from_email             = "tccbookappt@gmail.com";
-$from_email_password    = "wuwPyk-5xujwu-jabsyj";
+$from_email             = "psajithkumar97@gmail.com";
+$from_email_password    = "wkus hlnt cocm xgvd";
 $from_email_name        = "TCC";
 $to_email               = "ajithkumar.ps@spritle.com";
 $to_email_name          = "Ajithkumar PS";
