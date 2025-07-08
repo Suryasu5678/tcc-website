@@ -165,33 +165,40 @@
     padding-right: 30px;
   }
 }
+#hero-buttons {
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.5s ease-in-out;
+}
 
+#hero-buttons.show {
+    opacity: 1;
+    visibility: visible;
+}
       </style>
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+      const heroVideo = document.getElementById('heroVideo');
+      const heroButtons = document.getElementById('hero-buttons');
+      
+      function showButtons() {
+          heroButtons.classList.add('show');
+          console.log('Buttons shown!'); // For debugging
+      }
+      
+      // Show buttons when video has loaded enough data to play
+      heroVideo.addEventListener('canplaythrough', showButtons);
+      
+      // Backup: Show buttons when video starts playing
+      heroVideo.addEventListener('playing', showButtons);
+      
+      // Safety fallback: Show buttons after 3 seconds regardless
+      setTimeout(showButtons, 3000);
+  });
+  </script>
    </head>
    <body>
-    <script>
-      document.addEventListener("DOMContentLoaded", function () {
-        const video = document.getElementById("heroVideo");
-        const buttons = document.getElementById("hero-buttons");
-    
-        // Only do this for mobile
-        if (window.innerWidth <= 768 && video) {
-          video.addEventListener("playing", function () {
-            buttons.style.display = "flex";
-          });
-    
-          // Fallback: if video doesn't start in 3s (due to autoplay issues), show buttons anyway
-          setTimeout(() => {
-            if (video.paused) {
-              buttons.style.display = "flex";
-            }
-          }, 3000);
-        } else {
-          // Desktop: show by default
-          buttons.style.display = "flex";
-        }
-      });
-    </script>
+  
     
     <!-- page wrapper -->
     <div class="page-wrapper   ">
