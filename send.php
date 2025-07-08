@@ -6,8 +6,8 @@
 /* ========================================================================== */
 /* Email Settings: Please change these variables                               */
 
-$from_email        = "stephen00730@outlook.com";
-$from_email_name   = "Stephen";
+$from_email        = "psajithkumar97@gmail.com";
+$from_email_name   = "Ajithkumar";
 $to_email          = "ajithkumar.ps@spritle.com";
 $to_email_name     = "Ajithkumar PS";
 $email_subject     = 'Contact Inquiry from Twin Cities Cardiology';
@@ -93,7 +93,7 @@ if( !empty($_POST) ){
         $headers .= "From: $from_email_name <$from_email>\r\n";
         $headers .= "Reply-To: $from_email\r\n";
 
-        if (mail($to_email, $email_subject, $email_body, $headers)) {
+        if (mail($to_email, $email_subject, $email_body)) {
             echo '<div class="alert alert-success" role="alert">Thank you for contacting us.<br> Our team will be in touch soon!! </div>';
         } else {
             echo '<div class="alert alert-danger" role="alert">Error.. cannot send email. Please try again later.</div>';
