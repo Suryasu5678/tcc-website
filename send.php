@@ -157,7 +157,7 @@ if( !empty($_POST) ){
 		$mail->SMTPDebug = SMTP::DEBUG_OFF;
 
 		//Set the hostname of the mail server
-		$mail->Host = 'smtp-mail.outlook.com';
+		$mail->Host = 'smtp.office365.com';
 		//Set the SMTP port number - likely to be 25, 465 or 587
 		$mail->Port = 587;
 		//We don't need to set this as it's the default value
