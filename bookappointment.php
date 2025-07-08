@@ -130,7 +130,7 @@ if (!empty($_POST)) {
         $mail->msgHTML($email_body);
 
         if ($mail->send()) {
-            echo '<div class="alert alert-success" role="alert">Thank you for your appointment request.<br>Our team will contact you soon!</div>';
+            echo '<div class="alert alert-success" role="alert">Thank you for contacting us.<br> Our team will be in touch soon!!</div>';
             // save_mail($mail); // Uncomment if you want to save to Sent Mail
         } else {
             echo '<div class="alert alert-danger" role="alert">Error: Cannot send email.<br>' . $mail->ErrorInfo . '</div>';
