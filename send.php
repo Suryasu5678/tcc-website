@@ -180,7 +180,7 @@ if( !empty($_POST) ){
 		//$mail->AltBody = 'This is a plain-text message body';
 
 		if ( $mail->send() ) {
-			echo '<div class="alert alert-success" role="alert">Thank for filling the form. <br> Our team will contact you soon !!! </div>';
+			echo '<div class="alert alert-success" role="alert">Thank you for contacting us.<br> Our team will be in touch soon!! </div>';
 			
 			// save your message in the 'Sent Mail' folder.
 			// save_mail($mail);
