@@ -9,9 +9,9 @@
 /* Make sure you done Gmail Account (or your server email account details)    */
 /* changes as described here: https://mailtrap.io/blog/phpmailer-gmail/       */
 
-$from_email				= "stephen00730@outlook.com";
-$from_email_password	= "nylcdsugpkvvyszd";
-$from_email_name		= "Stephen";
+$from_email				= "tcccontactus@gmail.com";
+$from_email_password	= "vyhvac-xiQvi3-dykjyz";
+$from_email_name		= "TCC";
 $to_email				= "ajithkumar.ps@spritle.com";
 $to_email_name			= "Ajithkumar PS";
 $email_subject			= 'Contact Inquiry from Twin Cities Cardiology';
