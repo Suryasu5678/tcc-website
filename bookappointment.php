@@ -5,11 +5,11 @@
  */
 
 // SMTP Email Settings
-$from_email             = "tcccontactus@gmail.com";
-$from_email_password    = "vuyn sdjq hdoo vpps";
+$from_email             = "tccbookappt@gmail.com";
+$from_email_password    = "vhza ldmi pygg ydad";
 $from_email_name        = "TCC";
-$to_email               = "raghu@quantumadvisors.ai";
-$to_email_name          = "Raghu";
+$to_email               = "cassiesemanko@tccardio.org";
+$to_email_name          = "Cassie Semanko";
 $email_subject          = 'Appointment Request from Twin Cities Cardiology';
 
 // Form fields to receive in email
