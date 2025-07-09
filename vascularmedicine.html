@@ -106,9 +106,6 @@
       border: none;
       background: transparent;
     }
-  
-
-
     </style>
     <!-- Page Wrapper -->
     <div class="page-wrapper">
@@ -742,8 +739,10 @@
              <span class="me-2" style="min-width: 22px;">
                <i class="pbmit-base-icon-location text-danger" style="font-size: 21px;"></i>
              </span>
-             <span>1421 Wayzata Blvd, Suite 303
-              Wayzata, MN 55391</span>
+             <span style="cursor:pointer;" id="map-address">
+              1421 Wayzata Blvd., Suite 303<br>
+              Wayzata, MN 55391.
+            </span>
            </li>
        
            
@@ -817,5 +816,22 @@
     <script src="js/aos.js"></script>
     <!-- Scripts JS -->
     <script src="js/scripts.js"></script>
+
+    <script>
+        const address = "1421 Wayzata Blvd, Suite 303, Wayzata, MN 55391";
+        const encodedAddress = encodeURIComponent(address);
+
+        // Detect platform
+        const isApple = /iPhone|iPad|Macintosh/.test(navigator.userAgent);
+        const mapUrl = isApple
+          ? `http://maps.apple.com/?q=${encodedAddress}`
+          : `https://www.google.com/maps?q=${encodedAddress}`;
+
+        // Open correct link on click
+        document.getElementById("map-address").addEventListener("click", () => {
+          window.open(mapUrl, "_blank");
+        });
+ 
+    </script>
   </body>
 </html>
