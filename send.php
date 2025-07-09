@@ -9,11 +9,11 @@
 /* Make sure you done Gmail Account (or your server email account details)    */
 /* changes as described here: https://mailtrap.io/blog/phpmailer-gmail/       */
 
-$from_email				= "psajithkumar97@gmail.com";
-$from_email_password	= "wkus hlnt cocm xgvd";
-$from_email_name		= "Ajith kumar";
-$to_email				= "ajithkumar.ps@spritle.com";
-$to_email_name			= "Ajithkumar PS";
+$from_email				= "tcccontactus@gmail.com";
+$from_email_password	= "vuyn sdjq hdoo vpps";
+$from_email_name		= "TCC";
+$to_email				= "lizziemcneil@tccardio.org";
+$to_email_name			= "Lizzie McNeil";
 $email_subject			= 'Contact Inquiry from Twin Cities Cardiology';
 
 /* ========================================================================== */
@@ -153,7 +153,7 @@ if( !empty($_POST) ){
 		//SMTP::DEBUG_OFF = off (for production use)
 		//SMTP::DEBUG_CLIENT = client messages
 		//SMTP::DEBUG_SERVER = client and server messages
-		//$mail->SMTPDebug = SMTP::DEBUG_SERVER;
+		// $mail->SMTPDebug = SMTP::DEBUG_SERVER;
 		$mail->SMTPDebug = SMTP::DEBUG_OFF;
 
 		//Set the hostname of the mail server
@@ -191,12 +191,8 @@ if( !empty($_POST) ){
 		}
 
 	}
-
-
-
 } else {
 
 	die('<p>Please go to Contact page and fill the contact form.</p>');
 
 }
-

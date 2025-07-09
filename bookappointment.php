@@ -5,11 +5,11 @@
  */
 
 // SMTP Email Settings
-$from_email             = "psajithkumar97@gmail.com";
-$from_email_password    = "wkus hlnt cocm xgvd";
-$from_email_name        = "Ajith kumar";
-$to_email               = "ajithkumar.ps@spritle.com";
-$to_email_name          = "Ajithkumar PS";
+$from_email             = "tccbookappt@gmail.com";
+$from_email_password    = "vhza ldmi pygg ydad";
+$from_email_name        = "TCC";
+$to_email               = "cassiesemanko@tccardio.org";
+$to_email_name          = "Cassie Semanko";
 $email_subject          = 'Appointment Request from Twin Cities Cardiology';
 
 // Form fields to receive in email
