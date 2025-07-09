@@ -509,7 +509,7 @@ $(document).ready(function () {
       $("#appointment-form .message-status").html("");
       $("#days-error").hide();
       console.log("Success");
-      
+
       const $button = $("#appointment-form button[type='submit']");
       const originalText = $button.text();
       $button.prop("disabled", true).text("Sending...");
@@ -520,14 +520,32 @@ $(document).ready(function () {
         data: $("#appointment-form").serialize(),
         success: function (response) {
           // alert("Your appointment request was submitted successfully!");
-          $("#appointment-form .message-status").html(response);
+          // $("#appointment-form .message-status").html(response);
           $("#appointment-form")[0].reset();
           $button.prop("disabled", false).text(originalText);
           $("#days-error").hide(); // hide error if previously shown
+          $("#formToast").removeClass("bg-danger").addClass("bg-success");
+          $("#toastMessage").html(
+            "Thank you for your appointment request. Our team will contact you soon!!"
+          );
+
+          // Show toast
+          const toast = new bootstrap.Toast(
+            document.getElementById("formToast")
+          );
+          toast.show();
         },
         error: function () {
-          $("#appointment-form .message-status").html(response);
+          // $("#appointment-form .message-status").html(response);
           $button.prop("disabled", false).text(originalText);
+          $("#formToast").removeClass("bg-success").addClass("bg-danger");
+          $("#toastMessage").html(
+            "Failed to submit your request. Please try again."
+          );
+          const toast = new bootstrap.Toast(
+            document.getElementById("formToast")
+          );
+          toast.show();
         },
       });
     }
