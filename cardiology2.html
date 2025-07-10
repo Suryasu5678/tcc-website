@@ -1,0 +1,712 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cardiology Services - Twin Cities Cardiology</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Favicon -->
+    <link
+      rel="shortcut icon"
+      type="image/x-icon"
+      href="images/logo/Group transparent.png"
+    />
+    <!-- CSS
+         ============================================ -->
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <!-- Fontawesome -->
+    <link rel="stylesheet" href="css/fontawesome.css" />
+    <!-- Flaticon -->
+    <link rel="stylesheet" href="css/flaticon.css" />
+    <!-- optico Icons -->
+    <link rel="stylesheet" href="css/pbminfotech-base-icons.css" />
+    <!-- Themify Icons -->
+    <link rel="stylesheet" href="css/themify-icons.css" />
+    <!-- Slick -->
+    <link rel="stylesheet" href="css/swiper.min.css" />
+    <!-- Magnific -->
+    <link rel="stylesheet" href="css/magnific-popup.css" />
+    <!-- AOS -->
+    <link rel="stylesheet" href="css/aos.css" />
+    <!-- Shortcode CSS -->
+    <link rel="stylesheet" href="css/shortcode.css" />
+    <!-- Base CSS -->
+    <link rel="stylesheet" href="css/base.css" />
+    <!-- Style CSS -->
+    <link rel="stylesheet" href="css/style.css" />
+    <!-- Responsive CSS -->
+    <link rel="stylesheet" href="css/responsive.css" />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Arial", sans-serif;
+        line-height: 1.6;
+        color: #333;
+        background-color: #f8f9fa;
+      }
+
+      .header {
+        background: linear-gradient(135deg, #1e3c72, #2a5298);
+        color: white;
+        padding: 80px 0;
+        text-align: center;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .header::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 100"><path d="M0,0 Q250,50 500,0 T1000,0 L1000,100 L0,100 Z" fill="rgba(255,255,255,0.1)"/></svg>');
+        background-size: cover;
+      }
+
+      .header h1 {
+        font-size: 3.5em;
+        font-weight: bold;
+        position: relative;
+        z-index: 1;
+      }
+
+      .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 20px;
+      }
+
+      .section {
+        padding: 60px 0;
+        background: white;
+        margin-bottom: 2px;
+      }
+
+      .section-content {
+        display: flex;
+        align-items: center;
+        gap: 50px;
+        margin-bottom: 40px;
+      }
+
+      .section-content:nth-child(even) {
+        flex-direction: row-reverse;
+      }
+
+      .section-image {
+        flex: 1;
+        max-width: 500px;
+      }
+
+      .section-image img {
+        width: 100%;
+        height: auto;
+        border-radius: 15px;
+        box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+      }
+
+      .section-text {
+        flex: 1;
+        padding: 20px;
+      }
+
+      .section-label {
+        color: #e74c3c;
+        font-size: 0.9em;
+        font-weight: bold;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        margin-bottom: 15px;
+      }
+
+      .section-title {
+        font-size: 2.5em;
+        font-weight: bold;
+        color: #2c3e50;
+        margin-bottom: 25px;
+        line-height: 1.2;
+      }
+
+      .section-description {
+        color: #666;
+        font-size: 1.1em;
+        line-height: 1.8;
+        margin-bottom: 30px;
+      }
+
+      /* .services-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 12px;
+        margin-top: 25px;
+      }
+
+      .service-item {
+        display: flex;
+        align-items: center;
+        padding: 10px 15px;
+        background: #f8f9fa;
+        border-radius: 6px;
+        border-left: 3px solid #e74c3c;
+        font-size: 0.95em;
+      } */
+
+      .services-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr); /* Fixed 2 columns */
+        gap: 12px;
+        margin-top: 25px;
+        }
+
+        .service-item {
+        display: flex;
+        align-items: center;
+        padding: 10px 15px;
+        background: #f8f9fa;
+        border-radius: 6px;
+        border-left: 3px solid #e74c3c;
+        font-size: 0.95em;
+        } 
+
+/* Responsive - 1 column on small screens */
+@media (max-width: 600px) {
+  .services-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+      .service-item::before {
+        content: "✓";
+        color: #e74c3c;
+        font-weight: bold;
+        margin-right: 12px;
+        font-size: 1.1em;
+      }
+
+      .stats-section {
+        background: linear-gradient(135deg, #2c3e50, #34495e);
+        color: white;
+        padding: 80px 0;
+        text-align: center;
+      }
+
+      .stats-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 40px;
+        margin-top: 50px;
+      }
+
+      .stat-item {
+        text-align: cente+r;
+      }
+
+      .stat-number {
+        font-size: 3em;
+        font-weight: bold;
+        color: #e74c3c;
+        display: block;
+      }
+
+      .stat-label {
+        font-size: 1.1em;
+        margin-top: 10px;
+        opacity: 0.9;
+      }
+
+      .why-section {
+        background: #f8f9fa;
+      }
+
+      .why-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+        gap: 40px;
+        margin-top: 40px;
+      }
+
+      .why-item {
+        background: white;
+        padding: 30px;
+        border-radius: 15px;
+        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+      }
+
+      .why-item h3 {
+        color: #2c3e50;
+        font-size: 1.5em;
+        margin-bottom: 15px;
+      }
+
+      .why-item p {
+        color: #666;
+        line-height: 1.6;
+      }
+
+      @media (max-width: 768px) {
+        .header h1 {
+          font-size: 2.5em;
+        }
+
+        .section-content {
+          flex-direction: column;
+          gap: 30px;
+        }
+
+        .section-content:nth-child(even) {
+          flex-direction: column;
+        }
+
+        .section-title {
+          font-size: 2em;
+        }
+
+        .services-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .stats-grid {
+          grid-template-columns: repeat(2, 1fr);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- <div class="header">
+      <div class="container">
+        <h1>Cardiology </h1>
+      </div>
+    </div> -->
+    <div class="page-wrapper">
+        <!-- Header Main Area -->
+        <header class="site-header header-style-3">
+          <div class="pbmit-header-overlay site-header-menu">
+             <div class="container g-0">
+                <div class="pre-header">
+                   <div class="container-fuild">
+                      <div class="d-md-flex align-items-center justify-content-between">
+                          <div class="pbmit-pre-header-left fs-6 ">
+                            
+                            <a href="tel:19522326132" style="display: inline-flex; align-items: center; gap: 6px; cursor: pointer; text-decoration: none; color: inherit;">
+                              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M6.62 10.79a15.464 15.464 0 0 0 6.59 6.59l2.2-2.2a1 1 0 0 1 1.11-.27c1.2.48 2.5.74 3.84.74a1 1 0 0 1 1 1v3.5a1 1 0 0 1-1 1C10.75 21.5 2.5 13.25 2.5 4a1 1 0 0 1 1-1h2.5a1 1 0 0 1 1 1c0 1.34.26 2.64.74 3.84a1 1 0 0 1-.27 1.11l-2.2 2.2z"/>
+                              </svg>
+                              +1 (952) 232-6132
+                            </a>
+                           </div>
+                         <div class="pbmit-pre-header-right">
+                          <ul class="pbmit-contact-info">
+                                
+                                <!-- <span class="d-flex align-items-center">
+                                    <img src="images/logo/Group transparent.png" alt="MY TCC Logo" class="img-fluid me-1 " style="width: 20px; height: 20px;">
+                                    <span style="font-size: 16px;">MY TCC</span>
+                                  </span> -->
+                               </ul>
+                            </li>
+                         </ul>		
+                         </div>
+                      </div>
+                   </div>
+                </div>
+                <div class="site-header-menu-inner">
+                   <div class="container-fuild">
+                      <div class="row">
+                         <div class="col-md-12">
+                            <div class="d-flex align-items-center justify-content-between">
+                               <div class="d-flex align-items-center justify-content-between flex-fill">
+                                  <div class="site-branding">
+                                     <!-- Logo area -->
+                                     <h1 class="site-title">
+                                        <a href="/index.html" rel="home">
+                                           <img class="logo-img" src="images/logo/Svg (1).svg" alt="Cardiology" title="Cardiology">
+                                        </a>
+                                     </h1>				        
+                                  </div>
+                                  <div class="site-navigation ml-auto">
+                                     <nav class="main-menu navbar-expand-xl navbar-light">
+                                        <div class="navbar-header">
+                                           <!-- Toggle Button --> 
+                                           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                                              <i class="pbmit-base-icon-menu-1"></i>
+                                           </button>
+                                        </div>
+                                        <div class="collapse navbar-collapse clearfix" id="navbarSupportedContent">
+                                          <ul class="navigation clearfix me-2">
+												
+                                            <li >
+                                              <a href="about-us.html">ABOUT US</a>
+                                              
+                                            </li>
+                                            <li class="dropdown">
+                                                            <a style="cursor: pointer; display: flex; align-items: center; ">
+                                                              SERVICES 
+                                                              <span class="arrow" style="font-size: 1.5rem; ">&#9662;</span>
+                                                            </a>
+                                                            <ul>
+                                                              <li><a href="cardiology.html">Cardiology</a></li>
+                                                              <li><a href="vascularmedicine.html">Vascular Medicine</a></li>
+                                                              <li><a href="executivehealthphysical.html">Executive Health Physical</a></li>
+                                                              <li><a href="conciergeprogram.html">Concierge Program</a></li>
+                                                            </ul>
+                                                          </li>
+                                                          
+                                          
+                                                         
+                                                          
+                                            <li><a href="contact-us.html ">CONTACT US</a></li>
+                                            <li class="d-block d-xl-none"><a href="bookmyappointment.html">BOOK APPOINTMENT</a></li>
+                            
+                                                        
+                                          </ul>
+                                        </div>
+                                     </nav>
+                                  </div>
+                               </div>
+                               <div class="pbmit-right-box">
+                                
+                                  <div class="menu-right-box d-flex align-items-center">
+                                     <div class="pbmit-header-button">
+                                          <a href="bookmyappointment.html" class="pbmit-btn text-uppercase">Book Appointment</a>
+                                     </div>
+                                  </div>
+                               </div>
+                            </div>
+                         </div>
+                      </div>
+                   </div>
+                </div>
+             </div>
+          </div>
+         
+      
+                
+        
+    
+    </div>
+      </header>
+      <!-- Header Main Area End Here -->
+
+      <!-- Title Bar -->
+      
+      <div class="pbmit-title-bar-wrapper-cardiology" >
+        <div class="pbmit-title-bar-content">
+            <div class="container">
+            <!-- Top Gradient Overlay (visible only on lg and up) -->
+      <div class="" style="position: absolute; top: 0; left: 0; width: 100%; height: 160px; background: linear-gradient(180deg, #00213a 0, rgba(0, 33, 58, 0) 100%); pointer-events: none; z-index: 1;"></div>
+      
+      <!-- Bottom Gradient Overlay (visible only on lg and up) -->
+      <div class="" style="position: absolute; bottom: 0; left: 0; width: 100%; height: 19.8rem; background: linear-gradient(180deg, rgba(0, 48, 87, 0) 40.86%, #003057 100%); pointer-events: none; z-index: 1;"></div>
+            <div class="pbmit-title-bar-content-inner">
+              <div class="pbmit-tbar">
+                <div class="pbmit-tbar-inner container">
+                  <h1 class="pbmit-tbar-title">Cardiology</h1>
+                </div>
+              </div>
+             
+            </div>
+          </div>
+        </div>
+      </div>
+
+    <div class="section">
+      <div class="container">
+        <div class="section-content">
+          <div class="section-image">
+            <img
+              src="data:image/jpeg;base64,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"
+              alt="Heart Treatment"
+            />
+          </div>
+          <div class="section-text">
+            <div class="section-label">OUR SERVICES</div>
+            <h2 class="section-title">What We Treat</h2>
+            <p class="section-description">
+              From common concerns to complex heart issues, Twin Cities
+              Cardiology is here to care for you. Some of the conditions we
+              commonly treat include comprehensive cardiac care with advanced
+              diagnostic tools and personalized treatment plans.
+            </p>
+            <div class="services-grid">
+              <div class="service-item">High blood pressure</div>
+              <div class="service-item">High cholesterol</div>
+              <div class="service-item">Coronary artery disease</div>
+              <div class="service-item">Chest pain or angina</div>
+              <div class="service-item">Heart failure</div>
+              <div class="service-item">Heart valve disease</div>
+              <div class="service-item">Post-heart attack care</div>
+              <div class="service-item">Arrhythmias</div>
+              <div class="service-item">Heart disease in women</div>
+              <div class="service-item">Congenital heart conditions</div>
+              <div class="service-item">Prevention & risk assessment</div>
+              <div class="service-item">Cardiomyopathy</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="container">
+        <div class="section-content">
+          <div class="section-image">
+            <img
+              src="https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=500&h=400&fit=crop"
+              alt="Cardiac Testing"
+            />
+          </div>
+          <div class="section-text">
+            <div class="section-label">OUR APPROACH</div>
+            <h2 class="section-title">How We Help</h2>
+            <p class="section-description">
+              At Twin Cities Cardiology, we use a combination of advanced
+              cardiac imaging, electrodiagnostic studies, and AI-powered heart
+              monitoring tools to understand the structure and function of your
+              heart. Whether you're experiencing symptoms or simply seeking
+              clarity, our goal is to detect issues early, guide you toward the
+              right level of care, personalize your treatment, and provide
+              ongoing support to care for your heart.
+            </p>
+            <div class="services-grid">
+              <div class="service-item">Echocardiogram</div>
+              <div class="service-item">Stress Testing</div>
+              <div class="service-item">Electrocardiogram</div>
+              <div class="service-item">Heart Monitoring</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="container">
+        <div class="section-content">
+          <div class="section-image">
+            <img
+              src="https://images.unsplash.com/photo-1551601651-2a8555f1a136?w=500&h=400&fit=crop"
+              alt="Cardiac Evaluation"
+            />
+          </div>
+          <div class="section-text">
+            <div class="section-label">ADVANCED CARE</div>
+            <h2 class="section-title">Cardiac Evaluations</h2>
+            <p class="section-description">
+              We coordinate closely with specialists for specialized
+              interventions, including surgery. Post-care follow-up is always
+              part of the plan - because healing doesn't stop at the hospital
+              door. Our comprehensive evaluation services ensure you receive the
+              most appropriate care for your specific condition.
+            </p>
+            <div class="services-grid">
+              <div class="service-item">Coronary angiography & stents</div>
+              <div class="service-item">Cardiac MRI</div>
+              <div class="service-item">Pacemakers & ablations</div>
+              <div class="service-item">Valve surgery</div>
+              <div class="service-item">CT coronary angiogram</div>
+              <div class="service-item">TAVR procedures</div>
+              <div class="service-item">MitraClip</div>
+              <div class="service-item">PFO closure</div>
+              <div class="service-item">Watchman device</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="stats-section">
+      <div class="container">
+        <h2 class="section-title" style="color: white; text-align: center">
+          Our Impact
+        </h2>
+        <div class="stats-grid">
+          <div class="stat-item">
+            <span class="stat-number">2250+</span>
+            <div class="stat-label">Patients Treated</div>
+          </div>
+          <div class="stat-item">
+            <span class="stat-number">125+</span>
+            <div class="stat-label">Procedures Performed</div>
+          </div>
+          <div class="stat-item">
+            <span class="stat-number">99%</span>
+            <div class="stat-label">Patient Satisfaction</div>
+          </div>
+          <div class="stat-item">
+            <span class="stat-number">5</span>
+            <div class="stat-label">Years Experience</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="section why-section">
+      <div class="container">
+        <div style="text-align: center; margin-bottom: 60px">
+          <div class="section-label">EXCELLENCE</div>
+          <h2 class="section-title">Why Choose Us?</h2>
+          <p class="section-description">
+            At Twin Cities Cardiology, you'll be cared for by a compassionate
+            and expert team that puts you first — with timely visits, clear
+            communication, and care tailored to your life and goals.
+          </p>
+        </div>
+        <div class="why-grid">
+          <div class="why-item">
+            <h3>Top cardiologists</h3>
+            <p>
+              With decades of trusted clinical experience, our team provides
+              expert cardiac care you can rely on.
+            </p>
+          </div>
+          <div class="why-item">
+            <h3>Proactive care</h3>
+            <p>
+              We catch issues early, before they become problems, ensuring the
+              best outcomes for your heart health.
+            </p>
+          </div>
+          <div class="why-item">
+            <h3>Advanced diagnostics</h3>
+            <p>
+              Powered by state-of-the-art imaging and AI technology, we provide
+              precise and comprehensive cardiac evaluations.
+            </p>
+          </div>
+          <div class="why-item">
+            <h3>Real relationships</h3>
+            <p>
+              We build lasting connections with our patients, providing
+              personalized care that extends beyond appointments.
+            </p>
+          </div>
+          <div class="why-item">
+            <h3>A local practice</h3>
+            <p>
+              Trusted by families across the Twin Cities, we're here when you
+              need us most with convenient locations.
+            </p>
+          </div>
+          <div class="why-item">
+            <h3>Designed for comfort</h3>
+            <p>
+              From the waiting room to your care plan, every detail is designed
+              to make your experience as comfortable as possible.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer class="py-5  text-white" style="
+    background: linear-gradient(to right, #192136, #273353);
+    font-family: var(--pbmit-body-typography-font-family);
+    color: var(--pbmit-heading-color);
+  ">
+    <div class="container">
+      <div class="row row-cols-1 row-cols-md-4 g-4">
+        
+        <!-- Logo & Tagline -->
+        <div class="text-left">
+         <img
+           src="images/logo/Landscape White.png"
+           alt="Twin Cities Cardiology Logo"
+           class="mb-2 img-fluid"
+           style="max-height: 80px; width: auto; height: auto;"
+         />
+       
+         <p class="fst-italic text-light mx-auto" 
+                  style="font-size: 11px; font-weight: 500; line-height: 1.6; max-width: 220px; text-align: left;">
+                  "It’s not just about hearts.<br/>
+
+                  It's about the people who carry them."
+               </p>
+       </div>
+       
+  
+        <!-- Services Links -->
+        <div>
+          <h6 class="fw-bold mb-3 text-white" style="font-size: 15px;">Services</h6>
+          <ul class="list-unstyled small">
+            <li><a href="/cardiology.html" class="text-decoration-none text-light">› Cardiology</a></li>
+            <li><a href="/vascularmedicine.html" class="text-decoration-none text-light">› Vascular Medicine</a></li>
+            <li><a href="/executivehealthphysical.html" class="text-decoration-none text-light">› Executive Health Physical</a></li>
+            <li><a href="/conciergeprogram.html" class="text-decoration-none text-light">› Concierge Program</a></li>
+          </ul>
+        </div>
+  
+        <!-- Clinic Hours -->
+        <div class="ps-md-3 clinic-hours-shift">
+          <h6 class="fw-bold mb-3 text-white" style="font-size: 15px;">Clinic Hours</h6>
+          <ul class="list-unstyled small text-light">
+            <li class="d-flex justify-content-between">
+              <span>Mon – Thu:</span> <span class="fw-semibold">9:30 – 4:00</span>
+            </li>
+            <li class="d-flex justify-content-between">
+              <span>Friday <small class="text-danger fw-semibold">(Emergencies only)</small>:</span>
+              <span class="fw-semibold">9:30 – 4:00</span>
+            </li>
+            <li class="d-flex justify-content-between">
+              <span>Sat – Sun:</span> <span class="fw-semibold">Closed</span>
+            </li>
+          </ul>
+        </div>
+  
+        <!-- Contact Info -->
+        <div class="ps-md-4 ps-lg-5 contact-right-shift">
+         <h6 class="fw-bold mb-3 text-white " style="font-size: 15px;">Contact Us</h6>
+         <ul class="list-unstyled small text-light">
+           <li class="d-flex align-items-center mb-2">
+             <span class="me-2" style="min-width: 22px;">
+               <i class="fas fa-envelope text-danger" style="font-size: 16px;"></i>
+             </span>
+             <a href="mailto:contactus@tccardio.org" class="text-decoration-none text-light">contactus@tccardio.org</a>
+           </li>
+       
+           <li class="d-flex align-items-center mb-2">
+             <span class="me-2" style="min-width: 22px;">
+               <i class="fas fa-phone text-danger" style="font-size: 16px;"></i>
+             </span>
+             <a href="tel:19522326132" class="text-decoration-none text-light">+1 (952) 232-6132</a>
+           </li>
+       
+           <li class="d-flex align-items-center mb-2">
+             <span class="me-2" style="min-width: 22px;">
+               <i class="pbmit-base-icon-location text-danger" style="font-size: 21px;"></i>
+             </span>
+             <span>1421 Wayzata Blvd, Suite 303
+              Wayzata, MN 55391</span>
+           </li>
+       
+           
+         </ul>
+       </div>
+       
+       
+  
+      </div>
+  
+      <!-- Divider -->
+      <hr class="my-4" style="border-top: 1px solid rgba(255, 255, 255, 0.6);" />
+
+  
+      <!-- Bottom Strip -->
+      <div class="d-flex flex-column flex-md-row justify-content-between align-items-center mt-4 pt-3 " style="border-color: rgba(255, 255, 255, 0.1);">
+       <p class="mb-2 mb-md-0 small text-light fw-bold text-start w-100" style="font-size: 14px;">
+         © 2025 Twin Cities Cardiology. All rights reserved.
+       </p>
+       <p class="mb-0 small text-light fw-bold text-start text-md-end w-100" style="font-size: 14px;">
+         Privacy Policy
+       </p>
+     </div>
+    </div>
+  </footer>
+  </body>
+</html>
