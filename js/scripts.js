@@ -464,7 +464,7 @@ $("#contact-form").submit(function () {
         $(".form-btn-loader").addClass("d-none");
         $(".contact-form button.pbmit-btn span").show();
         $(".contact-form button.pbmit-btn").removeAttr("disabled");
-        $(".contact-form .message-status").html(cevap);
+        // $(".contact-form .message-status").html(cevap);
         $("#contact-form")[0].reset(); // Reset the form after successful submission
         $("#formToast").removeClass("bg-danger").addClass("bg-success");
         $("#toastMessage").html(
@@ -509,7 +509,7 @@ $(document).ready(function () {
       );
       return false;
     } else {
-      $("#days-error").hide();
+      $("#days-error").hide((type = "tel"));
     }
 
     // ✅ Add hidden input for AJAX flag (only once)

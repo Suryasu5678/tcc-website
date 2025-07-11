@@ -961,6 +961,10 @@
                 </div>
                 <div class="pbmit-ihbox-contents">
                   <h3 class="pbmit-element-title text-muted">Coming Soon</h3>
+                  <div class="pbmit-heading-desc clickable-address" id="map-edina" style="cursor:pointer">
+                    Edina
+                  </div>
+
                 </div>
               </div>
             </div>
@@ -1321,7 +1325,7 @@
         });
         
         const address1 = "1421 Wayzata Blvd, Suite 303, Wayzata, MN 55391";
-        const encodedAddress1 = encodeURIComponent(address);
+        const encodedAddress1 = encodeURIComponent(address1);
 
         // Detect platform
         const isApple1 = /iPhone|iPad|Macintosh/.test(navigator.userAgent);
@@ -1337,17 +1341,26 @@
 
         const address2 = "3920 42nd Ave S, South Bldg, St. Cloud, MN 56301";
         const encodedAddress2 = encodeURIComponent(address2);
-
         // Detect platform
         const isApple2= /iPhone|iPad|Macintosh/.test(navigator.userAgent);
         const mapUrl2 = isApple2
-          ? `http://maps.apple.com/?q=${encodedAddress}`
-          : `https://www.google.com/maps?q=${encodedAddress}`;
+          ? `http://maps.apple.com/?q=${encodedAddress2}`
+          : `https://www.google.com/maps?q=${encodedAddress2}`;
 
         // Open correct link on click
         document.getElementById("map-address2").addEventListener("click", () => {
-          window.open(mapUrl, "_blank");
+          window.open(mapUrl2, "_blank");
         });
+
+        const address3 = "Edina, MN";
+        const encodedAddress3 = encodeURIComponent(address3);  
+        const isApple3 = /iPhone|iPad|Macintosh/.test(navigator.userAgent);
+        const mapUrl3 = isApple3
+          ? `http://maps.apple.com/?q=${encodedAddress3}`
+          : `https://www.google.com/maps?q=${encodedAddress3}`;
+        document.getElementById("map-edina").addEventListener("click", function () {
+        window.open(mapUrl3, "_blank");
+      });
 
 
     
