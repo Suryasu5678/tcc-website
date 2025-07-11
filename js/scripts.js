@@ -477,7 +477,7 @@ $("#contact-form").submit(function () {
         // Show error toast
         $("#formToast").removeClass("bg-success").addClass("bg-danger");
         $("#toastMessage").html(
-          "Failed to send your message. Please try again later."
+          "Failed to send your message!<br/>Please try again later..."
         );
         const toast = new bootstrap.Toast(document.getElementById("formToast"));
         toast.show();
@@ -555,7 +555,7 @@ $(document).ready(function () {
           $button.prop("disabled", false).text(originalText);
           $("#formToast").removeClass("bg-success").addClass("bg-danger");
           $("#toastMessage").html(
-            "Failed to submit your request. Please try again."
+            "Failed to send your message!<br/>Please try again later..."
           );
           const toast = new bootstrap.Toast(
             document.getElementById("formToast")
