@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta http-equiv="x-ua-compatible" content="ie=edge" />
-    <title>Contact Us – Cardiology </title>
+    <title>Contact Us – Twin Cities </title>
     <meta name="robots" content="noindex, follow" />
     <meta name="description" content="" />
     <meta
@@ -16,6 +16,8 @@
       type="image/x-icon"
       href="images/logo/Group transparent.png"
     />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
     <!-- CSS
         ============================================ -->
@@ -68,6 +70,10 @@
         overflow: hidden;
         position: relative;
         top: 50px;
+      }
+      .pbmit-btn-white:hover {
+      color: var(--pbmit-white-color);
+      background-color: var(--pbmit-global-color);
       }
     </style>
 
@@ -160,7 +166,7 @@
                               </li>
                               <li class="dropdown">
                                               <a style="cursor: pointer; display: flex; align-items: center; ">
-                                                SERVICES 
+                                                SERVICES &nbsp;
                                                 <span class="arrow" style="font-size: 1.5rem; ">&#9662;</span>
                                               </a>
                                               <ul>
@@ -226,7 +232,7 @@
       <div class="page-content">
         <!-- Contact -->
         
-        <section class="location-map-section my-20">
+        <section class="location-map-section">
           
           <!-- <div class="map-wrapper rounded-xl overflow-hidden shadow-lg max-w-6xl mx-auto"> -->
             
@@ -236,7 +242,7 @@
           <!-- </div> -->
         <section class="contact-section-bg">
           <div class="container">
-            <div class="contact-main-section">
+            <div class="contact-main-section" style="margin-top: 40px">
               <div class="row g-0">
                 <div class="col-md-4">
                   <div class="contact-section-left">
@@ -400,12 +406,9 @@
                           </div>
                         </div>
                         <div class="col-md-12 col-sm-12 pb-4">
-                          <button class="pbmit-btn pbmit-btn-hover-secondary">
-                            <i
-                              class="form-btn-loader fa fa-circle-o-notch fa-spin fa-fw margin-bottom d-none"
-                            ></i>
-                            Send Message
-                          </button>
+                          <div class="me-4 transform-bottom transform-delay-3">
+                            <button type="submit" class="pbmit-btn pbmit-btn-white w-100 mt-4">Send Message </button>
+                          </div>
                         </div>
                         <div class="col-md-12 col-lg-12 message-status"></div>
                       </div>
@@ -471,14 +474,14 @@
                    <h6 class="fw-bold mb-3 text-white" style="font-size: 15px;">Clinic Hours</h6>
                    <ul class="list-unstyled small text-light">
                      <li class="d-flex justify-content-between">
-                       <span>Mon – Thu:</span> <span class="fw-semibold">9:30 – 4:00</span>
+                       <span>Mon – Thu</span> <span class="fw-semibold">9:30 – 4:00</span>
                      </li>
                      <li class="d-flex justify-content-between">
-                       <span>Friday <small class="text-danger fw-semibold">(Emergencies only)</small>:</span>
+                       <span>Friday <small class="text-danger fw-semibold">(Emergencies only)</small></span>
                        <span class="fw-semibold">9:30 – 4:00</span>
                      </li>
                      <li class="d-flex justify-content-between">
-                       <span>Sat – Sun:</span> <span class="fw-semibold">Closed</span>
+                       <span>Sat – Sun</span> <span class="fw-semibold">Closed</span>
                      </li>
                    </ul>
                  </div>
@@ -553,6 +556,28 @@
             <i class="pbmit-base-icon-search-1"></i>
           </button>
         </form>
+      </div>
+    </div>
+
+    <div class="position-fixed top end-0 p-3" style="top: 80px; z-index: 1055">
+      <div
+        id="formToast"
+        class="toast hide align-items-center text-white bg-success border-0"
+        role="alert"
+        aria-live="assertive"
+        aria-atomic="true"
+      >
+        <div class="d-flex">
+          <div class="toast-body" id="toastMessage">
+            Thank you for contacting us. Our team will be in touch soon!!
+          </div>
+          <button
+            type="button"
+            class="btn-close btn-close-white me-2 m-auto"
+            data-bs-dismiss="toast"
+            aria-label="Close"
+          ></button>
+        </div>
       </div>
     </div>
     <!-- Search Box End Here -->

@@ -466,6 +466,21 @@ $("#contact-form").submit(function () {
         $(".contact-form button.pbmit-btn").removeAttr("disabled");
         $(".contact-form .message-status").html(cevap);
         $("#contact-form")[0].reset(); // Reset the form after successful submission
+        $("#formToast").removeClass("bg-danger").addClass("bg-success");
+        $("#toastMessage").html(
+          " Thank you for contacting us. Our team will be in touch soon!!"
+        );
+        const toast = new bootstrap.Toast(document.getElementById("formToast"));
+        toast.show();
+      },
+      error: function () {
+        // Show error toast
+        $("#formToast").removeClass("bg-success").addClass("bg-danger");
+        $("#toastMessage").html(
+          "Failed to send your message. Please try again later."
+        );
+        const toast = new bootstrap.Toast(document.getElementById("formToast"));
+        toast.show();
       },
     });
   }
