@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta http-equiv="x-ua-compatible" content="ie=edge" />
-    <title>Heart Surgery – Cardioly Demo HTML Template</title>
+    <title>Heart Surgery – Cardiology </title>
     <meta name="robots" content="noindex, follow" />
     <meta name="description" content="" />
     <meta
@@ -107,6 +107,133 @@
       border: none;
       background: transparent;
     }
+
+    .custom-grid-section {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;  
+      border-radius: 10px;
+    }
+    .custom-block {
+    background-color:#E0E0E5; /* Card-like feel */
+    padding: 1rem;
+    border-radius: 8px;
+    }
+    .custom-block h5 {
+    margin-bottom: 1rem;
+    }
+    .custom-block ul {
+      padding-left: 1rem;
+    }
+
+    .custom-block li {
+      text-align: left;
+      list-style: none;
+      margin-bottom: 0.75rem;
+    }
+
+    .custom-block li i {
+      margin-right: 0.5rem;
+      color: red;
+    }
+
+    .custom-title {
+      margin-top: 3rem;
+      margin-bottom: 1rem;
+      color: black;
+    }
+    .custom-block {
+    padding: 1.5rem;
+    border-radius: 8px;
+   
+  }
+
+  .custom-block h5 {
+    margin-bottom: 1rem;
+    text-align: justify;
+  }
+
+  .three-row-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.2rem;
+  }
+
+  .three-row-grid li {
+    list-style: none;
+    text-align: left;
+  }
+
+  .three-row-grid li i {
+    margin-right: 0.5rem;
+  }
+
+  /* Make responsive on smaller screens */
+  @media (max-width: 768px) {
+    .three-row-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  @media (min-width: 769px) and (max-width: 1024px) {
+    .three-row-grid {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+
+  .custom-list {
+    list-style: none;
+    padding-left: 0;
+    margin: 0;
+  }
+
+  .custom-list li {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 1rem;
+  }
+
+  .custom-list-icon {
+    width: 1.5rem; /* same for all */
+    flex-shrink: 0;
+    margin-top: 0.2rem;
+    color: red;
+  }
+
+  .custom-list-text {
+    flex: 1;
+    text-align: left;
+    color: #6c757d;
+  }
+
+
+    .why-section {
+      background: #f8f9fa;
+      }
+
+    .why-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+      gap: 20px;  
+    }  
+
+    .why-item {
+      background: white;
+      padding: 20px;
+      border-radius: 15px;
+      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+      text-align: left;  
+      }  
+
+    .why-item h3 {
+      font-size: 1.5em;
+      margin-bottom: 15px;
+    }
+
+    .why-item p {
+      color: #666;
+      line-height: 1.6;
+    }  
 
     </style>
     <!-- Page Wrapper -->
@@ -264,19 +391,19 @@
                     
                   </p>
                   <div class="col-md-6 col-sm-12">
-                    <ul class="list-group list-group-borderless 	  mb-0      ">
+                    <ul class="list-group list-group-borderless mb-0">
                       <li class="list-group-item ">
                         <i
                           class="pbmit-base-icon-ok-1"
                           aria-hidden="true"
                         ></i>
-                        High blood pressure (hypertension)                      </li>
+                        High blood pressure (hypertension) </li>
                       <li class="list-group-item">
                         <i
                           class="pbmit-base-icon-ok-1"
                           aria-hidden="true"
                         ></i>
-                        Coronary artery disease (CAD)                      </li>
+                        Coronary artery disease (CAD)</li>
                       <li class="list-group-item">
                         <i
                           class="pbmit-base-icon-ok-1"
@@ -362,10 +489,9 @@
 
                   <p style="max-width: 800px text-start;" style="text-align: justify;">
                     At Twin Cities Cardiology, we use a combination of advanced cardiac imaging, electrodiagnostic studies, and AI-powered heart monitoring tools to understand the structure and function of your heart. Whether you're experiencing symptoms or simply seeking clarity, our goal is to detect issues early, guide you toward the right level of care, personalize your treatment, and provide ongoing support to care for your heart.
-
                   </p>
                 
-                  <div class="row">
+                   <div class="row"> 
                   <div class="col-md-6 col-sm-12">
                     <ul class="list-group list-group-borderless mb-0">
                       <li class="list-group-item"> 
@@ -374,14 +500,14 @@
                         aria-hidden="true"
                       ></i>
                         Echocardiogram (Transthoracic & Transesophageal)
-                                            </li>
-                                            <li class="list-group-item">
-                                              <i
-                                              class="pbmit-base-icon-ok-1"
-                                              aria-hidden="true"
-                                            ></i>
-                                              Electrocardiogram (ECG/EKG)
-                                            </li>
+                      </li>
+                      <li class="list-group-item">
+                        <i
+                        class="pbmit-base-icon-ok-1"
+                        aria-hidden="true"
+                      ></i>
+                        Electrocardiogram (ECG/EKG)
+                      </li>                       
                     </ul>
                   </div>
                   <div class="col-md-6 col-sm-12">
@@ -392,183 +518,79 @@
                         aria-hidden="true"
                       ></i>
                         Stress Testing (Exercise)
-                                            </li>
-                                            <li class="list-group-item">
-                                              <i
-                                              class="pbmit-base-icon-ok-1"
-                                              aria-hidden="true"
-                                            ></i>
-                                              Heart Monitoring
-                                            </li>
+                        </li>
+                        <li class="list-group-item">
+                        <i
+                        class="pbmit-base-icon-ok-1"
+                        aria-hidden="true"                   
+                        ></i>
+                        Heart Monitoring
+                        </li>
                     </ul>
                   </div>
-                  </div>
-                                             
-                  <h5 class="sub-section-heading">Cardiac Evaluations</h5>
-
-                    <div class="pbmit-heading-subheading text-left mb-3" style="max-width: 800px text-start" style="text-align: justify;">
-                          <p>
-                            We coordinate referral for specialized interventions,
-                            including surgery. Post-care follow-up is always part of
-                            the plan – because healing doesn’t stop at the hospital
-                            door.
-
-                  </p>
-                              
-
-                   </div>
-                      <div class="row">
-                  <div class="col-md-6 col-sm-12">
-                    <ul class="list-group list-group-borderless mb-0">
-                      <li class="list-group-item">
-                        <i
-                        class="pbmit-base-icon-ok-1"
-                        aria-hidden="true"
-                      ></i>
-                       Coronary angiography and stents
-
-                                            </li>
-                                            <li class="list-group-item">
-                                              <i
-                                              class="pbmit-base-icon-ok-1"
-                                              aria-hidden="true"
-                                            ></i>
-                                            Pacemakers and cardiac ablations
-                                            </li>
-                                            <li class="list-group-item">
-                                              <i
-                                              class="pbmit-base-icon-ok-1"
-                                              aria-hidden="true"
-                                            ></i>
-                                            CT coronary angiogram
-                                            </li>
-                                            <li class="list-group-item">
-                                              <i
-                                              class="pbmit-base-icon-ok-1"
-                                              aria-hidden="true"
-                                            ></i>
-                                            MitraClip                                            </li>
-                                            <li class="list-group-item">
-                                              <i
-                                              class="pbmit-base-icon-ok-1"
-                                              aria-hidden="true"
-                                            ></i>
-                                            Left atrial appendage closure (Watchman)                      </li>
-                                         
+                  </div> 
+        
+                    <!-- Block 1 -->
+                    <div class="custom-block custom-list">
+                    <h5 class="sub-section-heading text-center">Cardiac Evaluations</h5>
+                    <p class="responsive-text text-start" style="text-align: justify; padding: 20px;">
+                      We coordinate referral for specialized interventions, including surgery. Post-care follow-up is always part of the plan – because healing doesn’t stop at the hospital door.
+                    </p>
+                    
+                    <ul class="three-row-grid">
+                      <li><span class="custom-list-icon"><i class="pbmit-base-icon-ok-1" aria-hidden="true"></i></span>&nbsp<span class="custom-list-text"> Coronary angiography and stents</span></li>
+                      <li><span class="custom-list-icon"><i class="pbmit-base-icon-ok-1" aria-hidden="true"></i> </span>&nbsp<span class="custom-list-text">Pacemakers and cardiac ablations</span></li>
+                      <li><span class="custom-list-icon"><i class="pbmit-base-icon-ok-1" aria-hidden="true"></i></span>&nbsp<span class="custom-list-text"> CT coronary angiogram</span></li>
+                  
+                      <li><span class="custom-list-icon"><i class="pbmit-base-icon-ok-1" aria-hidden="true"></i></span>&nbsp <span class="custom-list-text">MitraClip</span></li>
+                      <li><span class="custom-list-icon"><i class="pbmit-base-icon-ok-1" aria-hidden="true"></i> </span>&nbsp<span class="custom-list-text">Left atrial appendage closure (Watchman)</span></li>
+                      <li><span class="custom-list-icon"><i class="pbmit-base-icon-ok-1" aria-hidden="true"></i> </span> &nbsp<span class="custom-list-text">Cardiac MRI</span></li>
+                  
+                      <li><span class="custom-list-icon"><i class="pbmit-base-icon-ok-1" aria-hidden="true"></i> </span>&nbsp<span class="custom-list-text">Valve surgery</span></li>
+                      <li><span class="custom-list-icon"><i class="pbmit-base-icon-ok-1" aria-hidden="true"></i></span> &nbsp<span class="custom-list-text">Transcatheter aortic valve replacement (TAVR)</span></li>
+                      <li><span class="custom-list-icon"><i class="pbmit-base-icon-ok-1" aria-hidden="true"></i> </span>&nbsp<span class="custom-list-text">PFO closure</span></li>
                     </ul>
                   </div>
-                  <div class="col-md-6 col-sm-12">
-                    <ul class="list-group list-group-borderless mb-0">
-                      <li class="list-group-item">
-                        <i
-                        class="pbmit-base-icon-ok-1"
-                        aria-hidden="true"
-                      ></i>
-                      Cardiac MRI
-                      </li>
-                      <li class="list-group-item">
-                        <i
-                        class="pbmit-base-icon-ok-1"
-                        aria-hidden="true"
-                      ></i>
-                      Valve surgery
-                      </li>
-                      <li class="list-group-item">
-                        <i
-                        class="pbmit-base-icon-ok-1"
-                        aria-hidden="true"
-                      ></i>
-                      Transcatheter aortic valve replacement (TAVR)                      </li>
-                      <li class="list-group-item">
-                        <i
-                        class="pbmit-base-icon-ok-1"
-                        aria-hidden="true"
-                      ></i>
-                      PFO closure
-                      </li>
-                     
-                    </ul>
-                  </div>
-                  </div>
-                
-                </div>
 
-                <div  class="mb-5">
-                  <h2 class="main-section-heading text-start" style="text-align: justify;">Why Choose Us?</h2>
-               
-                 
+              <!-- Why Choose Us Section -->
+              <div class="mb-5">
+                <h2 class="main-section-heading text-start" style="text-align: justify;">Why Choose Us?</h2>
+
                 <div class="row">
                   <p style="max-width: 800px text-start" style="text-align: justify;">
                     At Twin Cities Cardiology, you’ll be cared for by a compassionate and expert team that puts you first — with timely visits, clear communication, and care tailored to your life and goals.
         
                   </p>
-                  <div class="pbmit-heading-subheading text-left mb-3" >
-                 </div>
-                 <div class="row">
-                  <div class="col-md-6 col-sm-12">
-                    <ul class="list-group list-group-borderless mb-0">
-                      <li class="list-group-item">
-                        <i class="pbmit-base-icon-ok-1" aria-hidden="true"></i>
-                        <div>
-                          <span style="color: #273353;">Top cardiologists</span><br/>
-                          <span style="color: #828690; font-weight: 400; font-size: 1rem; line-height: 1.6;">with decades of trusted clinical experience</span>
-                        </div>
-                      </li>
-                      
-                      <li class="list-group-item">
-                        <i class="pbmit-base-icon-ok-1" aria-hidden="true"></i>
-                        <div>
-                          <span style="color: #273353;"> Advanced diagnostics</span><br/>
-                          <span style="color: #828690; font-weight: 400; font-size: 1rem; line-height: 1.6;">powered by state-of-the-art imaging and AI</span>
-                        </div>
-                      </li>
-
-
-                      <li class="list-group-item">
-                        <i class="pbmit-base-icon-ok-1" aria-hidden="true"></i>
-                        <div>
-                          <span style="color: #273353;">A local practice</span><br/>
-                          <span style="color: #828690; font-weight: 400; font-size: 1rem; line-height: 1.6;">trusted by families across the Twin Cities</span>
-                        </div>
-                      </li>     
-                     </ul>
-                      </div>
-
-                        <div class="col-md-6 col-sm-12">
-                          <ul class="list-group list-group-borderless">
-                            <li class="list-group-item">
-                              <i class="pbmit-base-icon-ok-1" aria-hidden="true"></i>
-                              <div>
-                                <span style="color: #273353;">Proactive care</span><br/>
-                                <span style="color: #828690; font-weight: 400; font-size: 1rem; line-height: 1.6;"> that catches issues early, before they become problems</span>
-                              </div>
-                            </li> 
-                            
-                            
-                            <li class="list-group-item">
-                              <i class="pbmit-base-icon-ok-1" aria-hidden="true"></i>
-                              <div>
-                                <span style="color: #273353;">Real relationships</span><br/>
-                                <span style="color: #828690; font-weight: 400; font-size: 1rem; line-height: 1.6;">not rushed appointments</span>
-                              </div>
-                            </li> 
-
-
-                            <li class="list-group-item">
-                              <i class="pbmit-base-icon-ok-1" aria-hidden="true"></i>
-                              <div>
-                                <span style="color: #273353;"> Designed for comfort</span><br/>
-                                <span style="color: #828690; font-weight: 400; font-size: 1rem; line-height: 1.6;">from the waiting room to your care plan</span>
-                              </div>
-                            </li> 
-                    </ul>
+                </div>
+                <div class="why-grid">
+                  <div class="why-item">
+                    <h3>Top cardiologists</h3>
+                    <p>With decades of trusted clinical experience, our team provides expert cardiac care you can rely on.</p>
                   </div>
-                 
+                  <div class="why-item">
+                    <h3>Proactive care</h3>
+                    <p>We catch issues early, before they become problems, ensuring the best outcomes for your heart health.</p>
+                  </div>
+                     
+                  <div class="why-item">
+                    <h3>Real relationships</h3>
+                    <p>We build lasting connections with our patients, providing personalized care that extends beyond appointments.</p>
+                  </div>    
+                  <div class="why-item">
+                    <h3>A local practice</h3>
+                    <p>Trusted by families across the Twin Cities, we're here when you need us most with convenient locations.</p>
+                  </div>      
+                  <div class="why-item">
+                    <h3>Designed for comfort</h3>
+                    <p>From the waiting room to your care plan, every detail is designed to make your experience comfortable</p>
+                  </div>
+                <div class="why-item">
+                  <h3>Advanced diagnostics</h3>
+                  <p>Powered by state-of-the-art imaging and AI, we provide precise, comprehensive cardiac evaluations</p>
+                </div> 
+                   
                 </div>
               </div>
-              </div>
-
-
                
              
               </div>

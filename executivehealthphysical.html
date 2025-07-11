@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta http-equiv="x-ua-compatible" content="ie=edge" />
-    <title>Heart Surgery – Cardioly Demo HTML Template</title>
+    <title>Heart Surgery – Cardiology</title>
     <meta name="robots" content="noindex, follow" />
     <meta name="description" content="" />
     <meta
@@ -107,6 +107,100 @@
       background: transparent;
     }
   }
+
+  .custom-grid-section {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem; 
+    border-radius: 10px;
+    color: #E0E0E5;
+  }
+
+  .custom-block {
+    background-color:#E0E0E5; /* Card-like feel */
+    padding: 1rem;
+    border-radius: 8px;
+  }
+
+  .custom-block h5 {
+    margin-bottom: 1rem;
+  }
+
+  .custom-block ul {
+    padding-left: 1rem;
+  }
+
+  .custom-block li {
+    text-align: left;
+    list-style: none;
+    margin-bottom: 0.75rem;
+  }
+
+  .custom-block li i {
+    margin-right: 0.5rem;
+    color: red;
+  }
+
+  .custom-title {
+    margin-top: 3rem;
+    margin-bottom: 1rem;
+    color: black;
+  }
+  .custom-list {
+    list-style: none;
+    padding-left: 0;
+    margin: 0;
+  }
+
+  .custom-list li {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 1rem;
+  }
+
+  .custom-list-icon {
+    width: 1.5rem; /* same for all */
+    flex-shrink: 0;
+    margin-top: 0.2rem;
+    color: red;
+  }
+
+  .custom-list-text {
+    flex: 1;
+    text-align: left;
+    color: #6c757d;
+  }
+
+    .why-section {
+        background: #f8f9fa;
+      }
+
+    .why-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+        gap: 20px;
+        /* margin-top: 40px; */
+    }
+
+    .why-item {
+        background: white;
+        padding: 30px;
+        border-radius: 15px;
+        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+        text-align: left;
+      }
+
+      .why-item h3 {
+        font-size: 1.5em;
+        margin-bottom: 15px;
+      }
+
+      .why-item p {
+        color: #666;
+        line-height: 1.6;
+      }
+  
+
  </style>
   <body>
     <!-- Page Wrapper -->
@@ -278,292 +372,101 @@
                           aria-hidden="true"
                         ></i>
                         Detect issues early, before symptoms appear
-
-
-
-
+                        </li>
+                        <li class="list-group-item">
+                          <i
+                          class="pbmit-base-icon-ok-1"
+                          aria-hidden="true"
+                        ></i>
+                        Understand your unique risk profile                    
                       </li>
-                                              <li class="list-group-item">
-                                                <i
-                                                class="pbmit-base-icon-ok-1"
-                                                aria-hidden="true"
-                                              ></i>
-                                              Understand your unique risk profile
-
-
-
-
-  
-  
-                                            </li>
-                                            
-                                            <li class="list-group-item">
-                                              <i
-                                              class="pbmit-base-icon-ok-1"
-                                              aria-hidden="true"
-                                            ></i>
-Create a plan to stay healthy, active, and well
-
-
-                  
-                  
-                      
-                      
-                                          </li>
-                                           
-                      </ul>
-                    </div>
-               
-                    </div>
-                </div>
-                </div>
-                <div class="service-img-section">
-
-                  <h2 class="main-section-heading text-start" style="text-align: justify;">What’s Included?</h2>
-                 
-                <h5 class="sub-section-heading text-start" style="text-align: justify;">Heart & Vascular Health  </h5>
-              
-                  <div class="row">
-                  <div class="col-md-6 col-sm-12">
-                    <ul class="list-group list-group-borderless">
                       <li class="list-group-item">
                         <i
                         class="pbmit-base-icon-ok-1"
                         aria-hidden="true"
                       ></i>
-                      Cardiopulmonary fitness evaluation
-
-
-
-
-                    </li>
-                                            <li class="list-group-item">
-                                              <i
-                                              class="pbmit-base-icon-ok-1"
-                                              aria-hidden="true"
-                                            ></i>
-                                            VO2 max and stress testing
-
-
-
-
-                                          </li>
-                                            <li class="list-group-item">
-                                              <i
-                                              class="pbmit-base-icon-ok-1"
-                                              aria-hidden="true"
-                                            ></i>
-                                            Carotid artery screening
-
-
-
-
-
-
-                                          </li>
-                                            <li class="list-group-item">
-                                              <i
-                                              class="pbmit-base-icon-ok-1"
-                                              aria-hidden="true"
-                                            ></i>
-                                            Abdominal aortic aneurysm screening
-
-
-
-
-
-
-                                          </li>
-                                            <li class="list-group-item">
-                                              <i
-                                              class="pbmit-base-icon-ok-1"
-                                              aria-hidden="true"
-                                            ></i>
-                                            Arterial and venous circulation screening
-
-
-
-
-
-
-
-
-                                          </li>
+                      Create a plan to stay healthy, active, and well
+                    </li>                     
                     </ul>
-                  </div>
-                 
-                  </div>
-                                             
-                  
-                 
-
-
-                <div  class="mb-5 text-start" style="text-align: justify;">
-                <h5 class="sub-section-heading"> Lifestyle & Risk Factor Assessment </h5>
+                    </div>
                
-                 
-                <div class="row">
-                
-                 
-                 <div class="row">
-                  <div class="col-md-6 col-sm-12">
-                    <ul class="list-group list-group-borderless">
-                      <li class="list-group-item">
-                        <i
-                          class="pbmit-base-icon-ok-1"
-                          aria-hidden="true"
-                        ></i>
-                        Review of personal and family health history
-
-
-
-
-                      </li>
-                      <li class="list-group-item">
-                        <i
-                          class="pbmit-base-icon-ok-1"
-                          aria-hidden="true"
-                        ></i>
-                        Evaluation of cardiovascular risk factors
-
-
-
-
-                      </li>
-                      <li class="list-group-item">
-                        <i
-                          class="pbmit-base-icon-ok-1"
-                          aria-hidden="true"
-                        ></i>
-                        Guidance on fitness, nutrition, and stress management
-
-
-                      </li>
-                    
-                      </ul>
-                      </div>
-                      
-                 
+                    </div>
                 </div>
-              </div>
-              </div>
-              <h5 class="sub-section-heading text-start" style="text-align: justify;">Advanced Imaging &  Testing (Optional)  </h5>
-                 
-              <div class="row">
-          <div class="col-md-6 col-sm-12">
-            <ul class="list-group list-group-borderless">
-              <li class="list-group-item">
-                <i
-                class="pbmit-base-icon-ok-1"
-                aria-hidden="true"
-              ></i>
-              Total body MRI (to detect silent conditions early)
+                </div>
 
-
-
-
-
-                                    </li>
-                                    <li class="list-group-item">
-                                      <i
-                                      class="pbmit-base-icon-ok-1"
-                                      aria-hidden="true"
-                                    ></i>
-                                    Galleri® testing (to detect the “fingerprint” of many cancers before symptoms and beyond traditional screening)
-
-
-
-
-                                  </li>
-                                   
+        <h2 class="main-section-heading"> What’s Included? </h2>        
+        <div class="custom-grid-section">
+          <!-- Block 1 -->
+          <div class="custom-block">
+            <h5 class="sub-section-heading text-start" style="text-align: justify;">Heart & Vascular Health</h5> <br/>
+            <ul class="custom-list">
+              <li><span class="custom-list-icon"><i class="pbmit-base-icon-ok-1" aria-hidden="true"></i> </span>&nbsp<span class="custom-list-text">Cardiopulmonary fitness evaluation</span></li>
+              <li><span class="custom-list-icon"><i class="pbmit-base-icon-ok-1" aria-hidden="true"></i></span>&nbsp<span class="custom-list-text"> VO2 max and stress testing</span></li>
+              <li><span class="custom-list-icon"><i class="pbmit-base-icon-ok-1" aria-hidden="true"></i> </span>&nbsp<span class="custom-list-text">Carotid artery screening</span></li>
+              <li><span class="custom-list-icon"><i class="pbmit-base-icon-ok-1" aria-hidden="true"></i> </span>&nbsp<span class="custom-list-text">Abdominal aortic aneurysm screening</span></li>
+              <li><span class="custom-list-icon"><i class="pbmit-base-icon-ok-1" aria-hidden="true"></i> </span>&nbsp<span class="custom-list-text">Arterial and venous circulation screening</span></li>
             </ul>
           </div>
-     
+        
+          <!-- Block 2 -->
+          <div class="custom-block">
+            <h5 class="sub-section-heading text-start" style="text-align: justify;">Lifestyle & Risk Factor Assessment</h5> 
+            <ul class="custom-list">
+              <li><span class="custom-list-icon"><i class="pbmit-base-icon-ok-1" aria-hidden="true"></i></span>&nbsp<span class="custom-list-text"> Review of personal and family health history</span></li>
+              <li><span class="custom-list-icon"><i class="pbmit-base-icon-ok-1" aria-hidden="true"></i></span>&nbsp<span class="custom-list-text">Evaluation of cardiovascular risk factors</span></li>
+              <li><span class="custom-list-icon"><i class="pbmit-base-icon-ok-1" aria-hidden="true"></i> </span>&nbsp<span class="custom-list-text">Guidance on fitness, nutrition, and stress management</span></li>
+            </ul>
           </div>
-          
+        
+          <!-- Block 3 -->
+          <div class="custom-block">
+            <h5 class="sub-section-heading text-start" style="text-align: justify;">Advanced Imaging & Testing (Optional)</h5> 
+            <ul class="custom-list">
+              <li><span class="custom-list-icon"><i class="pbmit-base-icon-ok-1" aria-hidden="true"></i></span>&nbsp<span class="custom-list-text">Total body MRI (to detect silent conditions early)</span></li>
+              <li><span class="custom-list-icon"><i class="pbmit-base-icon-ok-1" aria-hidden="true"></i></span>&nbsp<span class="custom-list-text">Galleri® testing (to detect the “fingerprint” of many cancers before symptoms and beyond traditional screening)</span></li>
+            </ul>
+          </div>
         </div>
+      <!-- Why Choose Us -->
+              <div class="mb-5">
+                <h2 class="main-section-heading text-start" style="text-align: justify;">Why Choose Us?</h2>
 
-
-              <div  class="mb-5 text-start" style="text-align: justify;">
-                <h2 class="mb-3 mt-5 " >
-                  Why Choose Us?</h2>
-               
-                 
                 <div class="row">
-                  <p style="max-width: 800px;">
+                  <p style="max-width: 800px text-start" style="text-align: justify;">
                     At Twin Cities Cardiology, you’ll be cared for by a compassionate and expert team that puts you first — with timely visits, clear communication, and care tailored to your life and goals.
         
                   </p>
-                  <div class="pbmit-heading-subheading text-left mb-3" >
-                 </div>
-                 <div class="row">
-                  <div class="col-md-6 col-sm-12">
-                    <ul class="list-group list-group-borderless mb-0">
-                      <li class="list-group-item">
-                        <i class="pbmit-base-icon-ok-1" aria-hidden="true"></i>
-                        <div>
-                          <span style="color: #273353;">Top cardiologists</span><br/>
-                          <span style="color: #828690; font-weight: 400; font-size: 1rem; line-height: 1.6;">with decades of trusted clinical experience</span>
-                        </div>
-                      </li>
-                      
-                      <li class="list-group-item">
-                        <i class="pbmit-base-icon-ok-1" aria-hidden="true"></i>
-                        <div>
-                          <span style="color: #273353;"> Advanced diagnostics</span><br/>
-                          <span style="color: #828690; font-weight: 400; font-size: 1rem; line-height: 1.6;">powered by state-of-the-art imaging and AI</span>
-                        </div>
-                      </li>
-
-
-                      <li class="list-group-item">
-                        <i class="pbmit-base-icon-ok-1" aria-hidden="true"></i>
-                        <div>
-                          <span style="color: #273353;">A local practice</span><br/>
-                          <span style="color: #828690; font-weight: 400; font-size: 1rem; line-height: 1.6;">trusted by families across the Twin Cities</span>
-                        </div>
-                      </li>     
-                     </ul>
-                      </div>
-
-                        <div class="col-md-6 col-sm-12">
-                          <ul class="list-group list-group-borderless">
-                            <li class="list-group-item">
-                              <i class="pbmit-base-icon-ok-1" aria-hidden="true"></i>
-                              <div>
-                                <span style="color: #273353;">Proactive care</span><br/>
-                                <span style="color: #828690; font-weight: 400; font-size: 1rem; line-height: 1.6;"> that catches issues early, before they become problems</span>
-                              </div>
-                            </li> 
-                            
-                            
-                            <li class="list-group-item">
-                              <i class="pbmit-base-icon-ok-1" aria-hidden="true"></i>
-                              <div>
-                                <span style="color: #273353;">Real relationships</span><br/>
-                                <span style="color: #828690; font-weight: 400; font-size: 1rem; line-height: 1.6;">not rushed appointments</span>
-                              </div>
-                            </li> 
-
-
-                            <li class="list-group-item">
-                              <i class="pbmit-base-icon-ok-1" aria-hidden="true"></i>
-                              <div>
-                                <span style="color: #273353;"> Designed for comfort</span><br/>
-                                <span style="color: #828690; font-weight: 400; font-size: 1rem; line-height: 1.6;">from the waiting room to your care plan</span>
-                              </div>
-                            </li> 
-                    </ul>
+                </div>
+                <div class="why-grid">
+                  <div class="why-item">
+                    <h3>Top cardiologists</h3>
+                    <p>With decades of trusted clinical experience, our team provides expert cardiac care you can rely on.</p>
                   </div>
-                 
+                  <div class="why-item">
+                    <h3>Proactive care</h3>
+                    <p>We catch issues early, before they become problems, ensuring the best outcomes for your heart health.</p>
+                  </div>
+                     
+                  <div class="why-item">
+                    <h3>Real relationships</h3>
+                    <p>We build lasting connections with our patients, providing personalized care that extends beyond appointments.</p>
+                  </div>    
+                  <div class="why-item">
+                    <h3>A local practice</h3>
+                    <p>Trusted by families across the Twin Cities, we're here when you need us most with convenient locations.</p>
+                  </div>      
+                  <div class="why-item">
+                    <h3>Designed for comfort</h3>
+                    <p>From the waiting room to your care plan, every detail is designed to make your experience comfortable</p>
+                  </div>
+                <div class="why-item">
+                  <h3>Advanced diagnostics</h3>
+                  <p>Powered by state-of-the-art imaging and AI, we provide precise, comprehensive cardiac evaluations</p>
+                </div> 
+                   
                 </div>
               </div>
-              </div>
-
-               
-             
-              </div>
-             
+            </div>
             
             </div>
           </div>
