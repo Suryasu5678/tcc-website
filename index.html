@@ -160,6 +160,191 @@
             }   
           }
 
+          .client-marquee-wrapper {
+            width: 100%;
+            overflow: hidden;
+            background: white;
+            padding: 20px 0;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            border-radius: 8px;
+        }
+
+        .client-marquee-track {
+            display: flex;
+            align-items: center;
+            animation: scroll 25s linear infinite;
+            width: calc(200% + 40px);
+        }
+
+        .logo-item {
+            flex: 0 0 auto;
+            margin: 0 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-width: 120px;
+            height: 60px;
+        }
+
+        .logo-item img {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
+            filter: grayscale(20%);
+            transition: all 0.3s ease;
+        }
+
+        .logo-item:hover img {
+            filter: grayscale(0%);
+            transform: scale(1.05);
+        }
+
+        @keyframes scroll {
+            0% {
+                transform: translateX(0);
+            }
+            100% {
+                transform: translateX(-50%);
+            }
+        }
+
+        .client-marquee-wrapper:hover .client-marquee-track {
+            animation-play-state: paused;
+        }
+
+        @media (min-width: 1200px) {
+            .client-marquee-track {
+                animation-duration: 25s;
+            }
+        }
+        .client-marquee-wrapper {
+            width: 100%;
+            overflow: hidden;
+            background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+            padding: 40px 0;
+            box-shadow: 0 8px 32px rgba(0,0,0,0.1);
+            border-radius: 16px;
+            border: 1px solid rgba(255,255,255,0.2);
+            position: relative;
+        }
+
+        .client-marquee-wrapper::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(90deg, 
+                rgba(248,249,250,0.8) 0%, 
+                transparent 10%, 
+                transparent 90%, 
+                rgba(248,249,250,0.8) 100%);
+            pointer-events: none;
+            z-index: 1;
+        }
+
+        .client-marquee-track {
+            display: flex;
+            align-items: center;
+            animation: scroll 25s linear infinite;
+            width: calc(200% + 80px);
+        }
+
+        .logo-item {
+            flex: 0 0 auto;
+            margin: 0 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-width: 120px;
+            height: 90px;
+            background: rgba(255,255,255,0.8);
+            border-radius: 12px;
+            padding: 15px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+            transition: all 0.4s ease;
+            border: 1px solid rgba(0,0,0,0.05);
+        }
+
+        .logo-item img {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
+            filter: grayscale(10%) brightness(0.95);
+            transition: all 0.4s ease;
+        }
+
+        .logo-item:hover {
+            transform: translateY(-8px) scale(1.05);
+            box-shadow: 0 12px 40px rgba(0,0,0,0.15);
+            background: rgba(255,255,255,0.95);
+        }
+
+        .logo-item:hover img {
+            filter: grayscale(0%) brightness(1);
+            transform: scale(1.1);
+        }
+
+        @keyframes scroll {
+            0% {
+                transform: translateX(0);
+            }
+            100% {
+                transform: translateX(-50%);
+            }
+        }
+
+        .client-marquee-wrapper:hover .client-marquee-track {
+            animation-play-state: paused;
+        }
+
+       .client-marquee-wrapper {
+        padding: 20px 0;
+        background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+        box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+        border-radius: 12px;
+    }
+    
+    .logo-item {
+        min-width: 100px;
+        height: 70px;
+        margin: 0 15px;
+        padding: 10px;
+    }
+    
+    .client-marquee-track {
+        animation-duration: 25s; /* Faster on mobile */
+    }
+
+
+        @media (min-width: 1200px) {
+            .client-marquee-track {
+                animation-duration: 25s;
+            }
+            
+            .logo-item {
+                min-width: 200px;
+                height: 110px;
+                margin: 0 35px;
+            }
+        }
+
+        @media (min-width: 1400px) {
+            .logo-item {
+                min-width: 200px;
+                height: 110px;
+                margin: 0 40px;
+            }
+        }
+
+        @media (max-width: 767.98px) {
+      .client-marquee-track {
+        animation-duration: 12s !important; /* Make it faster */
+      }
+}
+
+
       </style>
 <script>
   document.addEventListener('DOMContentLoaded', function() {
@@ -247,7 +432,7 @@
                                                   </li>
                                                   <li class="dropdown">
                                         <a style="cursor: pointer; display: flex; align-items: center; ">
-                                          SERVICES 
+                                          SERVICES&nbsp;
                                           <span class="arrow" style="font-size: 1.3rem; " class="">&#9662;</span>
                                         </a>
                                         <ul>
@@ -576,7 +761,7 @@
                   </div>
                   <div class="pbminfotech-box-content">
                     <div class="pbmit-service-icon-wrapper">
-                      <i class="fa fa-tablet" aria-hidden="true"></i>
+                      <i class="fa fa-mobile" aria-hidden="true"></i>
                     </div>
                     <div class="pbminfotech-box-content-inner">
                       <div class="pbmit-service-cat"><a href="#" rel="tag">Boutique</a></div>
@@ -612,132 +797,43 @@
     </div>
     <!-- Desktop Swiper (visible on md and above) -->
     <div class="container-fluid swiper insurance-partners-swiper desktop px-4">
-
-      <div class="swiper-wrapper" id="insuranceMarqueeWrapper">
-        <!-- Aetna -->
-        <div class="swiper-slide">
-          <article class="insurance-client-card">
-            <div class="insurance-client-wrapper insurance-client-with-hover-img">
-              <h4 class="insurance-title-hidden">Aetna</h4>
-              <div class="insurance-logo-hover">
-                <img src="images/insurancelogos/Aetna.png" class="img-fluid" alt="Aetna">
-              </div>
-            </div>
-          </article>
+      <div class="client-marquee-wrapper  mt-4">
+        <div class="client-marquee-track d-flex align-items-center">
+            <!-- Set 1 -->
+            <div class="logo-item"><img src="images/insurancelogos/Aetna.png" alt="Aetna" /></div>
+            <div class="logo-item"><img src="images/insurancelogos/Allina Aetna.png" alt="Allina Aetna" /></div>
+            <div class="logo-item"><img src="images/insurancelogos/Americas PPO.png" alt="America's PPO" /></div>
+            <div class="logo-item"><img src="images/insurancelogos/BCBS.png" alt="BCBS" /></div>
+            <div class="logo-item"><img src="images/insurancelogos/Cigna.png" alt="Cigna" /></div>
+            <div class="logo-item"><img src="images/insurancelogos/1st Health Network.png" alt="1st Health Network" /></div>
+            <div class="logo-item"><img src="images/insurancelogos/HP.png" alt="HP" /></div>
+            <div class="logo-item"><img src="images/insurancelogos/Medicaid.png" alt="Medicaid" /></div>
+            <div class="logo-item"><img src="images/insurancelogos/Medicare.png" alt="Medicare" /></div>
+            <div class="logo-item"><img src="images/insurancelogos/Medicare RR.png" alt="Medicare RR" /></div>
+            <div class="logo-item"><img src="images/insurancelogos/MultiPlan.png" alt="MultiPlan" /></div>
+            <div class="logo-item"><img src="images/insurancelogos/PrimeWest.png" alt="PrimeWest" /></div>
+            <div class="logo-item"><img src="images/insurancelogos/Sanford.png" alt="Sanford" /></div>
+            <div class="logo-item"><img src="images/insurancelogos/UCare.png" alt="UCare" /></div>
+            
+            <!-- Set 2 (Duplicate for seamless loop) -->
+            <div class="logo-item"><img src="images/insurancelogos/Aetna.png" alt="Aetna" /></div>
+            <div class="logo-item"><img src="images/insurancelogos/Allina Aetna.png" alt="Allina Aetna" /></div>
+            <div class="logo-item"><img src="images/insurancelogos/Americas PPO.png" alt="America's PPO" /></div>
+            <div class="logo-item"><img src="images/insurancelogos/BCBS.png" alt="BCBS" /></div>
+            <div class="logo-item"><img src="images/insurancelogos/Cigna.png" alt="Cigna" /></div>
+            <div class="logo-item"><img src="images/insurancelogos/1st Health Network.png" alt="1st Health Network" /></div>
+            <div class="logo-item"><img src="images/insurancelogos/HP.png" alt="HP" /></div>
+            <div class="logo-item"><img src="images/insurancelogos/Medicaid.png" alt="Medicaid" /></div>
+            <div class="logo-item"><img src="images/insurancelogos/Medicare.png" alt="Medicare" /></div>
+            <div class="logo-item"><img src="images/insurancelogos/Medicare RR.png" alt="Medicare RR" /></div>
+            <div class="logo-item"><img src="images/insurancelogos/MultiPlan.png" alt="MultiPlan" /></div>
+            <div class="logo-item"><img src="images/insurancelogos/PrimeWest.png" alt="PrimeWest" /></div>
+            <div class="logo-item"><img src="images/insurancelogos/Sanford.png" alt="Sanford" /></div>
+            <div class="logo-item"><img src="images/insurancelogos/UCare.png" alt="UCare" /></div>
         </div>
+    </div>
+      
     
-        <!-- BCBS -->
-        <div class="swiper-slide">
-          <article class="insurance-client-card">
-            <div class="insurance-client-wrapper insurance-client-with-hover-img">
-              <h4 class="insurance-title-hidden">Blue Cross Blue Shield</h4>
-              <div class="insurance-logo-hover">
-                <img src="images/insurancelogos/BCBS.png" class="img-fluid" alt="BCBS">
-              </div>
-            </div>
-          </article>
-        </div>
-    
-        <!-- Cigna -->
-        <div class="swiper-slide">
-          <article class="insurance-client-card">
-            <div class="insurance-client-wrapper insurance-client-with-hover-img">
-              <h4 class="insurance-title-hidden">Cigna</h4>
-              <div class="insurance-logo-hover">
-                <img src="images/insurancelogos/Cigna.png" class="img-fluid" alt="Cigna">
-              </div>
-            </div>
-          </article>
-        </div>
-
-
-         <!-- 1st Health Network -->
-         <div class="swiper-slide">
-          <article class="insurance-client-card">
-            <div class="insurance-client-wrapper insurance-client-with-hover-img">
-              <h4 class="insurance-title-hidden">1st Health Network</h4>
-              <div class="insurance-logo-hover">
-                <img src="images/insurancelogos/1st Health Network.png" class="img-fluid" alt="1st Health Network">
-              </div>
-            </div>
-          </article>
-        </div>
-    
-        <!-- Health Partners -->
-        <div class="swiper-slide">
-          <article class="insurance-client-card">
-            <div class="insurance-client-wrapper insurance-client-with-hover-img">
-              <h4 class="insurance-title-hidden">Health Partners</h4>
-              <div class="insurance-logo-hover">
-                <img src="images/insurancelogos/HP.png" class="img-fluid" alt="Health Partners">
-              </div>
-            </div>
-          </article>
-        </div>
-    
-        <!-- Medicaid -->
-        <div class="swiper-slide">
-          <article class="insurance-client-card">
-            <div class="insurance-client-wrapper insurance-client-with-hover-img">
-              <h4 class="insurance-title-hidden">Medicaid</h4>
-              <div class="insurance-logo-hover">
-                <img src="images/insurancelogos/Medicaid.png" class="img-fluid" alt="Medicaid">
-              </div>
-            </div>
-          </article>
-        </div>
-    
-        <!-- Medicare -->
-        <div class="swiper-slide">
-          <article class="insurance-client-card">
-            <div class="insurance-client-wrapper insurance-client-with-hover-img">
-              <h4 class="insurance-title-hidden">Medicare</h4>
-              <div class="insurance-logo-hover">
-                <img src="images/insurancelogos/Medicare.png" class="img-fluid" alt="Medicare">
-              </div>
-            </div>
-          </article>
-        </div>
-    
-        <!-- MultiPlan -->
-        <div class="swiper-slide">
-          <article class="insurance-client-card">
-            <div class="insurance-client-wrapper insurance-client-with-hover-img">
-              <h4 class="insurance-title-hidden">MultiPlan</h4>
-              <div class="insurance-logo-hover">
-                <img src="images/insurancelogos/MultiPlan.png" class="img-fluid" alt="MultiPlan">
-              </div>
-            </div>
-          </article>
-        </div>
-    
-        <!-- PrimeWest -->
-        <div class="swiper-slide">
-          <article class="insurance-client-card">
-            <div class="insurance-client-wrapper insurance-client-with-hover-img">
-              <h4 class="insurance-title-hidden">PrimeWest</h4>
-              <div class="insurance-logo-hover">
-                <img src="images/insurancelogos/PrimeWest.png" class="img-fluid" alt="PrimeWest">
-              </div>
-            </div>
-          </article>
-        </div>
-    
-        <!-- UCare -->
-        <div class="swiper-slide">
-          <article class="insurance-client-card">
-            <div class="insurance-client-wrapper insurance-client-with-hover-img">
-              <h4 class="insurance-title-hidden">UCare</h4>
-              <div class="insurance-logo-hover">
-                <img src="images/insurancelogos/UCare.png" class="img-fluid" alt="UCare">
-              </div>
-            </div>
-          </article>
-        </div>
-    
-      </div>
-      <!-- Pagination dots -->
-      <div class="swiper-pagination"></div>
     </div>
     
 </div>
@@ -1067,14 +1163,14 @@
         <h6 class="fw-bold mb-3 text-white" style="font-size: 15px;">Clinic Hours</h6>
         <ul class="list-unstyled small text-light">
           <li class="d-flex justify-content-between">
-            <span>Mon – Thu:</span> <span class="fw-semibold">9:30 – 4:00</span>
+            <span>Mon – Thu</span> <span class="fw-semibold">9:30 – 4:00</span>
           </li>
           <li class="d-flex justify-content-between">
-            <span>Friday <small class="text-danger fw-semibold">(Emergencies only)</small>:</span>
+            <span>Friday <small class="text-danger fw-semibold">(Emergencies only)</small></span>
             <span class="fw-semibold">9:30 – 4:00</span>
           </li>
           <li class="d-flex justify-content-between">
-            <span>Sat – Sun:</span> <span class="fw-semibold">Closed</span>
+            <span>Sat – Sun</span> <span class="fw-semibold">Closed</span>
           </li>
         </ul>
       </div>
