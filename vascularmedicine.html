@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta http-equiv="x-ua-compatible" content="ie=edge" />
-    <title>Heart Surgery – Cardioly Demo HTML Template</title>
+    <title>Heart Surgery – Cardiology</title>
     <meta name="robots" content="noindex, follow" />
     <meta name="description" content="" />
     <meta
@@ -67,10 +67,12 @@
       display:unset !important;
       margin-left: 0 !important;
       }
+
       @media (max-width: 768px) {
         .list-group-item {
           text-align: left !important;
         }
+      }
 
         @media (max-width: 768px) {
         .pbmit-title-bar-wrapper-vascular .gradient-bottom {
@@ -78,26 +80,27 @@
         }
       }
 
-        @media (max-width: 768px) {
-      .list-group-item {
-        padding-left: 0.75rem;
-        padding-right: 0.75rem;
-        margin-bottom: 0.75rem;
+      @media (max-width: 768px) {
+        .list-group-item {
+          padding-left: 0.75rem;
+          padding-right: 0.75rem;
+          margin-bottom: 0.75rem;
+        }
+
+        .main-section-heading,
+        .sub-section-heading {
+          font-size: 1.25rem;
+          margin-top: 1.5rem;
+          margin-bottom: 1rem;
+        }
       }
-    }
-      .main-section-heading,
-      .sub-section-heading {
-        font-size: 1.25rem;
-        margin-top: 1.5rem;
-        margin-bottom: 1rem;
-      }
-    }
-        @media (min-width: 992px) {
+  
+      @media (min-width: 992px) {
       .text-lg-justify {
         text-align: justify !important;
       }
     }
-
+  
     .list-group-item {
       display: flex;
       align-items: flex-start;
@@ -106,11 +109,98 @@
       border: none;
       background: transparent;
     }
-  
+    .custom-grid-section {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;  
+      border-radius: 10px;
+    }
+    .custom-block {
+    background-color:#E0E0E5; /* Card-like feel */
+    padding: 1rem;
+    border-radius: 8px;
+    }
+    .custom-block h5 {
+    margin-bottom: 1rem;
+    }
+    .custom-block ul {
+      padding-left: 1rem;
+    }
 
+    .custom-block li {
+      text-align: left;
+      list-style: none;
+      margin-bottom: 0.75rem;
+    }
+
+    .custom-block li i {
+      margin-right: 0.5rem;
+      color: red;
+    }
+
+    .custom-title {
+      margin-top: 3rem;
+      margin-bottom: 1rem;
+      color: black;
+    }
+
+    .custom-list {
+    list-style: none;
+    padding-left: 0;
+    margin: 0;
+  }
+
+  .custom-list li {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 1rem;
+  }
+
+  .custom-list-icon {
+    width: 1.5rem; /* same for all */
+    flex-shrink: 0;
+    margin-top: 0.2rem;
+    color: red;
+  }
+
+  .custom-list-text {
+    flex: 1;
+    text-align: left;
+    color: #6c757d;
+  }
+
+
+    .why-section {
+        background: #f8f9fa;
+      }
+
+      .why-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+        gap: 20px;
+        /* margin-top: 40px; */
+      }
+
+      .why-item {
+        background: white;
+        padding: 30px;
+        border-radius: 15px;
+        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+        text-align: left;
+      }
+
+      .why-item h3 {
+        font-size: 1.5em;
+        margin-bottom: 15px;
+      }
+
+      .why-item p {
+        color: #666;
+        line-height: 1.6;
+      }
 
     </style>
-    <!-- Page Wrapper -->
+     <!-- Page Wrapper --> 
     <div class="page-wrapper">
         <!-- Header Main Area -->
         <header class="site-header header-style-3">
@@ -211,12 +301,12 @@
              </div>
           </div>
          
-      
+      </header>
                 
         
     
     </div>
-      </header>
+  
       <!-- Header Main Area End Here -->
 
       <!-- Title Bar -->
@@ -245,7 +335,7 @@
       <!-- Page Content -->
       <div class="page-content">
         <!-- Service Details -->
-        <section>
+        <div>
           <div class="container">
             <div class="row" style="text-align: justify;">
              
@@ -266,7 +356,7 @@
                           class="pbmit-base-icon-ok-1"
                           aria-hidden="true"
                         ></i>
-                        Peripheral Artery Disease (PAD)                                         </li>
+                        Peripheral Artery Disease (PAD)</li>
                       <li class="list-group-item">
                         <i
                           class="pbmit-base-icon-ok-1"
@@ -281,7 +371,7 @@
                           class="pbmit-base-icon-ok-1"
                           aria-hidden="true"
                         ></i>
-                        Abdominal Aortic Aneurysm                      </li>
+                        Abdominal Aortic Aneurysm </li>
                      
                       <li class="list-group-item">
                         <i
@@ -383,278 +473,91 @@
 
                   </p>
                   
-                    <h5 class="sub-section-heading text-start" style="text-align: justify;"> Diagnostic Testing</h5>
-                  
-                 
-                  
-                      <div class="row">
-                  <div class="col-md-6 col-sm-12 text-start" style="text-align: justify;"">
-                    <ul class="list-group list-group-borderless mb-0">
-                      <li class="list-group-item">
-                        <i
-                        class="pbmit-base-icon-ok-1"
-                        aria-hidden="true"
-                      ></i>
-                      Carotid Ultrasound
-                                            </li>
-                                            <li class="list-group-item">
-                                              <i
-                                              class="pbmit-base-icon-ok-1"
-                                              aria-hidden="true"
-                                            ></i>
-                                            Abdominal Aortic Ultrasound
-
-
-                                          </li>
-                                          
-                                          
-                                         
-                    </ul>
-                  </div>
-                  <div class="col-md-6 col-sm-12">
-                    <ul class="list-group list-group-borderless">
-                      <li class="list-group-item">
-                        <i
-                        class="pbmit-base-icon-ok-1"
-                        aria-hidden="true"
-                      ></i>
-                      Arterial Ultrasound
-
-
-                    </li>
-
-                      <li class="list-group-item">
-                        <i
-                        class="pbmit-base-icon-ok-1"
-                        aria-hidden="true"
-                      ></i>
-                      Venous Ultrasound
-
-
-                    </li>
-                    </ul>
-                  </div>
-                  </div>
-                  <div  class="mb-5">
-                    
-
-                      <h5 class="sub-section-heading text-start" style="text-align: justify;"">Vein Treatments</h5>
-                    
-                     
-                
-                     
-                     
-                     <div class="row">
-                      
-                      <div class="col-md-6 col-sm-12">
-                        <ul class="list-group list-group-borderless mb-0 text-start" style="text-align: justify;"">
-                          
-                          <li class="list-group-item">
-                            <i
-                              class="pbmit-base-icon-ok-1"
-                              aria-hidden="true"
-                            ></i>
-                            VenaSeal Closure System
-    
-    
-    
-    
-                          </li>
-                          <li class="list-group-item">
-                            <i
-                              class="pbmit-base-icon-ok-1"
-                              aria-hidden="true"
-                            ></i>
-                            ClosureFast Radiofrequency Ablation
-    
-    
-    
-    
-                          </li>
-                        
-                        
-                          </ul>
-                          </div>
-                            <div class="col-md-6 col-sm-12">
-                              <ul class="list-group list-group-borderless text-start" style="text-align: justify;"">
-                          <li class="list-group-item">
-                            <i
-                              class="pbmit-base-icon-ok-1"
-                              aria-hidden="true"
-                            ></i>
-                            Ambulatory Phlebectomy
-    
-    
-    
-    
-                          </li>
-                         
-                          <li class="list-group-item">
-                            <i
-                              class="pbmit-base-icon-ok-1"
-                              aria-hidden="true"
-                            ></i>
-                            Ultrasound-Guided Sclerotherapy
-    
-    
-    
-    
-                          </li>
-                      
-                        </ul>
-                      </div>
-                     
+                  <div class="custom-grid-section">
+                    <!-- Block 1 -->
+                    <div class="custom-block">
+                      <h5 class="sub-section-heading text-start" style="text-align: justify;">Diagnostic Testing</h5> <br/>
+                      <ul class="custom-list">
+                        <li> <span class="custom-list"><i class="pbmit-base-icon-ok-1" aria-hidden="true"></i> </span>&nbsp<span class="custom-list-text">Carotid Ultrasound </span></li>
+                        <li><span class="custom-list-icon"><i class="pbmit-base-icon-ok-1" aria-hidden="true"></i></span>&nbsp<span class="custom-list-text"> Abdominal Aortic Ultrasound</span></li>
+                        <li><span class="custom-list-icon"><i class="pbmit-base-icon-ok-1" aria-hidden="true"></i> </span>&nbsp<span class="custom-list-text">Arterial Ultrasound</span></li>
+                        <li><span class="custom-list-icon"><i class="pbmit-base-icon-ok-1" aria-hidden="true"></i></span>&nbsp<span class="custom-list-text"> Venous Ultrasound</span></li>
+                      </ul>
                     </div>
-                
-                  </div>
-                  <div  class="mb-5">
-                       <h5 class="sub-section-heading">Referrals for Arterial interventions</h5>
-                   
-                     
-                    
-                      
-                     
-                     <div class="row">
-                      <div class="col-md-6 col-sm-12">
-                        <ul class="list-group list-group-borderless">
-                          <li class="list-group-item">
-                            <i
-                            class="pbmit-base-icon-ok-1"
-                            aria-hidden="true"
-                          ></i>
-                          Angiography
-
-
-                        </li>
-                                                <li class="list-group-item">
-                                                  <i
-                                                  class="pbmit-base-icon-ok-1"
-                                                  aria-hidden="true"
-                                                ></i>
-                                                Balloon Angioplasty
-
+                  
+                    <!-- Block 2 -->
+                    <div class="custom-block">
+                      <h5 class="sub-section-heading text-start" style="text-align: justify;">Vein Treatments</h5> <br/>
+                      <ul class="custom-list">
+                        <li><span class="custom-list-icon"><i class="pbmit-base-icon-ok-1" aria-hidden="true"></i> </span>&nbsp<span class="custom-list-text">VenaSeal Closure System</span></li>
+                        <li><span class="custom-list-icon"><i class="pbmit-base-icon-ok-1" aria-hidden="true"></i></span>&nbsp <span class="custom-list-text">ClosureFast Radiofrequency Ablation</span></li>
+                        <li><span class="custom-list-icon"><i class="pbmit-base-icon-ok-1" aria-hidden="true"></i></span>&nbsp <span class="custom-list-text">Ambulatory Phlebectomy </span></li>
+                        <li><span class="custom-list-icon"><i class="pbmit-base-icon-ok-1" aria-hidden="true"></i> </span>&nbsp<span class="custom-list-text">Ultrasound-Guided Sclerotherapy</span></li>
+                      </ul>
+                    </div>
+                  
+                    <!-- Block 3 -->
+                    <div class="custom-block">
+                      <h5 class="sub-section-heading text-start" style="text-align: justify;">Referrals for Arterial interventions</h5> 
+                      <ul class="custom-list">
+                        <li ><span class="custom-list-icon"><i class="pbmit-base-icon-ok-1" aria-hidden="true"></i> </span>&nbsp<span class="custom-list-text">Angiography</span></li>
+                        <li><span class="custom-list-icon"><i class="pbmit-base-icon-ok-1" aria-hidden="true"></i></span>&nbsp<span class="custom-list-text">Balloon Angioplasty</span></li>
+                        <li><span class="custom-list-icon"><i class="pbmit-base-icon-ok-1" aria-hidden="true"></i></span>&nbsp<span class="custom-list-text">Stent Placement </span></li>
+                      </ul>
+                    </div>
+                    </div>
+                  <!-- Why Choose Us -->
 
     
-    
-                                              </li>
-                                              
-                                              <li class="list-group-item">
-                                                <i
-                                                class="pbmit-base-icon-ok-1"
-                                                aria-hidden="true"
-                                              ></i>
-                                              Stent Placement
-                    
-                    
-                        
-                        
-                                            </li>
-                                             
-                        </ul>
-                      </div>
-                 
-                      </div>
-                 
-                  </div>
-
-                  <div  class="mb-5">
+                  <div class="mb-5">
                     <h2 class="main-section-heading text-start" style="text-align: justify;">Why Choose Us?</h2>
-                   
-                     
-                    <div class="row text-start" style="text-align: justify;">
-                      <p style="max-width: 800px">
+    
+                    <div class="row">
+                      <p style="max-width: 800px text-start" style="text-align: justify;">
                         At Twin Cities Cardiology, you’ll be cared for by a compassionate and expert team that puts you first — with timely visits, clear communication, and care tailored to your life and goals.
             
                       </p>
-                      <div class="pbmit-heading-subheading text-left mb-3" >
-                     </div>
-                     <div class="row">
-                      <div class="col-md-6 col-sm-12">
-                        <ul class="list-group list-group-borderless mb-0">
-                          <li class="list-group-item">
-                            <i class="pbmit-base-icon-ok-1" aria-hidden="true"></i>
-                            <div>
-                              <span style="color: #273353;">Top cardiologists</span><br/>
-                              <span style="color: #828690; font-weight: 400; font-size: 1rem; line-height: 1.6;">with decades of trusted clinical experience</span>
-                            </div>
-                          </li>
-                          
-                          <li class="list-group-item">
-                            <i class="pbmit-base-icon-ok-1" aria-hidden="true"></i>
-                            <div>
-                              <span style="color: #273353;"> Advanced diagnostics</span><br/>
-                              <span style="color: #828690; font-weight: 400; font-size: 1rem; line-height: 1.6;">powered by state-of-the-art imaging and AI</span>
-                            </div>
-                          </li>
-    
-    
-                          <li class="list-group-item">
-                            <i class="pbmit-base-icon-ok-1" aria-hidden="true"></i>
-                            <div>
-                              <span style="color: #273353;">A local practice</span><br/>
-                              <span style="color: #828690; font-weight: 400; font-size: 1rem; line-height: 1.6;">trusted by families across the Twin Cities</span>
-                            </div>
-                          </li>     
-                         </ul>
-                          </div>
-    
-                            <div class="col-md-6 col-sm-12">
-                              <ul class="list-group list-group-borderless">
-                                <li class="list-group-item">
-                                  <i class="pbmit-base-icon-ok-1" aria-hidden="true"></i>
-                                  <div>
-                                    <span style="color: #273353;">Proactive care</span><br/>
-                                    <span style="color: #828690; font-weight: 400; font-size: 1rem; line-height: 1.6;"> that catches issues early, before they become problems</span>
-                                  </div>
-                                </li> 
-                                
-                                
-                                <li class="list-group-item">
-                                  <i class="pbmit-base-icon-ok-1" aria-hidden="true"></i>
-                                  <div>
-                                    <span style="color: #273353;">Real relationships</span><br/>
-                                    <span style="color: #828690; font-weight: 400; font-size: 1rem; line-height: 1.6;">not rushed appointments</span>
-                                  </div>
-                                </li> 
-    
-    
-                                <li class="list-group-item">
-                                  <i class="pbmit-base-icon-ok-1" aria-hidden="true"></i>
-                                  <div>
-                                    <span style="color: #273353;"> Designed for comfort</span><br/>
-                                    <span style="color: #828690; font-weight: 400; font-size: 1rem; line-height: 1.6;">from the waiting room to your care plan</span>
-                                  </div>
-                                </li> 
-                        </ul>
+                    </div>
+                    <div class="why-grid">
+                      <div class="why-item">
+                        <h3>Top cardiologists</h3>
+                        <p>With decades of trusted clinical experience, our team provides expert cardiac care you can rely on.</p>
                       </div>
-                     
+                      <div class="why-item">
+                        <h3>Proactive care</h3>
+                        <p>We catch issues early, before they become problems, ensuring the best outcomes for your heart health.</p>
+                      </div>
+                         
+                      <div class="why-item">
+                        <h3>Real relationships</h3>
+                        <p>We build lasting connections with our patients, providing personalized care that extends beyond appointments.</p>
+                      </div>    
+                      <div class="why-item">
+                        <h3>A local practice</h3>
+                        <p>Trusted by families across the Twin Cities, we're here when you need us most with convenient locations.</p>
+                      </div>      
+                      <div class="why-item">
+                        <h3>Designed for comfort</h3>
+                        <p>From the waiting room to your care plan, every detail is designed to make your experience comfortable</p>
+                      </div>
+                    <div class="why-item">
+                      <h3>Advanced diagnostics</h3>
+                      <p>Powered by state-of-the-art imaging and AI, we provide precise, comprehensive cardiac evaluations</p>
+                    </div> 
+                       
                     </div>
                   </div>
-                  </div>
-    
-                  
                 </div>
-
-               
-
-
-               
-             
               </div>
-             
-            
-            </div>
-
-            
-          </div>
-
-
-          
+            </div> 
+          </div> 
+        
         </section>
-
+      </div>
+      
         
         <!-- Service Details End -->
-      </div>
+      
       <!-- Page Content End -->
 
     <!-- footer -->
@@ -742,8 +645,10 @@
              <span class="me-2" style="min-width: 22px;">
                <i class="pbmit-base-icon-location text-danger" style="font-size: 21px;"></i>
              </span>
-             <span>1421 Wayzata Blvd, Suite 303
-              Wayzata, MN 55391</span>
+             <span style="cursor:pointer;" id="map-address">
+              1421 Wayzata Blvd., Suite 303<br>
+              Wayzata, MN 55391.
+            </span>
            </li>
        
            
@@ -817,5 +722,22 @@
     <script src="js/aos.js"></script>
     <!-- Scripts JS -->
     <script src="js/scripts.js"></script>
+
+    <script>
+        const address = "1421 Wayzata Blvd, Suite 303, Wayzata, MN 55391";
+        const encodedAddress = encodeURIComponent(address);
+
+        // Detect platform
+        const isApple = /iPhone|iPad|Macintosh/.test(navigator.userAgent);
+        const mapUrl = isApple
+          ? `http://maps.apple.com/?q=${encodedAddress}`
+          : `https://www.google.com/maps?q=${encodedAddress}`;
+
+        // Open correct link on click
+        document.getElementById("map-address").addEventListener("click", () => {
+          window.open(mapUrl, "_blank");
+        });
+ 
+    </script>
   </body>
 </html>

@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta http-equiv="x-ua-compatible" content="ie=edge" />
-    <title>Contact Us – Cardiology HTML Template</title>
+    <title>Heart Surgery – Cardiology</title>
     <meta name="robots" content="noindex, follow" />
     <meta name="description" content="" />
     <meta
@@ -16,7 +16,8 @@
       type="image/x-icon"
       href="images/logo/Group transparent.png"
     />
-
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <!-- CSS
         ============================================ -->
 
@@ -56,10 +57,16 @@
     margin-left: 30px;
   }
 }
-footer .pbmit-base-icon-location:before {
-      display:unset !important;
-      margin-left: 0 !important;
+  footer .pbmit-base-icon-location:before {
+    display:unset !important;
+    margin-left: 0 !important;
+  }
+  @media (max-width: 768px) {
+      .fst-italic.text-light {
+        margin-left: 0 !important;
+        margin-right: auto !important;
       }
+    }
 
 
   </style>
@@ -331,20 +338,30 @@ footer .pbmit-base-icon-location:before {
           </div>
         </div>
       </div>
-      
-     
-     
       </div>
     </div>
   </div>
-  <style>
-    @media (max-width: 768px) {
-      .fst-italic.text-light {
-        margin-left: 0 !important;
-        margin-right: auto !important;
-      }
-    }
-    </style>
+  <div class="position-fixed top-0 end-0 p-3" style="z-index: 1055">
+    <div
+      id="formToast"
+      class="toast hide align-items-center text-white bg-success border-0"
+      role="alert"
+      aria-live="assertive"
+      aria-atomic="true"
+    >
+      <div class="d-flex">
+        <div class="toast-body" id="toastMessage">
+          Thank you for your appointment request. Our team will contact you soon!!
+        </div>
+        <button
+          type="button"
+          class="btn-close btn-close-white me-2 m-auto"
+          data-bs-dismiss="toast"
+          aria-label="Close"
+        ></button>
+      </div>
+    </div>
+  </div>
   
              <!-- footer -->
             <footer class="py-5  text-white" style="
@@ -423,8 +440,10 @@ footer .pbmit-base-icon-location:before {
                     <span class="me-2" style="min-width: 22px;">
                       <i class="pbmit-base-icon-location text-danger" style="font-size: 21px;"></i>
                     </span>
-                    <span>1421 Wayzata Blvd, Suite 303
-                      Wayzata, MN 55391</span>
+                    <span style="cursor:pointer;" id="map-address">
+                      1421 Wayzata Blvd., Suite 303<br>
+                      Wayzata, MN 55391.
+                    </span>
                   </li>
               
                   
@@ -479,5 +498,22 @@ footer .pbmit-base-icon-location:before {
     <script src="js/jquery-validate/jquery.validate.min.js"></script>
     <!-- Scripts JS -->
     <script src="js/scripts.js"></script>
+
+    <script>
+       const address = "1421 Wayzata Blvd, Suite 303, Wayzata, MN 55391";
+        const encodedAddress = encodeURIComponent(address);
+
+        // Detect platform
+        const isApple = /iPhone|iPad|Macintosh/.test(navigator.userAgent);
+        const mapUrl = isApple
+          ? `http://maps.apple.com/?q=${encodedAddress}`
+          : `https://www.google.com/maps?q=${encodedAddress}`;
+
+        // Open correct link on click
+        document.getElementById("map-address").addEventListener("click", () => {
+          window.open(mapUrl, "_blank");
+        });
+ 
+    </script>
 </body>
 </html>
