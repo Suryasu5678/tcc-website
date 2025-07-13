@@ -12,8 +12,8 @@
 $from_email				= "tcccontactus@gmail.com";
 $from_email_password	= "vuyn sdjq hdoo vpps";
 $from_email_name		= "TCC";
-$to_email				= "lizziemcneil@tccardio.org";
-$to_email_name			= "Lizzie McNeil";
+$to_email				= "contactus@tccardio.org";
+$to_email_name			= "Twin Cities Cardiology Contact";
 $email_subject			= 'Contact Inquiry from Twin Cities Cardiology';
 
 /* ========================================================================== */
