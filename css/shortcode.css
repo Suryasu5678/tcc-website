@@ -195,7 +195,7 @@ body {
   color: var(--pbmit-global-color);
 }
 .pbmit-ihbox-style-3 .pbmit-ihbox-contents {
-  padding-left: 15px;
+  /* padding-left: 15px; */
 }
 /** Style 4 **/
 .pbmit-ihbox-style-4 .pbmit-ihbox-icon-wrapper {
