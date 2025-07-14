@@ -34,9 +34,10 @@ body {
 /*----------------------------------------*/
 .pbmit-service-style-1:hover .pbmit-service-icon-wrapper img {
   content: url("/images/icon/Frame 4.svg");
+  /* content: url("/images/Red_Veins.svg"); */
 }
 .service-card-vascular:hover .pbmit-service-icon-wrapper img {
-  content: url("/images/Red_Veins (1).svg");
+  content: url("/images/Red_Veins.svg") !important;
 }
 .service-card-executive:hover .pbmit-service-icon-wrapper img {
   content: url("/images/icon/Executive-1.svg");
@@ -2752,7 +2753,7 @@ body .nav-tabs {
   border: none;
   color: var(--pbmit-heading-color);
   padding: 0;
-  padding-bottom: calc(5px / 2);
+  margin-bottom: 0.5rem;
   background: transparent;
   font-family: var(--pbmit-body-typography-font-family);
   font-size: 16px;
@@ -2762,11 +2763,11 @@ body .nav-tabs {
 }
 .list-group-borderless .list-group-item i {
   font-size: 16px;
-  padding-right: 15px;
+  /* padding-right: 15px; */
   color: var(--pbmit-global-color);
 }
 ul.list-group.list-group-borderless {
-  margin-bottom: 1.75em;
+  /* margin-bottom: 1.75em; */
 }
 
 /*----------------------------------------*/
@@ -3428,4 +3429,10 @@ body {
   position: absolute;
   top: 815px;
   z-index: 1;
+}
+.custom-spacing {
+  margin-top: 2rem !important;
+}
+.card-spacing {
+  margin-bottom: 3rem;
 }
