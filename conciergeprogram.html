@@ -53,7 +53,7 @@
         font-weight: 700;
         color: #273353;
         margin-bottom: 2rem;
-        margin-top: 2rem;
+        margin-top: 4rem;
       }
 
       .sub-section-heading {
@@ -110,9 +110,15 @@
       }
       .custom-grid-section {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        grid-template-columns: 1fr 1fr; /* 2 columns */
         gap: 2rem;
         border-radius: 10px;
+      }
+
+      @media (max-width: 768px) {
+        .custom-grid-section {
+          grid-template-columns: 1fr; /* 1 column on small devices */
+        }
       }
 
       .custom-block {
@@ -155,6 +161,7 @@
         display: flex;
         align-items: flex-start;
         margin-bottom: 0.5rem;
+        /* gap: 10px; */
       }
 
       .custom-list-icon {
@@ -197,6 +204,7 @@
       .why-item p {
         color: #666;
         line-height: 1.6;
+        text-align: left;
       }
       @media (min-width: 992px) {
         .justify-lg {
@@ -660,7 +668,7 @@
                 </ul>
               </div>
 
-              <div class="mb-5">
+              <div style="margin-bottom: 5rem">
                 <h2
                   class="main-section-heading text-start text-lg-start justify-lg"
                 >
@@ -668,7 +676,7 @@
                 </h2>
 
                 <div class="row">
-                  <p style="max-width: 800px" class="responsive-justify">
+                  <p class="responsive-justify">
                     At Twin Cities Cardiology, you’ll be cared for by a
                     compassionate and expert team that puts you first — with
                     timely visits, clear communication, and care tailored to

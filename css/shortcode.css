@@ -32,19 +32,23 @@ body {
 /*----------------------------------------*/
 /*  00 - Section Title
 /*----------------------------------------*/
-.pbmit-service-style-1:hover .pbmit-service-icon-wrapper img {
-  content: url("/images/icon/Frame 4.svg");
-  /* content: url("/images/Red_Veins.svg"); */
+
+.pbmit-service-style-1:hover .pbmit-service-icon-wrapper.vascular img {
+  content: url("/images/icon/redhrt.svg");
 }
-.service-card-vascular:hover .pbmit-service-icon-wrapper img {
-  content: url("/images/Red_Veins.svg") !important;
+
+.pbmit-service-style-1:hover .pbmit-service-icon-wrapper.arteries img {
+  content: url("/images/icon/Red_Veins.svg");
 }
-.service-card-executive:hover .pbmit-service-icon-wrapper img {
+
+.pbmit-service-style-1:hover .pbmit-service-icon-wrapper.exec img {
   content: url("/images/icon/Executive-1.svg");
 }
-.service-card-Concierge:hover .pbmit-service-icon-wrapper img {
+
+.pbmit-service-style-1:hover .pbmit-service-icon-wrapper.conc img {
   content: url("/images/icon/Conciegre-1\ \(1\).svg");
 }
+
 .pbmit-heading-subheading {
   position: relative;
   z-index: 1;

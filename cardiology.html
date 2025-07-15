@@ -54,12 +54,11 @@
       *::after {
         box-sizing: border-box;
       }
-
       .main-section-heading {
         font-size: 2rem;
         font-weight: 700;
         color: #273353;
-        margin-top: 2rem;
+        margin-top: 4rem;
         margin-bottom: 2rem;
       }
 
@@ -166,6 +165,10 @@
         grid-template-columns: repeat(3, 1fr);
         /* gap: 1.2rem; */
       }
+      .two-row-grid{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+      }
 
       .three-row-grid li {
         list-style: none;
@@ -199,6 +202,7 @@
         display: flex;
         align-items: flex-start;
         margin-bottom: 0.5rem;
+        gap: 10px;
       }
 
       .custom-list-icon {
@@ -240,6 +244,7 @@
       .why-item p {
         color: #666;
         line-height: 1.6;
+        text-align: left;
       }
 
       @media (min-width: 992px) {
@@ -499,7 +504,7 @@
                 </div>
 
                 <div class="row">
-                  <p class="responsive-justify" style="max-width: 800px">
+                  <p class="responsive-justify">
                     From common concerns to complex heart issues, Twin Cities
                     Cardiology is here to care for you. Some of the conditions
                     we commonly treat include:
@@ -570,7 +575,7 @@
                     How We Help
                   </h2>
 
-                  <p class="responsive-justify" style="max-width: 800px">
+                  <p class="responsive-justify">
                     At Twin Cities Cardiology, we use a combination of advanced
                     cardiac imaging, electrodiagnostic studies, and AI-powered
                     heart monitoring tools to understand the structure and
@@ -581,7 +586,7 @@
                     heart.
                   </p>
 
-                  <div class="row">
+                  <!-- <div class="row">
                     <div class="col-md-6 col-sm-12">
                       <ul class="list-group list-group-borderless mb-0">
                         <li class="list-group-item">
@@ -618,9 +623,56 @@
                         </li>
                       </ul>
                     </div>
-                  </div>
+                  </div> -->
+                  <div class="custom-block custom-list custom-spacing">
+                    <h5 class="sub-section-heading">Diagnosis & Monitoring</h5>
 
+                    <ul class="two-row-grid">
+                      <li>
+                        <span class="custom-list-icon"
+                          ><i
+                            class="pbmit-base-icon-ok-1"
+                            aria-hidden="true"
+                          ></i></span
+                        >&nbsp<span class="custom-list-text">
+                          Echocardiogram (Transthoracic & Transesophageal)</span
+                        >
+                      </li>
+                      <li>
+                        <span class="custom-list-icon"
+                          ><i
+                            class="pbmit-base-icon-ok-1"
+                            aria-hidden="true"
+                          ></i> </span
+                        >&nbsp<span class="custom-list-text"
+                          >Electrocardiogram (ECG/EKG)</span
+                        >
+                      </li>
+
+                      <li>
+                        <span class="custom-list-icon"
+                          ><i
+                            class="pbmit-base-icon-ok-1"
+                            aria-hidden="true"
+                          ></i> </span
+                        >&nbsp<span class="custom-list-text"
+                          >Stress Testing (Exercise)</span
+                        >
+                      </li>
+
+                      <li>
+                        <span class="custom-list-icon"
+                          ><i
+                            class="pbmit-base-icon-ok-1"
+                            aria-hidden="true"
+                          ></i> </span
+                        >&nbsp<span class="custom-list-text"
+                          >Heart Monitoring</span
+                        >
+                      </li>
+                  </div>
                   <!-- Block 1 -->
+
                   <div class="custom-block custom-list custom-spacing">
                     <h5 class="sub-section-heading">Cardiac Evaluations</h5>
                     <p class="responsive-justify" style="padding: 20px">
@@ -723,7 +775,7 @@
                   </div>
 
                   <!-- Why Choose Us Section -->
-                  <div class="mb-5">
+                  <div style="margin-bottom: 5rem">
                     <h2
                       class="main-section-heading text-start text-lg-start justify-lg"
                     >
@@ -731,7 +783,7 @@
                     </h2>
 
                     <div class="row">
-                      <p class="responsive-justify" style="max-width: 800px">
+                      <p class="responsive-justify">
                         At Twin Cities Cardiology, you’ll be cared for by a
                         compassionate and expert team that puts you first — with
                         timely visits, clear communication, and care tailored to
