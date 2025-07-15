@@ -3,14 +3,17 @@
   <head>
     <meta charset="utf-8" />
     <meta http-equiv="x-ua-compatible" content="ie=edge" />
-    <title>Concierge Program - Twin Cities </title>
+    <title>Concierge Program - Twin Cities</title>
     <meta name="robots" content="noindex, follow" />
     <meta name="description" content="" />
     <meta
       name="viewport"
       content="width=device-width, initial-scale=1, shrink-to-fit=no"
     />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
     <link
       rel="shortcut icon"
       type="image/x-icon"
@@ -49,10 +52,10 @@
         font-size: 2rem;
         font-weight: 700;
         color: #273353;
-        margin-bottom: 1.5rem;
-        margin-top: 2rem;
+        margin-bottom: 2rem;
+        margin-top: 4rem;
       }
-    
+
       .sub-section-heading {
         font-size: 1.25rem;
         font-weight: 600;
@@ -62,113 +65,119 @@
         margin-bottom: 1rem;
       }
       .pbmit-base-icon-location:before {
-         display:unset !important;
-         margin-left: 0 !important;
-       }
-       @media (max-width: 768px) {
+        display: unset !important;
+        margin-left: 0 !important;
+      }
+      @media (max-width: 768px) {
         .list-group-item {
           text-align: left !important;
         }
 
         @media (max-width: 768px) {
-        .pbmit-title-bar-wrapper-concierge .gradient-bottom {
-          height: 10rem !important;
+          .pbmit-title-bar-wrapper-concierge .gradient-bottom {
+            height: 10rem !important;
+          }
+        }
+
+        @media (max-width: 768px) {
+          .list-group-item {
+            padding-left: 0.75rem;
+            padding-right: 0.75rem;
+            margin-bottom: 0.75rem;
+          }
+
+          .main-section-heading,
+          .sub-section-heading {
+            font-size: 1.25rem;
+            margin-top: 1.5rem;
+            margin-bottom: 1.5rem;
+          }
+        }
+        @media (min-width: 992px) {
+          .text-lg-justify {
+            text-align: justify !important;
+          }
+        }
+
+        .list-group-item {
+          display: flex;
+          align-items: flex-start;
+          gap: 10px;
+          padding: 0.75rem 0;
+          border: none;
+          background: transparent;
+        }
+      }
+      .custom-grid-section {
+        display: grid;
+        grid-template-columns: 1fr 1fr; /* 2 columns */
+        gap: 2rem;
+        border-radius: 10px;
+      }
+
+      @media (max-width: 768px) {
+        .custom-grid-section {
+          grid-template-columns: 1fr; /* 1 column on small devices */
         }
       }
 
-        @media (max-width: 768px) {
-      .list-group-item {
-        padding-left: 0.75rem;
-        padding-right: 0.75rem;
+      .custom-block {
+        background-color: #e0e0e5; /* Card-like feel */
+        padding: 1rem;
+        border-radius: 8px;
+      }
+
+      .custom-block h5 {
+        margin-bottom: 1rem;
+      }
+
+      .custom-block ul {
+        padding-left: 1rem;
+      }
+
+      .custom-block li {
+        text-align: left;
+        list-style: none;
         margin-bottom: 0.75rem;
       }
 
-      .main-section-heading,
-      .sub-section-heading {
-        font-size: 1.25rem;
-        margin-top: 1.5rem;
+      .custom-block li i {
+        margin-right: 0.5rem;
+        color: red;
+      }
+
+      .custom-title {
+        margin-top: 3rem;
         margin-bottom: 1rem;
+        color: black;
       }
-    }
-        @media (min-width: 992px) {
-      .text-lg-justify {
-        text-align: justify !important;
+      .custom-list {
+        list-style: none;
+        padding-left: 0;
+        margin: 0;
       }
-    }
 
-    .list-group-item {
-      display: flex;
-      align-items: flex-start;
-      gap: 10px;
-      padding: 0.75rem 0;
-      border: none;
-      background: transparent;
-    }
-  }
-  .custom-grid-section {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;  
-    border-radius: 10px;
-  }
+      .custom-list li {
+        display: flex;
+        align-items: flex-start;
+        margin-bottom: 0.5rem;
+        /* gap: 10px; */
+      }
 
-  .custom-block {
-    background-color:#E0E0E5; /* Card-like feel */
-    padding: 1rem;
-    border-radius: 8px;
-  }
+      .custom-list-icon {
+        width: 1.5rem; /* same for all */
+        flex-shrink: 0;
+        margin-top: 0.2rem;
+        color: red;
+      }
 
-  .custom-block h5 {
-    margin-bottom: 1rem;
-  }
+      .custom-list-text {
+        flex: 1;
+        text-align: left;
+        color: #6c757d;
+      }
 
-  .custom-block ul {
-    padding-left: 1rem;
-  }
-
-  .custom-block li {
-    text-align: left;
-    list-style: none;
-    margin-bottom: 0.75rem;
-  }
-
-  .custom-block li i {
-    margin-right: 0.5rem;
-    color: red;
-  }
-
-  .custom-title {
-    margin-top: 3rem;
-    margin-bottom: 1rem;
-    color: black;
-  }
-  .custom-list {
-    list-style: none;
-    padding-left: 0;
-    margin: 0;
-  }
-
-  .custom-list li {
-    display: flex;
-    align-items: flex-start;
-    margin-bottom: 1rem;
-  }
-
-  .custom-list-icon {
-    width: 1.5rem; /* same for all */
-    flex-shrink: 0;
-    margin-top: 0.2rem;
-    color: red;
-  }
-
-  .custom-list-text {
-    flex: 1;
-    text-align: left;
-    color: #6c757d;
-  }
-
-
-    .why-section {
+      .why-section {
         background: #f8f9fa;
       }
 
@@ -195,390 +204,726 @@
       .why-item p {
         color: #666;
         line-height: 1.6;
+        text-align: left;
+      }
+      @media (min-width: 992px) {
+        .justify-lg {
+          text-align: justify;
+        }
+      }
+      .responsive-justify {
+        text-align: left;
       }
 
-
+      @media (min-width: 992px) {
+        .responsive-justify {
+          text-align: justify;
+        }
+      }
+      @media (max-width: 400px) {
+        .why-grid {
+          grid-template-columns: 1fr;
+        }
+      }
     </style>
     <!-- Page Wrapper -->
     <div class="page-wrapper">
-        <!-- Header Main Area -->
-        <header class="site-header header-style-3">
-          <div class="pbmit-header-overlay site-header-menu">
-             <div class="container g-0">
-                <div class="pre-header">
-                   <div class="container-fuild">
-                      <div class="d-md-flex align-items-center justify-content-between">
-                          <div class="pbmit-pre-header-left fs-6 ">
-                            
-                            <a href="tel:19522326132" style="display: inline-flex; align-items: center; gap: 6px; cursor: pointer; text-decoration: none; color: inherit;">
-                              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 24 24">
-                                <path d="M6.62 10.79a15.464 15.464 0 0 0 6.59 6.59l2.2-2.2a1 1 0 0 1 1.11-.27c1.2.48 2.5.74 3.84.74a1 1 0 0 1 1 1v3.5a1 1 0 0 1-1 1C10.75 21.5 2.5 13.25 2.5 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.34.26 2.64.74 3.84a1 1 0 0 1-.27 1.11l-2.2 2.2z"/>
-                              </svg>
-                              +1 (952) 232-6132
-                            </a>
-                           </div>
-                           <div class="pbmit-pre-header-right">
-                            <ul class="pbmit-contact-info">
-                              <!-- <li class="d-flex align-items-center">
+      <!-- Header Main Area -->
+      <header class="site-header header-style-3">
+        <div class="pbmit-header-overlay site-header-menu">
+          <div class="container g-0">
+            <div class="pre-header">
+              <div class="container-fuild">
+                <div
+                  class="d-md-flex align-items-center justify-content-between"
+                >
+                  <div class="pbmit-pre-header-left fs-6">
+                    <a
+                      href="tel:19522326132"
+                      style="
+                        display: inline-flex;
+                        align-items: center;
+                        gap: 6px;
+                        cursor: pointer;
+                        text-decoration: none;
+                        color: inherit;
+                      "
+                    >
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="16"
+                        height="16"
+                        fill="currentColor"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          d="M6.62 10.79a15.464 15.464 0 0 0 6.59 6.59l2.2-2.2a1 1 0 0 1 1.11-.27c1.2.48 2.5.74 3.84.74a1 1 0 0 1 1 1v3.5a1 1 0 0 1-1 1C10.75 21.5 2.5 13.25 2.5 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.34.26 2.64.74 3.84a1 1 0 0 1-.27 1.11l-2.2 2.2z"
+                        />
+                      </svg>
+                      +1 (952) 232-6132
+                    </a>
+                  </div>
+                  <div class="pbmit-pre-header-right">
+                    <ul class="pbmit-contact-info">
+                      <!-- <li class="d-flex align-items-center">
                                 <img src="images/logo/Group transparent.png" alt="MY TCC Logo" class="img-fluid me-1" style="width: 20px; height: 20px;">
                                 <span style="font-size: 16px;">MY TCC</span>
                               </li> -->
-                            </ul>
-                            
-                         </div>
-                      </div>
-                   </div> 
-                </div>
-                <div class="site-header-menu-inner">
-                   <div class="container-fuild">
-                      <div class="row">
-                         <div class="col-md-12">
-                            <div class="d-flex align-items-center justify-content-between">
-                               <div class="d-flex align-items-center justify-content-between flex-fill">
-                                  <div class="site-branding">
-                                     <!-- Logo area -->
-                                     <h1 class="site-title">
-                                        <a href="/index.html" rel="home">
-                                           <img class="logo-img" src="images/logo/Svg (1).svg" alt="Cardiology" title="Cardiology">
-                                        </a>
-                                     </h1>				        
-                                  </div>
-                                  <div class="site-navigation ml-auto">
-                                     <nav class="main-menu navbar-expand-xl navbar-light">
-                                        <div class="navbar-header">
-                                           <!-- Toggle Button --> 
-                                           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                                              <i class="pbmit-base-icon-menu-1"></i>
-                                           </button>
-                                        </div>
-                                        <div class="collapse navbar-collapse clearfix" id="navbarSupportedContent">
-                                          <ul class="navigation clearfix me-2">
-                                            <li >
-                                              <a href="about-us.html">ABOUT US</a>
-                                              
-                                            </li>
-                                            <li class="dropdown">
-                                              <a style="cursor: pointer; display: flex; align-items: center; ">
-                                                SERVICES &nbsp;
-                                                <span class="arrow" style="font-size: 1.5rem; ">&#9662;</span>
-                                              </a>            
-                                              <ul>
-                                                <li><a href="cardiology.html">Cardiology</a></li>
-                                                <li><a href="vascularmedicine.html">Vascular Medicine</a></li>
-                                                <li><a href="executivehealthphysical.html">Executive Health Physical</a></li>
-                                                <li><a href="conciergeprogram.html">Concierge Program</a></li>
-                                              </ul>          
-                                            </li>                                                              
-                                            <li><a href="contact-us.html ">CONTACT US</a></li>
-                                            <li class="d-block d-xl-none"><a href="bookmyappointment.html">BOOK APPOINTMENT</a></li>                                                       
-                                          </ul>
-                                        </div>
-                                     </nav>
-                                  </div>
-                               </div>
-                               <div class="pbmit-right-box">
-                                
-                                  <div class="menu-right-box d-flex align-items-center">
-                                     <div class="pbmit-header-button">
-                                          <a href="bookmyappointment.html" class="pbmit-btn text-uppercase">Book Appointment</a>
-                                     </div>
-                                  </div>
-                               </div> 
-                            </div>
-                         </div>
-                      </div>
-                   </div>
-                </div>
-             </div>
-          </div>
-        </header>
-        </div>
-    </div>
-    
-      <!-- Header Main Area End Here -->
-
-      <!-- Title Bar -->
-      <div class="pbmit-title-bar-wrapper-conceirge">
-        <div class="pbmit-title-bar-content">
-            <div class="container">
-              <!-- Top Gradient Overlay (visible only on lg and up) -->
-      <div class="" style="position: absolute; top: 0; left: 0; width: 100%; height: 160px; background: linear-gradient(180deg, #00213a 0, rgba(0, 33, 58, 0) 100%); pointer-events: none; z-index: 1;"></div>
-      
-      <!-- Bottom Gradient Overlay (visible only on lg and up) -->
-      <div class="" style="position: absolute; bottom: 0; left: 0; width: 100%; height: 19.8rem; background: linear-gradient(180deg, rgba(0, 48, 87, 0) 40.86%, #003057 100%); pointer-events: none; z-index: 1;"></div>
-            <div class="pbmit-title-bar-content-inner">
-              <div class="pbmit-tbar">
-                <div class="pbmit-tbar-inner container">
-                  <h1 class="pbmit-tbar-title">Concierge Program</h1>
+                    </ul>
+                  </div>
                 </div>
               </div>
-          
+            </div>
+            <div class="site-header-menu-inner">
+              <div class="container-fuild">
+                <div class="row">
+                  <div class="col-md-12">
+                    <div
+                      class="d-flex align-items-center justify-content-between"
+                    >
+                      <div
+                        class="d-flex align-items-center justify-content-between flex-fill"
+                      >
+                        <div class="site-branding">
+                          <!-- Logo area -->
+                          <h1 class="site-title">
+                            <a href="/index.html" rel="home">
+                              <img
+                                class="logo-img"
+                                src="images/logo/Svg (1).svg"
+                                alt="Cardiology"
+                                title="Cardiology"
+                              />
+                            </a>
+                          </h1>
+                        </div>
+                        <div class="site-navigation ml-auto">
+                          <nav class="main-menu navbar-expand-xl navbar-light">
+                            <div class="navbar-header">
+                              <!-- Toggle Button -->
+                              <button
+                                class="navbar-toggler"
+                                type="button"
+                                data-bs-toggle="collapse"
+                                data-bs-target="#navbarSupportedContent"
+                                aria-controls="navbarSupportedContent"
+                                aria-expanded="false"
+                                aria-label="Toggle navigation"
+                              >
+                                <i class="pbmit-base-icon-menu-1"></i>
+                              </button>
+                            </div>
+                            <div
+                              class="collapse navbar-collapse clearfix"
+                              id="navbarSupportedContent"
+                            >
+                              <ul class="navigation clearfix me-2">
+                                <li>
+                                  <a href="about-us.html">ABOUT US</a>
+                                </li>
+                                <li class="dropdown">
+                                  <a
+                                    style="
+                                      cursor: pointer;
+                                      display: flex;
+                                      align-items: center;
+                                    "
+                                  >
+                                    SERVICES &nbsp;
+                                    <span
+                                      class="arrow"
+                                      style="font-size: 1.5rem"
+                                      >&#9662;</span
+                                    >
+                                  </a>
+                                  <ul>
+                                    <li>
+                                      <a href="cardiology.html">Cardiology</a>
+                                    </li>
+                                    <li>
+                                      <a href="vascularmedicine.html"
+                                        >Vascular Medicine</a
+                                      >
+                                    </li>
+                                    <li>
+                                      <a href="executivehealthphysical.html"
+                                        >Executive Health Physical</a
+                                      >
+                                    </li>
+                                    <li>
+                                      <a href="conciergeprogram.html"
+                                        >Concierge Program</a
+                                      >
+                                    </li>
+                                  </ul>
+                                </li>
+                                <li>
+                                  <a href="contact-us.html ">CONTACT US</a>
+                                </li>
+                                <li class="d-block d-xl-none">
+                                  <a href="bookmyappointment.html"
+                                    >BOOK APPOINTMENT</a
+                                  >
+                                </li>
+                              </ul>
+                            </div>
+                          </nav>
+                        </div>
+                      </div>
+                      <div class="pbmit-right-box">
+                        <div class="menu-right-box d-flex align-items-center">
+                          <div class="pbmit-header-button">
+                            <a
+                              href="bookmyappointment.html"
+                              class="pbmit-btn text-uppercase"
+                              >Book Appointment</a
+                            >
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+    </div>
+
+    <!-- Header Main Area End Here -->
+
+    <!-- Title Bar -->
+    <div class="pbmit-title-bar-wrapper-conceirge">
+      <div class="pbmit-title-bar-content">
+        <div class="container">
+          <!-- Top Gradient Overlay (visible only on lg and up) -->
+          <div
+            class=""
+            style="
+              position: absolute;
+              top: 0;
+              left: 0;
+              width: 100%;
+              height: 160px;
+              background: linear-gradient(
+                180deg,
+                #00213a 0,
+                rgba(0, 33, 58, 0) 100%
+              );
+              pointer-events: none;
+              z-index: 1;
+            "
+          ></div>
+
+          <!-- Bottom Gradient Overlay (visible only on lg and up) -->
+          <div
+            class=""
+            style="
+              position: absolute;
+              bottom: 0;
+              left: 0;
+              width: 100%;
+              height: 19.8rem;
+              background: linear-gradient(
+                180deg,
+                rgba(0, 48, 87, 0) 40.86%,
+                #003057 100%
+              );
+              pointer-events: none;
+              z-index: 1;
+            "
+          ></div>
+          <div class="pbmit-title-bar-content-inner">
+            <div class="pbmit-tbar">
+              <div class="pbmit-tbar-inner container">
+                <h1 class="pbmit-tbar-title">Concierge Program</h1>
+              </div>
             </div>
           </div>
         </div>
       </div>
-      <!-- Title Bar End-->
+    </div>
+    <!-- Title Bar End-->
 
-       <!-- Page Content -->
-       <div class="page-content">
-        <!-- Service Details -->
-        <section class="py-5 px-3 px-md-0">
-          <div class="container">
-            <div class="row" style="text-align: justify;">
-              <div class="service-details" style="text-align: justify;">
-           
-                <div class="">
-                  
-                  <h2 class="main-section-heading text-start" style="text-align: justify;">Elite Care. On Your Terms.</h2>
-                  </div>
-                
+    <!-- Page Content -->
+    <div class="page-content">
+      <!-- Service Details -->
+      <section class="px-md-0">
+        <div class="container">
+          <div class="row" style="text-align: justify">
+            <div class="service-details" style="text-align: justify">
+              <div class="">
+                <h2
+                  class="main-section-heading text-start text-lg-start justify-lg"
+                >
+                  Elite Care. On Your Terms.
+                </h2>
+              </div>
+
+              <div class="row">
+                <p
+                  class="mb-0 pb-0"
+                  style="max-width: 800px text-start"
+                  style="text-align: justify"
+                >
+                  Experience the highest level of personalized care with our
+                  white glove service – because your time, health, and peace of
+                  mind are priceless. Our concierge program, with annual
+                  membership, offers unparalleled, physician-led health
+                  management that is discreet, proactive, and tailored to your
+                  life.
+                </p>
+              </div>
+
+              <h2
+                class="main-section-heading text-start text-lg-start justify-lg"
+              >
+                What’s Included?
+              </h2>
+              <div class="custom-grid-section">
+                <!-- Block 1 -->
+                <div class="custom-block">
+                  <h5
+                    class="sub-section-heading text-start"
+                    style="text-align: justify"
+                  >
+                    Priority Access
+                  </h5>
+                  <br />
+                  <ul class="custom-list">
+                    <li>
+                      <span class="custom-list"
+                        ><i
+                          class="pbmit-base-icon-ok-1"
+                          aria-hidden="true"
+                        ></i> </span
+                      ><span class="custom-list-text"
+                        >Same-day or next-day scheduling</span
+                      >
+                    </li>
+                    <li>
+                      <span class="custom-list"
+                        ><i
+                          class="pbmit-base-icon-ok-1"
+                          aria-hidden="true"
+                        ></i></span
+                      ><span class="custom-list-text"
+                        >24/7 communication with your physician via phone, text,
+                        or email</span
+                      >
+                    </li>
+                  </ul>
+                </div>
+
+                <!-- Block 2 -->
+                <div class="custom-block">
+                  <h5
+                    class="sub-section-heading text-start"
+                    style="text-align: justify"
+                  >
+                    Comprehensive Health Management
+                  </h5>
+                  <ul class="custom-list">
+                    <li>
+                      <span class="custom-list"
+                        ><i
+                          class="pbmit-base-icon-ok-1"
+                          aria-hidden="true"
+                        ></i> </span
+                      ><span class="custom-list-text"
+                        >Health and wellness, longevity planning, personalized
+                        prevention</span
+                      >
+                    </li>
+                    <li>
+                      <span class="custom-list"
+                        ><i
+                          class="pbmit-base-icon-ok-1"
+                          aria-hidden="true"
+                        ></i></span
+                      ><span class="custom-list-text"
+                        >Ongoing support for heart and vascular needs</span
+                      >
+                    </li>
+                    <li>
+                      <span class="custom-list"
+                        ><i
+                          class="pbmit-base-icon-ok-1"
+                          aria-hidden="true"
+                        ></i></span
+                      ><span class="custom-list-text"
+                        >Genetic and biomarker testing, with personalized
+                        guidance whenever you need it</span
+                      >
+                    </li>
+                  </ul>
+                </div>
+
+                <!-- Block 3 -->
+                <div class="custom-block">
+                  <h5
+                    class="sub-section-heading text-start"
+                    style="text-align: justify"
+                  >
+                    Lifestyle Integration
+                  </h5>
+                  <br />
+                  <ul class="custom-list">
+                    <li>
+                      <span class="custom-list"
+                        ><i
+                          class="pbmit-base-icon-ok-1"
+                          aria-hidden="true"
+                        ></i></span
+                      ><span class="custom-list-text"
+                        >Collaboration with your personal team – nutritionist,
+                        trainer, mental health expert, performance coach
+                        etc.</span
+                      >
+                    </li>
+                    <li>
+                      <span class="custom-list"
+                        ><i class="pbmit-base-icon-ok-1" aria-hidden="true"></i
+                      ></span>
+                      <span class="custom-list-text"
+                        >HCustom wellness plans to support travel &
+                        business</span
+                      >
+                    </li>
+                  </ul>
+                </div>
+
+                <!-- Block 4 -->
+                <div class="custom-block">
+                  <h5
+                    class="sub-section-heading text-start"
+                    style="text-align: justify"
+                  >
+                    Luxury-Level Experience
+                  </h5>
+                  <br />
+                  <ul class="custom-list">
+                    <li>
+                      <span class="custom-list"
+                        ><i
+                          class="pbmit-base-icon-ok-1"
+                          aria-hidden="true"
+                        ></i> </span
+                      ><span class="custom-list-text"
+                        >A calm, private, and welcoming environment</span
+                      >
+                    </li>
+                    <li>
+                      <span class="custom-list"
+                        ><i
+                          class="pbmit-base-icon-ok-1"
+                          aria-hidden="true"
+                        ></i></span
+                      ><span class="custom-list-text"
+                        >Thoughtful, unhurried care that puts you at the
+                        center</span
+                      >
+                    </li>
+                    <li>
+                      <span class="custom-list"
+                        ><i
+                          class="pbmit-base-icon-ok-1"
+                          aria-hidden="true"
+                        ></i></span
+                      ><span class="custom-list-text"
+                        >Care that adapts to your unique life journey</span
+                      >
+                    </li>
+                  </ul>
+                </div>
+              </div>
+
+              <h2
+                class="main-section-heading text-start text-lg-start justify-lg"
+              >
+                Who It’s For?
+              </h2>
+              <div class="row">
+                <ul class="list-group list-group-borderless mb-0">
+                  <li class="list-group-item">
+                    <i class="pbmit-base-icon-ok-1" aria-hidden="true"></i>
+                    Convenience and flexibility
+                  </li>
+                  <li class="list-group-item">
+                    <i class="pbmit-base-icon-ok-1" aria-hidden="true"></i>
+                    A uniquely personal relationship with their doctor and care
+                    team
+                  </li>
+                </ul>
+                <ul class="list-group list-group-borderless">
+                  <li class="list-group-item">
+                    <i class="pbmit-base-icon-ok-1" aria-hidden="true"></i>
+                    Proactive approach to long and healthy living
+                  </li>
+                  <li class="list-group-item mb-0 pb-0">
+                    <i class="pbmit-base-icon-ok-1" aria-hidden="true"></i>
+                    Peace of mind knowing expert care is always within reach
+                  </li>
+                </ul>
+              </div>
+
+              <div style="margin-bottom: 5rem">
+                <h2
+                  class="main-section-heading text-start text-lg-start justify-lg"
+                >
+                  Why Choose Us
+                </h2>
+
                 <div class="row">
-                  <p style="max-width: 800px text-start" style="text-align: justify;">
-                    Experience the highest level of personalized care with our white glove service – because your time, health, and peace of mind are priceless. Our concierge program, with annual membership, offers unparalleled, physician-led health management that is discreet, proactive, and tailored to your life.
-                  </p>
-                </div>
-
-
-                <h2 class="main-section-heading"> What’s Included?</h2>
-                  <div class="custom-grid-section">
-                  <!-- Block 1 -->
-                  <div class="custom-block">
-                    <h5 class="sub-section-heading text-start" style="text-align: justify;">Priority Access</h5> <br/>
-                    <ul class="custom-list">
-                      <li><span class="custom-list"><i class="pbmit-base-icon-ok-1" aria-hidden="true"></i> </span><span class="custom-list-text">Same-day or next-day scheduling</span></li>
-                      <li><span class="custom-list"><i class="pbmit-base-icon-ok-1" aria-hidden="true"></i></span><span class="custom-list-text">24/7 communication with your physician via phone, text, or email</span></li>
-                    </ul>
-                  </div>
-                
-                  <!-- Block 2 -->
-                  <div class="custom-block">
-                    <h5 class="sub-section-heading text-start" style="text-align: justify;">Comprehensive Health Management</h5> 
-                    <ul class="custom-list">
-                      <li><span class="custom-list"><i class="pbmit-base-icon-ok-1" aria-hidden="true"></i> </span><span class="custom-list-text">Health and wellness, longevity planning, personalized prevention</span></li>
-                      <li><span class="custom-list"><i class="pbmit-base-icon-ok-1" aria-hidden="true"></i></span><span class="custom-list-text">Ongoing support for heart and vascular needs</span></li>
-                      <li><span class="custom-list"><i class="pbmit-base-icon-ok-1" aria-hidden="true"></i></span><span class="custom-list-text">Genetic and biomarker testing, with personalized guidance whenever you need it</span> </li>
-                    </ul>
-                  </div>
-                
-                  <!-- Block 3 -->
-                  <div class="custom-block">
-                    <h5 class="sub-section-heading text-start" style="text-align: justify;">Lifestyle Integration</h5> <br/>
-                    <ul class="custom-list">
-                      <li><span class="custom-list"><i class="pbmit-base-icon-ok-1" aria-hidden="true"></i></span><span class="custom-list-text">Collaboration with your personal team – nutritionist, trainer, mental health expert, performance coach etc.</span></li>
-                      <li><span class="custom-list"><i class="pbmit-base-icon-ok-1" aria-hidden="true"></i></span> <span class="custom-list-text">HCustom wellness plans to support travel & business</span></li>
-                    </ul>
-                  </div>
-                
-                  <!-- Block 4 -->
-                  <div class="custom-block">
-                    <h5 class="sub-section-heading text-start" style="text-align: justify;">Luxury-Level Experience</h5> <br/>
-                    <ul class="custom-list">
-                      <li><span class="custom-list"><i class="pbmit-base-icon-ok-1" aria-hidden="true"></i> </span><span class="custom-list-text">A calm, private, and welcoming environment</span></li>
-                      <li><span class="custom-list"><i class="pbmit-base-icon-ok-1" aria-hidden="true"></i></span><span class="custom-list-text">Thoughtful, unhurried care that puts you at the center</span></li>
-                      <li><span class="custom-list"><i class="pbmit-base-icon-ok-1" aria-hidden="true"></i></span><span class="custom-list-text">Care that adapts to your unique life journey</span></li>
-                    </ul>
-                  </div>
-                </div>
-
-                <h2 class="main-section-heading"> Who It’s For?</h2>
-                <div class="row"> 
-                    <ul class="list-group list-group-borderless mb-0">
-                      <li class="list-group-item"> 
-                        <i
-                        class="pbmit-base-icon-ok-1"
-                        aria-hidden="true"
-                      ></i>
-                      Convenience and flexibility
-                      </li>
-                      <li class="list-group-item">
-                        <i
-                        class="pbmit-base-icon-ok-1"
-                        aria-hidden="true"
-                      ></i>
-                      A uniquely personal relationship with their doctor and care team
-                      </li>                       
-                    </ul>
-                    <ul class="list-group list-group-borderless">
-                      <li class="list-group-item">
-                        <i
-                        class="pbmit-base-icon-ok-1"
-                        aria-hidden="true"
-                      ></i>
-                      Proactive approach to long and healthy living
-                        </li>
-                        <li class="list-group-item">
-                        <i
-                        class="pbmit-base-icon-ok-1"
-                        aria-hidden="true"                   
-                        ></i>
-                        Peace of mind knowing expert care is always within reach
-                        </li>
-                    </ul>
-                </div>
-                  
-                <div class="mb-5">
-                <h2 class="main-section-heading text-start" style="text-align: justify;">Why Choose Us?</h2>
-
-                <div class="row">
-                  <p style="max-width: 800px text-start" style="text-align: justify;">
-                    At Twin Cities Cardiology, you’ll be cared for by a compassionate and expert team that puts you first — with timely visits, clear communication, and care tailored to your life and goals.
-        
+                  <p class="responsive-justify">
+                    At Twin Cities Cardiology, you’ll be cared for by a
+                    compassionate and expert team that puts you first — with
+                    timely visits, clear communication, and care tailored to
+                    your life and goals.
                   </p>
                 </div>
                 <div class="why-grid">
                   <div class="why-item">
                     <h3>Top cardiologists</h3>
-                    <p>With decades of trusted clinical experience, our team provides expert cardiac care you can rely on.</p>
+                    <p>
+                      With decades of clinical excellence, we provide expert
+                      care that you can trust.
+                    </p>
                   </div>
                   <div class="why-item">
                     <h3>Proactive care</h3>
-                    <p>We catch issues early, before they become problems, ensuring the best outcomes for your heart health.</p>
+                    <p>
+                      We catch issues early, before they become problems,
+                      ensuring the best outcomes for you.
+                    </p>
                   </div>
-                     
+
                   <div class="why-item">
                     <h3>Real relationships</h3>
-                    <p>We build lasting connections with our patients, providing personalized care that extends beyond appointments.</p>
-                  </div>    
+                    <p>
+                      We connect with you and personalize your care to last
+                      beyond an appointment.
+                    </p>
+                  </div>
                   <div class="why-item">
                     <h3>A local practice</h3>
-                    <p>Trusted by families across the Twin Cities, we're here when you need us most with convenient locations.</p>
-                  </div>      
+                    <p>
+                      We are here when you need us, at convenient locations
+                      across Twin Cities.
+                    </p>
+                  </div>
+                  <div class="why-item">
+                    <h3>Advanced diagnostics</h3>
+                    <p>
+                      We use the latest science and technology, proven in the
+                      real world, for precise diagnosis.
+                    </p>
+                  </div>
                   <div class="why-item">
                     <h3>Designed for comfort</h3>
-                    <p>From the waiting room to your care plan, every detail is designed to make your experience comfortable</p>
+                    <p>
+                      From location to clinic design to care plan, every detail
+                      is thoughtfully crafted to put you at ease.
+                    </p>
                   </div>
-                <div class="why-item">
-                  <h3>Advanced diagnostics</h3>
-                  <p>Powered by state-of-the-art imaging and AI, we provide precise, comprehensive cardiac evaluations</p>
-                </div> 
-                   
                 </div>
               </div>
-              </div>
-              
-              </div>
             </div>
-          </section>     
-        <!-- Service Details End -->
-      </div>
-      <!-- Page Content End -->
-      <style>
-        @media (max-width: 768px) {
-          .fst-italic.text-light {
-            margin-left: 0 !important;
-            margin-right: auto !important;
-          }
+          </div>
+        </div>
+      </section>
+      <!-- Service Details End -->
+    </div>
+    <!-- Page Content End -->
+    <style>
+      @media (max-width: 768px) {
+        .fst-italic.text-light {
+          margin-left: 0 !important;
+          margin-right: auto !important;
         }
-        </style>
+      }
+    </style>
 
     <!-- footer -->
-    <footer class="py-5  text-white" style="
-    background: linear-gradient(to right, #192136, #273353);
-    font-family: var(--pbmit-body-typography-font-family);
-    color: var(--pbmit-heading-color);
-  ">
-    <div class="container text-start"style="text-align: justify;">
-      <div class="row row-cols-1 row-cols-md-4 g-4">
-        
-        <!-- Logo & Tagline -->
-        <div class="text-left">
-         <img
-           src="images/logo/Landscape White.png"
-           alt="Twin Cities Cardiology Logo"
-           class="mb-2 img-fluid"
-           style="max-height: 80px; width: auto; height: auto;"
-         />
-       
-         <p class="fst-italic text-light mx-auto" 
-                     style="font-size: 11px; font-weight: 500; line-height: 1.6; max-width: 220px; text-align: left;">
-                     "It’s not just about hearts.<br/>
+    <footer
+      class="py-5 text-white"
+      style="
+        background: linear-gradient(to right, #192136, #273353);
+        font-family: var(--pbmit-body-typography-font-family);
+        color: var(--pbmit-heading-color);
+      "
+    >
+      <div class="container text-start" style="text-align: justify">
+        <div class="row row-cols-1 row-cols-md-4 g-4">
+          <!-- Logo & Tagline -->
+          <div class="text-left">
+            <img
+              src="images/logo/Landscape White.png"
+              alt="Twin Cities Cardiology Logo"
+              class="mb-2 img-fluid"
+              style="max-height: 80px; width: auto; height: auto"
+            />
 
-                     It's about the people who carry them."
-                  </p>
-       </div>
-       
-  
-        <!-- Services Links -->
-        <div>
-          <h6 class="fw-bold mb-3 text-white" style="font-size: 15px;">Services</h6>
-          <ul class="list-unstyled small">
-            <li><a href="/cardiology.html" class="text-decoration-none text-light">› Cardiology</a></li>
-            <li><a href="/vascularmedicine.html" class="text-decoration-none text-light">› Vascular Medicine</a></li>
-            <li><a href="/executivehealthphysical.html" class="text-decoration-none text-light">› Executive Health Physical</a></li>
-            <li><a href="/conciergeprogram.html" class="text-decoration-none text-light">› Concierge Program</a></li>
-          </ul>
+            <p
+              class="fst-italic text-light mx-auto"
+              style="
+                font-size: 11px;
+                font-weight: 500;
+                line-height: 1.6;
+                max-width: 220px;
+                text-align: left;
+              "
+            >
+              "It’s not just about hearts.<br />
+
+              It's about the people who carry them."
+            </p>
+          </div>
+
+          <!-- Services Links -->
+          <div>
+            <h6 class="fw-bold mb-3 text-white" style="font-size: 15px">
+              Services
+            </h6>
+            <ul class="list-unstyled small">
+              <li>
+                <a
+                  href="/cardiology.html"
+                  class="text-decoration-none text-light"
+                  >› Cardiology</a
+                >
+              </li>
+              <li>
+                <a
+                  href="/vascularmedicine.html"
+                  class="text-decoration-none text-light"
+                  >› Vascular Medicine</a
+                >
+              </li>
+              <li>
+                <a
+                  href="/executivehealthphysical.html"
+                  class="text-decoration-none text-light"
+                  >› Executive Health Physical</a
+                >
+              </li>
+              <li>
+                <a
+                  href="/conciergeprogram.html"
+                  class="text-decoration-none text-light"
+                  >› Concierge Program</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <!-- Clinic Hours -->
+          <div class="ps-md-3 clinic-hours-shift">
+            <h6 class="fw-bold mb-3 text-white" style="font-size: 15px">
+              Clinic Hours
+            </h6>
+            <ul class="list-unstyled small text-light">
+              <li class="d-flex justify-content-between">
+                <span>Mon – Thu</span>
+                <span class="fw-semibold">9:30 – 4:00</span>
+              </li>
+              <li class="d-flex justify-content-between">
+                <span
+                  >Friday
+                  <small class="text-danger fw-semibold"
+                    >(Emergencies only)</small
+                  ></span
+                >
+                <span class="fw-semibold">9:30 – 4:00</span>
+              </li>
+              <li class="d-flex justify-content-between">
+                <span>Sat – Sun</span> <span class="fw-semibold">Closed</span>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Contact Info -->
+          <div class="ps-md-4 ps-lg-5 contact-right-shift">
+            <h6 class="fw-bold mb-3 text-white" style="font-size: 15px">
+              Contact Us
+            </h6>
+            <ul class="list-unstyled small text-light">
+              <li class="d-flex align-items-center mb-2">
+                <span class="me-2" style="min-width: 22px">
+                  <i
+                    class="fas fa-envelope text-danger"
+                    style="font-size: 16px"
+                  ></i>
+                </span>
+                <a
+                  href="mailto:contactus@tccardio.org"
+                  class="text-decoration-none text-light"
+                  >contactus@tccardio.org</a
+                >
+              </li>
+
+              <li class="d-flex align-items-center mb-2">
+                <span class="me-2" style="min-width: 22px">
+                  <i
+                    class="fas fa-phone text-danger"
+                    style="font-size: 16px"
+                  ></i>
+                </span>
+                <a
+                  href="tel:19522326132"
+                  class="text-decoration-none text-light"
+                  >+1 (952) 232-6132</a
+                >
+              </li>
+
+              <li class="d-flex align-items-center mb-2">
+                <span class="me-2" style="min-width: 22px">
+                  <i
+                    class="pbmit-base-icon-location text-danger"
+                    style="font-size: 21px"
+                  ></i>
+                </span>
+                <span
+                  style="cursor: pointer; white-space: nowrap"
+                  id="map-address"
+                >
+                  1421 Wayzata Blvd., Suite 303<br />
+                  Wayzata, MN 55391.
+                </span>
+              </li>
+            </ul>
+          </div>
         </div>
-  
-        <!-- Clinic Hours -->
-        <div class="ps-md-3 clinic-hours-shift">
-          <h6 class="fw-bold mb-3 text-white" style="font-size: 15px;">Clinic Hours</h6>
-          <ul class="list-unstyled small text-light">
-            <li class="d-flex justify-content-between">
-              <span>Mon – Thu</span> <span class="fw-semibold">9:30 – 4:00</span>
-            </li>
-            <li class="d-flex justify-content-between">
-              <span>Friday <small class="text-danger fw-semibold">(Emergencies only)</small></span>
-              <span class="fw-semibold">9:30 – 4:00</span>
-            </li>
-            <li class="d-flex justify-content-between">
-              <span>Sat – Sun</span> <span class="fw-semibold">Closed</span>
-            </li>
-          </ul>
+
+        <!-- Divider -->
+        <hr
+          class="my-4"
+          style="border-top: 1px solid rgba(255, 255, 255, 0.6)"
+        />
+
+        <!-- Bottom Strip -->
+        <div
+          class="d-flex flex-column flex-md-row justify-content-between align-items-center mt-4 pt-3"
+          style="border-color: rgba(255, 255, 255, 0.1)"
+        >
+          <p
+            class="mb-2 mb-md-0 small text-light fw-bold text-start w-100"
+            style="font-size: 14px"
+          >
+            © 2025 Twin Cities Cardiology. All rights reserved.
+          </p>
+          <p
+            class="mb-0 small text-light fw-bold text-start text-md-end w-100"
+            style="font-size: 14px"
+          >
+            Privacy Policy
+          </p>
         </div>
-  
-        <!-- Contact Info -->
-        <div class="ps-md-4 ps-lg-5 contact-right-shift">
-         <h6 class="fw-bold mb-3 text-white " style="font-size: 15px;">Contact Us</h6>
-         <ul class="list-unstyled small text-light">
-           <li class="d-flex align-items-center mb-2">
-             <span class="me-2" style="min-width: 22px;">
-               <i class="fas fa-envelope text-danger" style="font-size: 16px;"></i>
-             </span>
-             <a href="mailto:contactus@tccardio.org" class="text-decoration-none text-light">contactus@tccardio.org</a>
-           </li>
-       
-           <li class="d-flex align-items-center mb-2">
-             <span class="me-2" style="min-width: 22px;">
-               <i class="fas fa-phone text-danger" style="font-size: 16px;"></i>
-             </span>
-             <a href="tel:19522326132" class="text-decoration-none text-light">+1 (952) 232-6132</a>
-           </li>
-       
-           <li class="d-flex align-items-center mb-2">
-             <span class="me-2" style="min-width: 22px;">
-               <i class="pbmit-base-icon-location text-danger" style="font-size: 21px;"></i>
-             </span>
-             <span style="cursor:pointer;white-space: nowrap;" id="map-address">
-              1421 Wayzata Blvd., Suite 303<br>
-              Wayzata, MN 55391.
-            </span>
-           </li>
-       
-           
-         </ul>
-       </div>
-       
-       
-  
       </div>
-  
-      <!-- Divider -->
-      <hr class="my-4" style="border-top: 1px solid rgba(255, 255, 255, 0.6);" />
+    </footer>
+    <!-- footer End -->
 
-  
-      <!-- Bottom Strip -->
-      <div class="d-flex flex-column flex-md-row justify-content-between align-items-center mt-4 pt-3 " style="border-color: rgba(255, 255, 255, 0.1);">
-       <p class="mb-2 mb-md-0 small text-light fw-bold text-start w-100" style="font-size: 14px;">
-         © 2025 Twin Cities Cardiology. All rights reserved.
-       </p>
-       <p class="mb-0 small text-light fw-bold text-start text-md-end w-100" style="font-size: 14px;">
-         Privacy Policy
-       </p>
-     </div>
-    </div>
-  </footer>
-   <!-- footer End -->
-    </div>
     <!-- Page Wrapper End -->
 
     <!-- Search Box Start Here -->
@@ -626,20 +971,19 @@
     <script src="js/scripts.js"></script>
 
     <script>
-       const address = "1421 Wayzata Blvd, Suite 303, Wayzata, MN 55391";
-        const encodedAddress = encodeURIComponent(address);
+      const address = "1421 Wayzata Blvd, Suite 303, Wayzata, MN 55391";
+      const encodedAddress = encodeURIComponent(address);
 
-        // Detect platform
-        const isApple = /iPhone|iPad|Macintosh/.test(navigator.userAgent);
-        const mapUrl = isApple
-          ? `http://maps.apple.com/?q=${encodedAddress}`
-          : `https://www.google.com/maps?q=${encodedAddress}`;
+      // Detect platform
+      const isApple = /iPhone|iPad|Macintosh/.test(navigator.userAgent);
+      const mapUrl = isApple
+        ? `http://maps.apple.com/?q=${encodedAddress}`
+        : `https://www.google.com/maps?q=${encodedAddress}`;
 
-        // Open correct link on click
-        document.getElementById("map-address").addEventListener("click", () => {
-          window.open(mapUrl, "_blank");
-        });
- 
+      // Open correct link on click
+      document.getElementById("map-address").addEventListener("click", () => {
+        window.open(mapUrl, "_blank");
+      });
     </script>
   </body>
 </html>
