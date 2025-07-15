@@ -169,11 +169,19 @@
         display: grid;
         grid-template-columns: repeat(2, 1fr);
       }
-
+      @media (max-width: 768px) {
+      .two-row-grid {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr); /* 2 columns on mobile */
+       
+      }
+    }
       .three-row-grid li {
         list-style: none;
         text-align: left;
       }
+
+    
 
       .three-row-grid li i {
         margin-right: 0.5rem;
@@ -264,6 +272,124 @@
       @media (max-width: 400px) {
         .why-grid {
           grid-template-columns: 1fr;
+        }
+      }
+
+      footer .container {
+        padding-left: 15px;
+        padding-right: 15px;
+      }
+      /* Ensure consistent alignment for all list items */
+      footer ul li {
+        margin-bottom: 8px;
+        line-height: 1.5;
+      }
+
+      /* Fix responsiveness for medium screens (768px - 1024px) */
+      @media (min-width: 768px) and (max-width: 1024px) {
+        footer .row {
+          row-gap: 2rem;
+        }
+
+        footer .col-md-3 {
+          flex: 0 0 auto;
+          width: 50%;
+        }
+
+        footer .col-md-3:nth-child(1),
+        footer .col-md-3:nth-child(2) {
+          margin-bottom: 1.5rem;
+        }
+
+        .clinic-hours-shift {
+          padding-left: 0 !important;
+        }
+
+        .contact-right-shift {
+          padding-left: 0 !important;
+        }
+      }
+
+      /* Ensure proper spacing on larger screens */
+      @media (min-width: 1025px) {
+        .clinic-hours-shift {
+          padding-left: 1rem !important;
+        }
+
+        .contact-right-shift {
+          padding-left: 2rem !important;
+        }
+      }
+
+      .pbmit-ihbox-style-3 {
+        max-width: 100%;
+      }
+
+      @media (max-width: 768px) {
+        .pbmit-ihbox-box {
+          flex-wrap: nowrap;
+          align-items: center;
+        }
+
+        .pbmit-ihbox-contents a {
+          font-size: 14px;
+          word-break: break-word;
+          display: inline-block;
+          max-width: 100%;
+        }
+
+        .pbmit-ihbox-icon {
+          margin-bottom: 0.5rem;
+          margin-right: 0.5rem;
+        }
+      }
+
+      @media (max-width: 768px) {
+        footer [class^="pbmit-base-icon-"]:before,
+        footer [class*=" pbmit-base-icon-"]:before {
+          width: 1em;
+          margin-right: 0.7em !important;
+          text-align: center;
+        }
+      }
+
+      @media (min-width: 768px) {
+        footer [class^="pbmit-base-icon-"]:before,
+        footer [class*=" pbmit-base-icon-"]:before {
+          width: 1em;
+          margin-right: 0.7em !important;
+          text-align: center;
+        }
+
+        @media (min-width: 768px) and (max-width: 768px) {
+          footer .row.row-cols-md-4 > div {
+            flex: 0 0 50%;
+            max-width: 50%;
+            margin-bottom: 1.5rem;
+          }
+
+          footer .contact-right-shift a,
+          footer .contact-right-shift span {
+            font-size: 14px;
+            word-break: break-word;
+          }
+
+          footer .contact-right-shift i {
+            font-size: 16px;
+          }
+
+          .fst-italic.text-light {
+            margin-left: 0 !important;
+            text-align: left;
+          }
+
+          .clinic-hours-shift {
+            padding-left: 1.5rem !important;
+          }
+
+          .contact-right-shift {
+            padding-left: 1.5rem !important;
+          }
         }
       }
     </style>
@@ -853,183 +979,182 @@
               }
             }
           </style>
-          <footer
-            class="py-5 text-white"
-            style="
-              background: linear-gradient(to right, #192136, #273353);
-              font-family: var(--pbmit-body-typography-font-family);
-              color: var(--pbmit-heading-color);
-            "
-          >
-            <div class="container">
-              <div class="row row-cols-1 row-cols-md-4 g-4">
-                <!-- Logo & Tagline -->
-                <div class="text-left">
-                  <img
-                    src="images/logo/Landscape White.png"
-                    alt="Twin Cities Cardiology Logo"
-                    class="mb-2 img-fluid"
-                    style="max-height: 80px; width: auto; height: auto"
-                  />
-
-                  <p
-                    class="fst-italic text-light mx-auto"
-                    style="
-                      font-size: 11px;
-                      font-weight: 500;
-                      line-height: 1.6;
-                      max-width: 220px;
-                      text-align: left;
-                    "
-                  >
-                    "It’s not just about hearts.<br />
-
-                    It's about the people who carry them."
-                  </p>
-                </div>
-
-                <!-- Services Links -->
-                <div>
-                  <h6 class="fw-bold mb-3 text-white" style="font-size: 15px">
-                    Services
-                  </h6>
-                  <ul class="list-unstyled small">
-                    <li>
-                      <a
-                        href="/cardiology.html"
-                        class="text-decoration-none text-light"
-                        >› Cardiology</a
-                      >
-                    </li>
-                    <li>
-                      <a
-                        href="/vascularmedicine.html"
-                        class="text-decoration-none text-light"
-                        >› Vascular Medicine</a
-                      >
-                    </li>
-                    <li>
-                      <a
-                        href="/executivehealthphysical.html"
-                        class="text-decoration-none text-light"
-                        >› Executive Health Physical</a
-                      >
-                    </li>
-                    <li>
-                      <a
-                        href="/conciergeprogram.html"
-                        class="text-decoration-none text-light"
-                        >› Concierge Program</a
-                      >
-                    </li>
-                  </ul>
-                </div>
-
-                <!-- Clinic Hours -->
-                <div class="ps-md-3 clinic-hours-shift">
-                  <h6 class="fw-bold mb-3 text-white" style="font-size: 15px">
-                    Clinic Hours
-                  </h6>
-                  <ul class="list-unstyled small text-light">
-                    <li class="d-flex justify-content-between">
-                      <span>Mon – Thu</span>
-                      <span class="fw-semibold">9:30 – 4:00</span>
-                    </li>
-                    <li class="d-flex justify-content-between">
-                      <span
-                        >Friday
-                        <small class="text-danger fw-semibold"
-                          >(Emergencies only)</small
-                        ></span
-                      >
-                      <span class="fw-semibold">9:30 – 4:00</span>
-                    </li>
-                    <li class="d-flex justify-content-between">
-                      <span>Sat – Sun</span>
-                      <span class="fw-semibold">Closed</span>
-                    </li>
-                  </ul>
-                </div>
-
-                <!-- Contact Info -->
-                <div class="ps-md-4 ps-lg-5 contact-right-shift">
-                  <h6 class="fw-bold mb-3 text-white" style="font-size: 15px">
-                    Contact Us
-                  </h6>
-                  <ul class="list-unstyled small text-light">
-                    <li class="d-flex align-items-center mb-2">
-                      <span class="me-2" style="min-width: 22px">
-                        <i
-                          class="fas fa-envelope text-danger"
-                          style="font-size: 16px"
-                        ></i>
-                      </span>
-                      <a
-                        href="mailto:contactus@tccardio.org"
-                        class="text-decoration-none text-light"
-                        >contactus@tccardio.org</a
-                      >
-                    </li>
-
-                    <li class="d-flex align-items-center mb-2">
-                      <span class="me-2" style="min-width: 22px">
-                        <i
-                          class="fas fa-phone text-danger"
-                          style="font-size: 16px"
-                        ></i>
-                      </span>
-                      <a
-                        href="tel:19522326132"
-                        class="text-decoration-none text-light"
-                        >+1 (952) 232-6132</a
-                      >
-                    </li>
-
-                    <li class="d-flex align-items-center mb-2">
-                      <span class="me-2" style="min-width: 22px">
-                        <i
-                          class="pbmit-base-icon-location text-danger"
-                          style="font-size: 21px"
-                        ></i>
-                      </span>
-                      <span
-                        style="cursor: pointer; white-space: nowrap"
-                        id="map-address"
-                      >
-                        1421 Wayzata Blvd., Suite 303<br />
-                        Wayzata, MN 55391.
-                      </span>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-
-              <!-- Divider -->
-              <hr
-                class="my-4"
-                style="border-top: 1px solid rgba(255, 255, 255, 0.6)"
-              />
-
-              <!-- Bottom Strip -->
-              <div
-                class="d-flex flex-column flex-md-row justify-content-between align-items-center mt-4 pt-3"
-                style="border-color: rgba(255, 255, 255, 0.1)"
-              >
-                <p
-                  class="mb-2 mb-md-0 small text-light fw-bold text-start w-100"
-                  style="font-size: 14px"
-                >
-                  © 2025 Twin Cities Cardiology. All rights reserved.
-                </p>
-                <p
-                  class="mb-0 small text-light fw-bold text-start text-md-end w-100"
-                  style="font-size: 14px"
-                >
-                  Privacy Policy
-                </p>
-              </div>
-            </div>
-          </footer>
+             <footer
+             class="py-5 text-white"
+             style="
+               background: linear-gradient(to right, #192136, #273353);
+               font-family: var(--pbmit-body-typography-font-family);
+               color: var(--pbmit-heading-color);
+             "
+           >
+             <div class="container">
+               <div class="row row-cols-1 row-cols-md-4 g-4">
+                 <!-- Logo & Tagline -->
+                 <div class="col text-left">
+                   <img
+                     src="images/logo/Landscape White.png"
+                     alt="Twin Cities Cardiology Logo"
+                     class="mb-2 img-fluid"
+                     style="max-height: 80px; width: auto; height: auto"
+                   />
+     
+                   <p
+                     class="fst-italic text-light mx-auto"
+                     style="
+                       font-size: 11px;
+                       font-weight: 500;
+                       line-height: 1.6;
+                       max-width: 220px;
+                       text-align: left;
+                     "
+                   >
+                     "It's not just about hearts.<br />
+     
+                     It's about the people who carry them."
+                   </p>
+                 </div>
+     
+                 <!-- Services Links -->
+                 <div class="col">
+                   <h6 class="fw-bold mb-3 text-white" style="font-size: 15px">
+                     Services
+                   </h6>
+                   <ul class="list-unstyled small">
+                     <li>
+                       <a
+                         href="/cardiology.html"
+                         class="text-decoration-none text-light"
+                         >› Cardiology</a
+                       >
+                     </li>
+                     <li>
+                       <a
+                         href="/vascularmedicine.html"
+                         class="text-decoration-none text-light"
+                         >› Vascular Medicine</a
+                       >
+                     </li>
+                     <li>
+                       <a
+                         href="/executivehealthphysical.html"
+                         class="text-decoration-none text-light"
+                         >› Executive Health Physical</a
+                       >
+                     </li>
+                     <li>
+                       <a
+                         href="/conciergeprogram.html"
+                         class="text-decoration-none text-light"
+                         >› Concierge Program</a
+                       >
+                     </li>
+                   </ul>
+                 </div>
+     
+                 <!-- Clinic Hours -->
+                 <div class="col clinic-hours-shift">
+                   <h6 class="fw-bold mb-3 text-white" style="font-size: 15px">
+                     Clinic Hours
+                   </h6>
+                   <ul class="list-unstyled small text-light">
+                     <li class="d-flex justify-content-between">
+                       <span>Mon – Thu</span>
+                       <span class="fw-semibold">9:30 – 4:00</span>
+                     </li>
+                     <li class="d-flex justify-content-between">
+                       <span
+                         >Friday
+                         <small class="text-danger fw-semibold"
+                           >(Emergencies only)</small
+                         ></span
+                       >
+                       <span class="fw-semibold">9:30 – 4:00</span>
+                     </li>
+                     <li class="d-flex justify-content-between">
+                       <span>Sat – Sun</span> <span class="fw-semibold">Closed</span>
+                     </li>
+                   </ul>
+                 </div>
+     
+                 <!-- Contact Info -->
+                 <div class="col contact-right-shift">
+                   <h6 class="fw-bold mb-3 text-white" style="font-size: 15px">
+                     Contact Us
+                   </h6>
+                   <ul class="list-unstyled small text-light">
+                     <li class="d-flex align-items-center mb-2">
+                       <span class="me-2" style="min-width: 22px">
+                         <i
+                           class="fas fa-envelope text-danger"
+                           style="font-size: 16px"
+                         ></i>
+                       </span>
+                       <a
+                         href="mailto:contactus@tccardio.org"
+                         class="text-decoration-none text-light"
+                         >contactus@tccardio.org</a
+                       >
+                     </li>
+     
+                     <li class="d-flex align-items-center mb-2">
+                       <span class="me-2" style="min-width: 22px">
+                         <i
+                           class="fas fa-phone text-danger"
+                           style="font-size: 16px"
+                         ></i>
+                       </span>
+                       <a
+                         href="tel:19522326132"
+                         class="text-decoration-none text-light"
+                         >+1 (952) 232-6132</a
+                       >
+                     </li>
+     
+                     <li class="d-flex align-items-center mb-2">
+                       <span class="me-1" style="min-width: 22px">
+                         <i
+                           class="pbmit-base-icon-location text-danger"
+                           style="font-size: 21px"
+                         ></i>
+                       </span>
+                       <span
+                         style="cursor: pointer; white-space: nowrap"
+                         id="map-address"
+                       >
+                         1421 Wayzata Blvd., Suite 303<br />
+                         Wayzata, MN 55391.
+                       </span>
+                     </li>
+                   </ul>
+                 </div>
+               </div>
+     
+               <!-- Divider -->
+               <hr
+                 class="my-4"
+                 style="border-top: 1px solid rgba(255, 255, 255, 0.6)"
+               />
+     
+               <!-- Bottom Strip -->
+               <div
+                 class="d-flex flex-column flex-md-row justify-content-between align-items-center mt-4 pt-3"
+                 style="border-color: rgba(255, 255, 255, 0.1)"
+               >
+                 <p
+                   class="mb-2 mb-md-0 small text-light fw-bold text-start w-100"
+                   style="font-size: 14px"
+                 >
+                   © 2025 Twin Cities Cardiology. All rights reserved.
+                 </p>
+                 <p
+                   class="mb-0 small text-light fw-bold text-start text-md-end w-100"
+                   style="font-size: 14px"
+                 >
+                   Privacy Policy
+                 </p>
+               </div>
+             </div>
+           </footer>
           <!-- footer End -->
           <!-- Page Wrapper End -->
 
