@@ -169,11 +169,19 @@
         display: grid;
         grid-template-columns: repeat(2, 1fr);
       }
-
+      @media (max-width: 768px) {
+      .two-row-grid {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr); /* 2 columns on mobile */
+       
+      }
+    }
       .three-row-grid li {
         list-style: none;
         text-align: left;
       }
+
+    
 
       .three-row-grid li i {
         margin-right: 0.5rem;
