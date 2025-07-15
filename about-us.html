@@ -105,6 +105,124 @@
         text-align: justify !important;
       }
     }
+
+    footer .container {
+      padding-left: 15px;
+      padding-right: 15px;
+    }
+    /* Ensure consistent alignment for all list items */
+    footer ul li {
+      margin-bottom: 8px;
+      line-height: 1.5;
+    }
+
+    /* Fix responsiveness for medium screens (768px - 1024px) */
+    @media (min-width: 768px) and (max-width: 1024px) {
+      footer .row {
+        row-gap: 2rem;
+      }
+
+      footer .col-md-3 {
+        flex: 0 0 auto;
+        width: 50%;
+      }
+
+      footer .col-md-3:nth-child(1),
+      footer .col-md-3:nth-child(2) {
+        margin-bottom: 1.5rem;
+      }
+
+      .clinic-hours-shift {
+        padding-left: 0 !important;
+      }
+
+      .contact-right-shift {
+        padding-left: 0 !important;
+      }
+    }
+
+    /* Ensure proper spacing on larger screens */
+    @media (min-width: 1025px) {
+      .clinic-hours-shift {
+        padding-left: 1rem !important;
+      }
+
+      .contact-right-shift {
+        padding-left: 2rem !important;
+      }
+    }
+
+    .pbmit-ihbox-style-3 {
+      max-width: 100%;
+    }
+
+    @media (max-width: 768px) {
+      .pbmit-ihbox-box {
+        flex-wrap: nowrap;
+        align-items: center;
+      }
+
+      .pbmit-ihbox-contents a {
+        font-size: 14px;
+        word-break: break-word;
+        display: inline-block;
+        max-width: 100%;
+      }
+
+      .pbmit-ihbox-icon {
+        margin-bottom: 0.5rem;
+        margin-right: 0.5rem;
+      }
+    }
+
+    @media (max-width: 768px) {
+      footer [class^="pbmit-base-icon-"]:before,
+      footer [class*=" pbmit-base-icon-"]:before {
+        width: 1em;
+        margin-right: 0.7em !important;
+        text-align: center;
+      }
+    }
+
+    @media (min-width: 768px) {
+      footer [class^="pbmit-base-icon-"]:before,
+      footer [class*=" pbmit-base-icon-"]:before {
+        width: 1em;
+        margin-right: 0.7em !important;
+        text-align: center;
+      }
+
+      @media (min-width: 768px) and (max-width: 768px) {
+        footer .row.row-cols-md-4 > div {
+          flex: 0 0 50%;
+          max-width: 50%;
+          margin-bottom: 1.5rem;
+        }
+
+        footer .contact-right-shift a,
+        footer .contact-right-shift span {
+          font-size: 14px;
+          word-break: break-word;
+        }
+
+        footer .contact-right-shift i {
+          font-size: 16px;
+        }
+
+        .fst-italic.text-light {
+          margin-left: 0 !important;
+          text-align: left;
+        }
+
+        .clinic-hours-shift {
+          padding-left: 1.5rem !important;
+        }
+
+        .contact-right-shift {
+          padding-left: 1.5rem !important;
+        }
+      }
+    }
   </style>
   <body>
     <!-- Page Wrapper -->
