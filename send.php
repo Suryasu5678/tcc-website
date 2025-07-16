@@ -1,20 +1,21 @@
 <?php
+require __DIR__ . '/vendor/autoload.php';
+
+$dotenv = Dotenv\Dotenv::createImmutable(__DIR__);
+$dotenv->load();
 /**
- * This is email script based on PHPMailer library. Please congigure this SMTP details (below) to make the contact form working.
+ * This is email script based on Resend Mail API. Please configure your Resend API key below.
  */
 
-
 /* ========================================================================== */
-/* SMTP Email Settings: Please change this variables                          */
-/* Make sure you done Gmail Account (or your server email account details)    */
-/* changes as described here: https://mailtrap.io/blog/phpmailer-gmail/       */
+/* Email Settings: Please change these variables                              */
 
-$from_email				= "tcccontactus@gmail.com";
-$from_email_password	= "vuyn sdjq hdoo vpps";
-$from_email_name		= "TCC";
-$to_email				= "contactus@tccardio.org";
-$to_email_name			= "Twin Cities Cardiology Contact";
-$email_subject			= 'Contact Inquiry from Twin Cities Cardiology';
+$resend_api_key = $_ENV['RESEND_API_KEY']; // <-- Replace with your Resend API key
+$from_email     = $_ENV['FROM_EMAIL'];
+$from_email_name= "TCC";
+$to_email       = $_ENV['CONTACT_TO_EMAIL'];
+$to_email_name  = "Twin Cities Cardiology Contact";
+$email_subject  = 'Contact Inquiry from Twin Cities Cardiology';
 
 /* ========================================================================== */
 
@@ -23,77 +24,43 @@ $email_subject			= 'Contact Inquiry from Twin Cities Cardiology';
 /* Form fields you want to receive in email                                   */
 /* This is array so just write the name set in the form                       */
 
-// All form fields
 $field_list = array(
-	'name',
-	'email',
-	'number',
-	'subject',
-	'message',
+    'name',
+    'email',
+    'number',
+    'subject',
+    'message',
 );
 
-// required fields in the form
 $required_fields = array(
-	'name',
-	'email',
-	'number',
-	'subject',
-	'message',
+    'name',
+    'email',
+    'number',
+    'subject',
+    'message',
 );
 
-// to verify the valid email address
 $email_fields = array(
-	'email'
+    'email'
 );
 
 /* ========================================================================== */
 
 
 /* Do not modify after this line */
-
-
-//Import the PHPMailer class into the global namespace
-use PHPMailer\PHPMailer\PHPMailer;
-use PHPMailer\PHPMailer\SMTP;
-use PHPMailer\PHPMailer\Exception;
-
-//SMTP needs accurate times, and the PHP time zone MUST be set
-//This should be done in your php.ini, but this is how to do it if you don't have access to that
-date_default_timezone_set('Etc/UTC');
-
-require 'phpmailer/src/PHPMailer.php';
-require 'phpmailer/src/Exception.php';
-require 'phpmailer/src/SMTP.php';
-
-
-
 function isValidEmail($email) {
-	return filter_var($email, FILTER_VALIDATE_EMAIL) 
-		&& preg_match('/@.+\./', $email);
+    return filter_var($email, FILTER_VALIDATE_EMAIL) 
+        && preg_match('/@.+\./', $email);
 }
 
 function field_name($key) {
-	$return = '';
-	if( !empty($key) ){
-		$return = str_replace('_', ' ', $key);
-		$return = str_replace('-', ' ', $return);
-		$return = ucwords($return);
-	}
-	return $return;
-
-}
-
-function save_mail($mail) {
-	//You can change 'Sent Mail' to any other folder or tag
-	$path = '{imap.gmail.com:993/imap/ssl}[Gmail]/Sent Mail';
-
-	//Tell your server to open an IMAP connection using the same username and password as you used for SMTP
-	$imapStream = imap_open($path, $mail->Username, $mail->Password);
-
-	$result = imap_append($imapStream, $path, $mail->getSentMIMEMessage());
-	imap_close($imapStream);
-
-	return $result;
+    $return = '';
+    if( !empty($key) ){
+        $return = str_replace('_', ' ', $key);
+        $return = str_replace('-', ' ', $return);
+        $return = ucwords($return);
+    }
+    return $return;
 }
 
 $email_status = false;
@@ -101,98 +68,55 @@ $email_status_message = '';
 
 if( !empty($_POST) ){
 
-	// check if all required fields are not empty
-	$error_message = '';
+    // check if all required fields are not empty
+    $error_message = '';
 
-	foreach( $_POST as $key=>$value ){
-		if( !empty($key) && in_array( $key, $required_fields ) ){
-			$field_name = field_name($key);
-			if( empty($value) ){
-				$error_message .= '<li>The "'.$field_name.'" Field is required. Please fill it and submit again</li>' ;
-			} else if( in_array( $key, $email_fields ) && isValidEmail($value) == false ){
-				$error_message .= '<li>The "'.$field_name.'" email is not valid email</li>' ;
-			}
-		}
-	} // foreach
+    foreach( $_POST as $key=>$value ){
+        if( !empty($key) && in_array( $key, $required_fields ) ){
+            $field_name = field_name($key);
+            if( empty($value) ){
+                $error_message .= '<li>The "'.$field_name.'" Field is required. Please fill it and submit again</li>' ;
+            } else if( in_array( $key, $email_fields ) && isValidEmail($value) == false ){
+                $error_message .= '<li>The "'.$field_name.'" email is not valid email</li>' ;
+            }
+        }
+    }
 
-
-
-	
-	if( !empty($error_message) ){
-
-		// Required fields are empty
-		echo '<div class="alert alert-danger" role="alert">Please fill required fields: <br> <ul>' . $error_message . '</ul> <br> </div>';
-		die();
-
-	} else {
-
-		// all required files are valid.. continue to send email
-		$email_body = '<h2>User Submitted Details</h2><table style="border: 1px solid #b5b5b5; padding: 5px;">';
-		foreach( $_POST as $key=>$value ){
-			if( in_array( $key, $field_list ) ){
-				$field_name = field_name($key);
-				$email_body .= '<tr>
-					<td style="border: 1px solid #b5b5b5; padding: 5px;"><strong>'.$field_name.'</strong> </td>
-					<td style="border: 1px solid #b5b5b5; padding: 5px;">: '.$value.'</td>
-				</tr>';
-				
-			}
-		} // foreach
-		$email_body .= '</table>';
+    if( !empty($error_message) ) {
+        echo '<div class="alert alert-danger" role="alert">Please fill required fields: <br> <ul>' . $error_message . '</ul> <br> </div>';
+        die();
+    } else {
+        $email_body = '<h2>User Submitted Details</h2><table style="border: 1px solid #b5b5b5; padding: 5px;">';
+        foreach( $_POST as $key=>$value ){
+            if( in_array( $key, $field_list ) ){
+                $field_name = field_name($key);
+                $email_body .= '<tr>
+                    <td style="border: 1px solid #b5b5b5; padding: 5px;"><strong>'.$field_name.'</strong> </td>
+                    <td style="border: 1px solid #b5b5b5; padding: 5px;">: '.$value.'</td>
+                </tr>';
+            }
+        }
+        $email_body .= '</table>';
 
 
+        $reply_to_email = isset($_POST['email']) ? $_POST['email'] : '';
 
+		// Resend API integration
+        $resend = Resend::client($resend_api_key); // Replace with your actual API key
 
-		/**** Trying to send email ****/
-
-		//Create a new PHPMailer instance
-		$mail = new PHPMailer();
-		//Tell PHPMailer to use SMTP
-		$mail->isSMTP();
-		//Enable SMTP debugging
-		//SMTP::DEBUG_OFF = off (for production use)
-		//SMTP::DEBUG_CLIENT = client messages
-		//SMTP::DEBUG_SERVER = client and server messages
-		// $mail->SMTPDebug = SMTP::DEBUG_SERVER;
-		$mail->SMTPDebug = SMTP::DEBUG_OFF;
-
-		//Set the hostname of the mail server
-		$mail->Host = 'smtp.gmail.com';
-		//Set the SMTP port number - likely to be 25, 465 or 587
-		$mail->Port = 587;
-		//We don't need to set this as it's the default value
-		$mail->SMTPAuth = true;
-		$mail->SMTPSecure = "tls";
-		$mail->Username   = $from_email;
-		$mail->Password   = $from_email_password; // Please see here: https://mailtrap.io/blog/phpmailer-gmail/
-		//Set who the message is to be sent from
-		$mail->setFrom( $from_email, $from_email_name);
-		//Set an alternative reply-to address
-		$mail->addReplyTo($from_email, $from_email_name);
-		//Set who the message is to be sent to
-		$mail->addAddress( $to_email, $to_email_name);
-		//Set the subject line
-		$mail->Subject = $email_subject;
-		//Read an HTML message body from an external file, convert referenced images to embedded,
-		//convert HTML into a basic plain-text alternative body
-		$mail->msgHTML( $email_body );
-		//Replace the plain text body with one created manually
-		//$mail->AltBody = 'This is a plain-text message body';
-
-		if ( $mail->send() ) {
-			echo '<div class="alert alert-success" role="alert">Thank you for contacting us.<br> Our team will be in touch soon!! </div>';
-			
-			// save your message in the 'Sent Mail' folder.
-			// save_mail($mail);
-			
-		} else {
-			echo '<div class="alert alert-danger" role="alert">Error.. caannot send email: <br> ' . $mail->ErrorInfo . ' </div>';
-			
-		}
-
-	}
+        try {
+            $res = $resend->emails->send([
+                'from' => "$from_email_name <$from_email>",
+                'to' => [$to_email],
+                'subject' => $email_subject,
+                'html' => $email_body,
+				'reply_to' => $reply_to_email,
+            ]);
+            echo '<div class="alert alert-success" role="alert">Thank you for contacting us.<br> Our team will be in touch soon!! </div>';
+        } catch (Exception $e) {
+            echo '<div class="alert alert-danger" role="alert">Error.. cannot send email: <br> ' . $e->getMessage() . ' </div>';
+        }
+    }
 } else {
-
-	die('<p>Please go to Contact page and fill the contact form.</p>');
-
+    die('<p>Please go to Contact page and fill the contact form.</p>');
 }
