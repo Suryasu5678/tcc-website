@@ -486,19 +486,19 @@
                         </div>
                         <div class="pbmit-ihbox-contents">
                           <div class="mt-2">
-                            <a
-                              href="https://maps.google.com/?q=1421 Wayzata Blvd Suite 303, Wayzata, MN 55391"
-                              target="_blank"
-                              rel="noopener noreferrer"
+                            <div
+                              class="pbmit-heading-desc clickable-address white-space: nowrap;"
+                              id="map-address1"
                               style="
+                                cursor: pointer;
                                 color: rgb(50, 50, 82);
                                 text-decoration: none;
                               "
                               onmouseover="this.style.color='red'"
                               onmouseout="this.style.color='rgb(50, 50, 82)'"
                             >
-                              1421 Wayzata Blvd., Suite 303, Wayzata MN 55391
-                            </a>
+                              1421 Wayzata Blvd.,Suite 303 Wayzata, MN 55391.
+                            </div>
                           </div>
                         </div>
                       </div>
@@ -895,12 +895,31 @@
       });
     </script>
     <script>
+      const address1 = "1421 Wayzata Blvd, Suite 303, Wayzata, MN 55391";
+      const encodedAddress1 = encodeURIComponent(address1);
+
+      // Detect platform
+      const isApple1 = /iPhone|iPad|Macintosh/.test(navigator.userAgent);
+      const mapUrl1 = isApple1
+        ? `http://maps.apple.com/?q=${encodedAddress}`
+        : `https://www.google.com/maps?q=${encodedAddress}`;
+
+      // Open correct link on click
+      document.getElementById("map-address1").addEventListener("click", () => {
+        window.open(mapUrl, "_blank");
+      });
+    </script>
+
+    <script>
       $(document).ready(function () {
         // 1. Add the custom rule
         $.validator.addMethod(
           "customphone",
           function (value, element) {
-            return this.optional(element) || /^\(?\d{3}\)?[-\s.]?\d{3}[-\s.]?\d{4}$/.test(value);
+            return (
+              this.optional(element) ||
+              /^\(?\d{3}\)?[-\s.]?\d{3}[-\s.]?\d{4}$/.test(value)
+            );
           },
           "Please enter  valid phone number"
         );
