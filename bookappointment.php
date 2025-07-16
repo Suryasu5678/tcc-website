@@ -1,16 +1,21 @@
 <?php
+require __DIR__ . '/vendor/autoload.php';
+
+$dotenv = Dotenv\Dotenv::createImmutable(__DIR__);
+$dotenv->load();
+
 /**
  * Book Appointment Form Handler
- * Uses PHPMailer to send appointment requests via email.
+ * Uses Resend Mail API to send appointment requests via email.
  */
 
-// SMTP Email Settings
-$from_email             = "tccbookappt@gmail.com";
-$from_email_password    = "vhza ldmi pygg ydad";
-$from_email_name        = "TCC";
-$to_email               = "bookappointment@tccardio.org";
-$to_email_name          = "Twin Cities Cardiology Appointment";
-$email_subject          = 'Appointment Request from Twin Cities Cardiology';
+// Email Settings
+$resend_api_key = $_ENV['RESEND_API_KEY']; // <-- Replace with your Resend API key
+$from_email     = $_ENV['FROM_EMAIL'];
+$from_email_name= "TCC";
+$to_email       = $_ENV['BOOK_APPOINTMENT_TO_EMAIL'];
+$to_email_name  = "Twin Cities Cardiology Appointment";
+$email_subject  = 'Appointment Request from Twin Cities Cardiology';
 
 // Form fields to receive in email
 $field_list = array(
@@ -37,17 +42,6 @@ $email_fields = array(
     'email'
 );
 
-// PHPMailer setup
-use PHPMailer\PHPMailer\PHPMailer;
-use PHPMailer\PHPMailer\SMTP;
-use PHPMailer\PHPMailer\Exception;
-
-date_default_timezone_set('Etc/UTC');
-
-require 'phpmailer/src/PHPMailer.php';
-require 'phpmailer/src/Exception.php';
-require 'phpmailer/src/SMTP.php';
-
 function isValidEmail($email) {
     return filter_var($email, FILTER_VALIDATE_EMAIL) 
         && preg_match('/@.+\./', $email);
@@ -61,14 +55,6 @@ function field_name($key) {
         $return = ucwords($return);
     }
     return $return;
-}
-
-function save_mail($mail) {
-    $path = '{imap.gmail.com:993/imap/ssl}[Gmail]/Sent Mail';
-    $imapStream = imap_open($path, $mail->Username, $mail->Password);
-    $result = imap_append($imapStream, $path, $mail->getSentMIMEMessage());
-    imap_close($imapStream);
-    return $result;
 }
 
 if (!empty($_POST)) {
@@ -113,27 +99,22 @@ if (!empty($_POST)) {
         }
         $email_body .= '</table>';
 
-        // Send email
-        $mail = new PHPMailer();
-        $mail->isSMTP();
-        $mail->SMTPDebug = SMTP::DEBUG_OFF;
-        $mail->Host = 'smtp.gmail.com';
-        $mail->Port = 587;
-        $mail->SMTPAuth = true;
-        $mail->SMTPSecure = "tls";
-        $mail->Username   = $from_email;
-        $mail->Password   = $from_email_password;
-        $mail->setFrom($from_email, $from_email_name);
-        $mail->addReplyTo($from_email, $from_email_name);
-        $mail->addAddress($to_email, $to_email_name);
-        $mail->Subject = $email_subject;
-        $mail->msgHTML($email_body);
+        $reply_to_email = isset($_POST['email']) ? $_POST['email'] : '';
 
-        if ($mail->send()) {
+        // Send email using Resend API
+        $resend = Resend::client($resend_api_key);
+
+        try {
+            $res = $resend->emails->send([
+                'from' => "$from_email_name <$from_email>",
+                'to' => [$to_email],
+                'subject' => $email_subject,
+                'html' => $email_body,
+                'reply_to' => $reply_to_email,
+            ]);
             echo '<div class="alert alert-success" role="alert">Thank you for your appointment request.<br/>Our team will contact you soon!!</div>';
-            // save_mail($mail); // Uncomment if you want to save to Sent Mail
-        } else {
-            echo '<div class="alert alert-danger" role="alert">Error: Cannot send email.<br>' . $mail->ErrorInfo . '</div>';
+        } catch (Exception $e) {
+            echo '<div class="alert alert-danger" role="alert">Error: Cannot send email.<br>' . $e->getMessage() . '</div>';
         }
     }
 } else {
