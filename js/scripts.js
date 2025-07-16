@@ -442,15 +442,6 @@ if ($.isFunction($.fn.validate)) {
    Make sure you configure send.php file 
      -------------------------------------*/
 
-$('input[name="number"]').on("input", function () {
-  const phone = $(this).val();
-  const phonePattern = /^[0-9]{7,15}$/;
-
-  if (phonePattern.test(phone)) {
-    $(".contact-form .phonerr").html(""); // clear error on valid input
-  }
-});
-
 $("#contact-form").submit(function () {
   if ($("#contact-form .doing-via-ajax").length == 0) {
     $("#contact-form").prepend(
@@ -460,18 +451,6 @@ $("#contact-form").submit(function () {
 
   if ($("#contact-form").valid()) {
     // check if form is valid
-    var phone = $('input[name="number"]').val();
-    var phonePattern = /^[0-9]{7,15}$/; // adjust range as needed (e.g., min 7, max 15 digits)
-
-    if (!phonePattern.test(phone)) {
-      $(".contact-form .phonerr").html(
-        '<div style="color: #eb2c30; text-align: left;">Please enter a valid phone number.</div>'
-      );
-      return false; // stop form submission
-    } else {
-      $(".contact-form .phonerr").html("");
-    }
-
     $(".contact-form .message-status").html("");
     $(".form-btn-loader").removeClass("d-none");
     $(".contact-form button.pbmit-btn span").hide();
@@ -535,20 +514,6 @@ $(document).ready(function () {
       return false;
     } else {
       $("#days-error").hide((type = "tel"));
-    }
-
-    var phonenum = $('input[name="phone"]').val();
-    var phonePattern = /^[0-9]{7,15}$/; // adjust range as needed (e.g., min 7, max 15 digits)
-
-    if (!phonePattern.test(phonenum)) {
-      $("#appointment-form .phonerr").html(`
-        <div style="color: #eb2c30; text-align: left;">
-          Please enter a valid phone number.
-        </div>
-      `);
-      return false; // stop form submission
-    } else {
-      $(".phonerr").html(""); // ✅ clear previous error
     }
 
     // ✅ Add hidden input for AJAX flag (only once)
