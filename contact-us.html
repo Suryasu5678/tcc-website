@@ -208,6 +208,12 @@
         font-size: 0.95rem;
         letter-spacing: 0.3px;
       }
+
+      @media (min-width: 768px) and (max-width: 1024px) {
+        .hide-at-768 {
+          display: none !important;
+        }
+      }
     </style>
   </head>
 
@@ -317,7 +323,7 @@
                                   >
                                     SERVICES &nbsp;
                                     <span
-                                      class="arrow"
+                                      class="arrow hide-at-768"
                                       style="font-size: 1.5rem"
                                       >&#9662;</span
                                     >
@@ -894,7 +900,7 @@
         $.validator.addMethod(
           "customphone",
           function (value, element) {
-            return this.optional(element) || /^\d{3}-\d{3}-\d{4}$/.test(value);
+            return this.optional(element) || /^\(?\d{3}\)?[-\s.]?\d{3}[-\s.]?\d{4}$/.test(value);
           },
           "Please enter  valid phone number"
         );
@@ -902,7 +908,7 @@
         // 2. Use it in validation rules
         $("#contact-form").validate({
           rules: {
-            field1: {
+            number: {
               required: true,
               customphone: true,
             },
