@@ -462,6 +462,14 @@
         }
       }
 
+      @media (min-width: 768px) and (max-width: 1024px) {
+  .hide-at-768 {
+    display: none !important;
+  }
+}
+
+
+
 
 
       </style>
@@ -550,9 +558,9 @@
                                                       
                                                   </li>
                                                   <li class="dropdown">
-                                        <a style="cursor: pointer; display: flex; align-items: center; ">
+                                        <a  style="cursor: pointer; display: flex; align-items: center; ">
                                           SERVICES&nbsp;
-                                          <span class="arrow" style="font-size: 1.3rem; " class="">&#9662;</span>
+                                          <span class="arrow hide-at-768" style="font-size: 1.3rem; " class="">&#9662;</span>
                                         </a>
                                         <ul>
                                           <li><a href="cardiology.html">Cardiology</a></li>
@@ -1233,6 +1241,24 @@
           font-size: 14px; /* or whatever smaller size works */
         }
       }
+
+      @media (max-width: 768px) {
+  .menu-item-container {
+    width: 100%;
+    border-bottom: 2px solid #ccc; /* or your desired color */
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 16px; /* adjust spacing as needed */
+  }
+
+  .menu-item-container .dropdown-icon {
+    color: #333 !important; /* make icon gray/black, not navy */
+    background-color: transparent !important; /* remove unwanted bg */
+  }
+}
+
     </style>
   </section>
   <footer
