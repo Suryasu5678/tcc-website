@@ -455,7 +455,7 @@ $("#contact-form").submit(function () {
 
     if (!phonePattern.test(phone)) {
       $(".contact-form .phonerr").html(
-        '<div class=" msg text-danger">Please enter a valid phone number.</div>'
+        '<div style="color: #eb2c30; text-align: left;">Please enter a valid phone number.</div>'
       );
       return false; // stop form submission
     }
@@ -475,18 +475,22 @@ $("#contact-form").submit(function () {
         $(".contact-form button.pbmit-btn").removeAttr("disabled");
         // $(".contact-form .message-status").html(cevap);
         $("#contact-form")[0].reset(); // Reset the form after successful submission
-        $("#formToast").removeClass("bg-danger").addClass("bg-success");
+        $("#formToast")
+          .removeClass("bg-danger bg-success")
+          .addClass("bg-custom-green");
         $("#toastMessage").html(
-          " Thank you for contacting us. Our team will be in touch soon!!"
+          " ✅ <span class='fw-bold' style='font-size: 1.2rem;'>Success!</span><br/>Thank you for contacting us. Our team will be in touch soon!!"
         );
         const toast = new bootstrap.Toast(document.getElementById("formToast"));
         toast.show();
       },
       error: function () {
         // Show error toast
-        $("#formToast").removeClass("bg-success").addClass("bg-danger");
+        $("#formToast")
+          .removeClass("bg-success bg-danger")
+          .addClass("bg-custom-red");
         $("#toastMessage").html(
-          "Failed to send your message!<br/>Please try again later..."
+          " ⚠️ <span class='fw-bold' style='font-size: 1.2rem;'>Warning!</span><br/> Failed to send your message!<br/>Please try again later..."
         );
         const toast = new bootstrap.Toast(document.getElementById("formToast"));
         toast.show();
@@ -526,7 +530,7 @@ $(document).ready(function () {
 
     if (!phonePattern.test(phonenum)) {
       $("#appointment-form .phonerr").html(`
-        <div class="text-danger text-left">
+        <div style="color: #eb2c30; text-align: left;">
           Please enter a valid phone number.
         </div>
       `);
@@ -560,9 +564,11 @@ $(document).ready(function () {
           $("#appointment-form")[0].reset();
           $button.prop("disabled", false).text(originalText);
           $("#days-error").hide(); // hide error if previously shown
-          $("#formToast").removeClass("bg-danger").addClass("bg-success");
+          $("#formToast")
+            .removeClass("bg-danger bg-success")
+            .addClass("bg-custom-green");
           $("#toastMessage").html(
-            "Thank you for your appointment request. Our team will contact you soon!!"
+            "✅ <span class='fw-bold' style='font-size: 1.1rem;'>Success!</span><br/> Thank you for your appointment request. Our team will contact you soon!!"
           );
 
           // Show toast
@@ -574,9 +580,11 @@ $(document).ready(function () {
         error: function () {
           // $("#appointment-form .message-status").html(response);
           $button.prop("disabled", false).text(originalText);
-          $("#formToast").removeClass("bg-success").addClass("bg-danger");
+          $("#formToast")
+            .removeClass("bg-success bg-danger")
+            .addClass("bg-custom-red");
           $("#toastMessage").html(
-            "Failed to send your message!<br/>Please try again later..."
+            "⚠️ <span class='fw-bold' style='font-size: 1.2rem;'>Warning!</span><br/>Failed to send your message!<br/>Please try again later..."
           );
           const toast = new bootstrap.Toast(
             document.getElementById("formToast")
