@@ -53,7 +53,6 @@
     <link rel="stylesheet" href="css/responsive.css" />
   </head>
   <style>
-   
     footer .pbmit-base-icon-location:before {
       display: unset !important;
       margin-left: 0 !important;
@@ -187,28 +186,27 @@
       }
     }
 
+    .bg-custom-green {
+      background-color: #4caf50;
+      color: white;
+      font-weight: 500;
+      padding: 0.75rem 0.75rem;
+      border-radius: 0.375rem;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+      font-size: 0.95rem;
+      letter-spacing: 0.3px;
+    }
 
-    bg-custom-green {
-        background-color: #4caf50;
-        color: white;
-        font-weight: 500;
-        padding: 0.75rem 0.75rem;
-        border-radius: 0.375rem;
-        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
-        font-size: 0.95rem;
-        letter-spacing: 0.3px;
-      }
-
-      .bg-custom-red {
-        background-color: #dc3545; /* Bootstrap's danger red */
-        color: #fff;
-        font-weight: 500;
-        padding: 0.75rem 0.75rem;
-        border-radius: 0.375rem;
-        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
-        font-size: 0.95rem;
-        letter-spacing: 0.3px;
-      }
+    .bg-custom-red {
+      background-color: #dc3545; /* Bootstrap's danger red */
+      color: #fff;
+      font-weight: 500;
+      padding: 0.75rem 0.75rem;
+      border-radius: 0.375rem;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+      font-size: 0.95rem;
+      letter-spacing: 0.3px;
+    }
   </style>
 
   <body>
@@ -683,280 +681,257 @@
                     <div class="col-md-12 col-lg-12 message-status"></div>
                   </div>
                 </form>
-                </div>
-                </div>
-                </div>
-                </div>
-                </div>
-                </div>
-                <div
-                  class="position-fixed top end-0 p-3"
-                  style="top: 80px; z-index: 1055"
-                >
-                  <div
-                    id="formToast"
-                    class="toast hide align-items-center text-white bg-success border-0"
-                    role="alert"
-                    aria-live="assertive"
-                    aria-atomic="true"
-                  >
-                    <div class="d-flex">
-                      <div class="toast-body" id="toastMessage">
-                        Thank you for your appointment request. Our team will
-                        contact you soon!!
-                      </div>
-                      <button
-                        type="button"
-                        class="btn-close btn-close-white me-2 m-auto"
-                        data-bs-dismiss="toast"
-                        aria-label="Close"
-                      ></button>
-                    </div>
-                  </div>
-                </div>
-
-                <!-- footer -->
-                <footer
-                  class="py-5 text-white"
-                  style="
-                    background: linear-gradient(to right, #192136, #273353);
-                    font-family: var(--pbmit-body-typography-font-family);
-                    color: var(--pbmit-heading-color);
-                  "
-                >
-                  <div class="container">
-                    <div class="row row-cols-1 row-cols-md-4 g-4">
-                      <!-- Logo & Tagline -->
-                      <div class="col text-left">
-                        <img
-                          src="images/logo/Landscape White.png"
-                          alt="Twin Cities Cardiology Logo"
-                          class="mb-2 img-fluid"
-                          style="max-height: 80px; width: auto; height: auto"
-                        />
-
-                        <p
-                          class="fst-italic text-light mx-auto"
-                          style="
-                            font-size: 11px;
-                            font-weight: 500;
-                            line-height: 1.6;
-                            max-width: 220px;
-                            text-align: left;
-                          "
-                        >
-                          "It's not just about hearts.<br />
-
-                          It's about the people who carry them."
-                        </p>
-                      </div>
-
-                      <!-- Services Links -->
-                      <div class="col">
-                        <h6
-                          class="fw-bold mb-3 text-white"
-                          style="font-size: 15px"
-                        >
-                          Services
-                        </h6>
-                        <ul class="list-unstyled small">
-                          <li>
-                            <a
-                              href="/cardiology.html"
-                              class="text-decoration-none text-light"
-                              >› Cardiology</a
-                            >
-                          </li>
-                          <li>
-                            <a
-                              href="/vascularmedicine.html"
-                              class="text-decoration-none text-light"
-                              >› Vascular Medicine</a
-                            >
-                          </li>
-                          <li>
-                            <a
-                              href="/executivehealthphysical.html"
-                              class="text-decoration-none text-light"
-                              >› Executive Health Physical</a
-                            >
-                          </li>
-                          <li>
-                            <a
-                              href="/conciergeprogram.html"
-                              class="text-decoration-none text-light"
-                              >› Concierge Program</a
-                            >
-                          </li>
-                        </ul>
-                      </div>
-
-                      <!-- Clinic Hours -->
-                      <div class="col clinic-hours-shift">
-                        <h6
-                          class="fw-bold mb-3 text-white"
-                          style="font-size: 15px"
-                        >
-                          Clinic Hours
-                        </h6>
-                        <ul class="list-unstyled small text-light">
-                          <li class="d-flex justify-content-between">
-                            <span>Mon – Thu</span>
-                            <span class="fw-semibold">9:30 – 4:00</span>
-                          </li>
-                          <li class="d-flex justify-content-between">
-                            <span
-                              >Friday
-                              <small class="text-danger fw-semibold"
-                                >(Emergencies only)</small
-                              ></span
-                            >
-                            <span class="fw-semibold">9:30 – 4:00</span>
-                          </li>
-                          <li class="d-flex justify-content-between">
-                            <span>Sat – Sun</span>
-                            <span class="fw-semibold">Closed</span>
-                          </li>
-                        </ul>
-                      </div>
-
-                      <!-- Contact Info -->
-                      <div class="col contact-right-shift">
-                        <h6
-                          class="fw-bold mb-3 text-white"
-                          style="font-size: 15px"
-                        >
-                          Contact Us
-                        </h6>
-                        <ul class="list-unstyled small text-light">
-                          <li class="d-flex align-items-center mb-2">
-                            <span class="me-2" style="min-width: 22px">
-                              <i
-                                class="fas fa-envelope text-danger"
-                                style="font-size: 16px"
-                              ></i>
-                            </span>
-                            <a
-                              href="mailto:contactus@tccardio.org"
-                              class="text-decoration-none text-light"
-                              >contactus@tccardio.org</a
-                            >
-                          </li>
-
-                          <li class="d-flex align-items-center mb-2">
-                            <span class="me-2" style="min-width: 22px">
-                              <i
-                                class="fas fa-phone text-danger"
-                                style="font-size: 16px"
-                              ></i>
-                            </span>
-                            <a
-                              href="tel:19522326132"
-                              class="text-decoration-none text-light"
-                              >+1 (952) 232-6132</a
-                            >
-                          </li>
-
-                          <li class="d-flex align-items-center mb-2">
-                            <span class="me-1" style="min-width: 22px">
-                              <i
-                                class="pbmit-base-icon-location text-danger"
-                                style="font-size: 21px"
-                              ></i>
-                            </span>
-                            <span
-                              style="cursor: pointer; white-space: nowrap"
-                              id="map-address"
-                            >
-                              1421 Wayzata Blvd., Suite 303<br />
-                              Wayzata, MN 55391.
-                            </span>
-                          </li>
-                        </ul>
-                      </div>
-                    </div>
-
-                    <!-- Divider -->
-                    <hr
-                      class="my-4"
-                      style="border-top: 1px solid rgba(255, 255, 255, 0.6)"
-                    />
-
-                    <!-- Bottom Strip -->
-                    <div
-                      class="d-flex flex-column flex-md-row justify-content-between align-items-center mt-4 pt-3"
-                      style="border-color: rgba(255, 255, 255, 0.1)"
-                    >
-                      <p
-                        class="mb-2 mb-md-0 small text-light fw-bold text-start w-100"
-                        style="font-size: 14px"
-                      >
-                        © 2025 Twin Cities Cardiology. All rights reserved.
-                      </p>
-                      <p
-                        class="mb-0 small text-light fw-bold text-start text-md-end w-100"
-                        style="font-size: 14px"
-                      >
-                        Privacy Policy
-                      </p>
-                    </div>
-                  </div>
-                </footer>
-                <!-- footer End -->
-
-                <!-- JS
-        ============================================ -->
-
-                <!-- jQuery JS -->
-                <script src="js/jquery.min.js"></script>
-                <!-- Popper JS -->
-                <script src="js/popper.min.js"></script>
-                <!-- Bootstrap JS -->
-                <script src="js/bootstrap.min.js"></script>
-                <!-- jquery Waypoints JS -->
-                <script src="js/jquery.waypoints.min.js"></script>
-                <!-- jquery Appear JS -->
-                <script src="js/jquery.appear.js"></script>
-                <!-- Numinate JS -->
-                <script src="js/numinate.min.js"></script>
-                <!-- Slick JS -->
-                <script src="js/swiper.min.js"></script>
-                <!-- Magnific JS -->
-                <script src="js/jquery.magnific-popup.min.js"></script>
-                <!-- Circle Progress JS -->
-                <script src="js/circle-progress.js"></script>
-                <!-- AOS -->
-                <script src="js/aos.js"></script>
-                <!-- Form Validator -->
-                <script src="js/jquery-validate/jquery.validate.min.js"></script>
-                <!-- Scripts JS -->
-                <script src="js/scripts.js"></script>
-
-                <script>
-                  const address =
-                    "1421 Wayzata Blvd, Suite 303, Wayzata, MN 55391";
-                  const encodedAddress = encodeURIComponent(address);
-
-                  // Detect platform
-                  const isApple = /iPhone|iPad|Macintosh/.test(
-                    navigator.userAgent
-                  );
-                  const mapUrl = isApple
-                    ? `http://maps.apple.com/?q=${encodedAddress}`
-                    : `https://www.google.com/maps?q=${encodedAddress}`;
-
-                  // Open correct link on click
-                  document
-                    .getElementById("map-address")
-                    .addEventListener("click", () => {
-                      window.open(mapUrl, "_blank");
-                    });
-                </script>
               </div>
             </div>
           </div>
         </div>
       </div>
     </div>
+    <div class="position-fixed top end-0 p-3" style="top: 80px; z-index: 1055">
+      <div
+        id="formToast"
+        class="toast hide align-items-center text-white bg-success border-0"
+        role="alert"
+        aria-live="assertive"
+        aria-atomic="true"
+      >
+        <div class="d-flex">
+          <div class="toast-body" id="toastMessage">
+            Thank you for your appointment request. Our team will contact you
+            soon!!
+          </div>
+          <button
+            type="button"
+            class="btn-close btn-close-white me-2 m-auto"
+            data-bs-dismiss="toast"
+            aria-label="Close"
+          ></button>
+        </div>
+      </div>
+    </div>
+
+    <!-- footer -->
+    <footer
+      class="py-5 text-white"
+      style="
+        background: linear-gradient(to right, #192136, #273353);
+        font-family: var(--pbmit-body-typography-font-family);
+        color: var(--pbmit-heading-color);
+      "
+    >
+      <div class="container">
+        <div class="row row-cols-1 row-cols-md-4 g-4">
+          <!-- Logo & Tagline -->
+          <div class="col text-left">
+            <img
+              src="images/logo/Landscape White.png"
+              alt="Twin Cities Cardiology Logo"
+              class="mb-2 img-fluid"
+              style="max-height: 80px; width: auto; height: auto"
+            />
+
+            <p
+              class="fst-italic text-light mx-auto"
+              style="
+                font-size: 11px;
+                font-weight: 500;
+                line-height: 1.6;
+                max-width: 220px;
+                text-align: left;
+              "
+            >
+              "It's not just about hearts.<br />
+
+              It's about the people who carry them."
+            </p>
+          </div>
+
+          <!-- Services Links -->
+          <div class="col">
+            <h6 class="fw-bold mb-3 text-white" style="font-size: 15px">
+              Services
+            </h6>
+            <ul class="list-unstyled small">
+              <li>
+                <a
+                  href="/cardiology.html"
+                  class="text-decoration-none text-light"
+                  >› Cardiology</a
+                >
+              </li>
+              <li>
+                <a
+                  href="/vascularmedicine.html"
+                  class="text-decoration-none text-light"
+                  >› Vascular Medicine</a
+                >
+              </li>
+              <li>
+                <a
+                  href="/executivehealthphysical.html"
+                  class="text-decoration-none text-light"
+                  >› Executive Health Physical</a
+                >
+              </li>
+              <li>
+                <a
+                  href="/conciergeprogram.html"
+                  class="text-decoration-none text-light"
+                  >› Concierge Program</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <!-- Clinic Hours -->
+          <div class="col clinic-hours-shift">
+            <h6 class="fw-bold mb-3 text-white" style="font-size: 15px">
+              Clinic Hours
+            </h6>
+            <ul class="list-unstyled small text-light">
+              <li class="d-flex justify-content-between">
+                <span>Mon – Thu</span>
+                <span class="fw-semibold">9:30 – 4:00</span>
+              </li>
+              <li class="d-flex justify-content-between">
+                <span
+                  >Friday
+                  <small class="text-danger fw-semibold"
+                    >(Emergencies only)</small
+                  ></span
+                >
+                <span class="fw-semibold">9:30 – 4:00</span>
+              </li>
+              <li class="d-flex justify-content-between">
+                <span>Sat – Sun</span>
+                <span class="fw-semibold">Closed</span>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Contact Info -->
+          <div class="col contact-right-shift">
+            <h6 class="fw-bold mb-3 text-white" style="font-size: 15px">
+              Contact Us
+            </h6>
+            <ul class="list-unstyled small text-light">
+              <li class="d-flex align-items-center mb-2">
+                <span class="me-2" style="min-width: 22px">
+                  <i
+                    class="fas fa-envelope text-danger"
+                    style="font-size: 16px"
+                  ></i>
+                </span>
+                <a
+                  href="mailto:contactus@tccardio.org"
+                  class="text-decoration-none text-light"
+                  >contactus@tccardio.org</a
+                >
+              </li>
+
+              <li class="d-flex align-items-center mb-2">
+                <span class="me-2" style="min-width: 22px">
+                  <i
+                    class="fas fa-phone text-danger"
+                    style="font-size: 16px"
+                  ></i>
+                </span>
+                <a
+                  href="tel:19522326132"
+                  class="text-decoration-none text-light"
+                  >+1 (952) 232-6132</a
+                >
+              </li>
+
+              <li class="d-flex align-items-center mb-2">
+                <span class="me-1" style="min-width: 22px">
+                  <i
+                    class="pbmit-base-icon-location text-danger"
+                    style="font-size: 21px"
+                  ></i>
+                </span>
+                <span
+                  style="cursor: pointer; white-space: nowrap"
+                  id="map-address"
+                >
+                  1421 Wayzata Blvd., Suite 303<br />
+                  Wayzata, MN 55391.
+                </span>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Divider -->
+        <hr
+          class="my-4"
+          style="border-top: 1px solid rgba(255, 255, 255, 0.6)"
+        />
+
+        <!-- Bottom Strip -->
+        <div
+          class="d-flex flex-column flex-md-row justify-content-between align-items-center mt-4 pt-3"
+          style="border-color: rgba(255, 255, 255, 0.1)"
+        >
+          <p
+            class="mb-2 mb-md-0 small text-light fw-bold text-start w-100"
+            style="font-size: 14px"
+          >
+            © 2025 Twin Cities Cardiology. All rights reserved.
+          </p>
+          <p
+            class="mb-0 small text-light fw-bold text-start text-md-end w-100"
+            style="font-size: 14px"
+          >
+            Privacy Policy
+          </p>
+        </div>
+      </div>
+    </footer>
+    <!-- footer End -->
+
+    <!-- JS
+        ============================================ -->
+
+    <!-- jQuery JS -->
+    <script src="js/jquery.min.js"></script>
+    <!-- Popper JS -->
+    <script src="js/popper.min.js"></script>
+    <!-- Bootstrap JS -->
+    <script src="js/bootstrap.min.js"></script>
+    <!-- jquery Waypoints JS -->
+    <script src="js/jquery.waypoints.min.js"></script>
+    <!-- jquery Appear JS -->
+    <script src="js/jquery.appear.js"></script>
+    <!-- Numinate JS -->
+    <script src="js/numinate.min.js"></script>
+    <!-- Slick JS -->
+    <script src="js/swiper.min.js"></script>
+    <!-- Magnific JS -->
+    <script src="js/jquery.magnific-popup.min.js"></script>
+    <!-- Circle Progress JS -->
+    <script src="js/circle-progress.js"></script>
+    <!-- AOS -->
+    <script src="js/aos.js"></script>
+    <!-- Form Validator -->
+    <script src="js/jquery-validate/jquery.validate.min.js"></script>
+    <!-- Scripts JS -->
+    <script src="js/scripts.js"></script>
+
+    <script>
+      const address = "1421 Wayzata Blvd, Suite 303, Wayzata, MN 55391";
+      const encodedAddress = encodeURIComponent(address);
+
+      // Detect platform
+      const isApple = /iPhone|iPad|Macintosh/.test(navigator.userAgent);
+      const mapUrl = isApple
+        ? `http://maps.apple.com/?q=${encodedAddress}`
+        : `https://www.google.com/maps?q=${encodedAddress}`;
+
+      // Open correct link on click
+      document.getElementById("map-address").addEventListener("click", () => {
+        window.open(mapUrl, "_blank");
+      });
+    </script>
   </body>
 </html>
