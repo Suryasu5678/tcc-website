@@ -441,6 +441,16 @@ if ($.isFunction($.fn.validate)) {
      Send email via Ajax
    Make sure you configure send.php file 
      -------------------------------------*/
+
+$('input[name="number"]').on("input", function () {
+  const phone = $(this).val();
+  const phonePattern = /^[0-9]{7,15}$/;
+
+  if (phonePattern.test(phone)) {
+    $(".contact-form .phonerr").html(""); // clear error on valid input
+  }
+});
+
 $("#contact-form").submit(function () {
   if ($("#contact-form .doing-via-ajax").length == 0) {
     $("#contact-form").prepend(
@@ -459,7 +469,7 @@ $("#contact-form").submit(function () {
       );
       return false; // stop form submission
     } else {
-      $(".contact-form .phonerr").html(""); // ✅ clear previous error
+      $(".contact-form .phonerr").html("");
     }
 
     $(".contact-form .message-status").html("");
