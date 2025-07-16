@@ -450,6 +450,15 @@ $("#contact-form").submit(function () {
 
   if ($("#contact-form").valid()) {
     // check if form is valid
+    var phone = $('input[name="number"]').val();
+    var phonePattern = /^[0-9]{7,15}$/; // adjust range as needed (e.g., min 7, max 15 digits)
+
+    if (!phonePattern.test(phone)) {
+      $(".contact-form .phonerr").html(
+        '<div class=" msg text-danger">Please enter a valid phone number.</div>'
+      );
+      return false; // stop form submission
+    }
 
     $(".contact-form .message-status").html("");
     $(".form-btn-loader").removeClass("d-none");
@@ -510,6 +519,18 @@ $(document).ready(function () {
       return false;
     } else {
       $("#days-error").hide((type = "tel"));
+    }
+
+    var phonenum = $('input[name="phone"]').val();
+    var phonePattern = /^[0-9]{7,15}$/; // adjust range as needed (e.g., min 7, max 15 digits)
+
+    if (!phonePattern.test(phonenum)) {
+      $("#appointment-form .phonerr").html(`
+        <div class="text-danger text-left">
+          Please enter a valid phone number.
+        </div>
+      `);
+      return false; // stop form submission
     }
 
     // ✅ Add hidden input for AJAX flag (only once)
