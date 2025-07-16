@@ -458,6 +458,8 @@ $("#contact-form").submit(function () {
         '<div style="color: #eb2c30; text-align: left;">Please enter a valid phone number.</div>'
       );
       return false; // stop form submission
+    } else {
+      $(".phonerr").html(""); // ✅ clear previous error
     }
 
     $(".contact-form .message-status").html("");
@@ -535,6 +537,9 @@ $(document).ready(function () {
         </div>
       `);
       return false; // stop form submission
+    }
+    else {
+      $(".phonerr").html(""); // ✅ clear previous error
     }
 
     // ✅ Add hidden input for AJAX flag (only once)
