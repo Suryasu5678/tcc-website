@@ -563,7 +563,7 @@
                           <div class="contact-form-section">
                             <input
                               type="text"
-                              class="form-control"
+                              class="form-control customphone"
                               placeholder="Phone*"
                               name="number"
                               required
@@ -886,6 +886,28 @@
       // Open correct link on click
       document.getElementById("map-address").addEventListener("click", () => {
         window.open(mapUrl, "_blank");
+      });
+    </script>
+    <script>
+      $(document).ready(function () {
+        // 1. Add the custom rule
+        $.validator.addMethod(
+          "customphone",
+          function (value, element) {
+            return this.optional(element) || /^\d{3}-\d{3}-\d{4}$/.test(value);
+          },
+          "Please enter  valid phone number"
+        );
+
+        // 2. Use it in validation rules
+        $("#contact-form").validate({
+          rules: {
+            field1: {
+              required: true,
+              customphone: true,
+            },
+          },
+        });
       });
     </script>
   </body>
