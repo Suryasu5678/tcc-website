@@ -23,17 +23,20 @@ This is the official website for Twin Cities Cardiology, a healthcare provider s
 1. Clone or download the repository.
 2. Ensure a PHP-enabled web server is available to serve the site and handle backend PHP scripts.
 3. Install dependencies via Composer:
+
    ```bash
    composer install
    composer require vlucas/phpdotenv
    composer require resend/resend-php
-```
+   ```
+
 4. Create a `.env` file in the root directory with the following environment variables:
+
    ```
    RESEND_API_KEY=your_resend_api_key_here
    FROM_EMAIL=your_from_email@example.com
    CONTACT_TO_EMAIL=recipient_email@example.com
    BOOK_APPOINTMENT_TO_EMAIL=recipient_email@example.com
    ```
+
 5. Place the website files in your web server's root or appropriate directory.
-6. Ensure the `bookappointment.php` script is accessible and configured correctly to send emails.
