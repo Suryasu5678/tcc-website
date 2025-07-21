@@ -39,6 +39,8 @@
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 
       <style>
+                 
+
             .insurance-swiper .swiper-wrapper {
             transition-timing-function: linear !important;
             }
@@ -467,11 +469,6 @@
         display: none !important;
       }
     }
-
-
-
-
-
       </style>
 <script>
   document.addEventListener('DOMContentLoaded', function() {
@@ -493,6 +490,10 @@
       setTimeout(showButtons, 3000);
   });
   </script>
+  
+  
+  
+    
    </head>
    <body>
   
@@ -546,7 +547,7 @@
                                       <nav class="main-menu navbar-expand-xl navbar-light ">
                                           <div class="navbar-header">
                                               <!-- Toggle Button --> 
-                                              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                                              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" id="ta" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"  onclick="handleNavbarClick() ">
                                                   <i class="pbmit-base-icon-menu-1"></i>
                                               </button>
                                           </div>
@@ -1480,6 +1481,27 @@
     <!-- Scripts JS -->
     <script src="js/scripts.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.4.7/swiper-bundle.min.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const navbarCollapse = document.getElementById("navbarSupportedContent");
+        let hasHiddenScroll = false; // Flag to track first-time execution
+    
+        // When menu opens
+        navbarCollapse.addEventListener("shown.bs.collapse", function () {
+          if (!hasHiddenScroll) {
+            document.body.style.overflow = "hidden"; // Disable scroll only first time
+            hasHiddenScroll = true;
+          } else {
+            document.body.style.overflow = ""; // Keep scroll enabled from second time
+          }
+        });
+    
+        // When menu closes
+        navbarCollapse.addEventListener("hidden.bs.collapse", function () {
+          document.body.style.overflow = ""; // Always enable scroll when closing
+        });
+      });
+    </script>
     <script>
         // Initialize Insurance Partners Swiper with unique variable name
         const insurancePartnersSwiper = new Swiper('.insurance-partners-swiper', {
