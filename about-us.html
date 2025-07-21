@@ -1416,6 +1416,29 @@
               window.open(mapUrl, "_blank");
             });
         </script>
+        <script>
+          document.addEventListener("DOMContentLoaded", function () {
+            const navbarCollapse = document.getElementById(
+              "navbarSupportedContent"
+            );
+            let hasHiddenScroll = false; // Flag to track first-time execution
+
+            // When menu opens
+            navbarCollapse.addEventListener("shown.bs.collapse", function () {
+              if (!hasHiddenScroll) {
+                document.body.style.overflow = "hidden"; // Disable scroll only first time
+                hasHiddenScroll = true;
+              } else {
+                document.body.style.overflow = ""; // Keep scroll enabled from second time
+              }
+            });
+
+            // When menu closes
+            navbarCollapse.addEventListener("hidden.bs.collapse", function () {
+              document.body.style.overflow = ""; // Always enable scroll when closing
+            });
+          });
+        </script>
       </div>
     </div>
   </body>
