@@ -87,7 +87,7 @@ body {
   background-color: var(--pbmit-global-color);
 }
 .pbmit-heading-subheading .pbmit-title {
-  font-family: Geologica, sans-serif;
+  font-family: Montserrat, sans-serif;
   font-weight: 800;
   font-size: 40px;
   line-height: 50px;
@@ -513,7 +513,7 @@ div#clock span:first-child {
   line-height: 34px;
   font-weight: 900 !important;
   color: #192136;
-  font-family: Geologica, sans-serif;
+  font-family: Montserrat, sans-serif;
   font-style: normal;
 }
 .pbminfotech-ele-fid-style-1 .pbmit-fid-title {
@@ -1327,7 +1327,7 @@ div#clock span:first-child {
 .pbmit-testimonial-style-2 .pbminfotech-box-img:after {
   position: absolute;
   content: "“";
-  font-family: Geologica, sans-serif;
+  font-family: Montserrat, sans-serif;
   top: -20px;
   left: -20px;
   width: 48px;
@@ -1405,7 +1405,7 @@ div#clock span:first-child {
   margin: 0;
   border: 0;
   background: transparent;
-  font-family: Geologica, sans-serif;
+  font-family: Montserrat, sans-serif;
   font-weight: 300;
 }
 .pbmit-testimonial-style-2 .pbminfotech-box-author {
@@ -1972,7 +1972,7 @@ div#clock span:first-child {
   margin-bottom: 30px !important;
   padding: 0 !important;
   position: relative;
-  font-family: Geologica, sans-serif;
+  font-family: Montserrat, sans-serif;
   font-weight: 800;
   font-size: 22px;
   line-height: 30px;
