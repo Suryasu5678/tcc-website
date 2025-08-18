@@ -1,10 +1,12 @@
 # Twin Cities Cardiology Website
 
 ## Project Overview
+
 This is the official website for Twin Cities Cardiology, a healthcare provider specializing in cardiovascular care. The website offers information about the clinic's services, locations, insurance plans accepted.
 
 ## Features
-- Informational pages about cardiology services, vascular medicine, executive health physicals, and concierge programs.
+
+- Informational pages about cardiology services, vascular medicine, CardioLife360™s, and concierge programs.
 - Interactive homepage with video banner, service highlights, testimonials, and insurance partners carousel.
 - Multiple clinic locations with clickable addresses linked to maps.
 - Online appointment booking form with backend email integration.
@@ -13,6 +15,7 @@ This is the official website for Twin Cities Cardiology, a healthcare provider s
 - Smooth animations and interactive UI elements using JavaScript and jQuery plugins.
 
 ## Technologies Used
+
 - HTML5, CSS3, JavaScript
 - PHP for backend form handling
 - Resend Mail API for sending appointment request emails
@@ -20,6 +23,7 @@ This is the official website for Twin Cities Cardiology, a healthcare provider s
 - Various icon libraries: FontAwesome, Flaticon, Themify Icons
 
 ## Setup Instructions
+
 1. Clone or download the repository.
 2. Ensure a PHP-enabled web server is available to serve the site and handle backend PHP scripts.
 3. Install dependencies via Composer:
